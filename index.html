@@ -992,7 +992,7 @@
        "Last refresh" stamp below carries the currency; each Friday's meeting has its own
        dated pill on the Meetings tab. -->
   <div class="sub"><strong>Sales</strong>, <strong>Operations</strong> and <strong>Marketing</strong> refresh automatically <strong>every hour, 8am&ndash;6pm AEST on weekdays</strong>. <strong>Meetings</strong> and <strong>Calendars</strong> update every Friday &mdash; each week a new snapshot in time. All dollar figures are <strong>ex GST</strong>.</div>
-  <div class="stamp">Last refresh &middot; 27 July, 9:13am AEST</div>
+  <div class="stamp">Last refresh &middot; 27 July, 9:18am AEST</div>
   <!-- Reference pills (v59): subtle, far right of the hero banner — deliberately NOT
        tabs on the board tabbar (Nathan 24/7). Ids follow the top-tab-* convention so
        showTop()'s one loop drives their active state too. -->
@@ -3548,7 +3548,7 @@ const MKT_CAL = [
 // followers + every post and logged story for the meeting week. New weeks roll into
 // pills the same way meetings do.
 const SOCWEEKS = [
-{ws:'2026-07-27', cur:true, pending:false, label:'Wk31 · 27 July – 2 August 2026', pulled:'27 Jul 07:13',
+{ws:'2026-07-27', cur:true, pending:false, label:'Wk31 · 27 July – 2 August 2026', pulled:'27 Jul 07:18',
  ig:{handle:'@hybridag', followers:1257, posts:0},
  fb:{name:'Hybrid-Ag', likes:842, followers:842},
  storyCount:0,
@@ -3594,7 +3594,7 @@ const SOCWEEKS = [
 // The 2026 series — one row per ISO week, written by build_socials_year.py. Declared here
 // (above the hash router, per the v23 script-ordering trap) but only rendered when its
 // pill is opened, so a 150KB block never costs anything on first paint.
-const SOCYEAR = {pending:false, pulled:'27 Jul 09:14', today:'2026-07-26', handle:'@hybridag',
+const SOCYEAR = {pending:false, pulled:'27 Jul 09:19', today:'2026-07-26', handle:'@hybridag',
  now:{ig:1257, fb:842, fbLikes:842, li:4096, x:180},
  manualFrom:'2026-W01', storiesFrom:'2026-07-20',
  weeks:[
@@ -3681,12 +3681,15 @@ const SOCYEAR = {pending:false, pulled:'27 Jul 09:14', today:'2026-07-26', handl
       ? `Pulled ${w.pulled} straight from Meta &mdash; refreshes with the routine. Stories are banked with their picture and stats while they are live; Instagram deletes them after 24 hours, so only stories the routine catches can ever appear here.`
       : `Frozen snapshot &mdash; captured ${w.pulled || 'at week close'}, exactly as the week ended.`}</div>`;
   };
-  // One pill + one view per week, newest first (SOCWEEKS order); current week active.
-  $('socw-tabs').innerHTML = SOCWEEKS.map((w, i) => `
-    <div class="stab${i === 0 ? ' active' : ''}" id="socw-tab-w${i}" onclick="showSocW('w${i}')">
-      ${w.label.replace(/ \d{4}$/, '')}${w.cur ? ' <span class="tcount">auto</span>' : ''}</div>`).join('');
-  $('socw-views').innerHTML = SOCWEEKS.map((w, i) => `
-    <div class="socwview${i === 0 ? ' active' : ''}" id="socw-w${i}">
+  // One pill + one view per week, oldest -> newest left-to-right with the current week
+  // on the RIGHT and active — same convention as the Meetings and Calendars pills.
+  const weeks = [...SOCWEEKS].reverse();
+  const act = weeks.length - 1;
+  $('socw-tabs').innerHTML = weeks.map((w, i) => `
+    <div class="stab${i === act ? ' active' : ''}" id="socw-tab-w${i}" onclick="showSocW('w${i}')">
+      ${w.label.replace(/ \d{4}$/, '')}</div>`).join('');
+  $('socw-views').innerHTML = weeks.map((w, i) => `
+    <div class="socwview${i === act ? ' active' : ''}" id="socw-w${i}">
       <div class="mc-wrap">${weekBody(w)}</div></div>`).join('');
 })();
 
