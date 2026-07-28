@@ -1347,6 +1347,7 @@
       <div class="stab cmp-tab" id="cmp-tab-cherry" onclick="showCampaign('cherry')"><span class="ct-name">Cherry Growers Conference</span><span class="ct-sub">Hort &middot; Exhibitor &middot; 31 May</span></div>
       <div class="stab cmp-tab" id="cmp-tab-freegrowers" onclick="showCampaign('freegrowers')"><span class="ct-name">Fruit Growers Victoria</span><span class="ct-sub">Hort &middot; Exhibitor &middot; 20 Aug &middot; <b style="color:#8FCA82">Running</b></span></div>
       <div class="stab cmp-tab" id="cmp-tab-frost" onclick="showCampaign('frost')"><span class="ct-name">Frost Readiness</span><span class="ct-sub">Hort &middot; Published post</span></div>
+      <div class="stab cmp-tab" id="cmp-tab-bud" onclick="showCampaign('bud')"><span class="ct-name">Bud Optimisation</span><span class="ct-sub">Hort &middot; 30 Jul</span></div>
       <div class="stab cmp-tab" id="cmp-tab-brandbook" onclick="showCampaign('brandbook')"><span class="ct-name">Brand Book 2026</span><span class="ct-sub">Strategy &middot; Foundation</span></div>
     </div>
 
@@ -1503,6 +1504,12 @@
     <div class="cmpview" id="cmp-frost">
       <div class="cmp-embed-note">Frost readiness &middot; four-slide decision-led carousel &middot; selected platform copy, embedded below.</div>
       <div class="mkt-wrap"><iframe id="frost-frame" title="Frost readiness social post"></iframe></div>
+    </div>
+
+    <!-- ===== BUD OPTIMISATION (scheduled post — sibling same-origin file) ===== -->
+    <div class="cmpview" id="cmp-bud">
+      <div class="cmp-embed-note">Bud optimisation &middot; scheduled 30 July 2026 &middot; four-slide carousel and platform copy, embedded below.</div>
+      <div class="mkt-wrap"><iframe id="bud-frame" title="Bud optimisation social post"></iframe></div>
     </div>
 
     <!-- ===== BRAND BOOK 2026 (strategy — sibling same-origin file, not inlined) =====
@@ -1880,7 +1887,7 @@
 </div>
 
 <div class="overlay" id="overlay"><div class="modal" id="modal"></div></div>
-<div class="frost-asset-viewer" id="frost-asset-viewer" hidden role="dialog" aria-modal="true" aria-label="Full-screen Frost artwork preview">
+<div class="frost-asset-viewer" id="frost-asset-viewer" hidden role="dialog" aria-modal="true" aria-label="Full-screen marketing artwork preview">
   <button id="frost-asset-viewer-close" type="button" aria-label="Close full-screen view">&times;</button>
   <img id="frost-asset-viewer-image" alt="">
 </div>
@@ -2284,7 +2291,7 @@ window.addEventListener('scroll', () => {
   }, 120);
 }, {passive: true});
 function rememberFrostAssetScroll(){
-  _frostAssetScroll = {..._frostAssetStableScroll};
+  _frostAssetScroll = {x: window.scrollX, y: window.scrollY};
 }
 function restoreFrostAssetScroll(position){
   if (!position) return;
@@ -2301,7 +2308,7 @@ function openFrostAsset(src, alt, trigger){
   const viewer = $('frost-asset-viewer');
   const image = $('frost-asset-viewer-image');
   image.src = src;
-  image.alt = alt || 'Frost artwork preview';
+  image.alt = alt || 'Marketing artwork preview';
   viewer.hidden = false;
   document.body.classList.add('frost-viewer-open');
   if (_frostAssetTrigger) _frostAssetTrigger.setAttribute('aria-expanded', 'true');
@@ -3550,7 +3557,7 @@ const MKT_CAL = [
   // Soil-Testing Campaign (Hort, July) removed 21/7/26 — not started, and still under
   // review on whether to invest the time at all. Put it back when that's decided.
   [6, 'Thu 23 Jul', 'Hort — Frost readiness', 'social', 'Published · four-slide decision-led carousel · selected platform copy', true, 'frost'],
-  [6, 'July', 'Hort — Bud development', 'social', 'Planned post with Andrew Smith', false],
+  [6, 'Thu 30 Jul', 'Bud Optimisation', 'social', '', false, 'bud'],
   [7, 'Early Aug · TBC', 'GSB — SP, Lockout &amp; Digester launch', 'launch', 'Three products in the one Great Southern Biology launch · date locks after pricing + Grant review', false],
   [7, '20 Aug', 'Fruit Growers Victoria Conference', 'event', 'Hort · Exhibitor · McIntosh Centre, Shepparton · campaign running', false, 'freegrowers'],
   [8, '22–24 Sep', 'Henty Machinery Field Days', 'event', 'Broadacre · Liquid Inject playbook due by then', false],
@@ -4123,7 +4130,7 @@ function showMkt(v){
 }
 // Campaign sub-tabs: native pages plus embedded campaign documents, loaded on demand.
 function showCampaign(v){
-  for (const k of ['vicvid','cherry','wimmera','freegrowers','frost','brandbook']){
+  for (const k of ['vicvid','cherry','wimmera','freegrowers','frost','bud','brandbook']){
     $('cmp-' + k).classList.toggle('active', k === v);
     $('cmp-tab-' + k).classList.toggle('active', k === v);
   }
@@ -4135,6 +4142,12 @@ function showCampaign(v){
       ff.setAttribute('src', archived ? '../frost-post.html' : 'frost-post.html');
     }
     fitCampaignFrame('frost-frame'); }
+  if (v === 'bud'){ const bf = $('bud-frame');
+    if (!bf.getAttribute('src')){
+      const archived = location.pathname.replace(/\\/g, '/').includes('/archive/');
+      bf.setAttribute('src', archived ? '../bud-flower-post.html' : 'bud-flower-post.html');
+    }
+    fitCampaignFrame('bud-frame'); }
   // Brand book is a sibling same-origin file, not a base64 blob — set src once, then grow
   // to full page height and scroll with the dashboard, exactly like the campaigns (its
   // .cover/.page satisfy fitCampaignFrame's isReady). The document's images are decoded by
