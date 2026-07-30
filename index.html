@@ -995,12 +995,13 @@
   .blm .m-note{font-size:12.5px;font-style:italic;color:var(--muted);margin-top:12px}
   /* contacts org chart */
   .ct-search{width:100%;max-width:420px;font:inherit;font-size:14px;padding:9px 16px;border:1.5px solid var(--line);border-radius:24px;background:#fff;margin:0 0 18px}
-  .org-root{background:#fff;border-radius:12px;overflow:hidden;margin:0 0 8px;box-shadow:0 1px 4px rgba(30,35,33,.08)}
+  /* stem connector removed 31/7 (Nathan: "random line") — its 18px gap folded into the
+     root card's margin so the spacing to the first branch is unchanged. */
+  .org-root{background:#fff;border-radius:12px;overflow:hidden;margin:0 0 26px;box-shadow:0 1px 4px rgba(30,35,33,.08)}
   .org-root .acc{height:6px;background:var(--berry)}
   .org-root .rr{padding:14px 22px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
   .org-root .rr .t{font-family:var(--display);text-transform:uppercase;letter-spacing:.03em;font-size:22px;color:var(--berry)}
   .org-root .rr .s{font-size:12.5px;color:var(--muted)}
-  .org-stem{width:2px;height:18px;background:var(--line);margin:0 auto}
   .branch{margin:0 0 22px}
   .branch-h{display:flex;align-items:center;gap:12px;padding:9px 16px;border-radius:9px;color:#fff;margin:0 0 14px}
   .branch.c-teal .branch-h{background:var(--teal)}
@@ -5585,8 +5586,7 @@ function drawOrg(){
   const q=($('ctSearch').value||'').toLowerCase();
   const match = c => !q || (c.nm+' '+c.ttl+' '+c.r.map(x=>x.q+' '+x.d).join(' ')).toLowerCase().includes(q);
   let html = `<div class="org-root"><div class="acc"></div>
-    <div class="rr"><span class="t">Hybrid-Ag Support Team</span><span class="s">${CONTACTS.length} points of contact &middot; one directory, right person every time</span></div></div>
-    <div class="org-stem"></div>`;
+    <div class="rr"><span class="t">Hybrid-Ag Support Team</span><span class="s">${CONTACTS.length} points of contact &middot; one directory, right person every time</span></div></div>`;
   CONTACT_BRANCHES.forEach((b,bi)=>{
     const people = CONTACTS.filter(c=>c.b===bi && match(c));
     if (!people.length) return;
