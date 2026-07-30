@@ -561,6 +561,10 @@
   .stab.cmp-tab .ct-name{font-family:'Oswald',sans-serif;font-weight:600;font-size:13px;letter-spacing:1px;text-transform:uppercase}
   .stab.cmp-tab .ct-sub{font-size:10.5px;letter-spacing:.3px;opacity:.85;text-transform:none;font-family:'Inter',sans-serif;font-weight:500}
   .stab.cmp-tab.active .ct-sub{opacity:.9}
+  /* published one-off posts (Frost, Bud 31/7): work is done, pill reads retrospective —
+     greyed at rest, full strength on hover/active so the embed is still one tap away */
+  .stab.cmp-tab.done{opacity:.5;filter:grayscale(.6)}
+  .stab.cmp-tab.done:hover,.stab.cmp-tab.done.active{opacity:1;filter:none}
 
   /* VicVid black-card cover — values copied VERBATIM from the Cherry/Wimmera campaign
      stylesheet (.cover / .cover-* rules) so the three read as one set. Do not "tidy" these:
@@ -1439,8 +1443,8 @@
       <div class="stab cmp-tab" id="cmp-tab-vicvid" onclick="showCampaign('vicvid')"><span class="ct-name">Vic-Vid</span><span class="ct-sub">Hort &middot; Demo Plot &middot; 7&ndash;8 May</span></div>
       <div class="stab cmp-tab" id="cmp-tab-cherry" onclick="showCampaign('cherry')"><span class="ct-name">Cherry Growers Conference</span><span class="ct-sub">Hort &middot; Exhibitor &middot; 31 May</span></div>
       <div class="stab cmp-tab" id="cmp-tab-freegrowers" onclick="showCampaign('freegrowers')"><span class="ct-name">Fruit Growers Victoria</span><span class="ct-sub">Hort &middot; Exhibitor &middot; 20 Aug &middot; <b style="color:#8FCA82">Running</b></span></div>
-      <div class="stab cmp-tab" id="cmp-tab-frost" onclick="showCampaign('frost')"><span class="ct-name">Frost Readiness</span><span class="ct-sub">Hort &middot; Published post</span></div>
-      <div class="stab cmp-tab" id="cmp-tab-bud" onclick="showCampaign('bud')"><span class="ct-name">Bud Optimisation</span><span class="ct-sub">Hort &middot; Published post</span></div>
+      <div class="stab cmp-tab done" id="cmp-tab-frost" onclick="showCampaign('frost')"><span class="ct-name">Frost Readiness</span><span class="ct-sub">Hort &middot; Published post</span></div>
+      <div class="stab cmp-tab done" id="cmp-tab-bud" onclick="showCampaign('bud')"><span class="ct-name">Bud Optimisation</span><span class="ct-sub">Hort &middot; Published post</span></div>
       <div class="stab cmp-tab" id="cmp-tab-brandbook" onclick="showCampaign('brandbook')"><span class="ct-name">Brand Book 2026</span><span class="ct-sub">Strategy &middot; Foundation</span></div>
     </div>
 
