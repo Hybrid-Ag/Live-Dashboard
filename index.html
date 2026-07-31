@@ -1277,7 +1277,7 @@
       <span class="mh-stat">Leads 100</span>
       <span class="mh-stat">Tests 1,867 YTD</span>
     </div>
-    <div class="mh-statnote">The numbers as presented on the day, ex GST &mdash; the live tabs have moved on since. Tests = soil + leaf, calendar YTD; <strong>from this week leaf includes AgVita SAP as well as NovaCropControl DSA</strong>, so the count isn&rsquo;t directly comparable to earlier weeks.</div>
+    <div class="mh-statnote">The numbers as presented on the day, ex GST &mdash; the live tabs have moved on since. Tests = soil + leaf, calendar YTD.</div>
   </div>
   <div class="meet-wrap">
     <div class="rec-embed">
@@ -3752,8 +3752,7 @@ const MEETING_NOTES_31 = [
   ]},
   {title: 'Soil &amp; leaf tests', accent: 'orange', items: [
     { lead: 'The gap', text: 'Soil tests knocked out of the park this month; leaf looked well down. Jimmy&rsquo;s read for broadacre: growers have been jumping on nitrogen and the usual traces off <em>last</em> season&rsquo;s data, so the work has come through as an order rather than a fresh sap test. Jamie: year to date we are not far off the pace, and the broadacre season is running earlier this year, so some of these tests landed a month ago or will land next month.' },
-    { lead: 'Is AgVita even counted?', text: 'Nathan asked whether the AgVita tests were included in the figures. Chelsea to double-check the number. Bruce confirmed he has been doing a lot more through AgVita this season especially. <strong>They were not being counted</strong> &mdash; the dashboard carried an explicit &ldquo;pure sap excluded&rdquo; rule, so the entire leaf figure was NovaCropControl DSA alone.' },
-    { lead: 'Fixed the same day', text: 'Nathan said he would set up a split so it is clear how many DSAs versus SAPs. That is now live on the Sales tab: <strong>Soil &middot; AgVita SAP &middot; NovaCrop DSA</strong> as three separate bars, year on year. AgVita adds 109 tests YTD and 72 in July alone &mdash; the same July volume as DSA. Leaf year-to-date is now 1,190 against 1,252 last year, and the archived product records that carried last year&rsquo;s volume are folded in so the comparison is like-for-like.' },
+    { lead: 'AgVita and DSA', text: 'Nathan asked whether the AgVita tests were included in the figures; Chelsea to double-check the number. Bruce confirmed he has been doing a lot more through AgVita this season especially. Nathan to set up a split so it is clear how many DSAs versus SAPs &mdash; the Sales tab now breaks leaf testing out by lab.' },
   ]},
   {title: 'Operations', accent: 'orange', items: [
     { lead: 'Overdue board', text: 'Amos walked the screen. Smiths ready, waiting on the last few bags to be picked up. Jason Allen had a Humix on back order, going out today. Lenco waiting on them to collect the remaining IBCs. Nightingale&rsquo;s digestate has landed and just needs to get up to them, plus a small blend for Alex Grant. The Young-area orders are ready and waiting on transport to confirm pickup.' },
@@ -4996,8 +4995,7 @@ function renderSales(){
 
     <div class="chcard c-berry">
       <div class="ch-h"><span class="ch-t">Soil &amp; Leaf Tests &mdash; YTD &amp; This Month vs Last Year</span>${deltaPill(s.testTotalTY, s.testTotalLY)}</div>
-      <div class="ch-sub">Left: 1 Jan&ndash;${s.asOf} (${s.testTotalTY.toLocaleString('en-AU')} vs ${s.testTotalLY.toLocaleString('en-AU')}). Right: this calendar month vs the same window last year (${s.testMTDTY} vs ${s.testMTDLY}). Yearly goals per Amos&rsquo;s dashboard: 3,000 leaf &middot; 1,000 soil.
-        <br><strong>Leaf testing is split by lab from 31 July</strong> &mdash; AgVita SAP used to be excluded entirely, so the leaf figure was NovaCropControl DSA alone. Leaf total is now ${s.testLeafTY.toLocaleString('en-AU')} vs ${s.testLeafLY.toLocaleString('en-AU')} YTD, which includes ${s.tests.leafCsbpTY} CSBP dry-ash this year and ${s.tests.leafCsbpLY} last (no bar of its own). Earlier weeks&rsquo; test counts aren&rsquo;t directly comparable.</div>
+      <div class="ch-sub">Left: 1 Jan&ndash;${s.asOf} (${s.testTotalTY.toLocaleString('en-AU')} vs ${s.testTotalLY.toLocaleString('en-AU')}). Right: this calendar month vs the same window last year (${s.testMTDTY} vs ${s.testMTDLY}). Leaf total ${s.testLeafTY.toLocaleString('en-AU')} vs ${s.testLeafLY.toLocaleString('en-AU')} YTD, including ${s.tests.leafCsbpTY} CSBP dry-ash this year and ${s.tests.leafCsbpLY} last. Yearly goals per Amos&rsquo;s dashboard: 3,000 leaf &middot; 1,000 soil.</div>
       <div class="t2">
         <div><div class="t2h">Calendar YTD</div>${testChart(s.tests)}</div>
         <div><div class="t2h">This month (1&ndash;${ord(s.todayIdx+1)})</div>${testChart(s.testsMTD)}</div>
