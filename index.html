@@ -1120,7 +1120,8 @@
   <div class="subbar" id="calw-tabs">
     <div class="stab" id="calw-tab-20260717" onclick="showCalW('20260717')">Fri 17 July</div>
     <div class="stab active" id="calw-tab-20260724" onclick="showCalW('20260724')">Fri 24 July <span class="tcount">latest</span></div>
-    <div class="stab" id="calw-tab-20260731" onclick="showCalW('20260731')">Fri 31 July <span class="tcount">upcoming</span></div>
+    <div class="stab" id="calw-tab-20260731" onclick="showCalW('20260731')">Fri 31 July <span class="tcount">not covered</span></div>
+    <div class="stab" id="calw-tab-20260807" onclick="showCalW('20260807')">Fri 7 August <span class="tcount">upcoming</span></div>
   </div>
 
   <!-- Passed week, FROZEN as it was pulled for that Friday (data in calendars_20260717.js,
@@ -1157,16 +1158,32 @@
   </div>
   </div><!-- /calw-20260724 -->
 
+  <!-- 31/7: the who's-where segment did NOT run — the meeting went values, field photos,
+       sales, tests, ops, marketing, business updates, then the AgVita/NovaCrop technical
+       piece, and finished early for the Great Southern Biology session at 11:30. Marked as
+       not covered rather than left looking like a pending pull. -->
   <div class="calwview" id="calw-20260731">
   <div class="meet-wrap">
     <div class="rec-slot">
       <a class="rs-icon" style="padding-left:0;text-decoration:none" href="https://hybrid-ag.odoo.com/odoo/calendar" target="_blank" rel="noopener" title="Open Odoo Calendars">&#128197;</a>
-      <div class="rs-t">Fri 31 July 2026 &mdash; week of 3&ndash;9 August</div>
-      <div class="rs-d">Pulled Thursday with the fresh build &mdash; everyone&rsquo;s Odoo week lands here, and what each person says in Friday&rsquo;s meeting gets attached to their cards after the session.<br>
+      <div class="rs-t">Fri 31 July 2026 &mdash; not covered this week</div>
+      <div class="rs-d">The who&rsquo;s-where-next-week segment didn&rsquo;t run on 31 July &mdash; the session finished early to make room for the Great Southern Biology technical meeting. Everyone&rsquo;s live week is still one tap away in Odoo.<br>
       <a class="odoo-btn" style="display:inline-block;margin-top:12px;font-size:11px;padding:8px 15px" href="https://hybrid-ag.odoo.com/odoo/calendar" target="_blank" rel="noopener">Open Odoo Calendars &#8599;</a></div>
     </div>
   </div>
   </div><!-- /calw-20260731 -->
+
+  <!-- ===== FRI 7 AUGUST (upcoming) ===== -->
+  <div class="calwview" id="calw-20260807">
+  <div class="meet-wrap">
+    <div class="rec-slot">
+      <a class="rs-icon" style="padding-left:0;text-decoration:none" href="https://hybrid-ag.odoo.com/odoo/calendar" target="_blank" rel="noopener" title="Open Odoo Calendars">&#128197;</a>
+      <div class="rs-t">Fri 7 August 2026 &mdash; week of 10&ndash;16 August</div>
+      <div class="rs-d">Pulled Thursday with the fresh build &mdash; everyone&rsquo;s Odoo week lands here, and what each person says in Friday&rsquo;s meeting gets attached to their cards after the session.<br>
+      <a class="odoo-btn" style="display:inline-block;margin-top:12px;font-size:11px;padding:8px 15px" href="https://hybrid-ag.odoo.com/odoo/calendar" target="_blank" rel="noopener">Open Odoo Calendars &#8599;</a></div>
+    </div>
+  </div>
+  </div><!-- /calw-20260807 -->
 </div>
 
 <!-- ============ MEETING (the meeting's own tab: agenda cover, recording slot, field photos) ============ -->
@@ -1183,7 +1200,8 @@
     <!-- Default pill = the UPCOMING meeting (Nathan 21/7); `active` moves each week. -->
     <div class="stab" id="mtg-tab-20260717" onclick="showMtg('20260717')">Fri 17 July</div>
     <div class="stab" id="mtg-tab-20260724" onclick="showMtg('20260724')">Fri 24 July</div>
-    <div class="stab active" id="mtg-tab-20260731" onclick="showMtg('20260731')">Fri 31 July <span class="tcount">latest</span></div>
+    <div class="stab" id="mtg-tab-20260731" onclick="showMtg('20260731')">Fri 31 July <span class="tcount">latest</span></div>
+    <div class="stab active" id="mtg-tab-20260807" onclick="showMtg('20260807')">Fri 7 August <span class="tcount">upcoming</span></div>
   </div>
 
   <div class="mtgview" id="mtg-20260717">
@@ -1255,8 +1273,8 @@
   </div>
   </div><!-- /mtg-20260724 -->
 
-  <!-- ===== FRI 31 JULY (upcoming) ===== -->
-  <div class="mtgview active" id="mtg-20260731">
+  <!-- ===== FRI 31 JULY ===== -->
+  <div class="mtgview" id="mtg-20260731">
   <div class="meet-hero">
     <div class="mh-kicker">Friday 31 July 2026</div>
     <h2 class="mh-title">Optimising Inputs. Maximising Outcomes.</h2>
@@ -1300,6 +1318,35 @@
     <div style="max-width:1100px;margin:0 auto"><div class="mtg-sec s-green" id="gsb-sec"></div></div>
   </div>
   </div><!-- /mtg-20260731 -->
+
+  <!-- ===== FRI 7 AUGUST (upcoming) ===== -->
+  <div class="mtgview active" id="mtg-20260807">
+  <div class="meet-hero">
+    <div class="mh-kicker">Friday 7 August 2026</div>
+    <h2 class="mh-title">Optimising Inputs. Maximising Outcomes.</h2>
+    <div class="mh-accent"></div>
+    <div class="mh-purpose">Transforming Food for Health</div>
+    <div class="mh-values">
+      <div class="mh-val v1"><div class="vn">Integrity</div><ul><li>Do the right thing</li><li>People Synergy; the whole is greater than the simple sum of its parts</li><li>Trust in every direction</li><li>The Lincoln Principle</li></ul></div>
+      <div class="mh-val v2"><div class="vn">Find a Way</div><ul><li>Keep asking questions until you find a way</li><li>The ant philosophy</li></ul></div>
+      <div class="mh-val v3"><div class="vn">Family</div><ul><li>Family first</li><li>Every voice is heard</li></ul></div>
+      <div class="mh-val v4"><div class="vn">Knowledge</div><ul><li>Test. Don&rsquo;t Guess</li><li>Learn, Challenge, Improve; Repeat</li><li>Curiosity to challenge the status quo &mdash; don&rsquo;t be a Kodak</li><li>Challenge everything, no sacred cows</li></ul></div>
+    </div>
+    <div class="mh-statnote">The as-presented numbers pin here once the meeting has run.</div>
+  </div>
+  <div class="meet-wrap">
+    <div class="rec-slot">
+      <div class="rs-icon" style="padding-left:0">
+        <svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="13" height="12" rx="2.5"/><path d="M15 10.5l7-3.5v10l-7-3.5z"/></svg>
+      </div>
+      <div class="rs-t">Friday 7 August 2026 &mdash; next meeting</div>
+      <div class="rs-d">Built out Thursday on the fresh pull &mdash; sales, operations, marketing, leads and calendars all re-run &mdash; then presented Friday. The recording and the transcript notes land here after the session.</div>
+    </div>
+    <h3 class="meet-h">From the field this week <span class="meet-hs">shared over WhatsApp &mdash; we open on these, and the story behind each one gets unpacked live</span></h3>
+    <div class="field-gallery" id="field-gallery-0807"></div>
+    <div class="mtg-notes" id="mtg-notes-0807"></div>
+  </div>
+  </div><!-- /mtg-20260807 -->
 
   <!-- Snapshot card grid retired 21/7 — each meeting's as-presented numbers now sit in
        its own hero (.mh-stats), and past weeks live behind their pills. -->
