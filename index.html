@@ -1089,7 +1089,7 @@
        "Last refresh" stamp below carries the currency; each Friday's meeting has its own
        dated pill on the Meetings tab. -->
   <div class="sub"><strong>Sales</strong>, <strong>Operations</strong> and <strong>Marketing</strong> refresh automatically <strong>every hour, 8am&ndash;6pm AEST on weekdays</strong>. <strong>Meetings</strong> and <strong>Calendars</strong> update every Friday &mdash; each week a new snapshot in time. All dollar figures are <strong>ex GST</strong>.</div>
-  <div class="stamp">Last refresh &middot; 5 August, 11:57am AEST</div>
+  <div class="stamp">Last refresh &middot; 5 August, 12:00pm AEST</div>
   <!-- Reference pills (v59): subtle, far right of the hero banner — deliberately NOT
        tabs on the board tabbar (Nathan 24/7). Ids follow the top-tab-* convention so
        showTop()'s one loop drives their active state too. -->
@@ -3903,7 +3903,7 @@ const MKT_CAL = [
 // followers + every post and logged story for the meeting week. New weeks roll into
 // pills the same way meetings do.
 const SOCWEEKS = [
-{ws:'2026-08-03', cur:true, pending:false, label:'Wk32 · 3–9 August 2026', pulled:'05 Aug 09:58',
+{ws:'2026-08-03', cur:true, pending:false, label:'Wk32 · 3–9 August 2026', pulled:'05 Aug 10:00',
  ig:{handle:'@hybridag', followers:1310, posts:0},
  fb:{name:'Hybrid-Ag', likes:846, followers:846},
  storyCount:5,
@@ -3982,7 +3982,7 @@ const SOCWEEKS = [
 // The 2026 series — one row per ISO week, written by build_socials_year.py. Declared here
 // (above the hash router, per the v23 script-ordering trap) but only rendered when its
 // pill is opened, so a 150KB block never costs anything on first paint.
-const SOCYEAR = {pending:false, pulled:'05 Aug 11:58', today:'2026-08-04', handle:'@hybridag',
+const SOCYEAR = {pending:false, pulled:'05 Aug 12:00', today:'2026-08-04', handle:'@hybridag',
  now:{ig:1310, fb:846, fbLikes:846, li:4097, x:181},
  weekOpen:{ig:1302, fb:846, li:4096, x:180},
  manualFrom:'2026-W01', storiesFrom:'2026-07-20',
@@ -5472,7 +5472,7 @@ const PL_SECTIONS = [
  ]}
 ];
 /*BLEND-START*/
-const BL_META = {"extracted": "30 July 2026", "odooPull": "05 Aug 2026 09:58", "source": "Notion — Dry & Granular Blend Creation (AU pages only; NZ Only excluded) · codes confirmed against Trina's Odoo housekeeping sheet, 31 Jul 2026", "odooBasis": "product.product.standard_price, categories [200, 173]", "tol": 0.005, "counts": {"match": 22, "drift": 41, "nocost": 1, "norecord": 6, "ambiguous": 0, "bom_only": 4}, "states": {"ready": 60, "fix": 9, "pending": 1, "removing": 4}, "total": 74, "odooPool": 187, "odooUnmatched": 103};
+const BL_META = {"extracted": "30 July 2026", "odooPull": "05 Aug 2026 10:00", "source": "Notion — Dry & Granular Blend Creation (AU pages only; NZ Only excluded) · codes confirmed against Trina's Odoo housekeeping sheet, 31 Jul 2026", "odooBasis": "product.product.standard_price, categories [200, 173]", "tol": 0.005, "counts": {"match": 22, "drift": 41, "nocost": 1, "norecord": 6, "ambiguous": 0, "bom_only": 4}, "states": {"ready": 60, "fix": 9, "pending": 1, "removing": 4}, "total": 74, "odooPool": 187, "odooUnmatched": 103};
 const BL_SETS = [["shared", "Dry &amp; Granular (shared)"], ["dry", "Dry Blend"], ["granular", "Granular Blend"], ["liquid", "Liquid Coatings"]];
 const BL_ITEMS = [
  {"name": "Pearl Array", "set": "shared", "status": "✅", "code": "PAM-BLK", "mfr": "Hybrid Ag", "organic": "conventional", "budget": 1, "desc": "Pearl Array MGM is a biologically enhanced composite granule fertiliser designed to deliver balanced nutrition for optimal crop establishment. This advanced blend combines high-analysis and slow-release fertilisers with Humalite Carbon to provide immediate and sustained nutrient availability. It supplies essential Nitrogen, Phosphorus, and Sulfur, enriched with soil wetting agents and root stimulants to maximise efficiency. The Humalite coating stimulates soil biology, buffers toxicity, and enhances nutrient absorption, making it ideal for broadacre crops and burn-sensitive seeding systems. Pearl Array MGM supports robust plant growth while promoting long-term soil health and sustainability - Bulk Density: 970 Kg/m3.", "nutrients": "P: 14.13%, N: 13.91%, S: 7.12%, K: 0.40%, Ca: 0.35%, Mg: 0.08%, Fe: 0.03%, Carbon: 6.72%", "analysis": {"P": 0.1413, "N": 0.1391, "S": 0.0712, "K": 0.004, "Ca": 0.0035, "Mg": 0.0008, "Fe": 0.0003, "Carbon": 0.0672}, "notionCost": 1.15, "unit": "kg", "odooCode": false, "odooName": "Pearl Array - Stock", "odooId": 26273, "odooUom": "Kgs", "odooCost": 1.12385, "verdict": "bom_only", "delta": 0.02615, "pct": 2.3, "matchedBy": "id", "candidates": [], "flags": [], "state": "fix", "action": "Code confirmed PAM ($1.1238/kg, Trina 4/8) — still to be entered on 'Pearl Array - Stock' (id 26273)"},
