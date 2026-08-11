@@ -38,10 +38,14 @@ Rules that will bite if broken:
 
 1. Open `mktcal.json` on GitHub and click the pencil icon.
 2. Add, edit or remove a line.
-3. Commit — as a pull request if GitHub asks for one; Nathan merges it.
-4. Refresh the dashboard. If nothing changes, hard-refresh (Ctrl+Shift+R) — the file is
-   fetched fresh on every load, so it is nearly always a cached page rather than a
-   failed edit.
+3. Commit straight to `main`. No review, no approval, nobody else involved.
+4. Give it a minute — the site has to rebuild — then refresh the dashboard. If nothing
+   changes, hard-refresh (Ctrl+Shift+R); the file is re-fetched on every load, so a
+   stale-looking board is nearly always a cached page rather than a failed edit.
+
+You do not need Nathan, and you do not need the Windows machine to be switched on. The
+page reads this file directly, so the calendar is live whether or not the hourly rebuild
+has run since.
 
 If the JSON is malformed the calendar keeps showing its last good version rather than
 breaking the page, so a typo is recoverable — but it also means a broken file looks like
