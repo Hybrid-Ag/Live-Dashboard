@@ -536,18 +536,7 @@
     ]
    }
   ],
-  "mtg-notes-0814": [
-   {
-    "title": "Sales",
-    "accent": "teal",
-    "items": [
-     {
-      "lead": "SURVIVAL-TEST",
-      "text": "Written straight into content.json to prove a content edit survives the hourly rebuild. Remove once answered."
-     }
-    ]
-   }
-  ]
+  "mtg-notes-0814": []
  },
  "meetingStats": {
   "Friday 17 July 2026": {
@@ -591,17 +580,11 @@
    "note": "The numbers as presented on the day, ex GST &mdash; the live tabs have moved on since. Tests = soil + leaf, calendar YTD."
   },
   "Friday 14 August 2026": {
-   "chips": [
-    "SURVIVAL-CHIP"
-   ],
-   "note": "Test row - remove once answered."
+   "chips": [],
+   "note": ""
   }
  },
  "gsbNotes": [
-  {
-   "lead": "SURVIVAL-GSB",
-   "text": "Test item - remove once answered."
-  },
   {
    "lead": "Nutrient Solubiliser &mdash; our MYCRO-TEC&reg; SP",
    "text": "Four microbes selected as the highest organic-acid producers GSB could screen. They release phosphorus that is locked up &mdash; to calcium in high-pH soils, to iron and aluminium in low-pH &mdash; with gluconic acid doing most of the work and citric acid secondary. Only 20&ndash;30% of applied P is ever taken up; the rest fixes. Chemistry can break those bonds too, but it re-locks within a week, whereas the microbes keep doing it as long as they survive. Grant frames it as a <strong>soil conditioner</strong>, and was clear it is <strong>not the same job as Lockout</strong>."
