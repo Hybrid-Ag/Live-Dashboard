@@ -1,0 +1,796 @@
+{
+ "meetingNotes": {
+  "mtg-notes": [
+   {
+    "title": "Sales",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Where we sit",
+      "text": "&ldquo;We&rsquo;re at 712 month&rdquo; &mdash; tracking a little behind where we were at the same time last year, but with a pretty reasonable amount of quotes outstanding as well. Plenty of goals to chase and a whole lot of month still ahead of us, so a reasonable position so far."
+     },
+     {
+      "lead": "Testing",
+      "text": "Ahead of last year on soil tests, just a little behind on sap, and total tests very comparable at <strong>1,044 v 1,072</strong>. We&rsquo;re about to start getting busy in that space."
+     },
+     {
+      "lead": "Handpicked Vineyards (Hamilton)",
+      "text": "Waiting on their side, with a contact change there &mdash; expecting to hear today or early next week."
+     },
+     {
+      "lead": "Batinich (Chelsea)",
+      "text": "Just the freight cost to add for the blend, then updating and confirming it today."
+     },
+     {
+      "lead": "Philip Wilkinson (James)",
+      "text": "The $0 quote &mdash; should be easy to push through; numbers being worked up now."
+     }
+    ]
+   },
+   {
+    "title": "Operations",
+    "accent": "orange",
+    "items": [
+     {
+      "lead": "Amos walked the Operations tab",
+      "text": "Open orders summarised across the three columns &mdash; not yet shipped, in fulfilment or in transit, partially delivered &mdash; with the original delivery date, the updated schedule date and any notes on each card, plus stock on hand showing committed, incoming and forecast."
+     },
+     {
+      "lead": "Not live yet",
+      "text": "The data was pulled Thursday, so a couple of orders had already gone out by the meeting. The plan is to pull first thing on meeting morning so everything is current."
+     },
+     {
+      "lead": "Those big overdue numbers",
+      "text": "The day counts run off the <em>original</em> delivery date entered in Odoo, which makes some orders look further out than they really are &mdash; one had been re-scheduled because Hamilton was tweaking the mix. That&rsquo;s one of the nips and tucks to come."
+     },
+     {
+      "lead": "Notes",
+      "text": "Entered into the dashboard for now; the plan is to pull them live out of the Odoo log notes so it&rsquo;s one condensed view."
+     },
+     {
+      "lead": "Link goes out weekly",
+      "text": "Jamie shares this link after every sales meeting &mdash; scroll to your own customers, and click through to any order in Odoo to add detail yourself."
+     }
+    ]
+   },
+   {
+    "title": "Marketing",
+    "accent": "berry",
+    "items": [
+     {
+      "lead": "Vic-Vid debrief (Hamilton)",
+      "text": "An excellent event from an industry standpoint and well worth attending next time, ideally with more weeks to prepare. The learning: people come to look at seed plots and listen to talks &mdash; it only runs every three years &mdash; and the way the trial sites were situated, a chemical or fertiliser trial got very little traffic compared with the exhibitor stands."
+     },
+     {
+      "lead": "The spinach shot",
+      "text": "Excess nitrogen in the standard (middle, conventional) program. The right-hand side was a screw-up &mdash; somewhere between 500 and 800 kg of rustica went on over the top, potentially an extra 90 units of N, and the plants were soft. The interesting result: the Hybrid Ag liquid program over a low rate of Pearl Fusion, effectively equivalent to their 12.5.14 in the middle, still produced pretty decent results. Difference showed in root mass, side hairs, and how the leaf held up with no refrigeration or post-harvest management."
+     },
+     {
+      "lead": "Leads",
+      "text": "Nathan and Jamie&rsquo;s shared Google sheet takes every lead from every campaign and source, and feeds this dashboard so the whole team can see what&rsquo;s hot and what&rsquo;s being nurtured. Nathan calls certain leads to cover ground alongside Jamie; when one&rsquo;s good to go Jamie contacts the agronomist and it slots into the CRM."
+     },
+     {
+      "lead": "Soil-testing campaign",
+      "text": "Nathan is working through the exact rollout plan with Jamie and confirming the best burst play. Horticulture, not broadacre &mdash; three assets: a video from Smithy plus two statics."
+     },
+     {
+      "lead": "Housekeeping",
+      "text": "Past campaigns are moving into their own pill so the tab focuses on what&rsquo;s ahead. Fruit Growers Victoria is being pulled together now."
+     }
+    ]
+   },
+   {
+    "title": "Business updates",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Josh Richardson rejoins 24 August",
+      "text": "Horticulture-specific, chasing new business in the small veg space alongside Hamilton, and taking some pressure off Chelsea&rsquo;s region. A sharp operator last time round, back with four years of new skills."
+     },
+     {
+      "lead": "Forecasting",
+      "text": "Jamie is working on this financial year&rsquo;s forecast and will start with a phone call to everyone individually, looking to book 30&ndash;60 minutes each over the next fortnight."
+     },
+     {
+      "lead": "Grant Kelson, Great Southern Biology",
+      "text": "Jamie is making contact to coincide with the new SP launch; the aim is <strong>Friday 31 July</strong>, in lieu of the technical meeting, to walk through the new products and brand. Not locked in yet."
+     },
+     {
+      "lead": "Janelle &mdash; operations admin",
+      "text": "Started this week and back five days a week from Monday. She&rsquo;s the main point of contact for chasing orders and deliveries, contactable on the landline, and already set up on WhatsApp &mdash; number to be circulated. She&rsquo;ll reach out proactively ahead of orders going out and production being executed, so the team gets visibility in advance."
+     }
+    ]
+   },
+   {
+    "title": "Technical support",
+    "accent": "orange",
+    "items": [
+     {
+      "lead": "NovaCropControl sap tests stuck",
+      "text": "Held in German customs and now about three weeks late for Jimmy Kellaher, Dan McGrath and Ron Kazitzki (Selby Pastoral). The samples are well spoiled, so they&rsquo;ll need retesting &mdash; another reason Jimmy is leaning further towards AgVita. Paige has been chasing and getting stuffed around too; DHL shows a customs release but it still hasn&rsquo;t landed. Jamie is investigating and will email the team if there&rsquo;s anything useful in it."
+     },
+     {
+      "lead": "Worth a threshold?",
+      "text": "Raised on the call: NovaCropControl normally comes back around the two-week mark. Past three weeks, is there any point listening to the data &mdash; or paying for the test?"
+     }
+    ]
+   }
+  ],
+  "mtg-notes-24": [
+   {
+    "title": "Values & shout-outs",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Woody",
+      "text": "Shout-out of the week. He reached out unprompted about how he runs the CRM, wanting to get on the front foot before the one-on-ones &mdash; &ldquo;good to see a gentleman like Woody happy to put his hand up when there&rsquo;s something he doesn&rsquo;t know.&rdquo;"
+     },
+     {
+      "lead": "No sacred cows",
+      "text": "Got a genuine workout later in the meeting &mdash; new team members hearing it for the first time, and it framed the accommodation-booking discussion: if there&rsquo;s a better system, we&rsquo;ll look at it."
+     }
+    ]
+   },
+   {
+    "title": "Sales — month to date",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Where we sit",
+      "text": "$890k confirmed for July with another week to run, and about $160k of quotes sitting in the system. Lagging a little behind the same time last year &mdash; with a fair idea of where that&rsquo;s come from."
+     },
+     {
+      "lead": "By TM",
+      "text": "Chelsea flying along at the top for the month, Jimmy not far behind."
+     },
+     {
+      "lead": "Testing",
+      "text": "Soil tests neck-and-neck with last year and flying along for the month; leaf tests down a little &mdash; watching for them to tick up."
+     },
+     {
+      "lead": "Margin",
+      "text": "Section still being straightened out &mdash; disregard for now."
+     },
+     {
+      "lead": "Open items",
+      "text": "Hamilton&rsquo;s spuds order still sitting as-is &mdash; followed Steve up Wednesday, waiting on him to pull the trigger. Woody&rsquo;s quote restructured this morning: the client doesn&rsquo;t want the whole order at once, so it&rsquo;s staged now."
+     }
+    ]
+   },
+   {
+    "title": "Operations",
+    "accent": "orange",
+    "items": [
+     {
+      "lead": "The boards",
+      "text": "All boards carry notes now &mdash; jump in and read anything relevant before chasing someone. Amos announced this page as a live document pulling from Odoo hourly (&ldquo;thanks to a bit of handiwork behind the scenes from Katseli&rdquo;) &mdash; the link goes out to the team after the meeting."
+     },
+     {
+      "lead": "Dry blends",
+      "text": "About two days behind schedule; next week looks reasonably free, so back on top early in the week."
+     },
+     {
+      "lead": "Torrens Valley",
+      "text": "Two semi loads picked up this morning, the final load out this afternoon or Monday, and the spreader on its way for delivery tomorrow. The transport company dragged its feet &mdash; that freight sat ready for a week."
+     },
+     {
+      "lead": "Janelle — Monday",
+      "text": "Amos and Nate meet Janelle Monday morning: how ops information flows to the team, how she communicates freight delays back to clients, and pulling her Odoo notes into this dashboard so it becomes the central hub. More to the team next Friday."
+     }
+    ]
+   },
+   {
+    "title": "Marketing",
+    "accent": "berry",
+    "items": [
+     {
+      "lead": "The dashboard",
+      "text": "Weekly Activity now shows every story from the week with posts pulling through too; the Stats pill is evolving; and the marketing calendar is live &mdash; brand book, event retros, the frost post that went out late last night, and the bud-development post in the works."
+     },
+     {
+      "lead": "Leads",
+      "text": "Clear breakdown of every lead tracked so far, where they came from and where they&rsquo;re at. Nurturing toward appointments; a testing offer is going to the Playbook &ldquo;no&rdquo; cohort to pull them into interested."
+     },
+     {
+      "lead": "Nate Strawbridge&rsquo;s flag",
+      "text": "Some names on the list are already close to Hybrid (Dan Hill for one) &mdash; a cold-ish follow-up could read disconnected. Nathan to call Nate and walk through exactly what&rsquo;s been sent; cross-checking against existing customers is already underway, and the one-on-ones give TMs visibility."
+     }
+    ]
+   },
+   {
+    "title": "Business updates",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "All-Star finance update",
+      "text": "9:00 Eastern next week &mdash; Amos to send the calendar invite."
+     },
+     {
+      "lead": "Next Friday",
+      "text": "In place of the technical huddle: Grant and Kamal from Great Southern Biology on the two new products, plus a rehash on Lockout &mdash; bring questions beforehand so we&rsquo;re armed and dangerous."
+     },
+     {
+      "lead": "Accommodation",
+      "text": "Reminder from Roselle via Jamie: a few days&rsquo; notice where possible gives her more options on rooms. Jimmy proposed a booking app with an approval flow instead of screenshot-and-email double handling &mdash; &ldquo;no sacred cows&rdquo;; Jamie&rsquo;s looking at it and will grab details on the Cherry Hill call."
+     },
+     {
+      "lead": "Who to ask",
+      "text": "Request for an updated org chart / points of contact for vehicles, accommodation and the like &mdash; possibly next Friday with Amos. Noted: a point-of-contact doc already lives in the Odoo knowledge section; keep that the single location."
+     },
+     {
+      "lead": "Mojo",
+      "text": "Smithy is up for Mojo on Monday."
+     }
+    ]
+   }
+  ],
+  "mtg-notes-31": [
+   {
+    "title": "Values &amp; shout-outs",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Chelsea",
+      "text": "Jamie called out the Montague work in front of the team &mdash; &ldquo;absolutely phenomenal&rdquo; &mdash; for the effort put into that relationship and where it has got us. Ticks optimising inputs, maximising outcomes and transforming food for health, with integrity, finding a way and knowledge all through it. The Koori Fruit presentation the same week got its own mention: sniffing out opportunities and bringing them back to the business, even where they sit a little left of field of what we normally do."
+     }
+    ]
+   },
+   {
+    "title": "From the field",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Broadacre week",
+      "text": "Very broadacre-dominant &mdash; not much hort action in the group chat. Full attribution sits under each photo above."
+     },
+     {
+      "lead": "Molybdenum brailing",
+      "text": "Jimmy&rsquo;s leaf shot is the worst brailing he has seen. Around 100&ndash;150 mL/ha of a 25% molybdenum liquid had gone on, not ours, plus a fair bit of fungal disease. Nate&rsquo;s aside: treat crops more like zucchinis and feed them up on moly."
+     },
+     {
+      "lead": "Faba beans",
+      "text": "Bruce&rsquo;s Warda beans on Graeme Stevenson&rsquo;s river flats &mdash; a problem paddock for years, high silica and dries out fast regardless of irrigation. 120 kg/ha seed, kieserite as starter on the grower&rsquo;s call. Sap tested Wednesday; boron and molybdenum expected, but test rather than guess."
+     },
+     {
+      "lead": "Marshmallow and nettle",
+      "text": "The Boyd pasture at Young is swamped &mdash; nettles a metre high across a third of the paddock. Both indicate biological activity with poor digestion of organic matter, and it isn&rsquo;t a stock camp. Turned into the tangent of the morning: marshmallow was originally a food crop, and nettle picked before flowering is good for inflammation if you blanch the sting out. Woody has volunteered to try it."
+     }
+    ]
+   },
+   {
+    "title": "Sales &mdash; month to date",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Where we sit",
+      "text": "Sitting at <strong>$1.5M</strong> on the last day of the month. Add the $203k of open quotes and we are on par with where we were last year. A strong final week clawed back a lot of the gap."
+     },
+     {
+      "lead": "Open quotes",
+      "text": "Chelsea&rsquo;s Montague quote looks imminent once the PO is over the line. Hamilton has spoken to Steve again on Hamp and will try going direct next week if nothing more comes back. Nothing else in the list Jamie wasn&rsquo;t already across."
+     },
+     {
+      "lead": "Chelsea",
+      "text": "Flying at the moment &mdash; a big contribution this month, and it ties straight back into the Montague relationship work."
+     }
+    ]
+   },
+   {
+    "title": "Soil &amp; leaf tests",
+    "accent": "orange",
+    "items": [
+     {
+      "lead": "The gap",
+      "text": "Soil tests knocked out of the park this month; leaf looked well down. Jimmy&rsquo;s read for broadacre: growers have been jumping on nitrogen and the usual traces off <em>last</em> season&rsquo;s data, so the work has come through as an order rather than a fresh sap test. Jamie: year to date we are not far off the pace, and the broadacre season is running earlier this year, so some of these tests landed a month ago or will land next month."
+     },
+     {
+      "lead": "AgVita and DSA",
+      "text": "Nathan asked whether the AgVita tests were included in the figures; Chelsea to double-check the number. Bruce confirmed he has been doing a lot more through AgVita this season especially. Nathan to set up a split so it is clear how many DSAs versus SAPs &mdash; the Sales tab now breaks leaf testing out by lab."
+     }
+    ]
+   },
+   {
+    "title": "Operations",
+    "accent": "orange",
+    "items": [
+     {
+      "lead": "Overdue board",
+      "text": "Amos walked the screen. Smiths ready, waiting on the last few bags to be picked up. Jason Allen had a Humix on back order, going out today. Lenco waiting on them to collect the remaining IBCs. Nightingale&rsquo;s digestate has landed and just needs to get up to them, plus a small blend for Alex Grant. The Young-area orders are ready and waiting on transport to confirm pickup."
+     },
+     {
+      "lead": "Already moved",
+      "text": "Bragars delivered yesterday, Vivo and the Dunes went out yesterday, GB Crop amended their order, Yamatry goes this afternoon with another to follow Monday or Tuesday. Several of these still read as behind because the updates haven&rsquo;t been pushed through in Odoo yet."
+     },
+     {
+      "lead": "Holds",
+      "text": "Yamatry was held by a calcium nitrate delivery pushed back a couple of days. A couple of small orders are waiting on lab tests for the organic side. Torrance is being delivered direct by Peats Soils, about three quarters done with the rest next week. Mity Jones asked to push back on wet paddocks. CC has moved to August. Red Rock is waiting on the remainder of the gypsum, being mixed as we spoke."
+     },
+     {
+      "lead": "Finley Park",
+      "text": "Still waiting on payment. Luke said he would have organised it on 23 July and is back from Ireland; nothing had come through as of early this week. Nathan asked whether we had checked it had cleared recently &mdash; Amos to follow up."
+     }
+    ]
+   },
+   {
+    "title": "Marketing",
+    "accent": "berry",
+    "items": [
+     {
+      "lead": "This week",
+      "text": "Internal story-share goals held. The Fruit Growers Victoria content has started rolling out and the whole campaign is now in the dashboard &mdash; every day of the conference, with content built out to today and the next five days in progress. Works well on mobile. The Bud Optimisation post went out this morning."
+     },
+     {
+      "lead": "Leads",
+      "text": "A few good organic enquiries in, notes attached, Jamie working them. On the Cherry Playbook campaign, a heap of people only wanted the booklet, so they got a follow-up email and text earlier this week with a testing offer. Not the strongest play, deliberately a test of the water &mdash; if it doesn&rsquo;t convert, the next batch gets a slightly better offer."
+     },
+     {
+      "lead": "Does a face help?",
+      "text": "Bruce asked whether posts with a person in them &mdash; like Jimmy&rsquo;s paddock piece &mdash; engage better than those without, and whether we have the numbers to prove it. The stats tab is basic today; view rates and deeper analytics can be pulled and that is on the list. Jimmy wants to keep putting himself and others on camera as a different level of engagement."
+     }
+    ]
+   },
+   {
+    "title": "Business updates",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Who to call",
+      "text": "Following Bruce&rsquo;s request last week, the Contacts button in the top corner of this dashboard now gives a directory of who to direct what to. Janelle isn&rsquo;t in it yet &mdash; some of Amos&rsquo;s items shift across as her role firms up &mdash; and more detail on vehicles and the like can go in over time."
+     },
+     {
+      "lead": "Pricelist tab",
+      "text": "A Pricelist tab has been added in the same corner as an easy reference, with organic status against each product. <strong>Disregard the organic information for now</strong> &mdash; Amos is still waiting on ACO. Once it lands you will be able to segment by what is ACO-approved, and anything restricted will explain its restrictions on hover. Should be complete within a couple of weeks."
+     },
+     {
+      "lead": "Opti-Cal and Power-Cal organic",
+      "text": "On hold roughly <strong>6&ndash;8 weeks</strong>. The acetic acid in the calcium acetate needs a paper trail proving a non-synthetic source, which we can&rsquo;t currently provide, so new stock has been reordered. Nate and Chelsea are most affected. We are playing it by the book rather than in the grey. In the interim there are a couple of organic calcium products we can give a general recommendation on &mdash; and they run $50&ndash;$80 dearer per 20 L than ours, which softens the conversation."
+     },
+     {
+      "lead": "Organic dry blends",
+      "text": "Nathan asked how labelling works. Dry and prescription blends are part of the labelling process, but the certification is applied for <em>at the time of producing</em> each blend rather than once for the range. You would expect approval of every raw ingredient to carry through to the finished blend; it doesn&rsquo;t. Bruce asked whether that means testing the blend after manufacture &mdash; no: liquids need heavy-metal testing before release, dry blends don&rsquo;t, and the certification rests on the raw ingredients. Frustrating, but clear."
+     },
+     {
+      "lead": "Jamie &mdash; Monday and Tuesday",
+      "text": "Out of action for surgery early next week. Anything that falls on Monday or Tuesday, call today."
+     }
+    ]
+   },
+   {
+    "title": "Technical &mdash; AgVita vs NovaCropControl",
+    "accent": "orange",
+    "items": [
+     {
+      "lead": "The question",
+      "text": "Jimmy&rsquo;s standing question, brought to the group: the two labs give genuinely different results and a different recommendation off the same paddock. He screen-shared both reports side by side &mdash; wheat at Morris, near Rand, <strong>same leaf taken</strong> (AgVita&rsquo;s youngest mature leaf against NovaCrop&rsquo;s young leaf)."
+     },
+     {
+      "lead": "Where they disagree",
+      "text": "AgVita: no detectable nitrate and high molybdenum. NovaCrop: reasonable nitrate, lower moly. Copper reads satisfactory on AgVita but low on both leaves on NovaCrop, and a third the value in the young leaf. Boron similar &mdash; Jimmy doesn&rsquo;t accept AgVita&rsquo;s optimal range there. Zinc slightly higher on NovaCrop. Brix 6&ndash;7 on the refractometer against 11.7 on the AgVita report, and sugar reads low on NovaCrop."
+     },
+     {
+      "lead": "Where they agree",
+      "text": "Potassium is close &mdash; 7,000 against 6,100. Iron is low on both. Hamilton&rsquo;s read: a similar fingerprint overall, with nitrogen moved around. Jamie has seen this before at Cherry Hill two seasons ago: majors line up, traces don&rsquo;t, because traces are far harder to extract consistently and it comes down to lab methodology, not one lab being right."
+     },
+     {
+      "lead": "Reading total N",
+      "text": "Jamie&rsquo;s approach, offered up deliberately to be challenged: ignore the ammonium and nitrate split and go to <strong>total nitrogen</strong> &mdash; the actual energy outcome in the plant. Young leaf sitting well ahead of old leaf signals an oncoming deficiency regardless of what the other forms are doing, and there aren&rsquo;t large reserves in the others on a parts basis. The same differential argues an oncoming phosphorus deficiency too, with phosphorus applied as straight MAP at 80 kg/ha."
+     },
+     {
+      "lead": "What Jimmy would do",
+      "text": "Copper and boron definitely. Some molybdenum only if applying nitrate forms &mdash; and he won&rsquo;t be, because he doesn&rsquo;t want to push more tillers into what looks like a dry spring. Walking the paddock, it looks nitrogen hungry, which is what the AgVita test says and the NovaCrop test doesn&rsquo;t."
+     },
+     {
+      "lead": "The moly verdict",
+      "text": "There has been no molybdenum applied on that paddock beyond a sodium molybdate in a legume rotation a while back. On that basis Jamie would bin AgVita&rsquo;s moly result outright. Hort is not using AgVita much, though it gets used early season where a grower wants results fast, with a NovaCrop test to back it up."
+     },
+     {
+      "lead": "The takeaway",
+      "text": "The best fertiliser recommendations still come from walking the paddock yourself and getting a feel for it. Use the test as side rails, not as the answer."
+     }
+    ]
+   }
+  ],
+  "mtg-notes-0807": [
+   {
+    "title": "Values &mdash; health, and asking properly",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Jamie",
+      "text": "Put health itself under the Transforming Food for Health banner &mdash; a reminder that we all contribute, on a pretty widespread scale, to the health of the general population or to the poor health of it. The work question that falls out of it: are we really doing everything we can to produce the best food, and the healthiest people, that we can?"
+     },
+     {
+      "lead": "Bruce",
+      "text": "Ask someone how they are and genuinely listen to the answer before launching into the reason for the call &mdash; they may not have the energy for what you came to talk about, and you would never know. Jamie&rsquo;s addition: are you asking for a response, or is it just the thing we all say in passing while tuning out the answer?"
+     }
+    ]
+   },
+   {
+    "title": "From the field",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "The set",
+      "text": "Nate&rsquo;s pistachios, Jimmy&rsquo;s wheat, Bruce&rsquo;s nutrient-removal table and Woody&rsquo;s macadamias. Full detail sits under each photo above."
+     },
+     {
+      "lead": "Monoculture",
+      "text": "The pistachio block turned into the morning&rsquo;s tangent: lasered wall-to-wall plantings as biological deserts, and whether anything can live in the strips between rows. Woody&rsquo;s Bundaberg example runs 8 km of fence line, macadamia the whole way, no shelter belts. Nobody could name a tree crop planted as a genuine multi-species system at scale &mdash; mid-row cover crops are as far as it goes, and without reliable rainfall the seed cost is hard to justify."
+     },
+     {
+      "lead": "Fungicide efficacy",
+      "text": "Off the back of Jimmy&rsquo;s canola: a grower at Rand is lining up a third sclerotinia spray on the agronomist&rsquo;s word rather than on anything he has seen. Bruce&rsquo;s counter &mdash; five passes at Roger Robinson&rsquo;s a couple of seasons ago still came back below par. If you are going to use a fungicide, make sure it actually works: water quality or tank pH can strip 30&ndash;40% of its capacity, which is a fine outcome for soil health and no outcome at all for the disease. That ran into chlorinated town water in the tank, and a question to put back to Great Southern Biology about what it does to a biological mix."
+     }
+    ]
+   },
+   {
+    "title": "Sales &mdash; month to date",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Where we sit",
+      "text": "<strong>$364k</strong> month to date with another $140k in open quotes. Last August was a very good month, so the number being chased is a big one and we are lagging month on month &mdash; but a lot is starting to make its way through, and Jamie expects it to even out as the month goes on."
+     },
+     {
+      "lead": "Chelsea",
+      "text": "Still absolutely flying for the financial year."
+     },
+     {
+      "lead": "Margins",
+      "text": "Still to come back to."
+     },
+     {
+      "lead": "Test figures fixed",
+      "text": "Nate&rsquo;s query landed: the figures were only pulling DSAs, so the AgVita SAP tests were missing entirely. Nathan traced it and fixed it &mdash; AgVita and NovaCropControl now each carry their own value, and last month&rsquo;s numbers moved once they were included."
+     }
+    ]
+   },
+   {
+    "title": "Operations",
+    "accent": "orange",
+    "items": [
+     {
+      "lead": "Ahead of the board",
+      "text": "Amos walked the outstanding orders, with the caveat that a couple read as behind only because Odoo hasn&rsquo;t caught up &mdash; the notes are accurate, the records lag. Montague&rsquo;s blends and Pearl Fusion delivered with liquids scheduled early next week; Finley Park taking one load today and one tomorrow, with the spreader riding on one of them via the rigid truck on hire; Smiths Fruit picked up; Bale citrus blooms done; ColourMax in production for dispatch today or Monday; the Darren Hayes strawberry blend product landed yesterday and goes today; Ingelara partially delivered; Red Rock down to the liquid gypsum back-order."
+     },
+     {
+      "lead": "Waiting on",
+      "text": "Soluble calcium yet to arrive on one order. A couple of organic lines sit on final test results and label approval. Torrens Valley is being delivered direct by Peats Soils &mdash; waiting on their update. CRC has pushed to August, one customer is waiting on paddocks dry enough to take delivery, and one blend needs Hamilton to confirm whether it goes ahead."
+     },
+     {
+      "lead": "Bernard",
+      "text": "Came through as a lead; Amos and Nathan went through it yesterday and it has converted &mdash; five tonnes of Cal ordered. Jamie had left a message with him that morning without hearing back."
+     },
+     {
+      "lead": "Janelle",
+      "text": "Amos put the week&rsquo;s headway squarely on her. Chelsea passed on the same from Montague: a few mix-ups at their end, and they were really impressed with how she handled it."
+     }
+    ]
+   },
+   {
+    "title": "Marketing",
+    "accent": "berry",
+    "items": [
+     {
+      "lead": "Janelle in Contacts",
+      "text": "Her details are now in the Contacts directory &mdash; landline by preference, per Amos &mdash; with the email address alongside."
+     },
+     {
+      "lead": "Pricing goes to Trina",
+      "text": "Pricing updates have been coming to Nathan; they should go to Trina, who updates Odoo directly. Everything now pulls from there."
+     },
+     {
+      "lead": "What the stats can tell us",
+      "text": "Answering Nate&rsquo;s question: stories genuinely only carry views, reach and taps. Posts carry far more, and it is all on the dashboard now. We are also experimenting with very small boosts &mdash; the frost / BudMax post shows the view count climbing sharply for not much spend."
+     },
+     {
+      "lead": "In flight",
+      "text": "The Fruit Growers Victoria campaign is running, with another boosted post to come as a key part of it. Great Southern Biology product updates are still being worked in the background. On leads, a few good enquiries last week with Jamie working them &mdash; Leon is the most recent."
+     },
+     {
+      "lead": "DSA codes",
+      "text": "The DSA sample-submission codes are now built into the dashboard &mdash; the same references, tidied up."
+     },
+     {
+      "lead": "Prescription blend pricing",
+      "text": "Now in the Pricing tab. A lot of background work with Trina and Amos: the stock variations didn&rsquo;t have correct Odoo entries, and now every one does &mdash; cost price set, linked directly through. Organic information is still in progress. It lays a clean foundation for V2 with Tom, who is working on the liquid side; the two come together in the next version of the app."
+     }
+    ]
+   },
+   {
+    "title": "Sample submissions",
+    "accent": "orange",
+    "items": [
+     {
+      "lead": "The Sunraysia citrus",
+      "text": "The question came up about the blocked citrus samples. Josh&rsquo;s Burquettes submission was held for a separate customs check and never went further; Jimmy&rsquo;s went through. The fix is putting the species name on the form, where the habit had been to leave the crop/variety field blank &mdash; never a problem until this one. Woody&rsquo;s recollection for citrus was a <em>reticulata</em>-type name, but he wasn&rsquo;t certain, so worth pinning down properly before the next submission."
+     }
+    ]
+   },
+   {
+    "title": "AI, and what cuts through it",
+    "accent": "berry",
+    "items": [
+     {
+      "lead": "Hamilton",
+      "text": "Shared a marketing email from a company whose material he normally finds genuinely useful, and this one told him nothing he wanted to know about the product. The tells: repeated words nobody actually says, and sentences that lecture rather than lead &mdash; someone else added the dashes, &ldquo;every time I see dashes, I know it&rsquo;s AI.&rdquo; First time their email read like something he could have got out of ChatGPT himself."
+     },
+     {
+      "lead": "Jamie",
+      "text": "What cuts through the noise is a customer reading an email and knowing Hamilton wrote it. AI is a powerful tool and it is not going away, but there is a widening window for things that feel human &mdash; at a marketing and a sales level &mdash; and everyone leaning on the machine falls by the wayside in it. Where you have the time, form your own thoughts and write your own emails."
+     },
+     {
+      "lead": "The counter-example",
+      "text": "The Maxsil segment on Landline a fortnight ago has generated at least five unprompted grower conversations for one of the team, and &ldquo;heaps&rdquo; for another. Nothing sciency about it &mdash; footage of sampling and running the tools &mdash; and growers who knew nothing about silica now feel like they do, and want some."
+     }
+    ]
+   },
+   {
+    "title": "Technology &mdash; on-the-spot leaf analysis",
+    "accent": "orange",
+    "items": [
+     {
+      "lead": "The ask",
+      "text": "Woody flagged a video on the AEA site: a handheld nutrient monitor reading leaf and producing a mix on the spot, results immediately. Jamie has chased the supplier three times through their support line, off the back of a Canoponics conversation about testing issues &mdash; they have a customer who wants to buy one and run trials &mdash; and has had nothing back. Presumably inundated."
+     }
+    ]
+   }
+  ],
+  "mtg-notes-0814": []
+ },
+ "meetingStats": {
+  "Friday 17 July 2026": {
+   "chips": [
+    "MTD $647k",
+    "MTD &minus;12.1% vs LY",
+    "Open $1.16M &middot; 52",
+    "Leads 95",
+    "Tests 1,701 YTD"
+   ],
+   "note": "As presented on the day, restated ex GST so every week compares like-for-like. Tests = soil + leaf, calendar YTD."
+  },
+  "Friday 24 July 2026": {
+   "chips": [
+    "MTD $890k",
+    "MTD &minus;33% vs LY",
+    "Open $1.20M &middot; 62",
+    "Leads 97",
+    "Tests 1,736 YTD"
+   ],
+   "note": "The numbers as presented on the day, ex GST &mdash; the live tabs have moved on since. Tests = soil + leaf, calendar YTD."
+  },
+  "Friday 31 July 2026": {
+   "chips": [
+    "MTD $1.54M",
+    "MTD &minus;10% vs LY",
+    "Open $1.40M &middot; 66",
+    "Leads 100",
+    "Tests 1,867 YTD"
+   ],
+   "note": "The numbers as presented on the day, ex GST &mdash; the live tabs have moved on since. Tests = soil + leaf, calendar YTD."
+  },
+  "Friday 7 August 2026": {
+   "chips": [
+    "MTD $364k",
+    "MTD &minus;73% vs LY",
+    "Open $138k &middot; 7",
+    "Leads 104",
+    "Tests 1,900 YTD"
+   ],
+   "note": "The numbers as presented on the day, ex GST &mdash; the live tabs have moved on since. Tests = soil + leaf, calendar YTD."
+  },
+  "Friday 14 August 2026": {
+   "chips": [],
+   "note": "The as-presented numbers pin here once the meeting has run."
+  }
+ },
+ "gsbNotes": [
+  {
+   "lead": "Nutrient Solubiliser &mdash; our MYCRO-TEC&reg; SP",
+   "text": "Four microbes selected as the highest organic-acid producers GSB could screen. They release phosphorus that is locked up &mdash; to calcium in high-pH soils, to iron and aluminium in low-pH &mdash; with gluconic acid doing most of the work and citric acid secondary. Only 20&ndash;30% of applied P is ever taken up; the rest fixes. Chemistry can break those bonds too, but it re-locks within a week, whereas the microbes keep doing it as long as they survive. Grant frames it as a <strong>soil conditioner</strong>, and was clear it is <strong>not the same job as Lockout</strong>."
+  },
+  {
+   "lead": "Phosphorus gates nitrogen",
+   "text": "The bigger idea underneath it, from Kamal: when phosphate is liberated, nitrogen availability rises with it &mdash; DNA synthesis needs phosphorus, and without it the plant can&rsquo;t properly access nitrogen or the micronutrients either. That reframes SP from a phosphorus product into a nitrogen-efficiency product."
+  },
+  {
+   "lead": "Where it belongs",
+   "text": "<strong>In the furrow.</strong> Liquid inject is the Rolls-Royce &mdash; and the reason matters: even where seed-applied fungicide kills a patch, you get re-inoculation once the fungicide dissipates. Seed coating loses on real estate rather than biology, because everything wants to be on the seed and there is usually a fungicide already there. A coated compost granule holds spores beautifully but costs the grower more. Ground spray is last and least targeted."
+  },
+  {
+   "lead": "The only field result on SP",
+   "text": "A yield bump in canola on GSB&rsquo;s local ground where phosphorus was locked up by aluminium. That is the whole evidence base Grant offered &mdash; unquantified, one site, one crop, no replication described, and nobody asked. Worth recording as exactly that."
+  },
+  {
+   "lead": "DigestMate &mdash; likely MYCRO-TEC&reg; Digester",
+   "text": "Deliberately fungal-biased: three fungi plus an actinomycete, because in our farming systems the bacteria survive and the fungi don&rsquo;t. Enzymatic breakdown of cellulose, hemicellulose, lignin and pectin &mdash; canola being the hard one on lignin. Take just 1% of the carbon out of that matter and the cementing holding the cell wall together fails, so it degrades fast. It colonises internally and works from the inside out, which Jimmy had seen in a trial near Albury."
+  },
+  {
+   "lead": "And it competes for the substrate",
+   "text": "The same organisms consume the carbon and nitrogen that stubble-borne pathogens rely on, so there is less for them to carry into the next crop. GSB&rsquo;s trial work used cereal stubble and compared treated against untreated and against a nutrition-only product. Grant&rsquo;s competitive point: products that rely on enzymes or nutrition plus whatever biology is already in the paddock risk proliferating the resident pathogens along with everything else &mdash; his words were that they run a very real risk, not that it always happens."
+  },
+  {
+   "lead": "Feeding it",
+   "text": "Base recommendation is DigestMate onto stubble with about <strong>8 kg/ha of ammonium sulfate</strong>. Be clear why: ammonium sulfate wins <strong>on economics, not biology</strong>. Urea works too and is slightly more complex for the microbes; amino acid and protein sources are fine; fish hydrolysate may be better again because the nitrogen is directly available. Nitrate is ruled out. Whether it is the ammonium or the sulfur doing the work was asked directly and never answered, so we can&rsquo;t make a sulfur claim."
+  },
+  {
+   "lead": "Rain, and how long it will wait",
+   "text": "It needs rain to be at its best but will sit on stubble from early summer after harvest and survive until it comes, within reason. Three months of 45&deg;C will kill it. Apply any time after harvest."
+  },
+  {
+   "lead": "How to tell it&rsquo;s working",
+   "text": "It starts at the base of the stubble because that is where the residual moisture sits, so the field check is whether the stubble pulls out easily at the base. It will not look dramatic from the ute. The lab check is a C:N ratio before and after against an untreated control &mdash; a carbon reduction means it is working. Evidence to date is mostly South Australian cropping-belt grower feedback rather than replicated trials."
+  },
+  {
+   "lead": "Lockout",
+   "text": "Three microbes on an endophytic Trichoderma backbone, all chosen as very rapid growers. They colonise the rhizosphere and phytosphere, out-populate anything pathogenic, steal its breakfast and then act as a bouncer on the door. Good results on high-Fusarium Queensland soils; currently being trialled in cotton on Verticillium. Grant was upfront: <em>&ldquo;by no means 100% effective 100% of the time &mdash; that&rsquo;s not the world we live in in this biological space.&rdquo;</em>"
+  },
+  {
+   "lead": "Lockout is carbon-led, DigestMate is nitrogen-led",
+   "text": "Jamie asked whether Lockout&rsquo;s food source follows the same principles. Grant started with &ldquo;nitrogen, carbon&rdquo; then corrected himself in the room and settled on <strong>more so carbon</strong> in that circumstance. A clean contrast between two products that otherwise sound like they want the same thing."
+  },
+  {
+   "lead": "Lockout in orchards goes on at budswell",
+   "text": "Through budswell and certainly before flowering, to get colonisation established in the ground ahead of the pathogen becoming active. Grant, on the orchard he visited with Chelsea and Andrew where there is significant vascular disease. Lab reports are still pending, so his pathogen identification is a working assumption. This is the substance of the email he owes Chelsea."
+  },
+  {
+   "lead": "Soil temperature &mdash; the fungi start at 5&deg;C",
+   "text": "Bruce asked whether anything actually happens in the top 10 cm below 8&deg;C. Kamal: the fungal side proliferates <strong>from 5&deg;C</strong>, works across 5&ndash;30&deg;C with an optimum around <strong>25&deg;C</strong>, but <strong>bacteria stall below about 15&deg;C</strong>. Multiplication at 5&ndash;6&deg;C is real, just slower. That is the honest answer to &ldquo;it&rsquo;s too cold for biology&rdquo; on a winter-sown furrow &mdash; and a genuine point of difference against a bacterial-only inoculant. One to put back to GSB: the organism that differentiates SP is a bacterium, so cold-soil furrow work leans on the fungal fraction."
+  },
+  {
+   "lead": "We are outnumbered about a thousand to one",
+   "text": "Kamal&rsquo;s own arithmetic, and the most useful number in the meeting. We apply somewhere around <strong>1&ndash;3 million cells</strong>; resident soil populations are around <strong>a billion per gram</strong>, and a heavy Fusarium load is a billion per gram on its own. That is why the food source isn&rsquo;t optional, why proliferation rather than the applied dose does the work, and why a simple sugar feeds the wrong side. It also honestly qualifies the out-populate story above."
+  },
+  {
+   "lead": "The language rule",
+   "text": "Grant flagged it unprompted: he does not use <strong>kill</strong>, <strong>suppress</strong> or <strong>control</strong>. The word is <strong>balance</strong>. Partly APVMA exposure, partly because it is the accurate description &mdash; nothing is being killed, it is being consumed, which leaves less opportunity for pathogens to proliferate. Worth adopting across our copy, and worth noting it rules out any claim framed as a reduction in disease incidence."
+  },
+  {
+   "lead": "Molasses is out",
+   "text": "GSB has removed molasses as a food source entirely, and the same goes for glucose, sucrose and fructose. Simple sugars feed the resident pathogen load faster than they feed what we apply &mdash; see the thousand-to-one above. Use complex carbon instead: humic, fulvic, fish, seaweed. Kamal&rsquo;s framing &mdash; molasses is fast food, humic is a meal you have to cook. <strong>One exception:</strong> where a test shows beneficials already outnumber pathogens, molasses is fine to push proliferation."
+  },
+  {
+   "lead": "Nitrogen nutrition decides who you feed",
+   "text": "Jimmy put it up and Kamal confirmed it: feed a crop hard on nitrogen, accumulate nitrates, and the plant exudes free amino acids and simple sugars rather than complex ones &mdash; which is food for the pathogens rather than for the Trichoderma. It is the causal chain that connects a nutrition decision to a root-disease outcome without making a disease claim, and it explains why intensively fed horticulture gets root disease."
+  },
+  {
+   "lead": "Carbon sets the recommendation, not soil type",
+   "text": "Asked which soil types suit, Kamal declined the texture framing entirely: it depends on carbon. <strong>Under 2% soil carbon, add a humic starter</strong> with the biology so it can fire up. Above 2%, he is not recommending humic or sugar at all. The best combination he named: a carbon source, a nitrogen source like fish, and a seaweed extract."
+  },
+  {
+   "lead": "Carbon building is a five-to-ten-year play",
+   "text": "Fungal necromass is the stable form &mdash; melanin is very stable in soil. Kamal: visible at about five years, ten to judge it properly, and the fungal-to-bacterial rebalance sits on the same horizon. A strong year-one solubilisation response followed by tillage is a warning rather than a win, because year two it is gone. The room did not land on no-till dogma though: compacted ground needs oxygen for the fungi, and strategic tillage can sit alongside microbial application."
+  },
+  {
+   "lead": "Liquid for foliar, powder for soil",
+   "text": "The liquid is roughly <strong>80% metabolites and 20% spores</strong>. The metabolites do two jobs: inhibit pathogen growth, and signal the plant to switch on its own systemic resistance. That is why liquid beats powder as a foliar. Powder is mostly spores, which attach to carbon quickly and get through the rhizosphere &mdash; better for a root pathogen. And a granule and a powder are not the same thing."
+  },
+  {
+   "lead": "Calcium timing",
+   "text": "A field rule that has nothing to do with GSB&rsquo;s products and is immediately usable: <strong>never apply calcium when the stomata are shut</strong> &mdash; at night, or under scorching midday heat. Calcium moves on the transpiration stream, so apply when transpiration is running. The tell that it went on at the wrong time is calcium sitting in the leaf test while the fruit stays deficient, especially in citrus. This constrains our own standing Lockout mix, which carries PowerCal."
+  },
+  {
+   "lead": "Calcium can re-fix what SP just released",
+   "text": "Kamal flagged the interaction: where you have plenty of phosphate-solubilising bacteria working, applied calcium can re-fix the phosphorus they just released, and pH wants to sit around seven. Whether he meant soil pH or tank pH wasn&rsquo;t made clear &mdash; worth confirming before we put a number on it. Our standing cereal recipe pairs Lockout with humic and PowerCal, and the &ldquo;is there anything else worth adding&rdquo; question never got answered."
+  },
+  {
+   "lead": "Handling",
+   "text": "<strong>Never leave mixed product in a tank overnight.</strong> The spores go vegetative, block the sprayer, and die under pressure in that form. Spray pressure itself is not the problem &mdash; it is pressure over time, and a spray system only exposes them momentarily, so 15 bar in passing is fine. That is field experience rather than tested data. There is <strong>no EC or tank-concentration threshold</strong> &mdash; GSB has not trialled it and would not nominate a number."
+  },
+  {
+   "lead": "Fungicides",
+   "text": "Compatibility work exists for Trichoderma with a handful of registered fungicides and with glyphosate, but Grant framed that as a concession to grower nervousness rather than best practice &mdash; best practice is that the fungicide isn&rsquo;t there and the pathogens are out-populated instead. His broader position on fungicide overuse driving resistant Fusarium, Verticillium and black root rot is strongly held; paraphrase it, don&rsquo;t quote it. No compatibility statement was given for DigestMate with copper, despite the question naming copper."
+  },
+  {
+   "lead": "Phytophthora, and why chemistry struggles",
+   "text": "Worth having straight for potato, cherry, avocado and tree-crop conversations. Phytophthora is an oomycete, not a true fungus, which is part of why fungicides have had a hard time with it &mdash; and it is picking up resistance to most of them. Its spores carry a flagellum and <strong>swim</strong>: a film of water, mist, fog or irrigation water and it moves through a block overnight. GSB&rsquo;s answer is competition rather than control."
+  },
+  {
+   "lead": "Testing before recommending",
+   "text": "GSB&rsquo;s metagenomic soil test reports carbon, the fungal-to-bacterial ratio, and counts of both pathogens and beneficials. Around 1 fungi to 50 bacteria is fine in high-nitrogen annuals like wheat, 1:20 is the aspiration, and worse than 1:100 is a problem. Horticulture wants fungal dominance &mdash; and <strong>GSB has never yet measured a fungal-dominant soil</strong> in their testing. It matters commercially: bacteria-dominant, the plant keeps only 20&ndash;30% of its photosynthate; balanced, it keeps 50&ndash;60%."
+  },
+  {
+   "lead": "Compost teas &mdash; the objection is risk, not efficacy",
+   "text": "Grant conceded plainly that growers do get an effect and that increasing microbial diversity is a good thing they support. The objection is that on-farm brewing carries an unmanaged contamination risk, including a genuine health risk to anyone immunocompromised, and that the cost per microbe is poor against a manufactured product. If compost is used it needs to hit <strong>70&deg;C at the thermophilic stage</strong> and then humify &mdash; end up like a humic substance, not like compost &mdash; and every batch should be tested."
+  },
+  {
+   "lead": "FKF tested extremely well",
+   "text": "Kamal has run our FKF in the lab as a food source: Trichoderma proliferation was so high it filled a plate overnight, against the usual two days and two nights. He has already started recommending it to GSB&rsquo;s own testers. One caveat &mdash; he suspects a preservative in it that suppresses the bacterial side; we need to confirm whether there is one. And a caution we raised ourselves: something that wins on a plate can still lose in the paddock if it is a simple sugar."
+  },
+  {
+   "lead": "We still have no application rate",
+   "text": "The single biggest gap. Across the whole session the only rate given was the 8 kg/ha ammonium sulfate food source. Nothing on product rate, water rate, nozzle, filter, tank-mix order, jar test, seed-coat loading, granule blend rate, liquid or powder shelf life, or storage temperature. The granule figure of six months is borrowed off GSB&rsquo;s rhizobium granules; they expect to beat it because these organisms are spore-formed, and Grant will review it in a few months. Registration status was never mentioned. First follow-up."
+  },
+  {
+   "lead": "Follow-ups",
+   "text": "Grant is writing an agronomist&rsquo;s summary covering all three products and where each best fits, and has already posted a paper on selecting microbial products by formulation type to the shared WhatsApp group &mdash; several of the team still need adding to it. We are to send food-source samples for plate testing, as single products <em>and</em> as mixtures, at recommended dose and at 1% and 2%. Andrew to supply the macadamia flower pathogen names and send diseased samples. Grant owes Chelsea the orchard email once the lab reports land. Next catch-up to be booked sooner than the last gap."
+  },
+  {
+   "lead": "Two things nobody answered",
+   "text": "Whether DigestMate can be used <strong>in-crop, mid-season</strong> for disease protection was asked twice and drifted both times &mdash; no in-crop use is endorsed, and nobody should infer one. And horticultural leaf digestion has <strong>no trial data at all</strong>; Andrew is only just starting on nut trees, so any horticulture position is mechanism and theory only."
+  }
+ ],
+ "growthRoutine": {
+  "cadence": "per day",
+  "confirmed": true,
+  "manualUntilAutomated": true,
+  "actions": [
+   {
+    "k": "feedLikes",
+    "label": "Feed likes"
+   },
+   {
+    "k": "storiesLiked",
+    "label": "Stories"
+   },
+   {
+    "k": "pagesFollowed",
+    "label": "New pages followed"
+   },
+   {
+    "k": "perPageLikes",
+    "label": "Likes on each page"
+   },
+   {
+    "k": "perPageComments",
+    "label": "Comment on each page"
+   }
+  ],
+  "who": {
+   "instagram": "small crop growers",
+   "facebook": "small crop growers",
+   "linkedin": "small crop growers or people in the space",
+   "x": "small crop growers or people in the space"
+  },
+  "platforms": [
+   {
+    "k": "instagram",
+    "name": "Instagram",
+    "col": "#1B9690",
+    "targets": {
+     "feedLikes": 50,
+     "storiesLiked": "All",
+     "pagesFollowed": 10,
+     "perPageLikes": 3,
+     "perPageComments": 1
+    }
+   },
+   {
+    "k": "facebook",
+    "name": "Facebook",
+    "col": "#D9742B",
+    "targets": {
+     "feedLikes": 50,
+     "storiesLiked": "All",
+     "pagesFollowed": 10,
+     "perPageLikes": 3,
+     "perPageComments": 1
+    }
+   },
+   {
+    "k": "linkedin",
+    "name": "LinkedIn",
+    "col": "#8C4F8E",
+    "targets": {
+     "feedLikes": 50,
+     "storiesLiked": "N/A",
+     "pagesFollowed": 10,
+     "perPageLikes": 3,
+     "perPageComments": 1
+    }
+   },
+   {
+    "k": "x",
+    "name": "X",
+    "col": "#8f887d",
+    "targets": {
+     "feedLikes": 50,
+     "storiesLiked": "N/A",
+     "pagesFollowed": 10,
+     "perPageLikes": 3,
+     "perPageComments": 1
+    }
+   }
+  ]
+ }
+}
