@@ -536,7 +536,12 @@
     ]
    }
   ],
-  "mtg-notes-0814": []
+  "mtg-notes-0814": [
+   { "title": "MACTEST- survival check", "accent": "teal", "items": [
+     { "lead": "MACTEST- written from the MacBook", "text": "This section was committed straight to content.json from Nathan&rsquo;s MacBook, with the Windows machine out of the loop. It is here to prove the hourly rebuild cannot erase written content. It gets removed once the test passes." },
+     { "text": "MACTEST- a second paragraph with no bold lead-in, checking that shape renders too." }
+   ]}
+  ]
  },
  "meetingStats": {
   "Friday 17 July 2026": {
@@ -580,11 +585,15 @@
    "note": "The numbers as presented on the day, ex GST &mdash; the live tabs have moved on since. Tests = soil + leaf, calendar YTD."
   },
   "Friday 14 August 2026": {
-   "chips": [],
-   "note": ""
+   "chips": ["MACTEST- chip one", "MACTEST- chip two"],
+   "note": "MACTEST- placeholder note, removed once the survival test passes."
   }
  },
  "gsbNotes": [
+  {
+   "lead": "MACTEST- top of the GSB list",
+   "text": "Inserted from the MacBook to check an item added at the top of gsbNotes survives the hourly rebuild."
+  },
   {
    "lead": "Nutrient Solubiliser &mdash; our MYCRO-TEC&reg; SP",
    "text": "Four microbes selected as the highest organic-acid producers GSB could screen. They release phosphorus that is locked up &mdash; to calcium in high-pH soils, to iron and aluminium in low-pH &mdash; with gluconic acid doing most of the work and citric acid secondary. Only 20&ndash;30% of applied P is ever taken up; the rest fixes. Chemistry can break those bonds too, but it re-locks within a week, whereas the microbes keep doing it as long as they survive. Grant frames it as a <strong>soil conditioner</strong>, and was clear it is <strong>not the same job as Lockout</strong>."
