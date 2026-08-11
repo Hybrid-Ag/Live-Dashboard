@@ -11,6 +11,5 @@
   [7, "20 Aug", "Fruit Growers Victoria Conference", "event", "Hort · Exhibitor · McIntosh Centre, Shepparton · campaign running", false, "freegrowers"],
   [8, "22–24 Sep", "Henty Machinery Field Days", "event", "Broadacre · Liquid Inject playbook due by then", false],
   [9, "13–15 Oct", "Australian Almond Conference", "event", "Hort · Attending, not exhibiting · Nathan &amp; Josh", false],
-  [11, "Dec → early Jan", "Broadacre — Soil Testing", "campaign", "Assets through December, ramp up in the new year ahead of late-winter/spring testing", false],
-  [7, "Test", "Pia survival test", "campaign", "Added to mktcal.json 11/8 to prove a Marketing edit now survives the hourly bake. Remove once answered.", false]
+  [11, "Dec → early Jan", "Broadacre — Soil Testing", "campaign", "Assets through December, ramp up in the new year ahead of late-winter/spring testing", false]
 ]
