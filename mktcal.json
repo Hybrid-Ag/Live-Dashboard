@@ -1,121 +1,15 @@
 [
-  [
-    0,
-    "January",
-    "Hybrid Ag Brand Book 2026",
-    "strategy",
-    "Our positioning, voice, visual system and go-to-market direction — the strategy the rest of this calendar executes against. The full book is embedded.",
-    false,
-    "brandbook"
-  ],
-  [
-    1,
-    "Late Feb",
-    "Hort — Soil Testing",
-    "campaign",
-    "Chelsea Hall confirmed sampling time — samples taken April/May",
-    false
-  ],
-  [
-    2,
-    "3–5 Mar",
-    "Wimmera Machinery Field Days",
-    "event",
-    "Broadacre · Exhibitor · Site U8–9",
-    true,
-    "wimmera"
-  ],
-  [
-    4,
-    "7–8 May",
-    "Vic-Vid Demo Plot",
-    "event",
-    "Hort · Taranto Farms spinach trial",
-    true,
-    "vicvid"
-  ],
-  [
-    4,
-    "31 May",
-    "Cherry Growers Conference",
-    "event",
-    "Hort · Exhibitor · Adelaide",
-    true,
-    "cherry"
-  ],
-  [
-    5,
-    "June",
-    "Cherry Playbook — paid lead campaign",
-    "campaign",
-    "78 leads at ~$2.39 CPL · follow-through running",
-    true
-  ],
-  [
-    6,
-    "Thu 23 Jul",
-    "Hort — Frost readiness",
-    "social",
-    "Published · four-slide decision-led carousel · selected platform copy",
-    true,
-    "frost"
-  ],
-  [
-    6,
-    "Thu 31 Jul",
-    "Hort — Bud Optimisation",
-    "social",
-    "Published · four-slide bud &amp; flower readiness carousel · selected platform copy",
-    true,
-    "bud"
-  ],
-  [
-    7,
-    "Early Aug · TBC",
-    "GSB — SP, Lockout &amp; Digester launch",
-    "launch",
-    "Three products in the one Great Southern Biology launch · date locks after pricing + Grant review",
-    false
-  ],
-  [
-    7,
-    "20 Aug",
-    "Fruit Growers Victoria Conference",
-    "event",
-    "Hort · Exhibitor · McIntosh Centre, Shepparton · campaign running",
-    false,
-    "freegrowers"
-  ],
-  [
-    8,
-    "22–24 Sep",
-    "Henty Machinery Field Days",
-    "event",
-    "Broadacre · Liquid Inject playbook due by then",
-    false
-  ],
-  [
-    9,
-    "13–15 Oct",
-    "Australian Almond Conference",
-    "event",
-    "Hort · Attending, not exhibiting · Nathan &amp; Josh",
-    false
-  ],
-  [
-    11,
-    "Dec → early Jan",
-    "Broadacre — Soil Testing",
-    "campaign",
-    "Assets through December, ramp up in the new year ahead of late-winter/spring testing",
-    false
-  ],
-  [
-    7,
-    "Test",
-    "Test",
-    "campaign",
-    "Survival test from Pia's MacBook 12/8 — confirms mktcal.json edits persist through the hourly bake. Remove once confirmed.",
-    false
-  ]
+  [0, "January", "Hybrid Ag Brand Book 2026", "strategy", "Our positioning, voice, visual system and go-to-market direction — the strategy the rest of this calendar executes against. The full book is embedded.", false, "brandbook"],
+  [1, "Late Feb", "Hort — Soil Testing", "campaign", "Chelsea Hall confirmed sampling time — samples taken April/May", false],
+  [2, "3–5 Mar", "Wimmera Machinery Field Days", "event", "Broadacre · Exhibitor · Site U8–9", true, "wimmera"],
+  [4, "7–8 May", "Vic-Vid Demo Plot", "event", "Hort · Taranto Farms spinach trial", true, "vicvid"],
+  [4, "31 May", "Cherry Growers Conference", "event", "Hort · Exhibitor · Adelaide", true, "cherry"],
+  [5, "June", "Cherry Playbook — paid lead campaign", "campaign", "78 leads at ~$2.39 CPL · follow-through running", true],
+  [6, "Thu 23 Jul", "Hort — Frost readiness", "social", "Published · four-slide decision-led carousel · selected platform copy", true, "frost"],
+  [6, "Thu 31 Jul", "Hort — Bud Optimisation", "social", "Published · four-slide bud &amp; flower readiness carousel · selected platform copy", true, "bud"],
+  [7, "Early Aug · TBC", "GSB — SP, Lockout &amp; Digester launch", "launch", "Three products in the one Great Southern Biology launch · date locks after pricing + Grant review", false],
+  [7, "20 Aug", "Fruit Growers Victoria Conference", "event", "Hort · Exhibitor · McIntosh Centre, Shepparton · campaign running", false, "freegrowers"],
+  [8, "22–24 Sep", "Henty Machinery Field Days", "event", "Broadacre · Liquid Inject playbook due by then", false],
+  [9, "13–15 Oct", "Australian Almond Conference", "event", "Hort · Attending, not exhibiting · Nathan &amp; Josh", false],
+  [11, "Dec → early Jan", "Broadacre — Soil Testing", "campaign", "Assets through December, ramp up in the new year ahead of late-winter/spring testing", false]
 ]
