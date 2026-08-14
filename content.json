@@ -536,7 +536,187 @@
     ]
    }
   ],
-  "mtg-notes-0814": []
+  "mtg-notes-0814": [
+   {
+    "title": "Values &mdash; speed from conversation to outcome",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Jamie",
+      "text": "Handed the values shout-out to Nathan against <em>Find a Way</em> and <em>Learn, Challenge, Improve; Repeat</em> &mdash; the speed at which something goes from a casual conversation to a finished thing. The example was that morning: a passing suggestion about a fix he assumed would take a fortnight, already done by the time he sat down."
+     }
+    ]
+   },
+   {
+    "title": "From the field",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "The set",
+      "text": "Bruce&rsquo;s triticale and his composted manure pile, Nate Strawbridge&rsquo;s Commodus barley and Chelsea&rsquo;s Montague stone fruit. Full detail sits under each photo above."
+     },
+     {
+      "lead": "Parked for Bruce",
+      "text": "Both of Bruce&rsquo;s shots came with questions and he wasn&rsquo;t on the call. The triticale is the live one &mdash; over east it is planted deliberately, where in WA it mostly turns up out of dirty wheat seed, and what it is being grown <em>for</em> is worth asking. The composted manure at Australian Fresh Milk Holdings is the other."
+     }
+    ]
+   },
+   {
+    "title": "Sales &mdash; month to date",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Where we sit",
+      "text": "Lagging last year by a fair margin, and Jamie&rsquo;s read is that the shape of the month matters as much as the number: at the same day last year we were at $1.7M and only finished at $2.5M, so most of last August landed early. The gap now is not the gap at month end."
+     },
+     {
+      "lead": "The top-20 exercise",
+      "text": "Jamie is finishing a workbook comparing the top 20 clients for August last year against August so far this year. The drop-off is immense and the list is a very different one. Some of it is timing rather than loss &mdash; Hamilton&rsquo;s example was Wormtech, big orders last August and expected end of September this year. It goes out to the team to cast eyes over; if a client on it looks explainable, say so."
+     },
+     {
+      "lead": "Budget line &mdash; Hamilton&rsquo;s ask",
+      "text": "Last year is no longer the right benchmark, because the business has gone backwards against it. What the graph needs is the month&rsquo;s budget carried across the days, so the question becomes where we should be today rather than where we were a year ago. Hamilton&rsquo;s working figure was around $2.45M for the month and roughly $1,170k by the 13th."
+     },
+     {
+      "lead": "Chart changes agreed",
+      "text": "Contribution Margin by Territory Manager comes off &mdash; the data isn&rsquo;t pulling through correctly, so it goes rather than sits there wrong. FYTD Total Sales by Territory Manager takes its place, with a month-to-date version beside it so the year and the month read side by side."
+     },
+     {
+      "lead": "Testing",
+      "text": "Still tracking about on par with last year once the AgVita SAP tests are counted in."
+     }
+    ]
+   },
+   {
+    "title": "Operations",
+    "accent": "orange",
+    "items": [
+     {
+      "lead": "The board",
+      "text": "Amos walked the overdue orders. Rich Glenn in production and close to finished; Smok and one other for dispatch that day; Bale sent Thursday; Knight dispatched Thursday; Nutrien picked up that day. CRC is a placeholder against the Hussey order and waiting on the customer to confirm a delivery date. One load is sitting finished and ready, waiting on Gus Campbell to collect. The Montague orders are either delivered, going that day, or Monday."
+     },
+     {
+      "lead": "Jimmy Kellaher",
+      "text": "Booked for dispatch Monday. The original blend wasn&rsquo;t working as a liquid, so it was tweaked and re-sampled to be sure before it goes."
+     },
+     {
+      "lead": "Rich Glenn and Ellie",
+      "text": "Hamilton needs Rich Glenn on the ground for an application early next week &mdash; Amos is aiming for Friday afternoon or Monday. For Ellie, Chris is happy to take delivery and hold it in the shed so it is ready the moment they hear back, rather than wait. Amos is calling him Monday on the calcium; it may be a swap, or the liquids go and the rest follows once Zadco lands."
+     }
+    ]
+   },
+   {
+    "title": "Part IBC charging",
+    "accent": "orange",
+    "items": [
+     {
+      "lead": "The problem",
+      "text": "Additional charges on a separate invoice line generate the most questions of anything we send out. The cost behind it is real: a part shuttle takes the same pallet space and the same truck, we still buy the IBC, and on return we pay to ship it back, clean it, inspect it and sometimes cut it up. That is margin, and growers should hear about it at quote time rather than discover it on an invoice."
+     },
+     {
+      "lead": "The proposal",
+      "text": "Build the charge into the per-litre price when quoting and explain it there. Jamie&rsquo;s framing for the conversation: price 200 L in 20s against 200 L in a part shuttle, and be straight that most competitors won&rsquo;t do part shuttles at all &mdash; even with the fee the grower is better off."
+     },
+     {
+      "lead": "Where it landed",
+      "text": "Not settled, deliberately, with the room thin. Chelsea prefers it built in and asked for it in writing to mull over. Hamilton pointed out the separate line exists for certified partners, whose own calculations have to reconcile with ours. Nathan adds the fee himself on CP quotes and was blunt that the old build-in-then-divide-back approach was painful with codes in Xero, where a flat part-shuttle charge has been a breeze. The likely landing is a line item for CPs and built into the price direct to customer. Jamie is sending the detail round by email and it gets hashed out with more of the team present."
+     },
+     {
+      "lead": "The real point",
+      "text": "Which mechanism we pick is close to negligible. What matters is that the conversation happens up front, so nobody is surprised."
+     }
+    ]
+   },
+   {
+    "title": "Organic certification",
+    "accent": "orange",
+    "items": [
+     {
+      "lead": "Heavy metals &mdash; wider than we thought",
+      "text": "The agreement covers the whole range for heavy metal testing, not just the one product that raised the issue. That was understood as product-specific along the chain and wasn&rsquo;t &mdash; Jamie and Amos both put their hand up for it. Away now: Aminoplex (result already back, sent July), FKF, K-Max, OptiCal and PowerCal, and OptiTrace boron, copper, iron, manganese, moly and zinc. Amos is reconciling the rest against the full organic list and sending the gaps. Turnaround is 7&ndash;10 business days. If an order is held awaiting a heavy metals test, that is why."
+     },
+     {
+      "lead": "Per batch, ongoing",
+      "text": "Testing is per batch, so a new batch needs a new test. Nate should forecast organic traces into the system even where orders aren&rsquo;t firm, so stock-take shows a batch running low early enough to get testing underway. BudMax and OptiTrace Max are going forward now for the organic growers coming into spring. It is an ongoing requirement, though a run of clean results makes it a fair conversation at the next audit."
+     },
+     {
+      "lead": "Labels",
+      "text": "All approved except FKF, K-Max and 0030 &mdash; positioning of information and some additional asterisks. Amos has resubmitted and the request is confirmed as processed, with approval expected shortly. Product can technically ship without the label, since it is the label and not the product that is outstanding."
+     },
+     {
+      "lead": "Who it touches",
+      "text": "Effectively Chelsea and Nate. Bruce has an organic wheat grower who uses very little and Jimmy an organic garlic grower doing small volumes; nothing significant in Queensland. Jamie&rsquo;s call is to over-communicate it anyway so the whole team can answer the question if it comes up. Worth noting the direction of travel: 2026 is the biggest organic batch we have ever made, in 30,000 L runs."
+     }
+    ]
+   },
+   {
+    "title": "Calcium chloride at Montague",
+    "accent": "berry",
+    "items": [
+     {
+      "lead": "The situation",
+      "text": "Montague hold about 18 shuttles of calcium chloride bought through a tender, and want it gone rather than carried into next year. They don&rsquo;t have to use all of it. Their preference was the apples, to maximise calcium; cherries were raised and steered away from. They are not replacing PowerCal &mdash; this is on top."
+     },
+     {
+      "lead": "Why it matters",
+      "text": "Chelsea inferred it was in the system before anyone told her: leaf chloride was significantly high last year with no matching soil chloride. She asked point blank whether they were spraying calcium chloride and was told no &mdash; which was probably honest, because the label reads Cal 175 and, as Hamilton put it, growers often have no idea what form they are using. That sent everyone down a rabbit hole of water quality and Humix at the rhizosphere. Colour in their Pinks is their biggest hindrance, and excess chloride does much the same thing as nitrogen applied too late."
+     },
+     {
+      "lead": "The numbers",
+      "text": "Cal 175 is 17.5% calcium and 31% chloride. Ten foliar applications at 10 L/ha puts about 31 units of chloride straight onto the leaf, against a soil test that might total something similar. For a highly mobile nutrient Hamilton called that a no-go zone."
+     },
+     {
+      "lead": "Where it landed",
+      "text": "Fertigate it, don&rsquo;t spray it &mdash; in with the OptiCal fertigation at late flower, the same trick already used to carry leftover thiocal and thio-K in on an existing application rather than adding a pass. 50 L/ha, potentially up to 100. Fertigated, the chloride displaces through the soil instead of sitting on leaf and fruit; it disassociates almost immediately and about 75 mm of rain moves the lot, which is why soil tests before and after rain read so differently. The young trees are the better home for it than the mature blocks &mdash; 18 ha, already on a fortnightly fertigation, growth lost last year to make up, and chloride is a vegetative nutrient. The seven hectares of pears won&rsquo;t make a dent. Leaf tests through the season, and cut it the moment chloride climbs."
+     },
+     {
+      "lead": "Jamie&rsquo;s framing",
+      "text": "If the product weren&rsquo;t already sitting on the farm with a requirement to use it up, nobody here would put it in the program. It isn&rsquo;t that it is bad &mdash; it is a lot of calcium, cheap, and reasonably cost-effective fertigated &mdash; it is that the program doesn&rsquo;t need it. Tuesday&rsquo;s session with Montague partly exists so their team knows where <em>not</em> to use it; some have already gone rogue with PowerCal and OptiTrace boron, which are better things to go rogue with."
+     }
+    ]
+   },
+   {
+    "title": "Marketing",
+    "accent": "berry",
+    "items": [
+     {
+      "lead": "Brochures",
+      "text": "Working through the list &mdash; FKF, BudMax and the Great Southern Biology products. OptiCal and PowerCal are on the desk now, and the forms discussion above goes straight into them: five concepts for the last page, with a comparison of forms the likely pick as a tasteful way in rather than going straight at a product. Hamilton&rsquo;s addition &mdash; make sure salt index is in there. Chelsea is sending her forms table through."
+     },
+     {
+      "lead": "Great Southern Biology",
+      "text": "A brief has gone to Grant as a dashboard &mdash; every brochure draft plus the questions still outstanding, so his answers come back before anything goes out."
+     },
+     {
+      "lead": "Fruit Growers Victoria",
+      "text": "Thursday 20 August, and Chelsea is on it solo with Nathan in Queensland. She knows most of who will be there and the mingling is concentrated into morning tea, lunch and the end rather than the whole day. Heavy rain forecast for the day may well help the turnout &mdash; nobody will be in the orchard. Everything should be ready in time."
+     },
+     {
+      "lead": "A lead worth chasing",
+      "text": "Anthony &mdash; Amos reckons Hamilton is the one most likely to get him to pick up the phone."
+     }
+    ]
+   },
+   {
+    "title": "Next week",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Chelsea",
+      "text": "The Montague presentation Monday morning &mdash; 85&ndash;90% through and being cut back rather than added to. It covers why you would use one form over another, where acetates and sulfates fit and where they don&rsquo;t, and it goes to the sales chat first for a factual once-over. Great Southern microbiome reports are landing, including an interesting fusarium one to go through with Grant."
+     },
+     {
+      "lead": "Hamilton",
+      "text": "Hussey&rsquo;s Tuesday to knock over their soils, Brisbane Wednesday with Russell Barbrey and Elders, Bundaberg Thursday and back that night, office Friday."
+     },
+     {
+      "lead": "Nate Strawbridge",
+      "text": "Monday Zoom with Grant and a local grower on a metagenomic test. Catching up with Sam at DJ&rsquo;s, who wants to do more work in strawberries. Program rounds, and a protected cropping day at Berri he is weighing up &mdash; a long way to go for one day."
+     }
+    ]
+   }
+  ],
+  "mtg-notes-0821": []
  },
  "meetingStats": {
   "Friday 17 July 2026": {
@@ -580,6 +760,16 @@
    "note": "The numbers as presented on the day, ex GST &mdash; the live tabs have moved on since. Tests = soil + leaf, calendar YTD."
   },
   "Friday 14 August 2026": {
+   "chips": [
+    "MTD $847k",
+    "MTD &minus;50% vs LY",
+    "Open $1.71M &middot; 93",
+    "Quotes $420k &middot; 18",
+    "Tests 1,907 YTD"
+   ],
+   "note": "The numbers as presented on the day, ex GST &mdash; the live tabs have moved on since. Tests = soil + leaf, calendar YTD."
+  },
+  "Friday 21 August 2026": {
    "chips": [],
    "note": ""
   }
@@ -792,5 +982,16 @@
     }
    }
   ]
+ },
+ "budget": {
+  "fy": "FY26&ndash;27",
+  "source": "Set by the sales manager, Aug 2026. Confident to November; revised after that.",
+  "months": {
+   "2026-07": 1513758,
+   "2026-08": 2000000,
+   "2026-09": 1400000,
+   "2026-10": 1200000,
+   "2026-11": 750000
+  }
  }
 }
