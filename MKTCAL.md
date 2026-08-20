@@ -24,7 +24,7 @@ One line per chip. Each line is a list of six or seven values, in this order:
 | 4 | Type | One of `event` · `campaign` · `social` · `launch` · `strategy`. Sets the colour. |
 | 5 | Note | The small grey line under the title. |
 | 6 | Done | `true` adds the ✓ tick and greys the chip. `false` for anything upcoming. |
-| 7 | Page *(optional)* | Leave it off unless the chip should open an embedded page. Valid values today: `brandbook`, `wimmera`, `vicvid`, `cherry`, `frost`, `bud`, `freegrowers`. |
+| 7 | Page *(optional)* | Leave it off unless the chip should open an embedded page. Valid values today: `brandbook`, `wimmera`, `vicvid`, `cherry`, `frost`, `bud`, `freegrowers`, `hampers`. |
 
 Rules that will bite if broken:
 
