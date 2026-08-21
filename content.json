@@ -716,7 +716,179 @@
     ]
    }
   ],
-  "mtg-notes-0821": []
+  "mtg-notes-0821": [
+   {
+    "title": "Values &mdash; challenge everything",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Jamie",
+      "text": "Called out Amos against <em>Challenge everything; no sacred cows</em>. The point was not that every challenge changes the decision, but that people can raise one openly and know it will be heard."
+     },
+     {
+      "lead": "Bruce&rsquo;s oats",
+      "text": "A dense oat crop with a buggy in the stand. Bruce was away and the room did not know whether it was his own place or a client&rsquo;s, so the location stays unlabelled until he confirms it."
+     },
+     {
+      "lead": "Fruit Growers Victoria",
+      "text": "Nate and Chelsea&rsquo;s stand, story capture and Apple Nutrition Playbook were the other opening shots. The Cherry booklet had already generated strong inquiry and the smaller pile left over suggested the Apple booklet travelled well too, but Jamie still wants the direct grower feedback rather than reading too much into leftovers."
+     }
+    ]
+   },
+   {
+    "title": "Sales &mdash; August shape and pipeline",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Where the month sits",
+      "text": "August was tracking a little behind the revised profile. The budget had deliberately been pulled back slightly against last year and moved within Q1, with some work pushed into Q2, to reflect when the orders are expected to land. The gap was not read as lost business: a large volume was still sitting in quotes and the Fusion F order had gone through that morning."
+     },
+     {
+      "lead": "People and margin",
+      "text": "Chelsea led month-to-date and financial-year-to-date; Hamilton was strong for the month; much of Nate&rsquo;s expected volume was still in the quote pipeline. Margins were holding."
+     },
+     {
+      "lead": "Testing",
+      "text": "Soil tests were a little ahead of last year. Combined sap work was broadly level, but the mix had moved: AgVita SAP was ahead and NovaCrop DSA was behind."
+     }
+    ]
+   },
+   {
+    "title": "Operations",
+    "accent": "orange",
+    "items": [
+     {
+      "lead": "Organic holds",
+      "text": "The organic-related holds on the first overdue orders had effectively cleared. Most priority label approvals and heavy-metal results were back; two less-used labels and the remaining samples on Paige&rsquo;s desk were still to close out. The expectation in the room was that the remainder should clear within about a week."
+     },
+     {
+      "lead": "Dispatch and production",
+      "text": "Two Handpicked Tasmania orders were due out that day and Montague Farms work was scheduled for the following week. Dry blends were about half a day behind and booked through Thursday 27 August. Liquids were three to four days behind, with catch-up planned early in the week of 24 August."
+     },
+     {
+      "lead": "Jamie",
+      "text": "Will spend about half a day in the Wangaratta warehouse while in Victoria, both to help and to understand the manufacture, pick-pack and dispatch process properly."
+     }
+    ]
+   },
+   {
+    "title": "Marketing &amp; enquiries",
+    "accent": "berry",
+    "items": [
+     {
+      "lead": "What the dashboard should answer",
+      "text": "Nathan narrowed the marketing read to reach, views, engagement and new followers. Not every platform is connected because some history sits behind paid integrations, but the four-week direction was up."
+     },
+     {
+      "lead": "Next work",
+      "text": "Fruit Growers Victoria gets a SWOT after Nathan returns. Great Southern Biology, Henty and early Christmas-hamper planning sit in the next month. Hamilton has been asked for a three-month view of small-crop opportunities; the same forward view is needed across the other segments so the marketing calendar can be built around what sales is actually approaching."
+     },
+     {
+      "lead": "Inquiry workflow &mdash; now live",
+      "text": "Inquiries have moved out of the Marketing tab into their own workflow, combining the useful Notion and Odoo history in one place. Paige enters new inquiries there and the team stops using Odoo Helpdesk for them. Website and manual inquiries feed the same list and trigger an SMS to Nathan and Jamie for fast follow-up."
+     }
+    ]
+   },
+   {
+    "title": "Week of 24 August",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Jamie",
+      "text": "Melbourne and Wangaratta Monday to Thursday for Josh Richardson&rsquo;s start, office and target-list work, the Piangil discussion and time in the warehouse. Back in Perth Thursday and in the office Friday."
+     },
+     {
+      "lead": "Hamilton",
+      "text": "A reasonably open week to follow up the Queensland meetings and send the leaf- and soil-testing material back to the Bundaberg contacts."
+     },
+     {
+      "lead": "Joshua Hull",
+      "text": "Chase the testing for Jimmy, Piangil on Wednesday 26 August, and schedule the new-season leaf testing with Nate&rsquo;s help. Use the open Monday and Friday slots to keep those moving."
+     }
+    ]
+   },
+   {
+    "title": "Organic information, Digesta and CMS",
+    "accent": "orange",
+    "items": [
+     {
+      "lead": "Organic restrictions",
+      "text": "Amos had the new product-by-product restriction sheet and would circulate it as the interim reference. Nathan&rsquo;s follow-up was to bring the classifications into the dashboard price list so the sales team can see what a grower may use without translating the certificate each time."
+     },
+     {
+      "lead": "Great Southern Biology",
+      "text": "<strong>Digesta</strong> remains the working product name. Grant had passed roughly a dozen launch-document questions to Isaac; the team launch information waits for those answers rather than filling the gaps itself."
+     },
+     {
+      "lead": "CMS",
+      "text": "No reply to the latest email. Hamilton will call."
+     }
+    ]
+   },
+   {
+    "title": "Technical opportunity &mdash; Elders and Queensland",
+    "accent": "berry",
+    "items": [
+     {
+      "lead": "The opening",
+      "text": "Hamilton&rsquo;s Queensland meetings with Neil James and Russ Parberry surfaced a possible Elders pathway. Neil&rsquo;s new-product role is looking for a dependable foliar calcium, a go-to plant stimulant and trace products that are easier to place commercially. Hamilton will prepare a product-and-placement list and keep exploring a working relationship with Russ."
+     },
+     {
+      "lead": "Testing and support",
+      "text": "Neil is considering more centralised soil-test intake, preferred laboratories and consistent output. The room could see a place for AI Ag in graphing and interpretation, but the support model matters: Elders would rather resell a supplier-supported range than carry the training burden of importing or owning a white label."
+     },
+     {
+      "lead": "No range decision yet",
+      "text": "Existing Hybrid Ag products, a small distinct offer and some reformulation were all discussed. None was approved. The specialty-margin figures raised in the room were working numbers for the opportunity, not a new price decision."
+     }
+    ]
+   },
+   {
+    "title": "Technical field huddle",
+    "accent": "green",
+    "items": [
+     {
+      "lead": "Hussey&rsquo;s lettuce",
+      "text": "The mixed-leaf crop is seeded together so it can be harvested as one mix. The photos showed substantial strike gaps. Seed depth was Hamilton&rsquo;s first suspicion; blocked tubes, chemical effects and early laser-weeder scorch were also raised. None is a diagnosis yet because he had not worked through the failure with Warwick."
+     },
+     {
+      "lead": "Bed preparation",
+      "text": "The bed polisher followed ripping and bed forming as the third pass. Beds are remade for every crop, in places up to five times a year. The finish is excellent for seeding, but the repeated tillage remains the structural trade-off. The laser weeder footage showed the system in action without claiming a result."
+     },
+     {
+      "lead": "M&amp;J Produce",
+      "text": "Hamilton sampled potatoes from the area treated with Soil Primer and Nutrient Solubiliser. The canopy looked strong; there was no leaf result yet, so the photo is a sampling checkpoint rather than an efficacy claim."
+     },
+     {
+      "lead": "Red Rock macadamias",
+      "text": "The orchard was generally carrying good flower, with serious damage in local hotspots. The sequence showed spray burn, citrus blossom bug feeding and raceme dieback, with secondary fungal pressure discussed. Whether the insect vectors fungi or simply opens an infection point is unknown. Spraying had begun, but the meeting did not establish a treatment result."
+     }
+    ]
+   },
+   {
+    "title": "Actions to carry forward",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Jamie",
+      "text": "Get the direct Fruit Growers Victoria feedback, set Josh Richardson&rsquo;s Monday-morning work and target list, and use the Victoria trip to build the warehouse understanding discussed in the meeting."
+     },
+     {
+      "lead": "Hamilton",
+      "text": "Prepare the Elders product-and-placement list, follow up Russ and the Bundaberg testing items, explore a Gatton visit, and call CMS."
+     },
+     {
+      "lead": "Nathan Katseli",
+      "text": "Complete the Fruit Growers Victoria SWOT, carry the organic restrictions into the price list, and connect the next three months of sales opportunities to the marketing calendar."
+     },
+     {
+      "lead": "Nate, Jamie and Hamilton",
+      "text": "Prepare the questions for an open technical conversation with Kim Green and Tony about the yield issue. Work from the evidence and shared ground; the room did not accept fertiliser as the proven cause."
+     }
+    ]
+   }
+  ],
+  "mtg-notes-0828": []
  },
  "meetingStats": {
   "Friday 17 July 2026": {
@@ -771,6 +943,16 @@
    "note": "The numbers as presented on the day, ex GST &mdash; the live tabs have moved on since. Tests = soil + leaf, calendar YTD."
   },
   "Friday 21 August 2026": {
+   "chips": [
+    "MTD $1.06M",
+    "MTD &minus;49.4% vs LY",
+    "Open $1.20M &middot; 78",
+    "Enquiries 141",
+    "Tests 2,002 YTD"
+   ],
+   "note": "The numbers on the dashboard as presented on the day, ex GST &mdash; the live tabs have moved on since. Tests = soil + leaf, calendar YTD. The sales screen also showed $449k across 15 open quotes and $2.55M FYTD."
+  },
+  "Friday 28 August 2026": {
    "chips": [],
    "note": ""
   }
