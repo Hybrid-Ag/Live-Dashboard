@@ -953,12 +953,12 @@
   "Friday 21 August 2026": {
    "chips": [
     "MTD $1.06M",
-    "MTD &minus;49.4% vs LY",
+    "MTD &minus;21.4% vs budget",
     "Open $1.20M &middot; 78",
     "Enquiries 141",
     "Tests 2,002 YTD"
    ],
-   "note": "The numbers on the dashboard as presented on the day, ex GST &mdash; the live tabs have moved on since. Tests = soil + leaf, calendar YTD. The sales screen also showed $449k across 15 open quotes and $2.55M FYTD."
+   "note": "The numbers on the dashboard as presented on the day, ex GST &mdash; the live tabs have moved on since. The August budget was $2.00M; budget to 21 August was $1.35M using the dashboard's calendar-day pacing. Tests = soil + leaf, calendar YTD. The sales screen also showed $449k across 15 open quotes and $2.55M FYTD."
   },
   "Friday 28 August 2026": {
    "chips": [],
