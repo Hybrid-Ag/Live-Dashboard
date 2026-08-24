@@ -58,7 +58,7 @@ body{margin:0;font-family:'Inter',system-ui,sans-serif;background:var(--paper);c
 .ops-intro p{margin:9px 0 0;max-width:84ch;color:var(--muted);font-size:14.5px}
 
 /* ── KPI tiles ── */
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);
   column-gap:30px;row-gap:22px;padding:28px max(40px,calc((100% - 1350px)/2)) 12px;max-width:1350px;margin:0 auto}
 .kpi{position:relative;padding:3px 0 4px 15px}
 .kpi::before{content:'';position:absolute;top:5px;bottom:7px;left:0;width:3px;background:var(--ink)}
@@ -103,6 +103,8 @@ a{color:var(--teal)}
 .rot > .sheet:nth-child(3n+2){--a:var(--orange)}
 .rot > .sheet:nth-child(3n+3){--a:var(--berry)}
 @media(max-width:1100px){.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1000px){.kpis{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.kpis{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:900px){.g3,.g2,.g4{grid-template-columns:1fr}}
 
 .tw{background:#fff;border:1px solid var(--line);border-radius:var(--r);
@@ -152,6 +154,7 @@ tbody tr:last-child td{border-bottom:0}
 @media(max-width:1000px){.session{grid-template-columns:1fr}}
 
 /* timeline */
+.tl tr.now td{background:#fbf4e8}
 .tl td:first-child{font-family:var(--oswald);font-weight:600;font-size:12px;letter-spacing:.06em;
   text-transform:uppercase;white-space:nowrap}
 
@@ -237,6 +240,7 @@ blockquote .who{display:block;margin-top:6px;font-size:12px;color:var(--muted)}
         <li><b>Production-line packing</b> &mdash; instructions on the wall, a sample to copy. Paige + Monique + Chelsea ran it in about a week.</li>
         <li><b>Premium branded items</b> &mdash; the black beanie in every crate, engraved Yeti for the top tier. Lifted the whole experience.</li>
         <li><b>Pia&rsquo;s documentation</b> &mdash; allocation list, conditions sheet, tier-based packing list, supplier context, live delivery checklist. This is why 2026 is repeatable.</li>
+        <li><b>Family-friendly product mix</b> &mdash; the crate lands at the house, not the shed. Produce the whole family eats is why it gets remembered (and why the thank-you note came from the whole family).</li>
         <li><b>Supplier collaboration</b> &mdash; discounts and flexibility nearly everywhere (15% off Kaesler, 35% off Handpicked, freight covered on dried fruit, nine bonus flour bags from Col at Taravale for staff).</li>
       </ul>
     </div>
@@ -245,7 +249,7 @@ blockquote .who{display:block;margin-top:6px;font-size:12px;color:var(--muted)}
       <ul>
         <li><b>Calendar ownership was unclear</b> &mdash; Amos pre-ordered stock calendars for VARD without flagging Marketing. 2026: Marketing owns calendars, full stop.</li>
         <li><b>Allocations changed mid-flight</b> &mdash; 2026 gets a firm cut-off date; a late case has to be genuinely strong.</li>
-        <li><b>Content capture didn&rsquo;t happen</b> &mdash; deliveries ran through December and the reciprocity bar with sales was still empty. 2026: expectations set on day one, built through individual asks.</li>
+        <li><b>Content capture didn&rsquo;t happen</b> &mdash; deliveries ran through December and the reciprocity bar with sales was still empty. 2026: expectations set on day one, built through individual asks. The one asset that did get captured was <a href="https://photos.app.goo.gl/KoNbPUnC6EJUeksG7" target="_blank" rel="noopener">Woody&rsquo;s delivery video</a> &mdash; the whole 2025 haul.</li>
         <li><b>Card-signing session never ran</b> &mdash; ad-hoc notes instead. 2026: formal boardroom session, aligned with the team&rsquo;s in-person review days.</li>
         <li><b>Hats arrived dusty</b> &mdash; a $1 lint roller fixes it. Now a pre-pack QC step.</li>
         <li><b>Recipe book + territory map didn&rsquo;t make the cut</b> &mdash; both carry into 2026.</li>
@@ -257,12 +261,14 @@ blockquote .who{display:block;margin-top:6px;font-size:12px;color:var(--muted)}
     <thead><tr><th>Item</th><th>Supplier</th><th>Contact</th><th>Notes from 2025</th></tr></thead>
     <tbody>
       <tr><td>Crates (3 sizes) + acrylic engraved lids</td><td>Aussie Wine Boxes &amp; Crates, Bendigo</td><td>Maree</td><td>Husband-and-wife operation &mdash; <b>book early, lead time is the whole game</b>. She re-cut the small crate to hold budget; call her first in 2026 (and take her a box of chocolates).</td></tr>
-      <tr><td>Wine (one bottle per hamper)</td><td>Kaesler &middot; Lienert &middot; Handpicked &middot; Longview</td><td>via Nate S. &amp; Lintern</td><td>SA regenerative/organic mix + client vineyards. 15&ndash;35% discounts; Longview at $19.60/bottle. Never return a client&rsquo;s own label to them.</td></tr>
+      <tr><td>Wine (one bottle per hamper)</td><td>Kaesler &middot; Lienert &middot; Handpicked &middot; Longview</td><td>via Nate S. &amp; Lintern</td><td>SA regenerative/organic mix + client vineyards. 15&ndash;35% discounts; Longview at $19.60/bottle. Never return a client&rsquo;s own label to them. 2026 shortlist also carries <b>Hither &amp; Yon</b>, <b>Inkwell</b> and <b>Torbreck</b> off the SA regenerative/organic list, plus client vineyards.</td></tr>
       <tr><td>Macadamias &mdash; roasted/salted + cold-pressed oil</td><td>Red Rock Macadamias</td><td>Jason Klotz</td><td>Wholesale pricing. Premium provenance &mdash; a client Woody has built into a serious account.</td></tr>
       <tr><td>Organic whole almonds</td><td>Manna Farms (Dave&rsquo;s Nuts)</td><td>David Keens</td><td>Personally delivered the almonds. Easy to work with.</td></tr>
       <tr><td>Dried fruits</td><td>Olive Grove Fruits (Little Gemz)</td><td>Sharee Gallace</td><td>Discounted + covered more than half the freight; wholesale on offer if orders continue.</td></tr>
-      <tr><td>Olive oil</td><td>Goldi (Oasis)</td><td>Owen Symington</td><td>$9 off per bottle.</td></tr>
+      <tr><td>Olive oil</td><td>Goldi (Oasis) &middot; Cockatoo Grove</td><td>Owen Symington</td><td>$9 off per bottle from Goldi. Cockatoo Grove is the second approved source on the inclusions list &mdash; decide which one runs in 2026.</td></tr>
       <tr><td>Chemical-free flour</td><td>Taravale</td><td>Col Harper</td><td>15+ years regenerative &mdash; brand story aligns. Bulky and heavy though: challenge whether it stays inside the crate in 2026.</td></tr>
+      <tr><td>Licorice &mdash; chemical-free substitute</td><td>&mdash;</td><td>&mdash;</td><td>Carry-over inclusion, pairs with the Taravale flour. Supplier to confirm at the October sourcing pass.</td></tr>
+      <tr><td>Branded notepads</td><td>&mdash;</td><td>&mdash;</td><td>Replaced the Hybrid diary &mdash; cheaper, used more, no dated stock left over. Carry into 2026.</td></tr>
       <tr><td>Balsamic vinegar</td><td>Random Harvest</td><td>&mdash;</td><td>Large hampers only.</td></tr>
       <tr><td>Beanies (all crates)</td><td>Bullseye Gifts</td><td>Skye Dawson</td><td>Black wool, embroidered logo. Repeat supplier, gives discount &mdash; reuse the 2025 SKU.</td></tr>
       <tr><td>Yeti cup + bottle (top tier)</td><td>YETI Australia</td><td>&mdash;</td><td>Black, engraved. Order early &mdash; 2025&rsquo;s landed with days to spare.</td></tr>
@@ -389,15 +395,19 @@ blockquote .who{display:block;margin-top:6px;font-size:12px;color:var(--muted)}
   <p>Month by month, September to January. This is the pickup sequence &mdash; already agreed, ready to run.</p></section>
 <div class="blk"><div class="inner">
   <div class="tw"><table class="tl">
-    <thead><tr><th>When</th><th>What happens</th></tr></thead>
+    <thead><tr><th>When</th><th>What happens</th><th>Who</th></tr></thead>
     <tbody>
-      <tr><td>Sep &middot; Plan + lock</td><td>Hamper Planning Session &mdash; Pia + Nathan + Katie (remote). Allocation list from Hamilton out of forecasting. Confirm Amos is <b>not</b> pre-ordering calendars. Costco/Aldi sourcing pass with Katie. Confirm two tiers + ~$35K envelope. Re-survey sales for <i>new</i> ideas only.</td></tr>
-      <tr><td>Oct &middot; Source + order</td><td>Call Maree first &mdash; crate lead time anchors everything. Finalise foliar 3-pack with Hamilton. Dig out Chris&rsquo;s recipe-book file, regenerate recipes. Pull 12 calendar selects from Hamilton&rsquo;s photos. Reorder beanies + Yetis on 2025 SKUs. Place all supplier orders &mdash; Red Rock, Manna Farms, Olive Grove, Goldi, wine list, Taravale.</td></tr>
-      <tr><td>Nov &middot; Pack</td><td>Confirm packing space with Amos (storeroom default). Pia stands up the live Odoo Knowledge checklist &mdash; conditions, red flags, delivery tracking. Boardroom card-signing session on review days. Sample build of each tier, then the production line: Paige leads, Monique buddy, Chelsea support. Labels on, lint-roll pass, pre-pack QA.</td></tr>
-      <tr><td>Dec &middot; Deliver</td><td>Everything packed by ~28 Nov / early Dec. All hampers delivered <b>before the Hybrid Ag EOY event</b> &mdash; that&rsquo;s the anchor. Sales tick the checklist as they go; Marketing flags content-capture asks during the delivery window.</td></tr>
-      <tr><td>Jan &middot; Review</td><td>Result &amp; Review session with Pia. Update the Notion record with 2026 results and the 2027 deltas &mdash; the loop that makes next year easier again.</td></tr>
+      <tr data-m="9"><td>Sep &middot; Plan + lock</td><td>Hamper Planning Session &mdash; Pia + Nathan + Katie (remote). Allocation list from Hamilton out of forecasting. Confirm Amos is <b>not</b> pre-ordering calendars. Costco/Aldi sourcing pass with Katie. Confirm two tiers + ~$35K envelope. Re-survey sales for <i>new</i> ideas only. <b>Proposal to Amos for sign-off</b> &mdash; tiers, budget, allocation criteria &mdash; before anything is ordered.</td><td>Pia leads &middot; Nathan &middot; Katie &middot; Hamilton (list) &middot; Amos (sign-off)</td></tr>
+      <tr data-m="10"><td>Oct &middot; Source + order</td><td>Call Maree first &mdash; crate lead time anchors everything. Finalise foliar 3-pack with Hamilton. Dig out Chris&rsquo;s recipe-book file, regenerate recipes. Pull 12 calendar selects from Hamilton&rsquo;s photos. Reorder beanies + Yetis on 2025 SKUs. Place all supplier orders &mdash; Red Rock, Manna Farms, Olive Grove, Goldi, wine list, Taravale, licorice.</td><td>Pia &middot; Hamilton (foliar + photos) &middot; Katie (sourcing)</td></tr>
+      <tr data-m="11"><td>Nov &middot; Pack</td><td>Confirm packing space with Amos (storeroom default). Pia stands up the live Odoo Knowledge checklist &mdash; conditions, red flags, delivery tracking. Boardroom card-signing session on review days. Sample build of each tier, then the production line: Paige leads, Monique buddy, Chelsea support. Labels on, lint-roll pass, pre-pack QA.</td><td>Paige leads &middot; Monique &middot; Chelsea &middot; Pia (checklist) &middot; Amos (space)</td></tr>
+      <tr data-m="12"><td>Dec &middot; Deliver</td><td>Everything packed by ~28 Nov / early Dec. All hampers delivered <b>before the Hybrid Ag EOY event</b> &mdash; that&rsquo;s the anchor. Sales tick the checklist as they go; Marketing flags content-capture asks during the delivery window.</td><td>Sales team &middot; Marketing</td></tr>
+      <tr data-m="1"><td>Jan &middot; Review</td><td>Result &amp; Review session with Pia. Update the Notion record with 2026 results and the 2027 deltas &mdash; the loop that makes next year easier again.</td><td>Pia &middot; Nathan</td></tr>
     </tbody>
   </table></div>
+  <div class="note">
+    <h4>Stock on hand going in</h4>
+    <p>Two assembled 2025 hampers still with Amos (Fusion Fertiliser&rsquo;s and one individual client&rsquo;s), a box of leftover supplier stock and two boxes of Kaesler &mdash; filler and Amos-discretion gifts for this cycle. Count it before the October orders go in.</p>
+  </div>
 
   <h3 class="sub">Who owns what</h3>
   <div class="tw"><table>
@@ -419,18 +429,21 @@ blockquote .who{display:block;margin-top:6px;font-size:12px;color:var(--muted)}
     <div class="sheet"><h4>Event-invite tier</h4><p>A Premium crate that includes an invite &mdash; knowledge day, cricket, or the EOY review. The biggest potency-add on the list; budget decides.</p></div>
     <div class="sheet"><h4>Early-access AI-Ag QR</h4><p>Premium-tier preview login to the platform. Conditional on the Application Buildout&rsquo;s September state.</p></div>
     <div class="sheet"><h4>Per-client personalisation</h4><p>Capture grower preferences in the CRM (Torrens Valley &rarr; Bundaberg rum). The long-term upgrade from tiers to taste.</p></div>
+    <div class="sheet"><h4>Wine &amp; nibbles &ldquo;Harvest Pack&rdquo;</h4><p>A broadacre-specific second drop timed to harvest rather than December &mdash; the growers who are flat out exactly when the crates go round.</p></div>
     <div class="sheet"><h4>Territory manager map</h4><p>Print insert showing coverage + team. Carried from 2025 &mdash; only if everything else lands.</p></div>
     <div class="sheet"><h4>&ldquo;Year in Review&rdquo; client event</h4><p>James White&rsquo;s half-day gathering tied to hamper delivery. Bigger than a stretch item &mdash; scope separately.</p></div>
-    <div class="sheet"><h4>Remaining 2025 stock</h4><p>Two assembled hampers with Amos, a box of supplier stock, two boxes of Kaesler &mdash; filler and Amos-discretion gifts for this cycle.</p></div>
   </div>
 
   <div class="src">
     <h3 class="sub">Sources &amp; working documents</h3>
     <ul>
       <li><a href="https://dusty-attraction-d64.notion.site/3511966d6fde81b698f7e41f70d5ec50" target="_blank" rel="noopener">Pillar 6 &mdash; Community, Reviews, Partners &amp; Give-back</a> &mdash; the living Notion record this page is built from</li>
-      <li><a href="https://hybrid-ag.odoo.com/odoo/knowledge/527" target="_blank" rel="noopener">Odoo Knowledge 527</a> &mdash; live supplier context &middot; <a href="https://shorturl.at/G7w7r" target="_blank" rel="noopener">item list, costing &amp; conditions spreadsheet</a></li>
-      <li><a href="https://hybrid-ag.odoo.com/web/content/75695?download=true" target="_blank" rel="noopener">Hamper Packing List 2025</a> &middot; <a href="https://hybrid-ag.odoo.com/web/content/75669?download=true" target="_blank" rel="noopener">Finalised allocations by margin (Hamilton, 23 Oct 25)</a></li>
-      <li>SharePoint: MARKETING &rsaquo; Promotional Stuff &rsaquo; Calendars &amp; Hampers &rsaquo; 2025 &mdash; invoices, labels, conditions list, thank-you card artwork</li>
+      <li><a href="https://hybrid-ag.odoo.com/odoo/knowledge/527" target="_blank" rel="noopener">Odoo Knowledge 527</a> &mdash; live supplier context, conditions and red flags (Odoo login)</li>
+      <li><a href="https://hybridag365.sharepoint.com/:x:/r/sites/Hybrid/Shared%20Documents/MARKETING/PROMOTIONAL%20STUFF/Calendars%20%26%20Hampers/2025/Hampers%20-%202025%20Draft.xlsx?web=1" target="_blank" rel="noopener">2025 hamper workbook</a> &mdash; item list per tier, costing, conditions, allocations and the 2024 items tab. Copy it forward as the 2026 workbook.</li>
+      <li>2025 working PDFs: <a href="https://hybridag365.sharepoint.com/:b:/r/sites/Hybrid/Shared%20Documents/MARKETING/PROMOTIONAL%20STUFF/Calendars%20%26%20Hampers/2025/Documents/Hamper%20Packing%20List%20-%202025.pdf?web=1" target="_blank" rel="noopener">packing list</a> &middot; <a href="https://hybridag365.sharepoint.com/:b:/r/sites/Hybrid/Shared%20Documents/MARKETING/PROMOTIONAL%20STUFF/Calendars%20%26%20Hampers/2025/Documents/Hamper%20Conditions%20List%202025.pdf?web=1" target="_blank" rel="noopener">conditions list</a> &middot; <a href="https://hybridag365.sharepoint.com/:b:/r/sites/Hybrid/Shared%20Documents/MARKETING/PROMOTIONAL%20STUFF/Calendars%20%26%20Hampers/2025/Documents/Hamper%20Customer%20Labels.pdf?web=1" target="_blank" rel="noopener">crate labels</a> &middot; <a href="https://hybridag365.sharepoint.com/:b:/r/sites/Hybrid/Shared%20Documents/MARKETING/PROMOTIONAL%20STUFF/Calendars%20%26%20Hampers/2025/Documents/Finalised%20Hamper%20Allocations%20for%20Printing.pdf?web=1" target="_blank" rel="noopener">allocations for printing</a> &middot; <a href="https://hybridag365.sharepoint.com/:b:/r/sites/Hybrid/Shared%20Documents/MARKETING/PROMOTIONAL%20STUFF/Calendars%20%26%20Hampers/2025/Hybrid-Ag%20Thank%20You%20Card%202025%20-%20Revised%20.pdf?web=1" target="_blank" rel="noopener">thank-you card artwork</a> &middot; <a href="https://hybridag365.sharepoint.com/:x:/r/sites/Hybrid/Shared%20Documents/MARKETING/PROMOTIONAL%20STUFF/Calendars%20%26%20Hampers/2025/Finalised%20Hamper%20Allocations%20-%20By%20Customer%20Margin%20-%20Ham%20Rowe%20-%2023-10-25.xlsx?web=1" target="_blank" rel="noopener">allocations by margin (Hamilton, 23 Oct 25)</a></li>
+      <li><a href="https://hybridag365.sharepoint.com/:f:/r/sites/Hybrid/Shared%20Documents/MARKETING/PROMOTIONAL%20STUFF/Calendars%20%26%20Hampers/2025?csf=1&web=1" target="_blank" rel="noopener">SharePoint folder &mdash; Calendars &amp; Hampers &rsaquo; 2025</a> &mdash; everything above plus supplier invoices and product shots. Odoo copies: <a href="https://hybrid-ag.odoo.com/web/content/75695?download=true" target="_blank" rel="noopener">packing list</a> &middot; <a href="https://hybrid-ag.odoo.com/web/content/75669?download=true" target="_blank" rel="noopener">allocations</a></li>
+      <li><a href="https://photos.app.goo.gl/KoNbPUnC6EJUeksG7" target="_blank" rel="noopener">Woody&rsquo;s hamper delivery video</a> &middot; <a href="https://www.instagram.com/p/DREppMVE_cm/?hl=en" target="_blank" rel="noopener">Taravale behind-the-scenes reel</a> &mdash; the only content captured in the 2025 cycle</li>
+      <li><a href="https://app.notion.com/p/3511966d6fde81f9ad7be5c58c227cf6" target="_blank" rel="noopener">CRM Adoption</a> &mdash; where grower preferences would live &middot; <a href="https://app.notion.com/p/3441966d6fde816d88def2acaf8f5954" target="_blank" rel="noopener">Application Buildout 2026</a> &mdash; gates the early-access QR</li>
     </ul>
   </div>
 </div></div>
@@ -443,5 +456,19 @@ blockquote .who{display:block;margin-top:6px;font-size:12px;color:var(--muted)}
   <div class="tricolour"><i></i><i></i><i></i></div>
 </footer>
 
+<script>
+(function(){
+  // Light the runway row for the month we're in (Sep-Jan), or flag September as next
+  // for the rest of the year, so the page never reads stale between rebuilds.
+  var m = new Date().getMonth() + 1, rows = document.querySelectorAll('.tl tr[data-m]'), hit = null;
+  rows.forEach(function(r){ if (+r.dataset.m === m) hit = r; });
+  var label = hit ? 'Now' : 'Next';
+  if (!hit) rows.forEach(function(r){ if (+r.dataset.m === 9) hit = r; });
+  if (!hit) return;
+  hit.classList.add('now');
+  var c = hit.querySelector('td');
+  c.innerHTML += ' <span class="tag ' + (label === 'Now' ? 'go' : 'new') + '">' + label + '</span>';
+})();
+</script>
 </body>
 </html>
