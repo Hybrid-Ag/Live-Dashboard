@@ -1033,11 +1033,11 @@
   "Friday 28 August 2026": {
    "chips": [
     "MTD $1.48M",
-    "MTD &minus;41.9% vs LY",
+    "MTD &minus;42.0% vs LY",
     "Open quotes $351k &middot; 19",
     "FYTD $2.96M"
    ],
-   "note": "Pulled live from Odoo at 11:24am AEST this morning &mdash; confirmed orders, ex GST, on the same basis the board uses. The Sales and Operations tabs behind them are still Thursday 6pm AEST: the hourly refresh has not run today."
+   "note": "Pulled live from Odoo at 11:40am AEST this morning &mdash; confirmed orders, ex GST, on the same basis the board uses. The hourly refresh has not run today, so the Sales tab carries these same live figures while Operations, Calendars, testing volume and margins remain Thursday 6pm."
   }
  },
  "gsbNotes": [
