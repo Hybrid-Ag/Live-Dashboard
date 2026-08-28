@@ -1031,8 +1031,13 @@
    "note": "The numbers on the dashboard as presented on the day, ex GST &mdash; the live tabs have moved on since. The August budget was $2.00M; budget to 21 August was $1.35M using the dashboard's calendar-day pacing. Tests = soil + leaf, calendar YTD. The sales screen also showed $449k across 15 open quotes and $2.55M FYTD."
   },
   "Friday 28 August 2026": {
-   "chips": [],
-   "note": ""
+   "chips": [
+    "MTD $1.48M",
+    "MTD &minus;41.9% vs LY",
+    "Open quotes $351k &middot; 19",
+    "FYTD $2.96M"
+   ],
+   "note": "Pulled live from Odoo at 11:24am AEST this morning &mdash; confirmed orders, ex GST, on the same basis the board uses. The Sales and Operations tabs behind them are still Thursday 6pm AEST: the hourly refresh has not run today."
   }
  },
  "gsbNotes": [
