@@ -1,0 +1,23 @@
+# Ensure a Pages build exists for every push (31 Aug 2026).
+#
+# The dashboard publishes here by push from the kit's hourly refresh. Normally the
+# Pages webhook queues a build on its own, but it occasionally stays quiet - seen
+# again on the first cloud refresh run. The kit used to kick a build with Nathan's
+# authenticated gh; the Actions runner has no such auth for this repo, so this
+# workflow does the kick from inside, where GITHUB_TOKEN has the right scope.
+# Requesting a build when one is already queued is harmless (Pages coalesces).
+name: pages-kick
+on:
+  push:
+    branches: [main]
+permissions:
+  pages: write
+jobs:
+  kick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: request pages build
+        run: gh api -X POST "repos/${GITHUB_REPOSITORY}/pages/builds" || true
+        env:
+          GH_TOKEN: ${{ github.token }}
