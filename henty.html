@@ -133,6 +133,21 @@ table{border-collapse:collapse}
 .chk > li::before{counter-increment:step;content:counter(step) '.';position:absolute;left:0;top:8px;font-family:'Oswald',sans-serif;font-weight:600;font-size:12.5px;color:var(--muted);line-height:1.5}
 .chk > li.done::before{color:var(--green)}
 .chk > li.done{color:var(--muted)}
+.chk > li > details{margin:0}
+.chk > li > details > summary{cursor:pointer;list-style:none;display:block;padding-right:2px}
+.chk > li > details > summary::-webkit-details-marker{display:none}
+.chk > li > details > summary::after{content:'\25B8';display:inline-block;margin-left:8px;color:var(--muted);font-size:11px;transition:transform .15s;vertical-align:1px;opacity:.7}
+.chk > li > details[open] > summary::after{transform:rotate(90deg);color:var(--berry)}
+.chk > li > details > summary:hover::after{color:var(--berry)}
+.steps-wrap{margin-top:6px}
+.steps-wrap > summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:9px;min-height:40px;font-family:'Oswald',sans-serif;font-weight:600;font-size:11.5px;letter-spacing:1px;text-transform:uppercase;color:var(--berry);border-bottom:1px solid var(--cream);padding-bottom:9px}
+.steps-wrap > summary::-webkit-details-marker{display:none}
+.steps-wrap > summary::before{content:'\25B8';display:inline-block;transition:transform .15s}
+.steps-wrap[open] > summary::before{transform:rotate(90deg)}
+.steps-wrap .cnt{font-family:'Inter',sans-serif;font-weight:400;font-size:12.5px;letter-spacing:0;text-transform:none;color:var(--muted)}
+.stepbtns{display:flex;gap:8px;margin:12px 0 2px}
+.stepbtn{font-family:'Oswald',sans-serif;font-weight:600;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;padding:6px 13px;border:1px solid var(--line);border-radius:20px;background:#fff;color:var(--muted);cursor:pointer;user-select:none;min-height:34px;display:flex;align-items:center}
+.stepbtn:hover{border-color:var(--berry);color:var(--berry)}
 .chk .sub{list-style:none;margin:5px 0 0;padding:0}
 .chk .sub li{position:relative;padding:2px 0 2px 14px;font-size:13px;color:var(--muted);line-height:1.5}
 .chk .sub li::before{content:'\2014';position:absolute;left:0;color:var(--line)}
@@ -149,6 +164,10 @@ details.src .srcbody .lbl{font-weight:600}
 .note{font-size:12.5px;color:var(--muted);line-height:1.55;margin-top:9px}
 .fgv-tag.g{background:rgba(46,125,50,.13);color:var(--green)}
 .fgv-tag.r{background:rgba(192,57,43,.12);color:var(--red)}
+@media(max-width:760px){
+  .stepbtn{min-height:44px}
+  .chk > li > details > summary::after{margin-left:6px}
+}
 </style>
 </head>
 <body>
@@ -187,7 +206,13 @@ details.src .srcbody .lbl{font-weight:600}
 
     <div class="cmp-sec">
       <div class="cmp-h">Next steps</div>
-      <p style="font-size:13.5px;color:var(--muted);line-height:1.55">The full running list, in the order it was planned. Items 1&ndash;5 and 7 are closed out; the rest is the work still in front of us.</p>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.55">The full running list, in the order it was planned. Items 1&ndash;5 and 7 are closed out; the rest is the work still in front of us. Steps with detail underneath open up.</p>
+      <details class="steps-wrap" open id="steps">
+        <summary>The running list <span class="cnt">&middot; 13 steps, 6 done</span></summary>
+        <div class="stepbtns">
+          <div class="stepbtn" onclick="allSteps(true)">Expand all</div>
+          <div class="stepbtn" onclick="allSteps(false)">Collapse all</div>
+        </div>
       <ol class="chk">
         <li class="done">Submit application<span class="st">Done</span></li>
         <li class="done">Share event info and registration requirements to partners<span class="st">Done</span></li>
@@ -195,19 +220,20 @@ details.src .srcbody .lbl{font-weight:600}
         <li class="done">Lock in Site 998&ndash;999 once approved<span class="st">Done</span></li>
         <li class="done">Request PO and send the <a href="https://hybridag365.sharepoint.com/:i:/r/sites/Hybrid/Shared%20Documents/MARKETING/Marketing%20-%20New%20Chapter/13%20-%20Sponsorship%20%26%20Event%20ROI%20Framework/Henty%20Field%20Days/Invoice.jpeg?csf=1&amp;web=1&amp;e=0Y19L7" target="_blank" rel="noopener">invoice</a> to accounts, pay the exhibitor fee<span class="st">Done</span></li>
         <li>Event planning and campaign prep<span class="st open">Open</span></li>
-        <li class="done">Order extras required and coordinate payment &mdash; additional tickets, hay bales, bark chip<span class="st">Done</span>
-          <ul class="sub"><li>Extras such as bark chip, hay bales and additional tickets can be ordered up to two weeks before the event.</li></ul></li>
-        <li>Social media campaign drafts<span class="st open">Open</span>
-          <ul class="sub"><li>Story content</li><li>Feed posts</li></ul></li>
-        <li>Email and SMS<span class="st open">Open</span>
-          <ul class="sub"><li>Pre-event email</li><li>Pre-event SMS</li><li>Giveaway or post-event email *</li><li>Giveaway or post-event SMS *</li></ul></li>
-        <li>Landing page<span class="st open">Open</span>
-          <ul class="sub"><li>Giveaway</li><li>Nutrient Audit &mdash; TBC</li><li>Reserved offer, testing investment &mdash; TBC</li></ul></li>
+        <li class="done"><details><summary>Order extras required and coordinate payment &mdash; additional tickets, hay bales, bark chip<span class="st">Done</span></summary>
+          <ul class="sub"><li>Extras such as bark chip, hay bales and additional tickets can be ordered up to two weeks before the event.</li></ul></details></li>
+        <li><details><summary>Social media campaign drafts<span class="st open">Open</span></summary>
+          <ul class="sub"><li>Story content</li><li>Feed posts</li></ul></details></li>
+        <li><details><summary>Email and SMS<span class="st open">Open</span></summary>
+          <ul class="sub"><li>Pre-event email</li><li>Pre-event SMS</li><li>Giveaway or post-event email *</li><li>Giveaway or post-event SMS *</li></ul></details></li>
+        <li><details><summary>Landing page<span class="st open">Open</span></summary>
+          <ul class="sub"><li>Giveaway</li><li>Nutrient Audit &mdash; TBC</li><li>Reserved offer, testing investment &mdash; TBC</li></ul></details></li>
         <li>QR code poster &mdash; giveaway and reserved offer<span class="st open">Open</span></li>
-        <li>Stock check and logistics<span class="st open">Open</span>
-          <ul class="sub"><li>Event display &mdash; pull-up banners: Optimising Inputs and Testing Process. Use the existing ones?</li><li>Event display &mdash; TV: TBC</li></ul></li>
+        <li><details><summary>Stock check and logistics<span class="st open">Open</span></summary>
+          <ul class="sub"><li>Event display &mdash; pull-up banners: Optimising Inputs and Testing Process. Use the existing ones?</li><li>Event display &mdash; TV: TBC</li></ul></details></li>
         <li>Organise files for printing and prepare assets<span class="st open">Open</span></li>
       </ol>
+      </details>
       <div class="note">* Giveaway and post-event email and SMS are marked TBC in the plan &mdash; they depend on how the giveaway is finalised.</div>
     </div>
 
@@ -560,6 +586,9 @@ details.src .srcbody .lbl{font-weight:600}
   </div>
 </div>
 <script>
+function allSteps(open){
+  document.querySelectorAll('#steps .chk > li > details').forEach(function(d){ d.open = open; });
+}
 function showTab(g, v){
   document.querySelectorAll('.pnl-' + g).forEach(function(p){ p.classList.toggle('active', p.id === g + '-' + v); });
   document.querySelectorAll('#tabs-' + g + ' .atab').forEach(function(t){ t.classList.toggle('active', t.id === g + '-tab-' + v); });
