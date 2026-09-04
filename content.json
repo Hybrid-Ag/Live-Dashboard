@@ -1168,81 +1168,96 @@
     "MTD $647k",
     "MTD &minus;12.1% vs LY",
     "Open $1.16M &middot; 52",
+    "Open quotes $168k &middot; 9",
     "Enquiries 95",
-    "Tests 1,701 YTD"
+    "Tests 1,701 YTD",
+    "FYTD $647k"
    ],
-   "note": "As presented on the day, restated ex GST so every week compares like-for-like. Tests = soil + leaf, calendar YTD."
+   "note": "As presented on the day, restated ex GST so every week compares like-for-like. Tests = soil + leaf, calendar YTD. Open quotes and FYTD were added on 4 September from the same Friday publish (quotes restated ex GST like the rest; FYTD equals MTD because the financial year opened on 1 July) so every meeting carries the same seven pills."
   },
   "Friday 24 July 2026": {
    "chips": [
     "MTD $890k",
     "MTD &minus;33% vs LY",
     "Open $1.20M &middot; 62",
+    "Open quotes $203k &middot; 14",
     "Enquiries 97",
-    "Tests 1,736 YTD"
+    "Tests 1,736 YTD",
+    "FYTD $890k"
    ],
-   "note": "The numbers as presented on the day, ex GST &mdash; the live tabs have moved on since. Tests = soil + leaf, calendar YTD."
+   "note": "The numbers as presented on the day, ex GST &mdash; the live tabs have moved on since. Tests = soil + leaf, calendar YTD. Open quotes and FYTD were added on 4 September from the same Friday publish (FYTD equals MTD in July) so every meeting carries the same seven pills."
   },
   "Friday 31 July 2026": {
    "chips": [
     "MTD $1.54M",
     "MTD &minus;10% vs LY",
     "Open $1.40M &middot; 66",
+    "Open quotes $203k &middot; 9",
     "Enquiries 100",
-    "Tests 1,867 YTD"
+    "Tests 1,867 YTD",
+    "FYTD $1.54M"
    ],
-   "note": "The numbers as presented on the day, ex GST &mdash; the live tabs have moved on since. Tests = soil + leaf, calendar YTD."
+   "note": "The numbers as presented on the day, ex GST &mdash; the live tabs have moved on since. Tests = soil + leaf, calendar YTD. Open quotes and FYTD were added on 4 September from the same Friday publish (FYTD equals MTD in July) so every meeting carries the same seven pills."
   },
   "Friday 7 August 2026": {
    "chips": [
     "MTD $364k",
     "MTD &minus;73% vs LY",
-    "Open $138k &middot; 7",
+    "Open $1.36M &middot; 74",
+    "Open quotes $138k &middot; 7",
     "Enquiries 104",
-    "Tests 1,900 YTD"
+    "Tests 1,900 YTD",
+    "FYTD $1.85M"
    ],
-   "note": "The numbers as presented on the day, ex GST &mdash; the live tabs have moved on since. Tests = soil + leaf, calendar YTD."
+   "note": "The numbers as presented on the day, ex GST &mdash; the live tabs have moved on since. Tests = soil + leaf, calendar YTD. Corrected 4 September: the Open pill had carried the open-quotes figure ($138k across 7); the morning board showed 74 open orders at $1.36M. Open quotes and FYTD were added from the same publish so every meeting carries the same seven pills."
   },
   "Friday 14 August 2026": {
    "chips": [
     "MTD $847k",
     "MTD &minus;50% vs LY",
     "Open $1.71M &middot; 93",
-    "Quotes $420k &middot; 18",
+    "Open quotes $420k &middot; 18",
     "Enquiries 102",
-    "Tests 1,907 YTD"
+    "Tests 1,907 YTD",
+    "FYTD $2.33M"
    ],
-   "note": "The numbers as presented on the day, ex GST &mdash; the live tabs have moved on since. Tests = soil + leaf, calendar YTD."
+   "note": "The numbers as presented on the day, ex GST &mdash; the live tabs have moved on since. Tests = soil + leaf, calendar YTD. FYTD was added on 4 September from the same Friday pull so every meeting carries the same seven pills."
   },
   "Friday 21 August 2026": {
    "chips": [
     "MTD $1.06M",
     "MTD &minus;21.4% vs budget",
     "Open $1.20M &middot; 78",
+    "Open quotes $449k &middot; 15",
     "Enquiries 141",
-    "Tests 2,002 YTD"
+    "Tests 2,002 YTD",
+    "FYTD $2.55M"
    ],
-   "note": "The numbers on the dashboard as presented on the day, ex GST &mdash; the live tabs have moved on since. The August budget was $2.00M; budget to 21 August was $1.35M using the dashboard's calendar-day pacing. Tests = soil + leaf, calendar YTD. The sales screen also showed $449k across 15 open quotes and $2.55M FYTD."
+   "note": "The numbers on the dashboard as presented on the day, ex GST &mdash; the live tabs have moved on since. The August budget was $2.00M; budget to 21 August was $1.35M using the dashboard's calendar-day pacing. Tests = soil + leaf, calendar YTD. The sales screen also showed $449k across 15 open quotes and $2.55M FYTD. Open quotes and FYTD were added on 4 September from the same Friday publish so every meeting carries the same seven pills."
   },
   "Friday 28 August 2026": {
    "chips": [
     "MTD $1.48M",
     "MTD &minus;18.1% vs budget",
+    "Open $1.28M &middot; 71",
     "Open quotes $351k &middot; 19",
-    "FYTD $2.96M",
-    "Month budget $2.00M"
+    "Enquiries 137",
+    "Tests 2,032 YTD",
+    "FYTD $2.96M"
    ],
-   "note": "Frozen from the 11:40am AEST Odoo pull, confirmed orders ex GST. Jamie spoke to roughly $1.45M in the meeting; the pull showed $1.48M. The August budget was $2.00M and budget to 28 August was $1.81M using the dashboard&rsquo;s calendar-day pacing, hence &minus;18.1%. Open quotes were $351k across 19 and FYTD sales were $2.96M. The live tabs have moved on since."
+   "note": "Frozen from the 11:40am AEST Odoo pull, confirmed orders ex GST. Jamie spoke to roughly $1.45M in the meeting; the pull showed $1.48M. The August budget was $2.00M and budget to 28 August was $1.81M using the dashboard&rsquo;s calendar-day pacing, hence &minus;18.1%. Open orders (71 at $1.28M) are the Thursday 6pm bake that was still on the Operations tab during the meeting; the Sales tab had been re-pulled by hand that morning. Enquiries is the tracker count as at the day. The live tabs have moved on since."
   },
   "Friday 4 September 2026": {
    "chips": [
     "MTD $105k",
     "MTD &minus;43.5% vs budget",
+    "Open $700k &middot; 43",
     "Open quotes $344k &middot; 24",
-    "FYTD $3.10M",
-    "Month budget $1.40M"
+    "Enquiries 138",
+    "Tests 2,080 YTD",
+    "FYTD $3.10M"
    ],
-   "note": "Frozen from the 4:19pm AEST Odoo pull on 4 September, confirmed orders ex GST. The screen in the meeting was still showing the Thursday 6pm pull: the refresh had been failing a verify check since Thursday evening and was repaired at 10am. September is four days in, so MTD $105k against a $1.40M month budget paced by calendar day ($187k to 4 September) reads &minus;43.5%; last year&rsquo;s full September was $1.29M. Open quotes were $344k across 24 and FYTD sales were $3.10M. The live tabs have moved on since."
+   "note": "Frozen from the 4:19pm AEST Odoo pull on 4 September, confirmed orders ex GST. The screen in the meeting was still showing the Thursday 6pm pull: the refresh had been failing a verify check since Thursday evening and was repaired at 10am. September is four days in, so MTD $105k against a $1.40M month budget paced by calendar day ($187k to 4 September) reads &minus;43.5%; last year&rsquo;s full September was $1.29M. Open orders 43 at $700k, open quotes $344k across 24, 138 enquiries tracked, 2,080 tests calendar YTD and FYTD $3.10M all come from the same pull. The live tabs have moved on since."
   }
  },
  "gsbNotes": [
