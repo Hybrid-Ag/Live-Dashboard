@@ -1024,7 +1024,143 @@
     ]
    }
   ],
-  "mtg-notes-0904": []
+  "mtg-notes-0904": [
+   {
+    "title": "Values &mdash; Transforming Food for Health, argued from the paddock",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Bruce&rsquo;s prompt",
+      "text": "Bruce brought the purpose back onto the table after Vic No-Till. Cindy O&rsquo;Meara&rsquo;s session on wheat quality and food processing (glyphosate as a pre-harvest desiccant carrying into the food chain; lab-made citric acid sold as &lsquo;natural&rsquo;) landed while the group stood beside a magnificent 800-hectare canola crop with nothing good to say about it except the grower&rsquo;s margin."
+     },
+     {
+      "lead": "Where the team landed",
+      "text": "Profitability decides what gets grown until the market rewards difference; shoppers buy with the pocket, not the head. Josh Richardson&rsquo;s framing carried the room: a healthier tree with better pack-out is cheaper to grow and the fruit is better without the grower or the buyer ever needing the health argument. Jamie tied it to the secondary message of minimising inputs, maximising outcomes, as the quiet route to the purpose."
+     },
+     {
+      "lead": "Smithy on organic",
+      "text": "In the US, organic sits at near-conventional retail prices as a choice; here the small organic pool expects a premium, which will not expand the category. The wholefoods shop in Wangaratta cannot hold a consistent organic range because not enough is grown."
+     }
+    ]
+   },
+   {
+    "title": "Sales &amp; testing",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Chelsea past $1M",
+      "text": "Chelsea reached $1 million for this point of the year on her own numbers, with the wider team also contributing strong figures. Jamie wants earlier visibility of the monthly sales total and will ask Nathan for help with it."
+     },
+     {
+      "lead": "Leaf testing season opens",
+      "text": "Josh Hull took the first stone-fruit leaf test of the season at Koonoomoo this week and is now scheduling grower visits around it, checking with Manna on their leaf-testing plan. Chelsea has Ventry and Cockatoo microbiome results back and is taking Josh Richardson through the Goulburn Valley to land them; the Ventry result matches the Fusarium-based issue already seen in the GV, Cockatoo is still unclear."
+     },
+     {
+      "lead": "November&ndash;December hands",
+      "text": "Jamie asked Jimmy and Bruce whether the broadacre side can lend hands to sap testing through the horticulture crunch. Both are in: Jimmy will be around the Riverina rice country and Cobram with corn and rice, so almonds, rice and corn can be tested together. Bruce can pick up Young for Chelsea if needed, tying it to a broadacre client just west of Young. Chelsea will still drop self-take DSA kits at Young so nobody misses a leaf test."
+     }
+    ]
+   },
+   {
+    "title": "Operations",
+    "accent": "orange",
+    "items": [
+     {
+      "lead": "Dashboard lag",
+      "text": "The live dashboard was not yet updated; some orders on the list had already been dispatched. Since the meeting Amos has traced it to deliveries being ticked off in Odoo late while he checked every order himself; Janelle is taking that over, and the dashboard refresh now lands on the hour with an extra 8:30am pull on Fridays."
+     },
+     {
+      "lead": "Orders",
+      "text": "Longview is expected to dispatch within one to two days. Chelsea asked for a delivery status on one of her customers."
+     }
+    ]
+   },
+   {
+    "title": "Marketing &amp; events",
+    "accent": "berry",
+    "items": [
+     {
+      "lead": "Vic No-Till debrief",
+      "text": "Jimmy and Bruce are becoming familiar faces at these events; Jimmy was referred to at one as &lsquo;Jimmy the agro&rsquo;, and Alex, now presenting on stage, is doing well in his new role. Bruce&rsquo;s read on the soil-pit session: the conversations at the back of the group were worth more than the presentation at the front, and some growers switched off because the delivery came across as knowing better than they did. A Vic No-Till SWOT is locked in for next Friday after the technical meeting."
+     },
+     {
+      "lead": "What growers heard",
+      "text": "Dr Susan Orgill (ex-CSIRO/DPI, now Impact Ag) walked a soil pit using a Hybrid Ag-branded soil test Alex had supplied, talking cation exchange capacity, calcium and cation balance; pH was treated as the last thing to look at and trace elements sat front and centre, with most growers nodding. Boron&rsquo;s link to calcium and pollen formation was better understood than expected. Liquid through the seeder was a big theme, with Horizon promoting peristaltic pumps that push slurries, worm leachate and compost teas without blocking. Omnia, Cropping Solutions and NutriSoil were all in growers&rsquo; ears; Great Southern Biology were expected but not seen, and the microbes-for-disease-control conversation left the door wide open for them."
+     },
+     {
+      "lead": "Engagement and pipeline",
+      "text": "Engagement is slightly down while content keeps going out; Nathan credited Pia for carrying the campaign through his leave. An Apple Booklet campaign to generate leads is planned, Henty Field Days planning is under way with a few weeks to run, the old website now redirects to the current one, and a pricing-and-cart exposure, possibly from an Odoo update, has been closed. The FGV SWOT is being scheduled around Nate&rsquo;s Monday availability; both SWOTs will set the next three months of marketing and small-crop opportunities through Ham and, soon, Josh. A new enquiry came in yesterday and Jamie is already on it."
+     },
+     {
+      "lead": "Marquee and hampers",
+      "text": "Jamie is coordinating shipping quotes with Paige and arrangements with Simon; the supplier only opens a one-hour window on certain days, which has made coordination difficult. Jamie has emailed Simon, will call him after the meetings, and the aim is to ship today. On hampers, Chelsea wants them ready by early November before the horticulture rush; Josh Richardson suggested New Year hampers as his previous company did; tiers were debated (Chelsea: leftover wine could make a bottle-and-card third tier, and some of last year&rsquo;s tier-three recipients need not receive one). Nathan is holding to two tiers per last year&rsquo;s wrap-up, needs a new crate supplier since the old one closed, will use both SWOTs to keep the hamper project rolling, and is adding the hamper list to his and Jamie&rsquo;s sales-and-marketing agenda."
+     }
+    ]
+   },
+   {
+    "title": "Week of 7 September",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Smithy",
+      "text": "Closing off chestnut work at Stanley early in the week, then keeping Cobram ticking as the season moves."
+     },
+     {
+      "lead": "Chelsea and Josh Richardson",
+      "text": "Cobram on Wednesday to land the Ventry and Cockatoo microbiome results and catch up on Montague orders; Josh has office days Monday and Tuesday, calls Tuesday, and joins Hamilton to Bairnsdale on Thursday. Chelsea will set up a Zoom or phone call with Grant and Kamal, likely Monday, since they can&rsquo;t make Wednesday."
+     },
+     {
+      "lead": "Hamilton",
+      "text": "Catch up with Gary and Griffith, then Bairnsdale to catch up with Hussey, and Riviera and Stewie Gray to close the week."
+     },
+     {
+      "lead": "Jimmy",
+      "text": "Touring the Riverina, a soil test on rice at Russell Ford&rsquo;s, Dan McGrath again, and the Birchip Cropping Group field day on Wednesday, following up sap tests from the growers he visited this week with an eye to potassium on irrigated and possibly dryland wheat while moisture holds."
+     },
+     {
+      "lead": "Nate",
+      "text": "Finishing vineyard programs Monday (Heathcote, Yon and Longview), hoping to get stuck into Torrens Valley next week and calling in to facilitate it, calling on Kersbrook Cherries about their blends, then Flavell and Parkers on Wednesday; Thursday in the office."
+     }
+    ]
+   },
+   {
+    "title": "Technical huddle",
+    "accent": "green",
+    "items": [
+     {
+      "lead": "Gus Campbell sap test",
+      "text": "Two wheat paddocks sown at similar times: Maxes had a copper, zinc, boron and moly trace foliar with K-Max and a Power blend (30-odd litres total) and Moores did not. The treated canopy showed a much more even total-N pattern down the plant, lower ammonium and nitrate, higher sugar and around 5,800 ppm sap N in old and new leaf, against roughly 10,000 ppm in the untreated new leaf and low totals lower down. Most traces lifted where the foliar went on, moly by far the most (about 48 where applied against next to nothing untreated). Jimmy&rsquo;s read: the foliar improved the distribution of energy through the canopy; the room&rsquo;s take was that the young leaf came back into balance once the old leaf had enough N to support it. The spreadsheet&rsquo;s growth-stage drop-down would not open on OneDrive, so the raw data carried the discussion."
+     },
+     {
+      "lead": "Tony&rsquo;s cherries and the spreaders",
+      "text": "The spreading contractors who look set to take on Tony&rsquo;s young cherries (John and Charles) used to manage his vineyards, have spread Hybrid blends on other properties with strong results on young plantings, and know the place well; it is a 300-hectare orchard run by three people, with ruts, prunings and cramped headlands."
+     },
+     {
+      "lead": "Boron, from an old book",
+      "text": "Bruce&rsquo;s reading came from the Acres USA primer on William Albrecht, not AI: the boron-calcium link, and Neil Kinsey&rsquo;s corn case where boron went on at about four times the going rate, roughly 4 lb to the acre against the usual 1 lb, and rather than killing the corn filled kernels to the cob tip. Jamie has seen the same on farmers-market corn, about ten unfilled rows at the tip; Bruce added that the tip is also where heliothis damage concentrates. A side note on memory: reading on paper with highlights and margin notes retains far more than scrolling a screen."
+     }
+    ]
+   },
+   {
+    "title": "Actions to carry forward",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Jamie",
+      "text": "Ship the marquee today; message the group on Monday Mojo cover."
+     },
+     {
+      "lead": "Nathan",
+      "text": "Earlier monthly sales-total visibility for Jamie; lock the FGV SWOT date; line up a crate supplier for hampers; add the hamper list to the sales-and-marketing agenda with Jamie; keep the product-page alignment moving on the new website."
+     },
+     {
+      "lead": "Team",
+      "text": "Vic No-Till SWOT next Friday after the technical meeting; Bruce to give Grant at Great Southern Biology a heads-up on how microbe-focused the Vic No-Till disease conversation was; Chelsea to reach Bruce directly for anything needing testing around Young; Jimmy and Bruce to pencil in November&ndash;December sap-testing support."
+     }
+    ]
+   }
+  ],
+  "mtg-notes-0911": []
  },
  "meetingStats": {
   "Friday 17 July 2026": {
@@ -1097,6 +1233,16 @@
     "Month budget $2.00M"
    ],
    "note": "Frozen from the 11:40am AEST Odoo pull, confirmed orders ex GST. Jamie spoke to roughly $1.45M in the meeting; the pull showed $1.48M. The August budget was $2.00M and budget to 28 August was $1.81M using the dashboard&rsquo;s calendar-day pacing, hence &minus;18.1%. Open quotes were $351k across 19 and FYTD sales were $2.96M. The live tabs have moved on since."
+  },
+  "Friday 4 September 2026": {
+   "chips": [
+    "MTD $105k",
+    "MTD &minus;43.5% vs budget",
+    "Open quotes $344k &middot; 24",
+    "FYTD $3.10M",
+    "Month budget $1.40M"
+   ],
+   "note": "Frozen from the 4:19pm AEST Odoo pull on 4 September, confirmed orders ex GST. The screen in the meeting was still showing the Thursday 6pm pull: the refresh had been failing a verify check since Thursday evening and was repaired at 10am. September is four days in, so MTD $105k against a $1.40M month budget paced by calendar day ($187k to 4 September) reads &minus;43.5%; last year&rsquo;s full September was $1.29M. Open quotes were $344k across 24 and FYTD sales were $3.10M. The live tabs have moved on since."
   }
  },
  "gsbNotes": [
