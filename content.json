@@ -1215,13 +1215,13 @@
    "chips": [
     "MTD $847k",
     "MTD &minus;50% vs LY",
-    "Open $1.71M &middot; 93",
-    "Open quotes $420k &middot; 18",
+    "Open $1.69M &middot; 90",
+    "Open quotes $302k &middot; 11",
     "Enquiries 102",
     "Tests 1,907 YTD",
     "FYTD $2.33M"
    ],
-   "note": "The numbers as presented on the day, ex GST &mdash; the live tabs have moved on since. Tests = soil + leaf, calendar YTD. FYTD was added on 4 September from the same Friday pull so every meeting carries the same seven pills."
+   "note": "The numbers as presented on the day, ex GST &mdash; the live tabs have moved on since. Tests = soil + leaf, calendar YTD. Restated 4 September to the page as it stood in the meeting (the 13 August 5:17pm bake &mdash; the next publish landed 3pm Friday): open orders 90 at $1.69M and open quotes $302k across 11, alongside the MTD, enquiries, tests and FYTD already taken from it, so all seven pills are one pull."
   },
   "Friday 21 August 2026": {
    "chips": [
@@ -1241,11 +1241,11 @@
     "MTD &minus;18.1% vs budget",
     "Open $1.28M &middot; 71",
     "Open quotes $351k &middot; 19",
-    "Enquiries 137",
+    "Enquiries 138",
     "Tests 2,032 YTD",
     "FYTD $2.96M"
    ],
-   "note": "Frozen from the 11:40am AEST Odoo pull, confirmed orders ex GST. Jamie spoke to roughly $1.45M in the meeting; the pull showed $1.48M. The August budget was $2.00M and budget to 28 August was $1.81M using the dashboard&rsquo;s calendar-day pacing, hence &minus;18.1%. Open orders (71 at $1.28M) are the Thursday 6pm bake that was still on the Operations tab during the meeting; the Sales tab had been re-pulled by hand that morning. Enquiries is the tracker count as at the day. The live tabs have moved on since."
+   "note": "Frozen from the 11:40am AEST Odoo pull, confirmed orders ex GST. Jamie spoke to roughly $1.45M in the meeting; the pull showed $1.48M. The August budget was $2.00M and budget to 28 August was $1.81M using the dashboard&rsquo;s calendar-day pacing, hence &minus;18.1%. Open orders (71 at $1.28M) are the Thursday 6pm bake that was still on the Operations tab during the meeting; the Sales tab had been re-pulled by hand that morning. Enquiries is the tracker count on the day (138 in both the 27 and 28 August bakes). The live tabs have moved on since."
   },
   "Friday 4 September 2026": {
    "chips": [
@@ -1257,7 +1257,7 @@
     "Tests 2,080 YTD",
     "FYTD $3.10M"
    ],
-   "note": "Frozen from the 4:19pm AEST Odoo pull on 4 September, confirmed orders ex GST. The screen in the meeting was still showing the Thursday 6pm pull: the refresh had been failing a verify check since Thursday evening and was repaired at 10am. September is four days in, so MTD $105k against a $1.40M month budget paced by calendar day ($187k to 4 September) reads &minus;43.5%; last year&rsquo;s full September was $1.29M. Open orders 43 at $700k, open quotes $344k across 24, 138 enquiries tracked, 2,080 tests calendar YTD and FYTD $3.10M all come from the same pull. The live tabs have moved on since."
+   "note": "Frozen from the 4:19pm AWST (6:19pm AEST) Odoo pull on 4 September, confirmed orders ex GST. The screen in the meeting was still showing the Thursday 6pm pull: the refresh had been failing a verify check since Thursday evening and was repaired at 10am. September is four days in, so MTD $105k against a $1.40M month budget paced by calendar day ($187k to 4 September) reads &minus;43.5% &mdash; the page on the day paced the month over a 31-day axis and showed &minus;41.6%, since corrected; last year&rsquo;s full September was $1.29M. Open orders 43 at $700k, open quotes $344k across 24, 138 enquiries tracked, 2,080 tests calendar YTD and FYTD $3.10M all come from the same pull. The live tabs have moved on since."
   }
  },
  "gsbNotes": [
