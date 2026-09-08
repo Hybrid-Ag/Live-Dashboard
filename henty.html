@@ -418,14 +418,15 @@ body.ha-event {margin:0; padding:0; background:var(--ha-paper)}
         const reduced = typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         const behavior = reduced ? 'auto' : 'smooth';
         const frame = window.frameElement;
-        if (frame && frame.ownerDocument.defaultView) {
-          // Autofitted same-origin frames scroll with the dashboard. A single
-          // parent scroll avoids competing inner/outer scrollIntoView motions.
-          const parentWindow = frame.ownerDocument.defaultView;
-          const navigation = frame.ownerDocument.querySelector('.tabbar');
-          const inset = navigation ? navigation.getBoundingClientRect().height : 0;
-          const top = parentWindow.scrollY + frame.getBoundingClientRect().top + heading.getBoundingClientRect().top - inset - 12;
-          parentWindow.scrollTo({top: Math.max(0, top), behavior: behavior});
+        const host = frame ? frame.ownerDocument : document;
+        const reader = host.querySelector('#calendar-content-nav');
+        if (frame || reader) {
+          // Both sticky bars remain visible while navigating native or embedded pages.
+          const hostWindow = host.defaultView;
+          const navigation = host.querySelector('.tabbar');
+          const inset = (navigation ? navigation.getBoundingClientRect().height : 0) + (reader ? reader.getBoundingClientRect().height : 0);
+          const top = hostWindow.scrollY + (frame ? frame.getBoundingClientRect().top : 0) + heading.getBoundingClientRect().top - inset - 12;
+          hostWindow.scrollTo({top: Math.max(0, top), behavior: behavior});
         } else heading.scrollIntoView({behavior: behavior, block: 'start'});
         heading.focus({preventScroll: true});
       });
