@@ -1258,6 +1258,18 @@
     "FYTD $3.10M"
    ],
    "note": "Frozen from the 4:19pm AWST (6:19pm AEST) Odoo pull on 4 September, confirmed orders ex GST. The screen in the meeting was still showing the Thursday 6pm pull: the refresh had been failing a verify check since Thursday evening and was repaired at 10am. September is four days in, so MTD $105k against a $1.40M month budget paced by calendar day ($187k to 4 September) reads &minus;43.5% &mdash; the page on the day paced the month over a 31-day axis and showed &minus;41.6%, since corrected; last year&rsquo;s full September was $1.29M. Open orders 43 at $700k, open quotes $344k across 24, 138 enquiries tracked, 2,080 tests calendar YTD and FYTD $3.10M all come from the same pull. The live tabs have moved on since."
+  },
+  "Friday 11 September 2026": {
+   "chips": [
+    "MTD $356k",
+    "MTD &minus;30.6% vs budget",
+    "Open $648k &middot; 49",
+    "Open quotes $379k &middot; 30",
+    "Enquiries 139",
+    "Tests 2,081 YTD",
+    "FYTD $3.33M"
+   ],
+   "note": "Frozen automatically from the 11 September, 11:05am AEST Odoo pull, confirmed orders ex GST. The September budget is $1.40M and budget to 11 September is $513k on the dashboard&rsquo;s calendar-day pacing, hence &minus;30.6%. Open orders, open quotes, 139 enquiries tracked and 2,081 tests calendar YTD are as at the same pull. The live tabs move on from here."
   }
  },
  "gsbNotes": [
