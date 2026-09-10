@@ -126,6 +126,31 @@ table{border-collapse:collapse}
   .fgv-assets{grid-template-columns:1fr}
   .atab{min-height:44px}
 }
+
+/* VicNoTill timeline and retained planning context. */
+.ha-event .fgv-tbl.fgv-budget-tbl{table-layout:fixed;min-width:0}
+.ha-event .fgv-tbl.fgv-budget-tbl th:first-child,.ha-event .fgv-tbl.fgv-budget-tbl td:first-child{width:40%;min-width:0;white-space:normal}
+.fgv-budget-tbl td{overflow-wrap:anywhere}
+.fgv-folds{margin-top:14px;border-top:1px solid var(--line)}
+.fgv-fold{border-bottom:1px solid var(--line)}
+.fgv-fold summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 2px;color:var(--ink)}
+.fgv-fold summary::-webkit-details-marker{display:none}
+.fgv-fold summary::marker{content:''}
+.fgv-fold summary::after{content:'+';flex:0 0 auto;width:24px;height:24px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;font-size:16px;line-height:1;color:var(--teal)}
+.fgv-fold[open] summary::after{content:'−'}
+.fgv-fold summary:hover{color:var(--teal)}
+.fgv-fold summary:focus-visible,.vnt-preview:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.fgv-fold-title{font-family:'Oswald',sans-serif;font-weight:600;font-size:13px;letter-spacing:1px;text-transform:uppercase}
+.fgv-fold-meta{font-size:12px;color:var(--muted);margin-left:auto;text-align:right}
+.fgv-fold-body{padding:0 0 18px}
+.fgv-fold-body .cmp-sec:first-child{margin-top:0}
+.vnt-review-note,.vnt-history-note{font-size:13.5px;color:var(--muted);line-height:1.6;margin-top:12px}
+.fgv-item.has-prev{grid-template-columns:104px minmax(0,1fr) 118px}
+.fgv-when span{display:block;font-family:'Inter',sans-serif;font-size:10.5px;line-height:1.45;font-weight:400;letter-spacing:0;text-transform:none;color:var(--muted);margin-top:4px}
+.vnt-preview{display:block;width:118px;align-self:start;padding:0;background:transparent;border:0;border-radius:8px;cursor:zoom-in;text-align:left;color:var(--muted)}
+.vnt-preview .fgv-prev{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:8px}
+.vnt-preview-label{display:block;margin-top:5px;font-family:'Inter',sans-serif;font-size:10px;text-align:center}
+@media(max-width:760px){.fgv-item.has-prev{grid-template-columns:minmax(0,1fr)}.vnt-preview{width:min(100%,260px)}.fgv-fold summary{gap:10px;flex-wrap:wrap}.fgv-fold-meta{font-size:11px}.fgv-fold-title{max-width:68%}}
 </style>
 
 <style id="ha-event-fonts">@font-face{font-family:'Alternate Gothic No2 D';src:url(data:font/woff2;base64,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) format('woff2');font-weight:400;font-style:normal;font-display:swap;}
@@ -418,7 +443,7 @@ body.ha-event {margin:0; padding:0; background:var(--ha-paper)}
       <div class="cov-badge">&#x2B21; Broadacre Team</div>
     </div>
     <div class="cov-center">
-      <div class="cov-sub">Campaign Rollout</div>
+      <div class="cov-sub">Campaign Rollout &amp; Review</div>
       <div class="cov-title">Vic<em>NoTill</em> 2026</div>
       <div class="cov-meta">Wednesday 2 &amp; Thursday 3 September 2026 &middot; Yarrawonga Mulwala Golf Club Resort, Mulwala<br>Sponsor &amp; Exhibitor &middot; One day in the conference room, one day in the paddock</div>
     </div>
@@ -430,10 +455,175 @@ body.ha-event {margin:0; padding:0; background:var(--ha-paper)}
   <div class="cov-accent"></div>
 
   <div class="cmp-body">
-    <p class="cmp-lead">A two-day broadacre sponsorship with an existing partnership behind it &mdash; committed and paid since December/January. Day one is a conference room with our stand in it; day two is a field day on the Lawless property at Burramine.</p>
+    <p class="cmp-lead">The 2&ndash;3 September campaign brought together the conference at Mulwala and the field day at Burramine. The content rollout is recorded below, with the team&rsquo;s post-event review planned for Friday 11 September after the sales meeting.</p>
+    <div class="cmp-sec" id="vnt-review">
+      <div class="cmp-h">Post-event SWOT &amp; enquiries</div>
+      <div class="cmp-pending" style="margin:0;padding:26px 30px">
+        <div class="pi" aria-hidden="true">&#x2B21;</div>
+        <div class="pt">Friday 11 September 2026</div>
+        <div class="pd">The SWOT and enquiry capture are planned for after the sales meeting. The review will bring together the team&rsquo;s observations, grower conversations and follow-up actions.</div>
+      </div>
+      <p class="vnt-review-note">SWOT findings and enquiry outcomes are still to be recorded. The product-sample refresh is already on the discussion list; personalised grower follow-up remains to be drafted.</p>
+    </div>
 
     <div class="cmp-sec">
-      <div class="cmp-h">The play</div>
+      <div class="cmp-h">Content timeline</div>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.55">The lead-up stories, event invitation and post-event recap, in date order. Open any image to view the creative.</p>
+
+      <div class="fgv-sub">Phase 1 &middot; lead-up, 24 August &ndash; 1 September</div>
+      <div class="fgv-item has-prev">
+        <div class="fgv-when">24 Aug</div>
+        <div><div class="fgv-t">Meet our team at the VicNoTill Conference</div><div class="fgv-d">Introduced Bruce Armstrong and James White, with a practical invitation to bring soil and plant results, nutrient programs, paddock questions and nitrogen-use questions to the stand.</div><div class="fgv-tags"><span class="fgv-tag k">Story</span><span class="fgv-tag p">Posted</span></div></div>
+        <button type="button" class="vnt-preview" aria-haspopup="dialog" aria-controls="vnt-lightbox" aria-label="View Meet our team at the VicNoTill Conference" data-caption="24 Aug 2026 · Story">
+          <img class="fgv-prev" src="assets/vicnotill-2026/2026-08-24-team.jpg" alt="Meet our team at the VicNoTill Conference" width="1080" height="1920" loading="lazy" decoding="async">
+          <span class="vnt-preview-label">View creative</span>
+        </button>
+      </div>
+      <div class="fgv-item has-prev">
+        <div class="fgv-when">26 Aug</div>
+        <div><div class="fgv-t">What can we do about poor NUE?</div><div class="fgv-d">A nitrogen use efficiency story covering form, application, conversion and co-factors, with an invitation to talk it through with Bruce and James.</div><div class="fgv-tags"><span class="fgv-tag k">Story</span><span class="fgv-tag p">Posted</span></div></div>
+        <button type="button" class="vnt-preview" aria-haspopup="dialog" aria-controls="vnt-lightbox" aria-label="View What can we do about poor NUE?" data-caption="26 Aug 2026 · Story">
+          <img class="fgv-prev" src="assets/vicnotill-2026/2026-08-26-nue.jpg" alt="What can we do about poor NUE?" width="1080" height="1920" loading="lazy" decoding="async">
+          <span class="vnt-preview-label">View creative</span>
+        </button>
+      </div>
+      <div class="fgv-item has-prev">
+        <div class="fgv-when">26 Aug</div>
+        <div><div class="fgv-t">Conference line-up</div><div class="fgv-d">Reshared the VicNoTill Farmers Helping Farmers conference line-up and event details.</div><div class="fgv-tags"><span class="fgv-tag k">Story reshare</span><span class="fgv-tag p">Posted</span></div></div>
+        <button type="button" class="vnt-preview" aria-haspopup="dialog" aria-controls="vnt-lightbox" aria-label="View Conference line-up" data-caption="26 Aug 2026 · Story reshare">
+          <img class="fgv-prev" src="assets/vicnotill-2026/2026-08-26-lineup.jpg" alt="Conference line-up" width="1080" height="1920" loading="lazy" decoding="async">
+          <span class="vnt-preview-label">View creative</span>
+        </button>
+      </div>
+      <div class="fgv-item has-prev">
+        <div class="fgv-when">27 Aug</div>
+        <div><div class="fgv-t">Practical broadacre conversations and data walkthroughs</div><div class="fgv-d">Invited growers to bring paddock data or questions about crop performance, fertiliser return, soil and plant results, DSA testing and nitrogen use efficiency.</div><div class="fgv-tags"><span class="fgv-tag k">Story</span><span class="fgv-tag p">Posted</span></div></div>
+        <button type="button" class="vnt-preview" aria-haspopup="dialog" aria-controls="vnt-lightbox" aria-label="View Practical broadacre conversations and data walkthroughs" data-caption="27 Aug 2026 · Story">
+          <img class="fgv-prev" src="assets/vicnotill-2026/2026-08-27-data-walkthrough.jpg" alt="Practical broadacre conversations and data walkthroughs" width="1080" height="1920" loading="lazy" decoding="async">
+          <span class="vnt-preview-label">View creative</span>
+        </button>
+      </div>
+      <div class="fgv-item has-prev">
+        <div class="fgv-when">27 Aug</div>
+        <div><div class="fgv-t">Join us at the VicNoTill Conference</div><div class="fgv-d">Direct invitation to meet Bruce and James, with the conference details, practical discussion topics and the Nitrogen Use Efficiency webinar. Recorded results: 309 opens from 587 emails sent (52.62%), and 25 clicks at 4.34%.</div><div class="fgv-tags"><span class="fgv-tag o">Email</span><span class="fgv-tag p">Sent</span></div></div>
+        <button type="button" class="vnt-preview" aria-haspopup="dialog" aria-controls="vnt-lightbox" aria-label="View Join us at the VicNoTill Conference" data-caption="27 Aug 2026 · Email">
+          <img class="fgv-prev" src="assets/vicnotill-2026/2026-08-27-email.jpg" alt="Join us at the VicNoTill Conference" width="926" height="2000" loading="lazy" decoding="async">
+          <span class="vnt-preview-label">View creative</span>
+        </button>
+      </div>
+      <div class="fgv-item has-prev">
+        <div class="fgv-when">27 Aug</div>
+        <div><div class="fgv-t">Conference and field day invitation</div><div class="fgv-d">A two-message invitation covering the dates, venue, team and broadacre nutrition topics. Recorded send: 425 recipients and 850 SMS in total.</div><div class="fgv-tags"><span class="fgv-tag o">SMS</span><span class="fgv-tag p">Sent</span></div></div>
+        <button type="button" class="vnt-preview" aria-haspopup="dialog" aria-controls="vnt-lightbox" aria-label="View Conference and field day invitation" data-caption="27 Aug 2026 · SMS">
+          <img class="fgv-prev" src="assets/vicnotill-2026/2026-08-27-sms.jpg" alt="Conference and field day invitation" width="1080" height="1920" loading="lazy" decoding="async">
+          <span class="vnt-preview-label">View creative</span>
+        </button>
+      </div>
+      <div class="fgv-item has-prev">
+        <div class="fgv-when">29 Aug</div>
+        <div><div class="fgv-t">Plan for the season ahead</div><div class="fgv-d">Bruce and James invited growers to bring a result, program or paddock question. Covered paddock performance, nitrogen use efficiency, soil and plant testing, and nutrient programs.</div><div class="fgv-tags"><span class="fgv-tag k">Story</span><span class="fgv-tag p">Posted</span></div></div>
+        <button type="button" class="vnt-preview" aria-haspopup="dialog" aria-controls="vnt-lightbox" aria-label="View Plan for the season ahead" data-caption="29 Aug 2026 · Story">
+          <img class="fgv-prev" src="assets/vicnotill-2026/2026-08-29-season-ahead.jpg" alt="Plan for the season ahead" width="1080" height="1920" loading="lazy" decoding="async">
+          <span class="vnt-preview-label">View creative</span>
+        </button>
+      </div>
+      <div class="fgv-item has-prev">
+        <div class="fgv-when">30 Aug</div>
+        <div><div class="fgv-t">Burramine field day site preview</div><div class="fgv-d">Reshared Nathan Lawless at the field day site, previewing day two of the Farmers Helping Farmers Conference.</div><div class="fgv-tags"><span class="fgv-tag o">Video story reshare</span><span class="fgv-tag p">Posted</span></div></div>
+        <button type="button" class="vnt-preview" aria-haspopup="dialog" aria-controls="vnt-lightbox" aria-label="View Burramine field day site preview" data-caption="30 Aug 2026 · Video story reshare">
+          <img class="fgv-prev" src="assets/vicnotill-2026/2026-08-30-field-day-preview.jpg" alt="Burramine field day site preview" width="1080" height="1920" loading="lazy" decoding="async">
+          <span class="vnt-preview-label">View creative</span>
+        </button>
+      </div>
+      <div class="fgv-item has-prev">
+        <div class="fgv-when">31 Aug</div>
+        <div><div class="fgv-t">Crop checks and the coming weeks</div><div class="fgv-d">James White in the paddock, with an invitation to come and chat to the Hybrid-Ag team at the conference on 2 September.</div><div class="fgv-tags"><span class="fgv-tag o">Video story</span><span class="fgv-tag p">Posted</span></div></div>
+        <button type="button" class="vnt-preview" aria-haspopup="dialog" aria-controls="vnt-lightbox" aria-label="View Crop checks and the coming weeks" data-caption="31 Aug 2026 · Video story">
+          <img class="fgv-prev" src="assets/vicnotill-2026/2026-08-31-crop-checks.jpg" alt="Crop checks and the coming weeks" width="1112" height="1955" loading="lazy" decoding="async">
+          <span class="vnt-preview-label">View creative</span>
+        </button>
+      </div>
+      <div class="fgv-item has-prev">
+        <div class="fgv-when">1 Sep</div>
+        <div><div class="fgv-t">This Wednesday: meet our team</div><div class="fgv-d">Final team reminder covering foliar program review, post-flowering nutrition, sap testing, and potassium and grain fill.</div><div class="fgv-tags"><span class="fgv-tag k">Story</span><span class="fgv-tag p">Posted</span></div></div>
+        <button type="button" class="vnt-preview" aria-haspopup="dialog" aria-controls="vnt-lightbox" aria-label="View This Wednesday: meet our team" data-caption="1 Sep 2026 · Story">
+          <img class="fgv-prev" src="assets/vicnotill-2026/2026-09-01-team-reminder.jpg" alt="This Wednesday: meet our team" width="1080" height="1920" loading="lazy" decoding="async">
+          <span class="vnt-preview-label">View creative</span>
+        </button>
+      </div>
+
+      <div class="fgv-sub">Phase 2 &middot; event days, 2&ndash;3 September</div>
+      <div class="fgv-item has-prev">
+        <div class="fgv-when">2 Sep</div>
+        <div><div class="fgv-t">Come and have a chat with our team</div><div class="fgv-d">The conference stand set up with banners, display screen, booklets and products, alongside a day-of invitation to come and talk.</div><div class="fgv-tags"><span class="fgv-tag k">Story</span><span class="fgv-tag p">Posted</span></div></div>
+        <button type="button" class="vnt-preview" aria-haspopup="dialog" aria-controls="vnt-lightbox" aria-label="View Come and have a chat with our team" data-caption="2 Sep 2026 · Story">
+          <img class="fgv-prev" src="assets/vicnotill-2026/2026-09-02-stand.jpg" alt="Come and have a chat with our team" width="1080" height="1920" loading="lazy" decoding="async">
+          <span class="vnt-preview-label">View creative</span>
+        </button>
+      </div>
+
+      <div class="fgv-sub">Phase 3 &middot; post-event</div>
+      <div class="fgv-item has-prev">
+        <div class="fgv-when">9 Sep</div>
+        <div><div class="fgv-t">Recap: Alex Grant, Bridging the Soil Gap</div><div class="fgv-d">Conference highlights featuring Alex Grant and his Bridging the Soil Gap presentation.</div><div class="fgv-tags"><span class="fgv-tag k">Story</span><span class="fgv-tag p">Posted</span></div></div>
+        <button type="button" class="vnt-preview" aria-haspopup="dialog" aria-controls="vnt-lightbox" aria-label="View Recap: Alex Grant, Bridging the Soil Gap" data-caption="9 Sep 2026 · Story">
+          <img class="fgv-prev" src="assets/vicnotill-2026/2026-09-09-recap.jpg" alt="Recap: Alex Grant, Bridging the Soil Gap" width="1080" height="1920" loading="lazy" decoding="async">
+          <span class="vnt-preview-label">View creative</span>
+        </button>
+      </div>
+      <div class="fgv-item"><div class="fgv-when">Post-event</div><div><div class="fgv-t">Personalised grower and lead follow-up</div><div class="fgv-d">Continues each grower&rsquo;s conversation with a relevant next step &mdash; the question they asked, the resource promised, a named contact.</div><div class="fgv-tags"><span class="fgv-tag o">Email</span><span class="fgv-tag o">SMS</span><span class="fgv-tag s">To draft</span></div></div></div>
+    </div>
+
+    <div class="cmp-sec">
+      <div class="cmp-h">Commitment &amp; cost</div>
+      <div class="fgv-stats">
+        <div class="kpi"><div class="lab">Annual sponsorship</div><div class="num">$5,445</div><div class="det">paid Dec/Jan &middot; committed</div></div>
+        <div class="kpi k-berry"><div class="lab">Included tickets</div><div class="num">1</div><div class="det">conference ticket + 1 conference stand</div></div>
+        <div class="kpi k-green"><div class="lab">Planned team</div><div class="num">2</div><div class="det">James White &middot; Bruce Armstrong</div></div>
+      </div>
+      <div class="tblwrap"><table class="fgv-tbl fgv-budget-tbl">
+        <thead><tr><th>What the sponsorship includes</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td class="wrap">Logo &amp; 200-word profile on the VicNoTill website</td><td>Listing name, logos and business description supplied.</td></tr>
+          <tr><td class="wrap">Logo on the magazine</td><td>Included.</td></tr>
+          <tr><td class="wrap">Three half-page magazine ads</td><td>Artwork deadlines below; the April edition is supplied.</td></tr>
+          <tr><td class="wrap">Post sharing</td><td>Included.</td></tr>
+          <tr><td class="wrap">Ticket/s</td><td>One conference ticket included. One additional purchased.</td></tr>
+          <tr><td class="wrap">One conference stand</td><td>Day one only. No stands at the field day.</td></tr>
+          <tr><td class="wrap">Additional tickets</td><td><a href="https://www.trybooking.com/DNCMP" target="_blank" rel="noopener">trybooking.com/DNCMP</a> with code <strong>SPONSOR2026</strong>, or email <a href="mailto:manager@vicnotill.com.au">manager@vicnotill.com.au</a> to arrange an invoice. Ask Amy about pricing first.</td></tr>
+          <tr><td class="wrap">Flights &amp; accommodation</td><td>To be confirmed.</td></tr>
+        </tbody>
+      </table></div>
+      <div class="fgv-team">
+        <div class="fgv-p"><div class="fgv-av">JW</div><div><div class="pn">James White</div><div class="pr">Broadacre &middot; confirmed</div></div></div>
+        <div class="fgv-p"><div class="fgv-av">BA</div><div><div class="pn">Bruce Armstrong</div><div class="pr">Broadacre &middot; confirmed</div></div></div>
+      </div>
+      <div class="cmp-next"><strong>Sponsorship scope:</strong> $5,445 covers the annual partnership, including magazine advertising and the conference benefits above. It is not an all-in conference cost. The additional ticket price and final travel or accommodation costs are not recorded here.</div>
+    </div>
+
+    <div class="cmp-sec">
+      <div class="cmp-h">Magazine advertising</div>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.55">Three half-page ads across the year, included in the sponsorship. The April creative was supplied; the July placement is not recorded here. The December slot remains open.</p>
+      <div class="tblwrap"><table class="fgv-tbl">
+        <thead><tr><th>Artwork due</th><th>Edition</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>27 Feb</td><td class="wrap">1 April</td><td>Supplied &mdash; <a href="https://shorturl.at/V7HQy" target="_blank" rel="noopener">Nutritional Audit</a> creative, running to the <a href="https://www.hybridag.com.au/audit" target="_blank" rel="noopener">hybridag.com.au/audit</a> lead form.</td></tr>
+          <tr><td>29 May</td><td class="wrap">1 July</td><td>Check what ran &mdash; not recorded here.</td></tr>
+          <tr><td>30 Oct</td><td class="wrap">1 December</td><td>Open. Brief it after the post-event review.</td></tr>
+        </tbody>
+      </table></div>
+      <div class="cmp-next"><strong><a href="https://hybridag365.sharepoint.com/:b:/r/sites/Hybrid/Shared%20Documents/MARKETING/Marketing%20-%20New%20Chapter/Sponsorships%20%26%20Events/Vic-No-Till/VicNoTillSpecs2024%20(1).pdf?csf=1&amp;web=1&amp;e=vrkr9E" target="_blank" rel="noopener">Artwork specs</a>:</strong> 142mm high &times; 198mm wide &middot; 15mm bleed &middot; crop marks visible and offset by 4.5mm.</div>
+    </div>
+
+    <div class="cmp-sec">
+      <div class="cmp-h">Planning history</div>
+      <p class="vnt-history-note">The original approach, organiser program, offers and preparation are kept below. These are the plans and allocations recorded before the event; the post-event review will capture what happened.</p>
+      <div class="fgv-folds">
+      <details class="fgv-fold" id="vnt-plan-program">
+        <summary><span class="fgv-fold-title">Event approach &amp; program</span><span class="fgv-fold-meta">Pre-event brief</span></summary>
+        <div class="fgv-fold-body">
+    <div class="cmp-sec">
+      <div class="fgv-sub">The play</div>
       <p style="font-size:14px;line-height:1.6">VicNoTill puts progressive broadacre growers, soil scientists and agronomists in one room for two days, and the room already thinks about soil the way we do. That makes it a conversation event rather than a promotion event. Bruce and James work the stand and the sessions on day one; day two is paddock time and networking.</p>
       <p style="font-size:14px;line-height:1.6">Lunch is catered <strong>among the sponsor stands</strong> on day one, which is our foot-traffic window &mdash; the same lesson the Cherry and FGV rollouts kept surfacing. Plan the stand and the team&rsquo;s roaming around the breaks.</p>
       <div class="cmp-next"><strong>Goals:</strong> build brand awareness &middot; network with progressive broadacre growers &middot; generate qualified leads &middot; support the no-till community we already sit inside.</div>
@@ -446,14 +636,14 @@ body.ha-event {margin:0; padding:0; background:var(--ha-paper)}
     </div>
 
     <div class="cmp-sec">
-      <div class="cmp-h">Program &amp; schedule</div>
-      <p style="font-size:13.5px;color:var(--muted);line-height:1.55">Organiser detail as supplied. Session times beyond the 8:00am start are still to be confirmed &mdash; check the VicNoTill program closer to the date.</p>
+      <div class="fgv-sub">Program &amp; schedule</div>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.55">Organiser detail retained from the pre-event brief. Session times beyond the 8:00am start were not recorded in the brief.</p>
 
       <div class="asset-tabs" id="ag-tabs" style="flex-wrap:wrap;margin:14px 0 18px">
-        <div class="atab active" id="ag-tab-bumpin" onclick="showAg('bumpin')">Bump-In &middot; 1 Sep</div>
-        <div class="atab" id="ag-tab-day1" onclick="showAg('day1')">Conference Day &middot; 2 Sep</div>
-        <div class="atab" id="ag-tab-day2" onclick="showAg('day2')">Field Day &middot; 3 Sep</div>
-        <div class="atab" id="ag-tab-speakers" onclick="showAg('speakers')">Speakers &amp; program</div>
+        <button type="button" class="atab active" id="ag-tab-bumpin" aria-pressed="true" onclick="showAg('bumpin')">Bump-In &middot; 1 Sep</button>
+        <button type="button" class="atab" aria-pressed="false" id="ag-tab-day1" onclick="showAg('day1')">Conference Day &middot; 2 Sep</button>
+        <button type="button" class="atab" aria-pressed="false" id="ag-tab-day2" onclick="showAg('day2')">Field Day &middot; 3 Sep</button>
+        <button type="button" class="atab" aria-pressed="false" id="ag-tab-speakers" onclick="showAg('speakers')">Speakers &amp; program</button>
       </div>
 
       <div class="fgv-apanel active" id="ag-bumpin">
@@ -500,9 +690,13 @@ body.ha-event {margin:0; padding:0; background:var(--ha-paper)}
         </table></div>
       </div>
     </div>
-
+        </div>
+      </details>
+      <details class="fgv-fold" id="vnt-plan-offers">
+        <summary><span class="fgv-fold-title">Offer tiers</span><span class="fgv-fold-meta">Planned activation</span></summary>
+        <div class="fgv-fold-body">
     <div class="cmp-sec">
-      <div class="cmp-h">Offer tiers</div>
+      <div class="fgv-sub">Offer tiers</div>
       <p style="font-size:14px;line-height:1.6">No giveaway this time. The activation is a two-tier offer.</p>
       <div class="prog-row">
         <div class="prog" style="border-left-color:var(--teal)">
@@ -516,34 +710,14 @@ body.ha-event {margin:0; padding:0; background:var(--ha-paper)}
       </div>
       <div class="cmp-next"><strong>Execution:</strong> two separate QR codes routing to two separate landing pages, one per tier, and two A4 QR posters printed for the stand. Keep the testing-investment offer off to the side.</div>
     </div>
-
+        </div>
+      </details>
+      <details class="fgv-fold" id="vnt-plan-assets">
+        <summary><span class="fgv-fold-title">Site, display &amp; consumables</span><span class="fgv-fold-meta">Planning allocations</span></summary>
+        <div class="fgv-fold-body">
     <div class="cmp-sec">
-      <div class="cmp-h">Content timeline</div>
-      <p style="font-size:13.5px;color:var(--muted);line-height:1.55">Story-led through the lead-up, with the feed carrying one reel and a reshare of Nathan&rsquo;s field-day preview; email and SMS carry the direct invitation.</p>
-
-      <div class="fgv-sub">Phase 1 &middot; lead-up, 24 August &ndash; 1 September</div>
-      <div class="fgv-item"><div class="fgv-when">24 Aug</div><div><div class="fgv-t">Meet our team at the VicNoTill Conference</div><div class="fgv-d">Introduces Bruce and James and the topics growers can bring to them.</div><div class="fgv-tags"><span class="fgv-tag k">Story</span><span class="fgv-tag p">Done</span></div></div></div>
-      <div class="fgv-item"><div class="fgv-when">26 Aug</div><div><div class="fgv-t">What can we do about poor NUE?</div><div class="fgv-d">Explains the key factors influencing nitrogen use efficiency.</div><div class="fgv-tags"><span class="fgv-tag k">Story</span><span class="fgv-tag p">Done</span></div></div></div>
-      <div class="fgv-item"><div class="fgv-when">26 Aug</div><div><div class="fgv-t">Conference line-up and ticket giveaway</div><div class="fgv-d">Reshare of the VicNoTill conference line-up and ticket giveaway.</div><div class="fgv-tags"><span class="fgv-tag k">Story reshare</span><span class="fgv-tag p">Done</span></div></div></div>
-      <div class="fgv-item"><div class="fgv-when">27 Aug</div><div><div class="fgv-t">Practical broadacre conversations and data walkthroughs</div><div class="fgv-d">Highlights the technical conversations growers can have with Bruce and James at the stand.</div><div class="fgv-tags"><span class="fgv-tag k">Story</span><span class="fgv-tag p">Done</span></div></div></div>
-      <div class="fgv-item"><div class="fgv-when">27 Aug</div><div><div class="fgv-t">Join our team at the VicNoTill Conference</div><div class="fgv-d">Invites growers to visit the stand for a practical conversation with the team, and to watch the Nitrogen Use Efficiency webinar ahead of the conference. 309 opens from 587 emails sent, a 52.62% open rate, and 25 clicks at 4.34%.</div><div class="fgv-tags"><span class="fgv-tag o">Email</span><span class="fgv-tag p">Done</span></div></div></div>
-      <div class="fgv-item"><div class="fgv-when">27 Aug</div><div><div class="fgv-t">Join Hybrid-Ag at the VicNoTill Conference + Field Day</div><div class="fgv-d">Direct event invitation and reminder. 425 recipients, two messages each &mdash; 850 SMS sent in total.</div><div class="fgv-tags"><span class="fgv-tag o">SMS</span><span class="fgv-tag p">Done</span></div></div></div>
-      <div class="fgv-item"><div class="fgv-when">29 Aug</div><div><div class="fgv-t">Plan for the season ahead &mdash; meet the team</div><div class="fgv-d">Value-led meet-the-team story featuring nutrition agronomists Bruce Armstrong and James White. Invites growers to bring a result, a program or a paddock question and to talk through the practical support on offer &mdash; soil and plant testing, DSA testing, nutrient program reviews, data mapping and Prescription Blends. The conversation areas run across paddock performance, covering crop patterns, constraints and recent inputs; nitrogen use efficiency, covering form, crop uptake and co-factors; soil and plant testing, covering sampling, crop stage and interpreting results; and nutrient programs, covering crop demand, conditions and yield. Closes on the invitation to bring those questions to the Hybrid-Ag stand, 2&ndash;3 September at Yarrawonga Mulwala Golf Club Resort.</div><div class="fgv-tags"><span class="fgv-tag k">Story</span><span class="fgv-tag p">Done</span></div></div></div>
-      <div class="fgv-item"><div class="fgv-when">30 Aug</div><div><div class="fgv-t">Burramine field day site preview</div><div class="fgv-d">Reshare of a reel featuring Nathan Lawless previewing the Burramine field day site, where attendees spend day two of the Farmers Helping Farmers Conference.</div><div class="fgv-tags"><span class="fgv-tag k">Story reshare</span><span class="fgv-tag p">Done</span></div></div></div>
-      <div class="fgv-item"><div class="fgv-when">31 Aug</div><div><div class="fgv-t">What should growers be checking now and over the coming weeks?</div><div class="fgv-d">James White on what he is seeing this season, the checks worth making now and over the coming weeks, closing on an invitation to the VicNoTill Conference.</div><div class="fgv-tags"><span class="fgv-tag o">Reel</span><span class="fgv-tag k">Story share</span><span class="fgv-tag p">Done</span></div></div></div>
-      <div class="fgv-item"><div class="fgv-when">1 Sep</div><div><div class="fgv-t">This Wednesday: meet Bruce Armstrong and James White</div><div class="fgv-d">Event reminder carrying the schedule, location, team and the topics they can talk through.</div><div class="fgv-tags"><span class="fgv-tag k">Story</span><span class="fgv-tag p">Done</span></div></div></div>
-
-      <div class="fgv-sub">Phase 2 &middot; event days, 2&ndash;3 September</div>
-      <div class="fgv-item"><div class="fgv-when">2 Sep</div><div><div class="fgv-t">Come and see Hybrid-Ag at the VicNoTill Conference today</div><div class="fgv-d">A photo of the stand set for the conference day &mdash; broadacre booklet, merchandise and products &mdash; with a day-of invitation.</div><div class="fgv-tags"><span class="fgv-tag k">Story</span><span class="fgv-tag p">Done</span></div></div></div>
-
-      <div class="fgv-sub">Phase 3 &middot; post-event &mdash; where the conversion happens</div>
-      <div class="fgv-item"><div class="fgv-when">9 Sep</div><div><div class="fgv-t">Recap: Alex Grant, &ldquo;Bridging the Soil Gap&rdquo;</div><div class="fgv-d">Recaps Alex Grant during his &ldquo;Bridging the Soil Gap&rdquo; talk.</div><div class="fgv-tags"><span class="fgv-tag k">Story</span><span class="fgv-tag p">Done</span></div></div></div>
-      <div class="fgv-item"><div class="fgv-when">Post-event</div><div><div class="fgv-t">Personalised grower and lead follow-up</div><div class="fgv-d">Continues each grower&rsquo;s conversation with a relevant next step &mdash; the question they asked, the resource promised, a named contact.</div><div class="fgv-tags"><span class="fgv-tag o">Email</span><span class="fgv-tag o">SMS</span><span class="fgv-tag s">To draft</span></div></div></div>
-    </div>
-
-    <div class="cmp-sec">
-      <div class="cmp-h">Site, display &amp; consumables</div>
-      <p style="font-size:14px;line-height:1.6">One event-provided table, no assigned numbers &mdash; pick a spot with traffic when we arrive. Power is still to confirm with the organiser. Paige organises everything and has it ready for collection. James White will drop by at Wangaratta on Tuesday to collect the event assets.</p>
+      <div class="fgv-sub">Site, display &amp; consumables</div>
+      <p style="font-size:14px;line-height:1.6">The pre-event plan allocated one event-provided table with no assigned number. Power was unconfirmed in the brief. Paige was organising the assets for James White to collect at Wangaratta on Tuesday 1 September. Quantities below are planning allocations, not a record of what was used.</p>
       <div class="fgv-assets">
         <div class="fgv-asset"><div class="an">Pull-up banners</div><div class="ad">2 allocated &mdash; <a href="https://hybridag365.sharepoint.com/:b:/r/sites/Hybrid/Shared%20Documents/MARKETING/EVENTS/Event%20Items/Pull%20Up%20Banners/Pull%20Up%20Banners%202022/Pull%20Up%20Banners%20Final%20-%20Optimising%20Inputs.pdf?csf=1&amp;web=1&amp;e=fz1uTg" target="_blank" rel="noopener">Optimising Inputs</a> &amp; <a href="https://hybridag365.sharepoint.com/:b:/r/sites/Hybrid/Shared%20Documents/MARKETING/EVENTS/Event%20Items/Pull%20Up%20Banners/Pull%20Up%20Banners%202022/Pull%20Up%20Banner%20Final%20-%20Testing.pdf?csf=1&amp;web=1&amp;e=Jhthhh" target="_blank" rel="noopener">Testing Process</a>.</div><span class="fgv-tag">Pickup Wang</span></div>
         <div class="fgv-asset"><div class="an">Table</div><div class="ad">1 event-provided trestle.</div><span class="fgv-tag">Event provided</span></div>
@@ -566,87 +740,128 @@ body.ha-event {margin:0; padding:0; background:var(--ha-paper)}
       </div>
       <div class="cmp-next"><strong>Stock counts are pre-FGV.</strong> Pens, bags and caps were last counted in June, before Fruit Growers Victoria.</div>
     </div>
-
+        </div>
+      </details>
+      <details class="fgv-fold" id="vnt-plan-preparation">
+        <summary><span class="fgv-fold-title">Preparation checklist</span><span class="fgv-fold-meta">Recorded pre-event status</span></summary>
+        <div class="fgv-fold-body">
     <div class="cmp-sec">
-      <div class="cmp-h">Commitment &amp; cost</div>
-      <div class="fgv-stats">
-        <div class="kpi"><div class="lab">Sponsorship</div><div class="num">$5,445</div><div class="det">paid Dec/Jan &middot; committed</div></div>
-        <div class="kpi k-berry"><div class="lab">Included tickets</div><div class="num">1</div><div class="det">conference ticket + 1 conference stand</div></div>
-        <div class="kpi k-green"><div class="lab">Team attending</div><div class="num">2</div><div class="det">James White &middot; Bruce Armstrong</div></div>
-      </div>
-      <div class="tblwrap"><table class="fgv-tbl">
-        <thead><tr><th>What the sponsorship includes</th><th>Status</th></tr></thead>
-        <tbody>
-          <tr><td class="wrap">Logo &amp; 200-word profile on the VicNoTill website</td><td>Listing name, logos and business description supplied.</td></tr>
-          <tr><td class="wrap">Logo on the magazine</td><td>Included.</td></tr>
-          <tr><td class="wrap">Three half-page magazine ads</td><td>Artwork deadlines below; the April edition is supplied.</td></tr>
-          <tr><td class="wrap">Post sharing</td><td>Included.</td></tr>
-          <tr><td class="wrap">Ticket/s</td><td>One conference ticket included. One additional purchased.</td></tr>
-          <tr><td class="wrap">One conference stand</td><td>Day one only. No stands at the field day.</td></tr>
-          <tr><td class="wrap">Additional tickets</td><td><a href="https://www.trybooking.com/DNCMP" target="_blank" rel="noopener">trybooking.com/DNCMP</a> with code <strong>SPONSOR2026</strong>, or email <a href="mailto:manager@vicnotill.com.au">manager@vicnotill.com.au</a> to arrange an invoice. Ask Amy about pricing first.</td></tr>
-          <tr><td class="wrap">Flights &amp; accommodation</td><td>To be confirmed.</td></tr>
-        </tbody>
-      </table></div>
-      <div class="fgv-team">
-        <div class="fgv-p"><div class="fgv-av">JW</div><div><div class="pn">James White</div><div class="pr">Broadacre &middot; confirmed</div></div></div>
-        <div class="fgv-p"><div class="fgv-av">BA</div><div><div class="pn">Bruce Armstrong</div><div class="pr">Broadacre &middot; confirmed</div></div></div>
-      </div>
-      <div class="cmp-next"><strong>Registration needs, per representative:</strong> full name, email address, dietary requirements and mobile number for each person attending on our allocated sponsor tickets.</div>
-    </div>
-
-    <div class="cmp-sec">
-      <div class="cmp-h">Magazine advertising</div>
-      <p style="font-size:13.5px;color:var(--muted);line-height:1.55">Three half-page ads across the year, included in the sponsorship. One is placed; two are still open.</p>
-      <div class="tblwrap"><table class="fgv-tbl">
-        <thead><tr><th>Artwork due</th><th>Edition</th><th>Status</th></tr></thead>
-        <tbody>
-          <tr><td>27 Feb</td><td class="wrap">1 April</td><td>Supplied &mdash; <a href="https://shorturl.at/V7HQy" target="_blank" rel="noopener">Nutritional Audit</a> creative, running to the <a href="https://www.hybridag.com.au/audit" target="_blank" rel="noopener">hybridag.com.au/audit</a> lead form.</td></tr>
-          <tr><td>29 May</td><td class="wrap">1 July</td><td>Check what ran &mdash; not recorded here.</td></tr>
-          <tr><td>30 Oct</td><td class="wrap">1 December</td><td>Open. Brief it off the back of what the conference surfaces.</td></tr>
-        </tbody>
-      </table></div>
-      <div class="cmp-next"><strong><a href="https://hybridag365.sharepoint.com/:b:/r/sites/Hybrid/Shared%20Documents/MARKETING/Marketing%20-%20New%20Chapter/Sponsorships%20%26%20Events/Vic-No-Till/VicNoTillSpecs2024%20(1).pdf?csf=1&amp;web=1&amp;e=vrkr9E" target="_blank" rel="noopener">Artwork specs</a>:</strong> 142mm high &times; 198mm wide &middot; 15mm bleed &middot; crop marks visible and offset by 4.5mm.</div>
-    </div>
-
-    <div class="cmp-sec">
-      <div class="cmp-h">Next steps</div>
-      <p style="font-size:13.5px;color:var(--muted);line-height:1.55">Open items before 2 September. Owners are indicative &mdash; confirm before locking anything in.</p>
+      <div class="fgv-sub">Preparation checklist</div>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.55">The checklist below records the pre-event plan and its status at the time. It is retained as planning history; it does not establish that the open items were completed.</p>
       <div class="tblwrap"><table class="fgv-tbl">
         <thead><tr><th>When</th><th>Action</th><th>Owner</th></tr></thead>
         <tbody>
-          <tr><td>Now</td><td>Register James and Bruce by email.</td><td style="white-space:nowrap;font-family:'Inter',sans-serif;font-weight:400;color:var(--muted)">Marketing</td></tr>
-          <tr><td>Now</td><td>Request a site map if one exists; confirm power with the organiser.</td><td style="white-space:nowrap;font-family:'Inter',sans-serif;font-weight:400;color:var(--muted)">Marketing</td></tr>
-          <tr><td>Now</td><td>Draft the social campaign &mdash; story content and feed posts.</td><td style="white-space:nowrap;font-family:'Inter',sans-serif;font-weight:400;color:var(--muted)">Marketing</td></tr>
-          <tr><td>Now</td><td>Send the pre-event email and SMS.</td><td style="white-space:nowrap;font-family:'Inter',sans-serif;font-weight:400;color:var(--muted)">Marketing</td></tr>
-          <tr><td>Next</td><td>Confirm the offer and landing pages with the team, then build the two A4 QR posters.</td><td style="white-space:nowrap;font-family:'Inter',sans-serif;font-weight:400;color:var(--muted)">Marketing / Broadacre</td></tr>
-          <tr><td>Next</td><td>Stock check and logistics &mdash; banners, TV, coreflutes, booklets, brochures, consumables.</td><td style="white-space:nowrap;font-family:'Inter',sans-serif;font-weight:400;color:var(--muted)">Marketing / Paige</td></tr>
-          <tr><td>Next</td><td>Organise files for printing and prepare the stand assets.</td><td style="white-space:nowrap;font-family:'Inter',sans-serif;font-weight:400;color:var(--muted)">Marketing / Paige</td></tr>
-          <tr><td>Next</td><td>Request the delegate list if one is available.</td><td style="white-space:nowrap;font-family:'Inter',sans-serif;font-weight:400;color:var(--muted)">Marketing</td></tr>
+          <tr><td>Pre-event</td><td>Register James and Bruce by email.</td><td style="white-space:nowrap;font-family:'Inter',sans-serif;font-weight:400;color:var(--muted)">Marketing</td></tr>
+          <tr><td>Pre-event</td><td>Request a site map if one exists; confirm power with the organiser.</td><td style="white-space:nowrap;font-family:'Inter',sans-serif;font-weight:400;color:var(--muted)">Marketing</td></tr>
+          <tr><td>Pre-event</td><td>Draft the social campaign &mdash; story content and feed posts.</td><td style="white-space:nowrap;font-family:'Inter',sans-serif;font-weight:400;color:var(--muted)">Marketing</td></tr>
+          <tr><td>Pre-event</td><td>Send the pre-event email and SMS.</td><td style="white-space:nowrap;font-family:'Inter',sans-serif;font-weight:400;color:var(--muted)">Marketing</td></tr>
+          <tr><td>Pre-event</td><td>Confirm the offer and landing pages with the team, then build the two A4 QR posters.</td><td style="white-space:nowrap;font-family:'Inter',sans-serif;font-weight:400;color:var(--muted)">Marketing / Broadacre</td></tr>
+          <tr><td>Pre-event</td><td>Stock check and logistics &mdash; banners, TV, coreflutes, booklets, brochures, consumables.</td><td style="white-space:nowrap;font-family:'Inter',sans-serif;font-weight:400;color:var(--muted)">Marketing / Paige</td></tr>
+          <tr><td>Pre-event</td><td>Organise files for printing and prepare the stand assets.</td><td style="white-space:nowrap;font-family:'Inter',sans-serif;font-weight:400;color:var(--muted)">Marketing / Paige</td></tr>
+          <tr><td>Pre-event</td><td>Request the delegate list if one is available.</td><td style="white-space:nowrap;font-family:'Inter',sans-serif;font-weight:400;color:var(--muted)">Marketing</td></tr>
           <tr><td>Done</td><td>Listing name, logos and business description confirmed &middot; sponsorship paid Dec/Jan &middot; April magazine artwork supplied &middot; James and Bruce attending &middot; second conference ticket purchased &middot; asset collection arranged at Wangaratta, Tue 1 Sep.</td><td style="white-space:nowrap;font-family:'Inter',sans-serif;font-weight:400;color:var(--green)">Complete</td></tr>
         </tbody>
       </table></div>
     </div>
-
-    <div class="cmp-sec">
-      <div class="cmp-h">Post-event SWOT</div>
-      <div class="cmp-pending" style="margin:0;padding:26px 30px">
-        <div class="pi">&#x2B21;</div>
-        <div class="pt">To be completed after 3 September</div>
-        <div class="pd">Leads and observations are captured live across both days and written up afterwards, the same way Wimmera, Cherry and Fruit Growers Victoria were. The product-sample refresh is already flagged as one thing to look at off the back of it.</div>
+      <div class="cmp-next"><strong>Registration requirements in the brief:</strong> full name, email address, dietary requirements and mobile number for each person attending on our allocated sponsor tickets.</div>
+        </div>
+      </details>
       </div>
     </div>
 
     <div class="cmp-foot">
-      VicNoTill 2026 Farmers Helping Farmers Conference + Field Day &middot; Broadacre &middot; sponsor &amp; exhibitor. Built from the event brief, 27 August 2026.
-      Speaker and program detail subject to the organiser&rsquo;s final program.
+      VicNoTill 2026 Farmers Helping Farmers Conference + Field Day &middot; Broadacre &middot; sponsor &amp; exhibitor. Campaign record updated 10 September 2026; planning history retained from the 27 August event brief.
     </div>
   </div>
 </div>
+
+<dialog class="vnt-lightbox" id="vnt-lightbox" aria-labelledby="vnt-lightbox-title" aria-describedby="vnt-lightbox-caption">
+  <style>
+    .vnt-lightbox{position:fixed;inset:0;margin:auto;width:min(1100px,calc(100vw - 32px));height:min(920px,calc(100dvh - 32px));max-width:none;max-height:none;padding:0;border:1px solid #D6D0C7;border-radius:12px;background:#F4F1EA;color:#1A1714;font-family:'Inter',system-ui,sans-serif;box-shadow:0 20px 80px #0005}
+    .vnt-lightbox::backdrop{background:rgba(19,17,16,.82)}
+    .vnt-lightbox[open]{display:flex;flex-direction:column}
+    .vnt-lightbox *{box-sizing:border-box}
+    .vnt-lightbox-header,.vnt-lightbox-footer{display:flex;align-items:center;gap:14px;padding:13px 18px;flex-shrink:0}
+    .vnt-lightbox-header{border-bottom:1px solid #D6D0C7}
+    .vnt-lightbox-title{font-size:15px;font-weight:600;line-height:1.4;margin:0;flex:1}
+    .vnt-lightbox button{font:inherit;min-width:44px;min-height:44px;padding:9px 13px;border:1px solid #D6D0C7;border-radius:7px;background:#FFF;color:#1A1714;cursor:pointer}
+    .vnt-lightbox button:hover{border-color:#1B9690;color:#166D65}
+    .vnt-lightbox button:focus-visible{outline:3px solid #1B9690;outline-offset:2px}
+    .vnt-lightbox-stage{flex:1;min-height:0;overflow:auto;display:flex;align-items:center;justify-content:center;padding:12px;background:#EAE5DF}
+    .vnt-lightbox .vnt-lightbox-image{display:block;width:auto!important;height:auto!important;max-width:100%!important;max-height:100%!important;object-fit:contain;border-radius:0}
+    .vnt-lightbox-footer{border-top:1px solid #D6D0C7;justify-content:space-between}
+    .vnt-lightbox-caption{flex:1;text-align:center;font-size:12px;line-height:1.5;margin:0;color:#6B665E}
+    @media(max-width:560px){.vnt-lightbox{width:calc(100vw - 16px);height:calc(100dvh - 16px)}.vnt-lightbox-header,.vnt-lightbox-footer{padding:10px;gap:8px}.vnt-lightbox-stage{padding:8px}.vnt-lightbox-title{font-size:13px}.vnt-lightbox button{padding:8px}.vnt-lightbox-caption{font-size:11px}}
+  </style>
+  <div class="vnt-lightbox-header">
+    <h2 class="vnt-lightbox-title" id="vnt-lightbox-title">Campaign asset</h2>
+    <button type="button" id="vnt-lightbox-close" aria-label="Close image viewer" autofocus>&times;</button>
+  </div>
+  <div class="vnt-lightbox-stage"><img class="vnt-lightbox-image" id="vnt-lightbox-image" alt=""></div>
+  <div class="vnt-lightbox-footer">
+    <button type="button" id="vnt-lightbox-prev" aria-label="Previous campaign asset">&larr; Previous</button>
+    <p class="vnt-lightbox-caption" id="vnt-lightbox-caption" aria-live="polite"></p>
+    <button type="button" id="vnt-lightbox-next" aria-label="Next campaign asset">Next &rarr;</button>
+  </div>
+</dialog>
 <script>
 function showAg(v){
   document.querySelectorAll('.fgv-apanel').forEach(function(p){ p.classList.toggle('active', p.id === 'ag-' + v); });
-  document.querySelectorAll('#ag-tabs .atab').forEach(function(t){ t.classList.toggle('active', t.id === 'ag-tab-' + v); });
+  document.querySelectorAll('#ag-tabs .atab').forEach(function(t){ t.classList.toggle('active', t.id === 'ag-tab-' + v); t.setAttribute('aria-pressed', String(t.id === 'ag-tab-' + v)); });
 }
+(function(){
+  var dialog=document.getElementById('vnt-lightbox');
+  var title=document.getElementById('vnt-lightbox-title');
+  var image=document.getElementById('vnt-lightbox-image');
+  var caption=document.getElementById('vnt-lightbox-caption');
+  var close=document.getElementById('vnt-lightbox-close');
+  var previous=document.getElementById('vnt-lightbox-prev');
+  var next=document.getElementById('vnt-lightbox-next');
+  var previews=[],index=0,opener=null,hostDocument=document,oldOverflow='';
+  function draw(){
+    var preview=previews[index],row=preview.closest('.fgv-item');
+    var thumb=preview.querySelector('img');
+    title.textContent=row.querySelector('.fgv-t').textContent;
+    image.src=new URL(preview.dataset.full || thumb.getAttribute('src'),document.baseURI).href;
+    image.alt=thumb.alt;
+    caption.textContent=(index+1)+' of '+previews.length+' · '+preview.dataset.caption;
+    previous.hidden=next.hidden=previews.length<2;
+  }
+  document.addEventListener('click',function(event){
+    var preview=event.target.closest('.vnt-preview');
+    if(!preview)return;
+    previews=Array.from(document.querySelectorAll('.vnt-preview'));
+    opener=preview;index=previews.indexOf(preview);
+    // The calendar grows this iframe to fit its content. Place the dialog in
+    // the same-origin host so its viewport and focus trap cover the visible page.
+    hostDocument=document;
+    try{if(window.parent!==window && window.parent.document.body)hostDocument=window.parent.document;}catch(error){}
+    if(dialog.ownerDocument!==hostDocument)hostDocument.body.appendChild(dialog);
+    oldOverflow=hostDocument.body.style.overflow;
+    hostDocument.body.style.overflow='hidden';
+    draw();dialog.showModal();close.focus();
+  });
+  close.addEventListener('click',function(){dialog.close();});
+  previous.addEventListener('click',function(){index=(index-1+previews.length)%previews.length;draw();});
+  next.addEventListener('click',function(){index=(index+1)%previews.length;draw();});
+  dialog.addEventListener('keydown',function(event){
+    if(event.key==='ArrowLeft'){event.preventDefault();previous.click();}
+    if(event.key==='ArrowRight'){event.preventDefault();next.click();}
+    // Native dialog handles Escape and keeps keyboard focus within the viewer.
+  });
+  dialog.addEventListener('click',function(event){
+    if(event.target!==dialog)return;
+    var rect=dialog.getBoundingClientRect();
+    if(event.clientX<rect.left || event.clientX>rect.right || event.clientY<rect.top || event.clientY>rect.bottom)dialog.close();
+  });
+  dialog.addEventListener('close',function(){
+    hostDocument.body.style.overflow=oldOverflow;
+    if(opener && opener.isConnected)opener.focus({preventScroll:true});
+    if(dialog.ownerDocument!==document)document.body.appendChild(dialog);
+  });
+  window.addEventListener('pagehide',function(){if(dialog.open)dialog.close();});
+})();
+
 </script>
 </body>
 </html>
