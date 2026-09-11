@@ -1,0 +1,90 @@
+{
+  "snapshot": "2026-09-11",
+  "status": "Draft examples for design and wording review, not technical approval.",
+  "products": [
+    {
+      "rf": "https://www.figma.com/design/RWiyqXmV33S3VddjniZrn4?node-id=7386-253"
+    },
+    {
+      "budmax": "https://www.figma.com/design/RWiyqXmV33S3VddjniZrn4?node-id=5681-616"
+    },
+    {
+      "lockout": "https://www.figma.com/design/RWiyqXmV33S3VddjniZrn4?node-id=7996-12545"
+    }
+  ],
+  "photography": "VicVid2026 field-program reference; not evidence of RF, BudMax or Lockout performance.",
+  "references": [
+    {
+      "name": "Super Max",
+      "title": "Hi-Tech Ag — Super Max",
+      "page": 1,
+      "focus": "A simple technical sheet",
+      "description": "Analysis and application tables dominate, with no crop photograph. Nathan’s nominated Hi-Tech reference; archived October 2021 edition.",
+      "image": "/assets/01-hi-tech-ag-p1.png",
+      "source": "https://drive.google.com/file/d/1uytwa4pupB04ZfStWqnQ4IuStTXsKrsl/view"
+    },
+    {
+      "name": "BLU N",
+      "title": "Hi-Tech Ag — BLU N",
+      "page": 1,
+      "focus": "Field photography and grower experience",
+      "description": "A field photograph, packshot and named grower testimonial give this archived sales brochure a different emphasis from Super Max.",
+      "image": "/assets/02-hi-tech-ag-p1.png",
+      "source": "https://drive.google.com/file/d/13AerlNL4pJPe00ggBxQSGUWYe_xPpKor/view"
+    },
+    {
+      "name": "VICCHEM Horticulture",
+      "title": "VICCHEM — Horticulture",
+      "page": 4,
+      "focus": "Several crops shown separately",
+      "description": "Small labelled crop photographs sit alongside the product information. Edition date is unconfirmed.",
+      "image": "/assets/03-vicchem-p4.png",
+      "source": "https://www.vicchem.com/product_detail?pn=19300"
+    },
+    {
+      "name": "Yara BRASSITREL",
+      "title": "Yara — BRASSITREL PRO",
+      "page": 1,
+      "focus": "A modest amount of field photography",
+      "description": "A grower-in-field photograph occupies part of the page, leaving space for analysis and explanation.",
+      "image": "/assets/04-yara-p1.png",
+      "source": "https://www.yara.com.au/crop-nutrition/crop-solutions/yara-australia-brochures-techsheets/yaravita-techsheet/"
+    },
+    {
+      "name": "SACOA SE14",
+      "title": "SACOA — SE14",
+      "page": 4,
+      "focus": "Photography that explains a process",
+      "description": "An actual soil-profile photograph and two arrows show placement. PDF page 4 is printed page 3. The original is hosted by Agrion.",
+      "image": "/assets/05-sacoa-p4.png",
+      "source": "https://agrion.com.au/products/se14/"
+    },
+    {
+      "name": "ATP Convey RxZn",
+      "title": "ATP — Convey RxZn",
+      "page": 1,
+      "focus": "Ingredients explained one at a time",
+      "description": "Three ingredient technologies have separate explanations and relevant images. This is a US edition from the Canadian ATP business.",
+      "image": "/assets/06-atp-p1.png",
+      "source": "https://atpag.com/biostimulant/convey/"
+    },
+    {
+      "name": "NTS Tricho-Shield",
+      "title": "NTS — Tricho-Shield",
+      "page": 1,
+      "focus": "A restrained biological sheet",
+      "description": "Species names, a short explanation and a packshot communicate a biological product without a crop-led hero image.",
+      "image": "/assets/07-nts-p1.png",
+      "source": "https://nutri-tech.com.au/products/tricho-shield"
+    },
+    {
+      "name": "RLF XFoliar",
+      "title": "RLF — XFoliar",
+      "page": 2,
+      "focus": "Application details",
+      "description": "Explanations, application rates and analyses occupy distinct areas, providing a comparison for the practical information page.",
+      "image": "/assets/08-rlf-p2.png",
+      "source": "https://www.rlfcentral.com/all-products/"
+    }
+  ]
+}
