@@ -1160,7 +1160,309 @@
     ]
    }
   ],
-  "mtg-notes-0911": []
+  "mtg-notes-0911": [
+   {
+    "title": "People synergy",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Denise",
+      "text": "Jamie thanked Denise for being efficient and responsive. He also recognised the way Chelsea, Josh and Smithy worked through a client’s fertiliser-analysis concern together; the detail was held for the technical meeting."
+     }
+    ]
+   },
+   {
+    "title": "Field days &mdash; follow-up",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Sulphur and nitrogen efficiency",
+      "text": "James challenged the field-day researchers on whether adding sulphur to sulphur-deficient Mallee soils could improve nitrogen-use efficiency and reduce urea requirements. He submitted feedback on the gap in their research. In his own work, sulphur differences are showing in sap tests; he has not established a comparable yield response. Crops often pick up more sulphur and boron as roots reach deeper layers, and he expects the early-season difference to matter more in a dry year."
+     },
+     {
+      "lead": "Oat hay and the next field day",
+      "text": "The first day also covered gibberellic acid to help oat panicles emerge for hay cutting and drying, and glyphosate desiccation, which Jimmy questioned. These were the presenters&rsquo; practices, not a program agreed by the team. At the following day&rsquo;s field event he saw silica and biostimulant trials, met further prospects and heard about the Regen for Real market-access program. He wants to investigate whether it offers a premium for growers reducing urea use."
+     }
+    ]
+   },
+   {
+    "title": "September sales",
+    "accent": "orange",
+    "items": [
+     {
+      "lead": "Review last year’s customers",
+      "text": "September was still behind budget. Jamie will email a tidied comparison with September 2025 so each agronomist can check for missed opportunities and report anything worth following up."
+     },
+     {
+      "lead": "Check the reporting context",
+      "text": "Red entries are prompts to investigate, not proof that a customer has not ordered. Chelsea raised Cherry Hill; entity names, quote-conversion timing and reduced spend can affect the comparison."
+     },
+     {
+      "lead": "Outstanding quotes",
+      "text": "Nate Strawbridge will review outstanding quotes next week, particularly the revised TVO quote, so the expected pipeline is clearer."
+     },
+     {
+      "lead": "Soil and leaf testing",
+      "text": "AgVita testing is well up while NovaCropControl is down. Jamie wants to look into that split as the leaf-testing season accelerates; the frozen figures above remain the Friday snapshot."
+     }
+    ]
+   },
+   {
+    "title": "Around the territories",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "James White",
+      "text": "Northeast crops are later and some are waterlogged. His near-term focus is flowering and post-flowering blends, pasture foliar work and the wetter cropping areas; the Mallee season is closer to finishing. Jimmy sees strong Mallee yield potential, including barley approaching 8 t/ha and wheat around 7 t/ha in well-managed crops; these are expectations ahead of harvest."
+     },
+     {
+      "lead": "Chelsea Hall",
+      "text": "Most growers are roughly five to seven days behind last year. Cherry and stone-fruit orders are moving towards RF and potassium, with apple orders expected later in the month. Next week’s Valley visits will also check fertigation options where rain has stopped machinery passes."
+     },
+     {
+      "lead": "Andrew Woodford",
+      "text": "Some Queensland ordering remains possible this month or next, but existing stock, nut prices and pollination are affecting spending decisions. Red Rock’s proposed dry blends were not a confirmed September order."
+     },
+     {
+      "lead": "Andrew Smith",
+      "text": "Flowering is about a week behind last year but more compressed, and he considers this closer to a normal season. He expects activity to pick up as flowering progresses and will use the customer comparison to check gaps."
+     },
+     {
+      "lead": "Hamilton Rowe",
+      "text": "His established customer base looks broadly similar year on year. Wormtech is delayed by cash-flow pressure around its shed and granulating-line investment; newer opportunities are unlikely to change the immediate picture much."
+     },
+     {
+      "lead": "Nathan Strawbridge",
+      "text": "He is staying close to the blend, stock and ordering requirements at TVO and has arranged a meeting with Smithy and Kim. Wine-grape activity is starting, another nitrogen order is expected from one customer, and olive discussions are beginning."
+     }
+    ]
+   },
+   {
+    "title": "Dispatch and availability",
+    "accent": "orange",
+    "items": [
+     {
+      "lead": "Odoo dispatch lag",
+      "text": "Amos said most orders still showing as unshipped had already left; delayed Odoo entry was keeping the board red. Wormtech&rsquo;s two orders still had a balance to complete, including FKF Organic, copper, zinc and Power-Cal that did not fit on the truck. Filsell Orchards was waiting on payment."
+     },
+     {
+      "lead": "Next week’s production",
+      "text": "A molasses-based input was expected on Monday 14 September, with James&rsquo;s related blends expected to be completed Monday or Tuesday."
+     },
+     {
+      "lead": "Organic calcium",
+      "text": "Amos will follow up the ETA for the organic calcium acetate shipment. Chelsea has growers nearing the end of their current supply who may wait a week or two if the timing works."
+     },
+     {
+      "lead": "Club Mandalay",
+      "text": "A customer reported four pallets arriving when they expected five. Amos recalled a 3.75-tonne order that should occupy four pallets and will check before the customer is given a final answer."
+     },
+     {
+      "lead": "Amino-Plex shipment",
+      "text": "The vessel ETA given was 29 September into Melbourne. Unloading, transfer and unpacking could take a further five to seven days, so that date was not a warehouse-availability promise."
+     }
+    ]
+   },
+   {
+    "title": "Certification and product feedback",
+    "accent": "orange",
+    "items": [
+     {
+      "lead": "Southern Cross application",
+      "text": "The full Southern Cross application has been submitted and a response is pending. The team reported difficulty getting replies from ACO. If Southern Cross&rsquo;s response is satisfactory, the plan is to let the ACO certification lapse at the end of its term. Label requirements would still apply; allowable biological inputs and individual approvals were also discussed."
+     },
+     {
+      "lead": "Quality checks",
+      "text": "The team understood that a move to Southern Cross could remove the current requirement for heavy-metals testing on every batch, while retaining random testing for quality control. The application is still pending."
+     },
+     {
+      "lead": "Tank residue",
+      "text": "A customer reported sludge after storing a large quantity of Amino-Plex Liquid. The cause was not established; the discussion considered the powder and fish components and asked for a clearer description of the residue. The manufacturing team also described the powder as difficult to dissolve, particularly at high concentration without strong agitation. Selling powder instead was discussed, not decided."
+     },
+     {
+      "lead": "Compatibility question",
+      "text": "A label warning about amino acid with copper was raised, but nobody established an answer in this discussion. It remains a question to check, not a confirmed compatibility result."
+     }
+    ]
+   },
+   {
+    "title": "Marketing and enquiries",
+    "accent": "berry",
+    "items": [
+     {
+      "lead": "More field video",
+      "text": "Nathan thanked the team for sending more video, which gives Marketing useful context and the agronomist&rsquo;s own voice. The target is 30 leads per month, supported by one lead-generation campaign each month. Recently, enquiries have been coming in at nearly one a day. Marketing&rsquo;s headline figures now sit in the Stats tab."
+     },
+     {
+      "lead": "Follow-through",
+      "text": "Nathan reported that both he and Jamie receive enquiry texts and can pass enquiries promptly to the right person. The new Outcome field and agronomist filters give Jamie a way to review follow-up during one-to-ones."
+     },
+     {
+      "lead": "Crop stages in the calendar",
+      "text": "The calendar now includes cereals, pome fruit and stone fruit alongside events. Dates will move with crop progress; Nathan plans to develop options with the team so posts arrive when they are useful."
+     },
+     {
+      "lead": "Apple Playbook campaign",
+      "text": "The Fruit Growers Victoria review is recorded and the Apple booklet lead-generation campaign is ready apart from two videos. Nathan has spoken with Smithy about getting those made so the campaign can run this month."
+     },
+     {
+      "lead": "Small crop focus",
+      "text": "Small crop is a growth priority to help the quieter cash-flow periods, with work beginning alongside Hamilton and Josh. Enquiries were described as generally more broadacre, although Jamie noted a stronger horticulture mix in the recent weeks; no percentage split was given."
+     },
+     {
+      "lead": "See the detail",
+      "text": "The enquiry table is available to the team with stage filters and enquiry details. A request to understand where enquiries are coming from was answered by pointing people back to that shared view."
+     }
+    ]
+   },
+   {
+    "title": "Events and product information",
+    "accent": "berry",
+    "items": [
+     {
+      "lead": "VicNoTill and Henty",
+      "text": "VicNoTill’s SWOT was scheduled for later that day. Henty preparation is underway with James, including the liquid-injection brochure and grow display. The marquee ETA was Monday 14 September, following a conversation with Paige."
+     },
+     {
+      "lead": "Hampers",
+      "text": "Jamie and Hamilton will review the Christmas hamper target list on Monday 14 September. Jamie aims to send it to the team by midweek, with additions, removals and reallocations back by Friday 18 September so Nathan and Pia can move ahead. Quotes are already being gathered, taking on the team&rsquo;s request to start earlier."
+     },
+     {
+      "lead": "One product-information base",
+      "text": "Nathan and Tom are firming up product details for the website, brochures and V2, using the price list as the staging point and a convenient reference for the team."
+     },
+     {
+      "lead": "Brochure review",
+      "text": "Following Hamilton’s feedback, Nathan is preparing a visual options review for Jamie, Hamilton, Tom, Amos and possibly Smithy. The aim is to understand what the team wants to see before settling the brochure format."
+     }
+    ]
+   },
+   {
+    "title": "Week of 14 September",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Andrew Smith and Josh Richardson",
+      "text": "Smithy has Montague and KY-area work on Tuesday, then Wednesday with Josh around Shepparton to reconnect with growers they have worked with before. Josh&rsquo;s Tuesday visits around Cobram and possibly Shepparton still needed confirmation; Thursday could be towards Melbourne with Hamilton, depending on their meeting later that Friday. Josh offered to help anyone call customers on Jamie&rsquo;s September follow-up list."
+     },
+     {
+      "lead": "Andrew Woodford",
+      "text": "Stanthorpe on Tuesday for leaf sampling with three stone-fruit growers, returning Wednesday with samples for DHL, then office time Thursday and Friday. Woody wants to work through the disappointing Bundaberg potato result with Hamilton and bring the explanation back to the team."
+     },
+     {
+      "lead": "Chelsea Hall",
+      "text": "With Claudio back, sit down with him and Ben about the biological program, product use and how the season is going. Get the team onto their dashboards as weekly reporting builds. Chelsea and Smithy also want to meet Aiden at the Narre Warren property, this week or next if it can be arranged, and check in with Yarra Valley apple growers on what they need."
+     },
+     {
+      "lead": "Hamilton Rowe",
+      "text": "Thursday was the main day taking shape: Connor Steel at Pakenham, then follow-ups with Taranto Farms and other vegetable growers in the area. Time with Stuart Grigg depended on that Friday afternoon&rsquo;s meeting. Hamilton still needed to fill out his plans over the following weeks."
+     },
+     {
+      "lead": "James White",
+      "text": "Office time to work through sap tests, then a substantial Cobram round: George Depalmer and the dairy maize plans, James Sims on turf, John Moorhead and soil tests for a rice trial. Jimmy wants to prioritise a visit to Matt Clarke, a Vic No-Till contact with irrigated wheat, and may fit in a pasture second opinion for Woody at Everton Fuel &amp; Farm on Friday. He also wants Bruce involved in the Carbon Granule discussions with Steve."
+     },
+     {
+      "lead": "Nathan Strawbridge",
+      "text": "Monday follow-ups at Nairne and Blefari, including fresh spur wood and a metagenomic sample at Blefari after SARDI could not obtain a result from the first wood sample. Tuesday to Thursday around Mildura, visiting established contacts and some newer prospects in the Riverland on the way there and back."
+     },
+     {
+      "lead": "Visits and coverage",
+      "text": "A possible Bacchus Marsh visit to a small strawberry, cherry and apple grower should fit an existing trip. The team believed Dan Hill already consulted there, so check that relationship before approaching. Bruce Armstrong and Joshua Hull did not have a calendar run-through in these recordings; their calendars are marked Not covered."
+     }
+    ]
+   },
+   {
+    "title": "Technical &mdash; field tools and the potato review",
+    "accent": "green",
+    "items": [
+     {
+      "lead": "Autonomous tractors and spray drones",
+      "text": "Jimmy saw autonomous tractor demonstrations at the field days; the tractors could still be driven manually and were programmed around headlands and obstacles. Nate is seeing more spray-drone use among his growers, with Longview planning a few trial blocks before expanding. The group corrected the suggestion that current drones refill themselves: an operator still fills them, sometimes rotating three aircraft so two can fly while one is refilled."
+     },
+     {
+      "lead": "Bundaberg potatoes",
+      "text": "Woody&rsquo;s grower had not achieved the yield of the comparison treatment after roughly 750 kg of Hybrid dry blend. The grower suspected too much humic acid and referred to a claimed 50 kg limit used elsewhere. The team did not establish that as the cause. Woody and Hamilton will review the whole program and report back; others asked to hear what they find."
+     },
+     {
+      "lead": "Graphing leaf tests",
+      "text": "Jimmy asked Jamie and Nathan for a session within the next month on graphing AgVita and NovaCropControl results, or training in the existing tools, so he can compare this season and plan next year. The idea of searching the highest boron results across the leaf-test history was also raised; Tom has gathered the soil tests, but the leaf-test collection is not yet together."
+     }
+    ]
+   },
+   {
+    "title": "Technical &mdash; calcium, boron and crop stage",
+    "accent": "green",
+    "items": [
+     {
+      "lead": "Oats for export hay",
+      "text": "Jimmy compared sap results showing boron uptake after early applications but calcium still appearing low. The team cautioned against treating a generic calcium target range as a crop-stage target. Once the soil test was opened, pH around 8 and high potassium became the main leads to investigate, alongside the young-versus-old-leaf pattern. Having calcium in the soil does not establish that it is available to the plant."
+     },
+     {
+      "lead": "Next program decisions",
+      "text": "The crop had already received sulphate of ammonia, including liquid injection. Jimmy is reconsidering the potassium phosphate in the starter blend for next season; a later SOA application was discussed as something to investigate, rather than a settled recommendation. The separate field-day treatment of 500 kg SOA in barley was an experimental comparison and was reportedly starting to lodge."
+     },
+     {
+      "lead": "High boron needs context",
+      "text": "A barley sap test had about 10.9 ppm boron in the young leaf, strong calcium and phosphorus, and a crop that still looked healthy. Jimmy suspected roots had reached an alkaline subsoil layer as manganese fell in the new leaf. The discussion compared an apple result around 30 ppm without visible symptoms with Woody&rsquo;s citrus results around 120&ndash;150 ppm, where flowering and tree performance were poor. These were observations from different crops, not agreed toxicity thresholds or application targets. Woody suspects boron below the usual 15 cm soil-sampling depth and has taken fresh leaf samples to check."
+     }
+    ]
+   },
+   {
+    "title": "Technical &mdash; checking a fertiliser analysis",
+    "accent": "orange",
+    "items": [
+     {
+      "lead": "Chelsea&rsquo;s client query",
+      "text": "An external analysis initially appeared well below the blend supplied. Working through the actual report with Smithy, Josh, Jamie and Hamilton showed a calculation and interpretation issue. Chelsea said seeing it through that lens changed the conversation and increased her confidence in the product."
+     },
+     {
+      "lead": "Compare the same basis",
+      "text": "Check the laboratory report, bag analysis and quoted units together. A weight-by-weight percentage cannot be compared directly with a weight-by-volume percentage without the product&rsquo;s density; partial-area spreading also changes the units per treated hectare. Hamilton used a 60% spread area as an example of why a whole-hectare calculation can disagree with the quote."
+     },
+     {
+      "lead": "Sample and laboratory checks",
+      "text": "Tom described previous results that needed retesting because the laboratory had used soil-test calibration for a fertiliser sample. Small grab samples from a large dry blend can also skew individual nutrients, as happened with variations between Handpicked blends. Sample handling matters too: an AdBlue sample taken in an old soft-drink bottle had been contaminated by the container. Ingredient quantities, batch records and total blend weights provide the internal checks to compare against."
+     },
+     {
+      "lead": "How to respond",
+      "text": "Jamie asked the team to respond calmly, get the report and work through the calculation and testing method before accepting that the product is wrong. Tom and Hamilton did not recall a major formulation failure after those checks, while acknowledging that discrepancies need investigation. Chelsea will follow up any further reports and suggested keeping this worked example in Odoo Knowledge so the team can refer to it next time."
+     }
+    ]
+   },
+   {
+    "title": "Technical follow-up &mdash; Lockout",
+    "accent": "green",
+    "items": [
+     {
+      "lead": "Brochure correction",
+      "text": "Chelsea flagged that the website brochure described Lockout as a two-species product, while her discussions with Grant indicated three, including Streptomyces. Nathan confirmed the website wording was wrong and said he would correct it."
+     }
+    ]
+   },
+   {
+    "title": "Actions to carry forward",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Jamie and the team",
+      "text": "Jamie to circulate the September customer comparison; agronomists to check gaps and send back useful context. Josh Richardson is available to help with follow-up calls. Confirm hamper recipients and reallocations by 18 September once Jamie&rsquo;s list arrives."
+     },
+     {
+      "lead": "Nathan Strawbridge and Amos",
+      "text": "Nate to tidy outstanding quotes, especially TVO. Amos to confirm the organic calcium acetate ETA and Club Mandalay pallet count, and keep the remaining dispatches moving."
+     },
+     {
+      "lead": "Nathan Katseli",
+      "text": "Finish the two Apple Playbook videos with Smithy, progress Henty materials and the brochure options review, and correct the Lockout brochure wording. The VicNoTill SWOT was scheduled after the meetings; these recordings do not contain that debrief."
+     },
+     {
+      "lead": "Technical follow-ups",
+      "text": "Woody and Hamilton to review the Bundaberg potato result and bring it back to the team. Jimmy to arrange leaf-test graphing support with Jamie and Nathan. Chelsea to follow up the fertiliser-analysis reports and the proposed Odoo Knowledge example. Obtain more detail on the Amino-Plex residue and keep the amino-acid/copper compatibility question open."
+     }
+    ]
+   }
+  ],
+  "mtg-notes-0918": []
  },
  "meetingStats": {
   "Friday 17 July 2026": {
