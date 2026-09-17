@@ -37,10 +37,10 @@ One line per chip. Each line is a list of six or seven values, in this order:
 | 1 | Month | `0` = January … `11` = December. The start month in 2026. |
 | 2 | Date label | Free text, shown on the chip: `"20 Aug"`, `"Late Feb"`, `"Dec → early Jan"`. |
 | 3 | Name | The chip's title. |
-| 4 | Type | One of `event` · `campaign` · `social` · `launch` · `strategy`. Events go in the dedicated Events row. |
+| 4 | Type | One of `event` · `campaign` · `social` · `launch` · `strategy` · `general`. Events and `general` posts (not crop- or segment-specific) go in the first row, "Events, field days & general". |
 | 5 | Note | The small grey line under the title. |
 | 6 | Done | `true` preserves completed status. It does not create a content page. |
-| 7 | Page *(optional)* | Leave it off unless the chip should open an embedded page. Valid values today: `brandbook`, `wimmera`, `vicvid`, `cherry`, `frost`, `bud`, `freegrowers`, `hampers`. |
+| 7 | Page *(optional)* | Leave it off unless the chip should open an embedded page. Valid values today: `brandbook`, `wimmera`, `vicvid`, `cherry`, `frost`, `bud`, `freegrowers`, `hampers`, `ran`. Henty and VicNoTill use their existing standalone plan links. |
 
 Rules that will bite if broken:
 
