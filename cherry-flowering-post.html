@@ -1,288 +1,400 @@
-<!doctype html>
-<html lang="en-AU">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hybrid Ag | Cherry flowering concept</title>
-    <link rel="stylesheet" href="frost-post.css">
-    <style>
-      .campaign-cover { min-height: 325px; }
-      .campaign-cover__kicker { color: #b8c9c6; }
-      .campaign-cover__meta { color: #d1d4d1; font-size: 15px; }
-      .campaign-cover__small { color: #aaa8a4; }
-      .campaign-cover__badge { color: #a7e3da; border-color: #3c706b; font-size: 11px; }
-      .campaign-cover h1 { line-height: 1.05; }
-      .concept { padding: 44px 0; }
-      .concept + .concept { border-top: 1px solid var(--line); }
-      .review-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: start; }
-      .artwork { margin: 0; min-width: 0; }
-      .artwork__link { display: block; border: 1px solid var(--line); background: #eeeae3; box-shadow: 0 8px 24px #1a171412; }
-      .artwork img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: contain; }
-      .artwork figcaption { margin: 13px 0 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
-      .asset-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
-      .asset-action { display: inline-block; padding: 11px 16px; border: 1px solid #b5c5c1; border-radius: 3px; background: #fff; color: #006d68; font-size: 15px; font-weight: 700; text-decoration: none; }
-      .asset-action:hover { background: #e9f3f0; }
-      .asset-action:focus-visible, a:focus-visible, button:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
-      .caption-card__header { flex-wrap: wrap; padding: 20px 25px; gap: 12px; }
-      .caption-card__body { font-size: 17px; line-height: 1.55; padding: 25px; }
-      .caption-card__body .caption-hook { color: var(--black); font-weight: 700; font-size: 22px; line-height: 1.25; }
-      .copy-button { padding: 7px 12px; border: 1px solid #bec8c3; border-radius: 3px; background: #fff; color: #006d68; font: 700 14px 'Proxima Nova', Arial, sans-serif; cursor: pointer; }
-      .copy-status { min-height: 1.4em; margin: 12px 0 0; color: var(--muted); font-size: 14px; }
-      .timing-note { margin: 0 0 27px; padding: 17px 20px; background: #eeece7; border-left: 4px solid var(--orange); color: #47433d; line-height: 1.55; font-size: 16px; }
-      .opening-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; list-style: none; margin: 0; padding: 0; counter-reset: openings; }
-      .opening-options li { counter-increment: openings; min-width: 0; padding: 23px; border: 1px solid var(--line); border-top: 3px solid var(--purple); background: #fff; font-size: 20px; line-height: 1.35; }
-      .opening-options li::before { content: '0' counter(openings); display: block; margin-bottom: 14px; color: #82607c; font-family: 'Oswald', sans-serif; font-size: 15px; }
-      .source-list { margin: 0; padding-left: 22px; max-width: 1100px; color: #4a4d4d; font-size: 16px; line-height: 1.6; }
-      .source-list li + li { margin-top: 14px; }
-      .source-list a, .review-footer a { color: #006d68; text-underline-offset: 3px; }
-      .review-footer { line-height: 1.5; }
-      .asset-action { font-family: inherit; cursor: pointer; }
-      .asset-status { margin: 12px 0 0; color: var(--muted); font-size: 14px; line-height: 1.4; }
-      @media (min-width: 1400px) { .review-layout { grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 42px; } }
-      @media (max-width: 900px) { .campaign-cover { min-height: 325px; } .review-layout { grid-template-columns: minmax(0, 1fr); } .artwork { max-width: 660px; } .opening-options { grid-template-columns: minmax(0, 1fr); } .concept { padding: 34px 0; } }
-      @media (max-width: 560px) { .campaign-cover { min-height: 300px; } .campaign-cover__top { gap: 12px; flex-wrap: wrap; } .campaign-cover__logo { max-width: 170px; height: auto; } .campaign-cover__badge { font-size: 10px; } .campaign-cover h1 { font-size: 41px; } .campaign-cover__meta { font-size: 14px; } .caption-card__header, .caption-card__body { padding: 20px; } .caption-card__body { font-size: 16px; } .caption-card__body .caption-hook { font-size: 21px; } .opening-options li { font-size: 18px; } }
-    </style>
-    <style id="flowering-art-style">
-      @font-face { font-family: 'Cherry Inter'; src: url('brochure-review/assets/inter.woff2') format('woff2'); font-style: normal; font-weight: 100 900; font-display: swap; }
-      @font-face { font-family: 'Cherry Oswald'; src: url('assets/marketing/frost-readiness/concept-5/oswald-variable.ttf') format('truetype'); font-style: normal; font-weight: 200 700; font-display: swap; }
-      .flower-art-shell { container-type: inline-size; width: 100%; }
-      .flower-art { --cream: #f2efe6; --forest: #164a46; --berry: #874d70; box-sizing: border-box; position: relative; display: flex; flex-direction: column; justify-content: space-between; width: 100%; aspect-ratio: 4 / 5; padding: 5.55%; overflow: hidden; background: var(--cream); color: var(--forest); font-family: 'Cherry Inter', Arial, sans-serif; }
-      .flower-art * { box-sizing: border-box; }
-      .flower-art p, .flower-art h3 { margin: 0; }
-      .flower-art__brand { display: flex; align-items: center; justify-content: space-between; gap: 2cqw; }
-      .flower-art__logo { display: block; width: 24cqw !important; height: auto !important; aspect-ratio: auto !important; filter: brightness(0); }
-      .flower-art__series { font-size: 1.75cqw; letter-spacing: .09em; line-height: 1.3; text-transform: uppercase; font-weight: 650; text-align: right; }
-      .flower-art__kicker { margin: 0 0 1.8cqw !important; color: var(--berry); font-size: 2.15cqw; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-      .flower-art__headline { color: var(--forest); font-family: 'Cherry Oswald', 'Arial Narrow', sans-serif; font-size: 8.4cqw; font-weight: 600; letter-spacing: -.012em; line-height: 1.075; }
-      .flower-art__headline span { display: block; }
-      .flower-art__headline .flower-art__emphasis { color: #cf5e1d; }
-      .flower-art__intro { max-width: 84cqw; margin-top: 2.7cqw !important; font-size: 2.68cqw; line-height: 1.48; text-wrap: balance; font-weight: 450; }
-      .flower-art__diagram { border-top: .15cqw solid #c1c7b8; border-bottom: .15cqw solid #c1c7b8; padding: 2.2cqw 0 1.4cqw; }
-      .flower-art__diagram-label { color: #53635a; font-size: 1.7cqw; letter-spacing: .1em; font-weight: 700; text-transform: uppercase; }
-      .flower-art__diagram svg { display: block; width: 100%; height: auto; margin-top: 1.2cqw; }
-      .flower-art__note { max-width: 83cqw; margin: 1.25cqw 0 0 !important; color: #606c62; font-size: 1.8cqw; line-height: 1.45; }
-      .flower-art__takeaway { font-size: 3.03cqw; line-height: 1.38; font-weight: 600; max-width: 82cqw; }
-      .flower-art__footer { display: flex; justify-content: space-between; align-items: center; gap: 2cqw; color: #677167; font-size: 1.63cqw; }
-      .flower-art__dots { display: flex; gap: .65cqw; }
-      .flower-art__dots i { width: .9cqw; height: .9cqw; border-radius: 50%; background: #018d8a; }
-      .flower-art__dots i:nth-child(2) { background: #dc6800; }
-      .flower-art__dots i:nth-child(3) { background: #8a4f7d; }
-    </style>
-    <style>
-      body.artwork-mode { margin: 0; background: #f2efe6; }
-      .artwork-mode .campaign-cover, .artwork-mode .campaign-cover__accent, .artwork-mode .review-footer,
-      .artwork-mode .concept__heading, .artwork-mode .timing-note, .artwork-mode .asset-actions,
-      .artwork-mode .asset-status, .artwork-mode figcaption, .artwork-mode .review-layout > div,
-      .artwork-mode .concept ~ .concept { display: none; }
-      .artwork-mode .page { width: 1080px; margin: 0; }
-      .artwork-mode .concept { padding: 0; }
-      .artwork-mode .review-layout { display: block; }
-      .artwork-mode .artwork { width: 1080px; max-width: none; }
-      @media print {
-        @page { size: 1080px 1350px; margin: 0; }
-        body { margin: 0; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
-        .campaign-cover, .campaign-cover__accent, .review-footer, .concept__heading, .timing-note, .asset-actions, .asset-status, figcaption, .review-layout > div, .concept ~ .concept { display: none; }
-        .page { width: 1080px; margin: 0; }
-        .concept { padding: 0; }
-        .review-layout { display: block; }
-        .artwork { width: 1080px; max-width: none; }
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hybrid Ag | The new leaves need sugar too.</title><style id="native-style">@font-face{font-family:'Alternate Gothic';src:url('assets/cherry-spring-2026/v3/alternate-gothic.otf')}@font-face{font-family:'Proxima Nova';src:url('assets/cherry-spring-2026/v3/proxima-400.otf');font-weight:400}@font-face{font-family:'Proxima Nova';src:url('assets/cherry-spring-2026/v3/proxima-600.otf');font-weight:600}@font-face{font-family:'Proxima Nova';src:url('assets/cherry-spring-2026/v3/proxima-700.otf');font-weight:700}@font-face{font-family:'Proxima Nova';src:url('assets/cherry-spring-2026/v3/proxima-italic-400.otf');font-style:italic}@font-face{font-family:'Oswald';src:url('assets/cherry-spring-2026/v3/oswald-700.ttf');font-weight:700}
+:root{--paper:#f4f1ea;--ink:#1a1714;--teal:#1b9690;--orange:#d9742b;--berry:#8c4f8e;--muted:#6b665e;--rule:#d6d0c7}
+.slide,.slide *{box-sizing:border-box}.slide{position:relative;width:1080px;height:1350px;overflow:hidden;background:#fff;color:var(--ink);font-family:'Proxima Nova',Arial,sans-serif;font-size:30px;line-height:1.35;isolation:isolate}.slide p,.slide h2,.slide h3,.slide h4,.slide figure{margin:0}.slide h2,.slide h3,.slide h4{font-family:'Alternate Gothic','Arial Narrow',sans-serif;font-weight:400}.slide img{display:block}.slide strong{font-weight:700}.slide .label{font:700 19px/1.4 'Oswald',sans-serif;letter-spacing:2px;text-transform:uppercase}.slide .stripe{height:6px;background:linear-gradient(90deg,var(--teal) 0 33.333%,var(--orange) 33.333% 66.666%,var(--berry) 66.666%)}
+.slide-header{position:absolute;inset:0 0 auto;height:296px;background:var(--paper)}.slide-header .header-image{position:absolute;right:0;top:0;width:580px;height:290px;object-fit:cover;object-position:50% 62%;opacity:.23;mask-image:linear-gradient(90deg,transparent,#000 45%)}.slide-header .stripe{position:absolute;left:0;right:0;bottom:0}.brand-logo{position:absolute;left:64px;top:40px;width:278px;height:auto}.running{position:absolute;top:44px;right:64px;text-align:right;color:var(--ink);font:700 17px/1.65 'Oswald';letter-spacing:2px}.running span{display:block;color:var(--muted);font-size:15px}.slide-header h2{position:absolute;left:64px;right:55px;top:156px;font-size:65px;line-height:1.02;letter-spacing:.1px}.slide-header .sub{position:absolute;left:64px;right:64px;top:238px;font-size:23px;font-style:italic;line-height:1.25;color:var(--muted)}
+.slide-footer{position:absolute;left:0;right:0;bottom:0;height:66px;background:var(--paper)}.slide-footer .stripe{height:4px}.footer-brand{position:absolute;inset:4px 64px 0;display:flex;align-items:center;justify-content:space-between;font:700 15px/1 'Oswald';letter-spacing:2.1px;color:var(--teal)}.footer-brand span:nth-child(2){color:var(--orange)}.footer-brand span:nth-child(3){color:var(--berry)}.folio{position:absolute;right:64px;bottom:78px;font:700 15px/1 'Oswald';letter-spacing:2px;color:var(--muted)}
+.slide.cover{background:var(--paper)}.cover .slide-header{height:132px;background:none}.cover .slide-header .stripe,.cover .slide-header h2,.cover .slide-header .sub,.cover .header-image{display:none}.cover-photo{position:absolute;top:0;right:0;width:1080px;height:1015px;object-fit:cover;object-position:58% 65%;z-index:-3}.cover-veil{position:absolute;inset:0 0 auto;height:1030px;z-index:-2;background:linear-gradient(90deg,#f4f1ea 0%,rgba(244,241,234,.98) 29%,rgba(244,241,234,.88) 47%,rgba(244,241,234,.24) 75%,rgba(244,241,234,.02) 100%),linear-gradient(180deg,rgba(244,241,234,.8),transparent 28%,transparent 75%,#f4f1ea)}.cover-copy{position:absolute;left:64px;top:218px;width:557px}.cover-copy>.label,.shuck-cover .cover-copy>.label{color:var(--teal);margin:0 0 25px;font:700 19px/1.4 Oswald;letter-spacing:2px}.cover-copy h2{font-size:112px;line-height:1;letter-spacing:0;max-width:570px}.cover-copy p{font-size:31px;line-height:1.4;max-width:495px;margin-top:31px}.cover-copy .quiet{font-size:25px;color:var(--muted);line-height:1.35;margin-top:24px;padding-left:19px;border-left:3px solid var(--teal)}.cover-photo-credit{position:absolute;right:64px;top:934px;width:395px;text-align:right;font-size:18px;line-height:1.3;color:var(--muted)}.cover-divider{position:absolute;top:1000px;left:0;right:0}.cover-insight{position:absolute;left:64px;right:64px;top:1043px;display:grid;grid-template-columns:1fr 1fr;gap:34px}.cover-insight>div{border-top:4px solid var(--teal);padding-top:17px}.cover-insight>div:nth-child(2){border-color:var(--orange)}.cover-insight h3{font-size:39px;line-height:1.12;margin-bottom:9px}.cover-insight p{font-size:26px;line-height:1.33;color:var(--muted)}.cover .next-cue{position:absolute;left:64px;bottom:92px;font:700 17px 'Oswald';letter-spacing:1.5px;color:var(--teal)}
+.shuck-cover .cover-photo{top:180px;right:-118px;width:840px;height:820px;object-fit:contain;object-position:center top;mix-blend-mode:multiply;z-index:-2;object-fit:cover}.shuck-cover .cover-veil{z-index:-1;height:1040px;background:linear-gradient(90deg,#f4f1ea 0%,rgba(244,241,234,.98) 31%,rgba(244,241,234,.78) 45%,rgba(244,241,234,.02) 66%,transparent)}.shuck-cover .cover-copy{top:220px;width:570px}.shuck-cover .cover-copy h2{font-size:98px;line-height:1.02}.shuck-cover .cover-copy p{max-width:493px;font-size:30px;line-height:1.36;margin-top:25px}.shuck-cover .cover-insight{display:block;top:1045px}.shuck-cover .cover-insight>div{border:0;padding:0}.shuck-cover .cover-insight h3{font-size:45px;line-height:1.14;max-width:930px}.shuck-cover .cover-insight p{font-size:25px;margin-top:14px}.shuck-cover .cover-photo-credit{top:945px;right:64px;font-size:17px;background:rgba(244,241,234,.93);padding:8px 12px;width:auto}
+.lead{position:absolute;left:64px;right:64px;top:336px;font-size:31px;line-height:1.35}.diagram{position:absolute;left:0;top:436px;width:1080px;height:712px}.specimen{position:absolute;left:300px;top:40px;width:480px;height:600px;object-fit:contain;mix-blend-mode:multiply}.callout{position:absolute;width:240px;font-size:27px;line-height:1.32;z-index:3}.callout h3{font-size:41px;line-height:1.05;margin-bottom:12px}.callout .label{font-size:17px;margin-bottom:8px;color:var(--muted)}.callout.developing{left:64px;top:90px}.callout.established{right:64px;top:63px;width:220px}.callout.reserves{left:64px;top:445px;width:252px}.callout.reserves h3{color:var(--orange)}.callout.established h3{color:var(--teal)}.callout.developing h3{color:var(--berry)}.routes{position:absolute;inset:0;width:1080px;height:712px;overflow:visible;z-index:2}.routes .leader{fill:none;stroke:#6b665e;stroke-width:2}.routes .route-back{fill:none;stroke:#fff;stroke-width:9;stroke-linecap:round;stroke-linejoin:round}.routes .route{fill:none;stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round}.route-note{position:absolute;left:64px;right:64px;top:1163px;padding-top:19px;border-top:1px solid var(--rule);font-size:25px;line-height:1.35;color:var(--muted)}.route-note strong{color:var(--ink)}
+.field-panel{position:absolute;left:64px;right:64px;top:336px;height:430px}.field-panel img{width:100%;height:398px;object-fit:cover;object-position:50% 70%;border-radius:3px}.field-panel figcaption{font-size:18px;line-height:1.35;color:var(--muted);margin-top:10px}.field-tag{position:absolute;left:24px;top:24px;background:rgba(244,241,234,.95);padding:12px 16px;font:700 16px 'Oswald';letter-spacing:1.5px}.comparison{position:absolute;left:64px;right:64px;top:816px;display:grid;grid-template-columns:1fr 1fr;gap:26px}.comparison>section{background:var(--paper);border:1px solid var(--rule);border-top:5px solid var(--teal);border-radius:5px;padding:23px 26px;min-height:238px}.comparison>section:nth-child(2){border-top-color:var(--orange)}.comparison h3{font-size:42px;line-height:1.1;margin-bottom:13px}.comparison p{font-size:28px;line-height:1.33}.application{position:absolute;left:64px;right:64px;top:1104px;padding-left:23px;border-left:4px solid var(--orange);font-size:30px;line-height:1.33}.evidence-note{position:absolute;left:64px;right:64px;top:1209px;font-size:18px;color:var(--muted);font-style:italic;line-height:1.3}
+.calcium-diagram{top:420px;height:712px}.calcium-diagram .specimen{left:304px;top:44px;width:480px;height:600px}.calcium-diagram .routes{height:712px}.callout.phloem{right:64px;top:62px;width:220px}.callout.phloem h3{color:var(--orange)}.callout.xylem{left:64px;top:375px;width:240px}.callout.xylem h3{color:var(--teal)}.transport-key{position:absolute;left:64px;top:341px;z-index:3;font-size:23px;line-height:1.4;color:var(--muted);width:720px}.transport-key .label{font-size:17px;margin-bottom:11px}.diagram-note{position:absolute;left:64px;right:64px;top:1136px;border-left:4px solid var(--berry);padding-left:23px;font-size:31px;line-height:1.35}.diagram-credit{position:absolute;left:64px;bottom:88px;font-size:17px;color:var(--muted)}
+.reading-panel{position:absolute;left:64px;right:64px;top:337px;background:var(--paper);border:1px solid var(--rule);border-top:6px solid var(--teal);border-radius:6px;padding:28px 30px 27px;box-shadow:0 5px 14px #1a171409}.reading-title{display:flex;justify-content:space-between;align-items:center;gap:35px;padding-bottom:19px;border-bottom:1px solid var(--rule)}.reading-title h3{font-size:44px;line-height:1.1;max-width:610px}.reading-title .label{font-size:15px;line-height:1.65;text-align:right;color:var(--muted)}.reading-intro{font-size:27px;line-height:1.3;padding:18px 0;max-width:855px}.interpretation{width:100%;border-collapse:collapse;font-size:26px;line-height:1.3}.interpretation th{font:700 17px 'Oswald';letter-spacing:1.6px;text-align:left;border-bottom:2px solid var(--rule);padding:0 20px 15px 0;color:var(--muted)}.interpretation td{padding:16px 20px 16px 0;border-bottom:1px solid var(--rule);vertical-align:top}.interpretation td:first-child{width:37%;font-weight:600}.interpretation tr:last-child td{border-bottom:0;padding-bottom:7px}.calcium-limit{position:absolute;left:64px;right:64px;top:930px;padding:21px 26px;border-left:4px solid var(--berry);background:var(--paper)}.calcium-limit h3{font-size:40px;margin-bottom:9px;line-height:1.1}.calcium-limit p{font-size:27px;line-height:1.35}.decision-end{position:absolute;left:64px;right:64px;top:1121px;font-size:30px;line-height:1.35}.decision-end strong{color:var(--teal)}.decision-end p+p{margin-top:13px}.decision-end .small{font-size:23px;color:var(--muted)}
+@media print{@page{size:1080px 1350px;margin:0}.slide{page-break-after:always;break-after:page;print-color-adjust:exact;-webkit-print-color-adjust:exact;transform:none!important}}
+</style><style>:root {
+  --review-paper: #f4f1ea;
+  --review-ink: #1a1714;
+  --review-muted: #696760;
+  --review-line: #d6d0c7;
+  --review-teal: #1b9690;
+  --review-orange: #d9742b;
+  --review-berry: #8c4f8e;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--review-paper); }
+body { margin: 0; color: var(--review-ink); background: var(--review-paper); font-family: 'Proxima Nova', Arial, sans-serif; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; }
+button:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid var(--review-orange); outline-offset: 4px; }
+button:disabled { cursor: default; opacity: .38; }
+
+.review-header, .review-main { width: min(1440px, calc(100% - 80px)); margin-inline: auto; }
+.review-header { position: relative; display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 38px; align-items: center; padding: 28px 0; }
+.review-header::after { content: ''; position: absolute; inset: auto 0 0; height: 3px; background: linear-gradient(90deg, var(--review-teal) 0 33.333%, var(--review-orange) 33.333% 66.666%, var(--review-berry) 66.666%); }
+.review-header img { display: block; width: 160px; max-width: 100%; height: auto; max-height: 48px; object-fit: contain; object-position: left; }
+.review-header > div { min-width: 0; }
+.review-header h1 { margin: 8px 0 7px; max-width: 1050px; font-family: 'Alternate Gothic', 'Oswald', 'Arial Narrow', sans-serif; font-size: 42px; font-weight: 400; line-height: 1.06; letter-spacing: -.012em; }
+.review-meta { margin: 0; color: var(--review-muted); font-size: 11px; font-weight: 700; letter-spacing: .08em; line-height: 1.5; }
+.review-meta strong { color: #076b65; font-weight: 700; }
+.review-intro { margin: 0; color: var(--review-muted); font-size: 14px; line-height: 1.4; }
+.review-main { padding: 34px 0 56px; }
+.review-grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); align-items: start; gap: 34px; }
+.preview { min-width: 0; padding: 18px; background: #fffefa; border: 1px solid var(--review-line); border-radius: 9px; }
+.slide-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; margin-bottom: 16px; }
+.slide-tabs button { min-width: 0; min-height: 44px; padding: 10px 8px; border: 1px solid var(--review-line); border-radius: 4px; background: #f8f6f0; color: #625f57; font-size: 14px; font-weight: 700; line-height: 1.25; cursor: pointer; }
+.slide-tabs button:hover { background: #edece3; }
+.slide-tabs button[aria-selected='true'] { border-color: var(--review-teal); background: var(--review-teal); color: #111; }
+.slides { width: 100%; min-width: 0; background: var(--review-paper); outline: 1px solid #e3ded4; }
+.slide-shell { position: relative; width: 100%; height: auto; aspect-ratio: 4 / 5; overflow: hidden; }
+.slide-shell[hidden] { display: none; }
+.slide-shell > .slide { width: 1080px; height: 1350px; transform-origin: top left; }
+.slide-controls { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 16px; }
+.slide-controls button { min-width: 82px; min-height: 40px; padding: 8px 13px; border: 1px solid var(--review-line); border-radius: 4px; background: #fff; color: var(--review-ink); font-size: 14px; font-weight: 700; cursor: pointer; }
+.slide-controls button:hover:not(:disabled) { border-color: var(--review-teal); color: var(--review-teal); }
+.slide-count { margin: 0; color: var(--review-muted); font-size: 14px; font-variant-numeric: tabular-nums; }
+.asset-actions { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 19px; margin-top: 18px; border-top: 1px solid var(--review-line); }
+.asset-actions a, .asset-actions button { display: inline-flex; align-items: center; justify-content: center; min-height: 41px; padding: 10px 13px; border: 1px solid #b9ccc3; border-radius: 4px; background: #fff; color: #076b65; font-size: 14px; font-weight: 700; line-height: 1.2; text-decoration: none; cursor: pointer; }
+.asset-actions a:hover, .asset-actions button:hover:not(:disabled) { background: #edf3ee; }
+.asset-actions [hidden] { display: none; }
+.asset-status, .copy-status { min-height: 1.35em; margin: 12px 0 0; color: var(--review-muted); font-size: 13px; line-height: 1.4; }
+.caption-panel { position: sticky; top: 24px; min-width: 0; padding: 28px; border: 1px solid var(--review-line); border-top: 3px solid var(--review-berry); border-radius: 5px; background: #fffefa; }
+.caption-panel > header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 20px; margin-bottom: 22px; border-bottom: 1px solid var(--review-line); color: var(--review-muted); font-size: 14px; font-weight: 700; }
+.caption-panel > header h2, .caption-panel > header p { margin: 0; font: inherit; }
+.copy-button { min-height: 38px; padding: 8px 12px; border: 1px solid #b9ccc3; border-radius: 4px; background: #fff; color: #076b65; font-size: 14px; font-weight: 700; cursor: pointer; }
+.copy-button:hover { background: #edf3ee; }
+#review-caption { font-size: 18px; line-height: 1.56; }
+#review-caption p { margin: 0 0 19px; }
+#review-caption p:first-child { color: var(--review-ink); font-size: 23px; font-weight: 700; line-height: 1.3; }
+#review-caption p:last-child { margin-bottom: 0; }
+.timing-note { margin: 26px 0 0; padding: 16px 0 0; border-top: 1px solid var(--review-line); color: var(--review-muted); font-size: 14px; line-height: 1.5; }
+.timing-note strong { color: #4f4a41; }
+.source-notes { margin-top: 34px; padding: 21px 24px; border: 1px solid var(--review-line); border-radius: 5px; background: #faf8f2; color: #5c5952; font-size: 15px; line-height: 1.55; }
+.source-notes summary { color: var(--review-ink); font-size: 16px; font-weight: 700; cursor: pointer; }
+.source-notes[open] summary { margin-bottom: 18px; }
+.source-notes a { color: #076b65; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.source-notes li + li { margin-top: 12px; }
+.source-notes p:last-child, .source-notes ul:last-child { margin-bottom: 0; }
+
+@media (max-width: 1000px) {
+  .review-header, .review-main { width: min(850px, calc(100% - 40px)); }
+  .review-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .preview { width: 100%; max-width: 680px; margin-inline: auto; }
+  .caption-panel { position: static; }
+}
+@media (max-width: 540px) {
+  .review-header, .review-main { width: calc(100% - 28px); }
+  .review-header { grid-template-columns: minmax(0, 1fr); gap: 19px; padding: 24px 0; }
+  .review-header img { width: 132px; }
+  .review-meta { font-size: 10px; }
+  .review-header h1 { font-size: 37px; }
+  .review-intro { font-size: 13px; }
+  .review-main { padding-top: 22px; }
+  .preview { padding: 11px; border-radius: 5px; }
+  .slide-tabs { gap: 5px; margin-bottom: 11px; }
+  .slide-tabs button { padding: 8px 5px; font-size: 12px; }
+  .asset-actions { gap: 7px; }
+  .asset-actions a, .asset-actions button { flex: 1 1 140px; font-size: 13px; }
+  .caption-panel { padding: 22px 19px; }
+  #review-caption { font-size: 17px; }
+  #review-caption p:first-child { font-size: 22px; }
+  .source-notes { padding: 18px; }
+}
+
+body.artwork-mode { width: 1080px; margin: 0; background: var(--review-paper); }
+.artwork-mode .review-header, .artwork-mode .slide-tabs, .artwork-mode .slide-controls,
+.artwork-mode .asset-actions, .artwork-mode .asset-status, .artwork-mode .caption-panel,
+.artwork-mode .source-notes { display: none; }
+.artwork-mode .review-main { width: 1080px; max-width: none; margin: 0; padding: 0; }
+.artwork-mode .review-grid { display: block; }
+.artwork-mode .preview { width: 1080px; max-width: none; margin: 0; padding: 0; border: 0; border-radius: 0; }
+.artwork-mode .slides { width: 1080px; outline: 0; }
+.artwork-mode .slide-shell { width: 1080px !important; height: 1350px !important; break-after: page; }
+.artwork-mode .slide-shell > .slide { transform: none !important; }
+.artwork-mode .slide-shell:last-child { break-after: auto; }
+
+@media print {
+  @page { size: 1080px 1350px; margin: 0; }
+  html, body { width: 1080px; margin: 0; padding: 0; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .review-header, .slide-tabs, .slide-controls, .asset-actions, .asset-status, .caption-panel, .source-notes { display: none !important; }
+  .review-main { width: 1080px; max-width: none; margin: 0; padding: 0; }
+  .review-grid { display: block; }
+  .preview { width: 1080px; max-width: none; margin: 0; padding: 0; border: 0; border-radius: 0; }
+  .slides { width: 1080px; outline: 0; }
+  .slide-shell, .slide-shell[hidden] { display: block; width: 1080px !important; height: 1350px !important; overflow: hidden; break-after: page; }
+  .slide-shell > .slide { transform: none !important; }
+  .slide-shell:last-child { break-after: auto; }
+}
+</style></head><body>
+<header class="review-header"><img src="assets/cherry-spring-2026/v3/logo-black.png" alt="Hybrid Ag"><div><p class="review-meta">CHERRY NUTRITION · MAIN FLOWERING · DRAFT FOR REVIEW</p><h1>The new leaves need sugar too.</h1><p class="review-intro">Three-slide carousel · 1080 × 1350 · Spring 2026</p></div></header>
+<main class="review-main page"><div class="review-grid"><section class="preview" aria-label="Carousel artwork"><nav class="slide-tabs" aria-label="Carousel slides"><button type="button" data-index="0">01 · The question</button><button type="button" data-index="1">02 · The mechanism</button><button type="button" data-index="2">03 · The block decision</button></nav><div class="slides"><div class="slide-shell"><article class="slide cover flowering-cover" aria-label="Slide 1. The new leaves need sugar too.">
+    <img class="cover-photo" src="assets/cherry-spring-2026/v3/flowering-orchard.jpg" alt="Flowering cherry rows photographed by Josh Richardson in northeast Victoria."><div class="cover-veil"></div>
+    <header class="slide-header">
+
+    <img class="brand-logo" src="assets/cherry-spring-2026/v3/logo-black.png" alt="Hybrid Ag. Precision Nutrition.">
+    <div class="running">CHERRY NUTRITION<span>FLOWERING / SPRING 2026</span></div>
+    <h2></h2><p class="sub"></p><div class="stripe"></div></header>
+    <div class="cover-copy"><p class="label">FLOWERING / THE CARBOHYDRATE HANDOVER</p><h2>The new leaves<br>need sugar too.</h2>
+    <p>At flowering, developing leaves draw on stored carbohydrates alongside flowers and young fruit.</p>
+    <p class="quiet">The tree is supporting the crop while building the canopy that will help feed it.</p></div>
+    <p class="cover-photo-credit">Cherry flowering, northeast Victoria.<br>Photo: Josh Richardson · September 2026</p>
+    <div class="cover-divider stripe"></div>
+    <div class="cover-insight"><div><h3>Reserves support the start.</h3><p>Carbohydrates stored in roots and wood help supply early growth.</p></div><div><h3>The canopy takes on more.</h3><p>As leaves develop, current photosynthesis contributes more sugars.</p></div></div>
+    <p class="next-cue">A CLOSER LOOK AT THE HANDOVER →</p><span class="folio">01 / 03</span><footer class="slide-footer"><div class="stripe"></div><div class="footer-brand"><span>PRECISION NUTRITION</span><span>OPTIMISING INPUTS</span><span>MAXIMISING OUTCOMES</span></div></footer></article></div><div class="slide-shell"><article class="slide flowering-handover" aria-label="Slide 2. The leaf changes jobs as it grows.">
+    <header class="slide-header">
+    <img class="header-image" src="assets/cherry-spring-2026/v3/flowering-orchard.jpg" alt="">
+    <img class="brand-logo" src="assets/cherry-spring-2026/v3/logo-black.png" alt="Hybrid Ag. Precision Nutrition.">
+    <div class="running">CHERRY NUTRITION<span>FLOWERING / SPRING 2026</span></div>
+    <h2>The leaf changes jobs as it grows.</h2><p class="sub">Stored reserves and current photosynthesis overlap through early development.</p><div class="stripe"></div></header>
+    <p class="lead">A young leaf drawing on reserves and an established leaf supplying sugars can be on the same branch.</p>
+    <div class="diagram">
+      <img class="specimen" src="assets/cherry-spring-2026/v3/cherry-branch-illustration.png" alt="Illustration of a cherry branch with flowers, unfolding leaves, established leaves and young green fruit.">
+      <div class="callout developing"><p class="label">STILL DEVELOPING</p><h3>A leaf also has<br>to grow.</h3><p>It can draw on stored carbohydrates while it develops.</p></div>
+      <div class="callout established"><p class="label">ESTABLISHED LEAF</p><h3>Photosynthesis<br>supplies sugars.</h3><p>It supplies sugars to support growth elsewhere in the tree.</p></div>
+      <div class="callout reserves"><p class="label">ROOTS AND WOOD</p><h3>Stored<br>carbohydrates</h3><p>Support flowers, young fruit and developing leaves.</p></div>
+      <svg class="routes" viewBox="0 0 1080 712" aria-hidden="true"><defs><marker id="teal-arrow" markerWidth="17" markerHeight="17" refX="14" refY="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M2,2 L14,8 L2,14" fill="none" stroke="#1b9690" stroke-width="3"/></marker><marker id="orange-arrow" markerWidth="17" markerHeight="17" refX="14" refY="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M2,2 L14,8 L2,14" fill="none" stroke="#d9742b" stroke-width="3"/></marker></defs>
+       <path class="leader" d="M292 207 H405 L515 250"/><circle cx="515" cy="250" r="5" fill="#8c4f8e"/>
+       <path class="leader" d="M788 200 H725 L684 152"/><circle cx="684" cy="152" r="5" fill="#1b9690"/>
+       <path class="leader" d="M306 570 H451 L556 542"/><circle cx="556" cy="542" r="5" fill="#d9742b"/>
+       <path class="route-back" d="M564 559 C548 520 537 477 531 416 C528 394 520 382 511 368 C490 345 478 310 467 288 C457 267 448 256 440 243 C442 213 447 189 449 160"/><path class="route" d="M564 559 C548 520 537 477 531 416 C528 394 520 382 511 368 C490 345 478 310 467 288 C457 267 448 256 440 243 C442 213 447 189 449 160" stroke="var(--orange)" marker-end="url(#orange-arrow)"/>
+       <path class="route-back" d="M522 385 C523 354 524 325 523 290 L522 263"/><path class="route" d="M522 385 C523 354 524 325 523 290 L522 263" stroke="var(--orange)" marker-end="url(#orange-arrow)"/>
+       <path class="route-back" d="M630 208 C615 229 605 250 597 265 C580 293 569 316 559 331 C563 340 574 350 580 365 C591 390 616 425 633 461"/><path class="route" d="M630 208 C615 229 605 250 597 265 C580 293 569 316 559 331 C563 340 574 350 580 365 C591 390 616 425 633 461" stroke="var(--teal)" marker-end="url(#teal-arrow)"/>
+      </svg>
+    </div>
+    <p class="route-note"><strong>This is a gradual handover.</strong> Leaf stages can overlap. The illustration shows the process, not a fixed date or measured flow.</p>
+    <span class="folio">02 / 03</span><footer class="slide-footer"><div class="stripe"></div><div class="footer-brand"><span>PRECISION NUTRITION</span><span>OPTIMISING INPUTS</span><span>MAXIMISING OUTCOMES</span></div></footer></article></div><div class="slide-shell"><article class="slide flowering-decision" aria-label="Slide 3. Read the canopy as well as the blossom.">
+    <header class="slide-header">
+    <img class="header-image" src="assets/cherry-spring-2026/v3/flowering-orchard.jpg" alt="">
+    <img class="brand-logo" src="assets/cherry-spring-2026/v3/logo-black.png" alt="Hybrid Ag. Precision Nutrition.">
+    <div class="running">CHERRY NUTRITION<span>FLOWERING / SPRING 2026</span></div>
+    <h2>Read the canopy as well as the blossom.</h2><p class="sub">The stage of the leaves adds context to the stage of the flowers.</p><div class="stripe"></div></header>
+    <figure class="field-panel"><img src="assets/cherry-spring-2026/v3/flowering-orchard.jpg" alt="A flowering cherry orchard in northeast Victoria."><span class="field-tag">FLOWERING IN THE FIELD</span><figcaption>Field context: northeast Victoria, September 2026. Photo: Josh Richardson.</figcaption></figure>
+    <div class="comparison"><section><h3>Carbohydrate supply</h3><p>Stored reserves and current photosynthesis help meet the demands of the developing crop.</p></section><section><h3>Mineral nutrition</h3><p>Nutrients support photosynthesis and growth. They do not replace the sugars the tree produces.</p></section></div>
+    <p class="application">If bloom is well advanced but the canopy is lagging, review leaf health, crop demand and root-zone conditions before changing the program.</p>
+    <p class="evidence-note">Cherry tracing research has followed stored carbon into flowers, young fruit and developing leaves.</p>
+    <span class="folio">03 / 03</span><footer class="slide-footer"><div class="stripe"></div><div class="footer-brand"><span>PRECISION NUTRITION</span><span>OPTIMISING INPUTS</span><span>MAXIMISING OUTCOMES</span></div></footer></article></div></div><div class="slide-controls"><button class="prev" type="button" aria-label="Previous slide">← Previous</button><span class="slide-count" aria-live="polite">1 / 3</span><button class="next" type="button" aria-label="Next slide">Next →</button></div><div class="asset-actions"><a class="png-download" href="assets/cherry-spring-2026/v3/flowering-01.png" download>Download slide PNG</a><button type="button" id="download-html">Download editable HTML</button><a id="carousel-pdf" href="assets/cherry-spring-2026/v3/flowering-carousel.pdf" download>Download carousel PDF</a></div><p class="asset-status" role="status"></p></section><aside class="caption-panel"><header><h2>Draft caption</h2><button class="copy-button" type="button">Copy caption</button></header><div id="review-caption"><p>The new leaves need sugar too.</p><p>During cherry flowering, developing leaves draw on stored carbohydrates alongside flowers and young fruit. As the canopy develops, photosynthesis contributes more of the sugars needed for growth.</p><p>That makes leaf development part of the flowering assessment. When bloom is moving ahead but the canopy is slow to develop, the useful question is what is limiting it. A nutrient shortage, poor root conditions and damaged leaves can require different responses.</p><p>Your Hybrid Ag agronomist can help interpret those observations alongside the block’s nutrition records and developing crop load, then decide whether the program needs to change.</p></div><p class="copy-status" role="status"></p><p class="timing-note"><strong>Calendar timing</strong><br>September–October is the regional planning window. Follow bloom and leaf development in each block; timing varies with site, cultivar and season.</p></aside></div><details class="source-notes"><summary>Technical sources and image notes</summary><p>The mechanism draws on Hybrid Ag’s Cherry Nutrition and Cell Expansion webinars, and Joe’s distinction between mineral inputs and plant energy in the crop-load webinar. Historical apple-specific day counts and universal reserve claims have been excluded.</p><p><a href="https://ijanr.cl/index.php/ijanr/article/view/38397" target="_blank" rel="noopener">Ayala &amp; Lang: original sweet-cherry carbohydrate tracing research</a> supports stored-carbon use by flowers, young fruit and developing leaves. <a href="https://treefruit.wsu.edu/nutrient-management-in-sweet-cherries/" target="_blank" rel="noopener">Washington State University: nutrient management in sweet cherries</a> supplies wider nutrient and tree-development context.</p><p>The orchard photograph is from Josh Richardson’s September 2026 field update in northeast Victoria. It provides crop context, not evidence of a nutrition treatment response. The botanical branch is an AI-generated explanatory illustration. Routes and stages are schematic.</p></details></main>
+<script>window.CAMPAIGN={"slug": "flowering", "title": "The new leaves need sugar too.", "slideNames": ["The question", "The mechanism", "The block decision"], "pngPaths": ["assets/cherry-spring-2026/v3/flowering-01.png", "assets/cherry-spring-2026/v3/flowering-02.png", "assets/cherry-spring-2026/v3/flowering-03.png"]};</script><script>(() => {
+  'use strict';
+
+  function initialiseReview() {
+    const campaign = window.CAMPAIGN || {};
+    const slidesElement = document.querySelector('.slides');
+    const shells = Array.from(document.querySelectorAll('.slides > .slide-shell'));
+    const tabs = Array.from(document.querySelectorAll('.slide-tabs [data-index]'));
+    if (!slidesElement || !shells.length) return;
+
+    const params = new URLSearchParams(location.search);
+    const artworkMode = params.get('artwork') === '1' || params.get('artwork') === 'all';
+    const showAll = params.get('artwork') === 'all';
+    const slug = String(campaign.slug || 'cherry-concept').replace(/[^a-z0-9_-]/gi, '-');
+    const previousButton = document.querySelector('.slide-controls .prev');
+    const nextButton = document.querySelector('.slide-controls .next');
+    const count = document.querySelector('.slide-count');
+    const pngDownload = document.querySelector('.png-download');
+    const assetStatus = document.querySelector('.asset-status');
+    const clampIndex = (index) => Math.max(0, Math.min(shells.length - 1, Number.isFinite(index) ? index : 0));
+    let activeIndex = clampIndex(Math.trunc(Number(params.get('slide') || 1)) - 1);
+
+    document.body.classList.toggle('artwork-mode', artworkMode);
+    document.body.classList.toggle('artwork-all', showAll);
+    document.querySelector('.slide-tabs')?.setAttribute('role', 'tablist');
+    document.querySelector('.slide-tabs')?.setAttribute('aria-label', 'Artwork slides');
+    previousButton?.setAttribute('aria-label', 'Previous slide');
+    nextButton?.setAttribute('aria-label', 'Next slide');
+    if (count) count.setAttribute('aria-live', 'polite');
+    if (assetStatus) {
+      assetStatus.setAttribute('role', 'status');
+      assetStatus.setAttribute('aria-live', 'polite');
+    }
+
+    tabs.forEach((tab) => {
+      const index = Number(tab.dataset.index);
+      tab.id ||= `${slug}-tab-${index + 1}`;
+      tab.setAttribute('role', 'tab');
+      if (shells[index]) {
+        shells[index].id ||= `${slug}-panel-${index + 1}`;
+        shells[index].setAttribute('role', 'tabpanel');
+        shells[index].setAttribute('aria-labelledby', tab.id);
+        tab.setAttribute('aria-controls', shells[index].id);
       }
-    </style>
-  </head>
-  <body>
-    <header class="campaign-cover">
-      <div class="campaign-cover__top">
-        <img class="campaign-cover__logo" src="assets/marketing/frost-readiness/concept-5/hybrid-ag-logo-white.png" alt="Hybrid Ag">
-        <p class="campaign-cover__badge">Horticulture · Cherries</p>
-      </div>
-      <div class="campaign-cover__centre">
-        <p class="campaign-cover__kicker">Draft concept · For review</p>
-        <h1>Cherry <em>Flowering</em></h1>
-        <p class="campaign-cover__meta">Main flowering · September–October 2026<br>Follow bloom in each block</p>
-      </div>
-      <div class="campaign-cover__bottom">
-        <p class="campaign-cover__small">Spring 2026 · Hybrid Ag</p>
-        <div class="campaign-cover__dots" aria-hidden="true"><span></span><span></span><span></span></div>
-      </div>
-    </header>
-    <div class="campaign-cover__accent" aria-hidden="true"></div>
-
-    <main class="page">
-      <section class="concept" aria-labelledby="concept-title">
-        <div class="concept__heading">
-          <h2 id="concept-title">Artwork and caption</h2>
-          <p class="concept__summary">The first flowers can be setting fruit while later flowers are still opening. Nutrition timing needs to account for both.</p>
-        </div>
-        <p class="timing-note"><strong>Timing follows the block.</strong> September–October is the planning window, not a fixed flowering date. Cultivar, region and seasonal conditions change the timing. Use the stage observed in each block to decide when this post is relevant.</p>
-        <div class="review-layout">
-          <figure class="artwork">
-            <div class="flower-art-shell">
-              <div class="flower-art" id="flowering-artwork" role="img" aria-label="The first flowers don’t wait for the rest of the block. An illustration shows newly open flowers, fertilised flowers and early fruit overlapping in one flowering block. Timing varies by block and cultivar.">
-                <div class="flower-art__brand">
-                  <img class="flower-art__logo" src="assets/marketing/frost-readiness/concept-5/hybrid-ag-logo-white.png" alt="Hybrid Ag">
-                  <p class="flower-art__series">Cherry nutrition<br>Flowering</p>
-                </div>
-                <div>
-                  <p class="flower-art__kicker">Bloom to fruit set</p>
-                  <h3 class="flower-art__headline"><span>The first flowers</span><span class="flower-art__emphasis">don’t wait for</span><span>the rest of the block.</span></h3>
-                  <p class="flower-art__intro">The earliest flowers can be setting fruit while later ones are still opening.</p>
-                </div>
-                <div class="flower-art__diagram">
-                  <p class="flower-art__diagram-label">One flowering block · Overlapping stages</p>
-                  <svg viewBox="0 0 930 365" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <defs>
-                      <g id="cherry-petal">
-                        <path d="M0 0 C-42 -18 -60 -72 -27 -96 C-8 -109 8 -106 22 -93 C55 -64 38 -18 0 0Z" fill="#fffdfa" stroke="#baa795" stroke-width="2.3"/>
-                      </g>
-                    </defs>
-                    <path d="M35 246 C205 259 373 251 489 254 S765 267 893 250" fill="none" stroke="#a88b67" stroke-width="15" stroke-linecap="round"/>
-                    <path d="M49 244 C239 250 325 248 445 254 S696 260 879 249" fill="none" stroke="#d8bf98" stroke-width="3" stroke-linecap="round"/>
-                    <path d="M150 248 Q150 211 148 151 M465 254 Q453 221 461 156 M778 257 Q784 212 775 165" fill="none" stroke="#5d7a51" stroke-width="8" stroke-linecap="round"/>
-                    <g transform="translate(149 116) scale(.78)">
-                      <use href="#cherry-petal" transform="rotate(0)"/><use href="#cherry-petal" transform="rotate(72)"/><use href="#cherry-petal" transform="rotate(144)"/><use href="#cherry-petal" transform="rotate(216)"/><use href="#cherry-petal" transform="rotate(288)"/>
-                      <circle r="24" fill="#f0cb68"/>
-                      <g fill="#996f20"><circle cx="-15" cy="-10" r="4"/><circle cx="9" cy="-15" r="4"/><circle cx="18" cy="6" r="4"/><circle cx="-4" cy="15" r="4"/><circle cx="-17" cy="8" r="4"/></g>
-                      <circle r="9" fill="#8ca375"/>
-                    </g>
-                    <g transform="translate(463 133)">
-                      <path d="M-13 0 C-58 -8 -85 -36 -68 -55 C-45 -70 -14 -39 -5 -12 M13 0 C49 -20 78 -58 66 -69 C37 -80 13 -38 9 -12 M-6 7 C-37 18 -48 55 -35 63 C-15 71 -1 40 4 12 M9 8 C38 15 58 44 45 54 C27 62 16 34 9 8" fill="#fffaf4" stroke="#bdab99" stroke-width="2.3"/>
-                      <path d="M-12 17 L-26 4 L-13 -5 L-20 -23 L0 -17 L15 -30 L22 -9 L37 -3 L22 10 L21 28 L3 19Z" fill="#87906d"/>
-                      <ellipse cx="5" cy="2" rx="20" ry="28" fill="#98a873" stroke="#60784f" stroke-width="2.3"/>
-                      <path d="M5 -24 L7 -49" fill="none" stroke="#6d724c" stroke-width="3" stroke-linecap="round"/>
-                    </g>
-                    <g transform="translate(773 120)">
-                      <path d="M0 62 L-19 38 L-7 19 L-18 1 L4 -9 L21 4 L13 24 L27 42 L10 66Z" fill="#9c7651"/>
-                      <ellipse cx="0" cy="5" rx="43" ry="48" fill="#7d985d" stroke="#476c48" stroke-width="2.3"/>
-                      <path d="M-17 -27 C-31 -12 -31 4 -25 15" fill="none" stroke="#adc384" stroke-width="7" stroke-linecap="round"/>
-                      <path d="M2 -43 L5 -62" stroke="#638150" stroke-width="3" stroke-linecap="round"/>
-                    </g>
-                    <path d="M285 141 H326 M316 131 L327 141 L316 151 M600 141 H641 M631 131 L642 141 L631 151" fill="none" stroke="#aeafa0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    <g font-family="'Cherry Inter',Arial,sans-serif" text-anchor="middle" fill="#164a46">
-                      <text x="149" y="298" font-size="26" font-weight="650">Newly open</text>
-                      <text x="464" y="298" font-size="26" font-weight="650">Fertilised</text>
-                      <text x="776" y="298" font-size="26" font-weight="650">Early fruit</text>
-                      <text x="149" y="331" font-size="20" fill="#606c62">Later flowers</text>
-                      <text x="464" y="331" font-size="20" fill="#606c62">Development underway</text>
-                      <text x="776" y="331" font-size="20" fill="#606c62">Earlier flowers</text>
-                    </g>
-                  </svg>
-                  <p class="flower-art__note">Illustration of overlapping stages. Timing varies by block and cultivar.</p>
-                </div>
-                <p class="flower-art__takeaway">Time nutrition to the flowers’ progress,<br>not just the look of the whole block.</p>
-                <div class="flower-art__footer"><span>hybridag.com.au</span><span class="flower-art__dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
-              </div>
-            </div>
-            <figcaption>Draft 4:5 artwork built in editable HTML and SVG. Open the artwork at 1080 × 1350 to inspect or export it.</figcaption>
-            <div class="asset-actions">
-              <a class="asset-action" href="?artwork=1" target="_blank" rel="noopener">Open artwork at 1080 × 1350</a>
-              <a class="asset-action" href="assets/cherry-spring-2026/flowering-concept-v2.png" download>Download draft PNG</a>
-              <button class="asset-action" type="button" id="download-artwork">Download editable HTML</button>
-            </div>
-            <p class="asset-status" role="status" aria-live="polite">The HTML download includes the artwork, fonts and logo. Use the artwork view to print or save a PDF.</p>
-          </figure>
-          <div>
-            <article class="caption-card" aria-labelledby="caption-title">
-              <header class="caption-card__header">
-                <p id="caption-title">Draft caption</p>
-                <button class="copy-button" type="button">Copy caption</button>
-              </header>
-              <div class="caption-card__body" id="review-caption">
-                <p class="caption-hook">The first flowers don’t wait for the rest of the block.</p>
-                <p>A cherry block can still look full of blossom while some of its earliest flowers have already set fruit. That spread matters when you’re timing nutrition.</p>
-                <p>The tree is supporting flowers and early fruit with stored reserves and a changing supply from its roots and leaves. Waiting for the whole block to look ready can overlook what the earliest flowers already need.</p>
-                <p>When you review your bud and flower program, look at how far the first flowers have progressed as well as what is still opening. Your Hybrid Ag agronomist can help match the next nutrition decision to that progression.</p>
-              </div>
-            </article>
-            <p class="copy-status" role="status" aria-live="polite"></p>
-          </div>
-        </div>
-      </section>
-
-      <section class="concept" aria-labelledby="openings-title">
-        <div class="concept__heading">
-          <h2 id="openings-title">Other first lines</h2>
-          <p class="concept__summary">Three alternatives for review. Use one opening with the caption, rather than stacking them.</p>
-        </div>
-        <ol class="opening-options">
-            <li>The block is still flowering. Some of the first flowers have already set fruit.</li>
-            <li>Full bloom doesn’t mean every flower is at the same stage.</li>
-            <li>What are the earliest flowers doing while the rest of the block opens?</li>
-        </ol>
-      </section>
-
-      <section class="concept" aria-labelledby="sources-title">
-        <div class="concept__heading">
-          <h2 id="sources-title">Source notes</h2>
-          <p class="concept__summary">The flowering story is supported by cherry research and informed by Hybrid Ag’s internal agronomy and marketing discussions.</p>
-        </div>
-        <ul class="source-list">
-          <li><a href="https://www.horticulture.com.au/media/Sub-pages/Information-hub/Project-reports/C/CY12003Understanding-flowering-fruit-set-and-crop-load-in-cherries.pdf" target="_blank" rel="noopener">Hort Innovation: Understanding flowering, fruit set and crop load in cherries (CY12003)</a>. Cherry flowering and fruit-set research supports treating flowering as a progression. The artwork illustrates overlapping stages; it is not a timeline or a prediction that every flower will set fruit.</li>
-          <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5314649/" target="_blank" rel="noopener">Cherry reproductive-development research, Annals of Botany</a>. Primary research on sweet cherry flower and early fruit development. No universal day count or fixed cell-division window is used in this concept.</li>
-          <li><a href="https://www.planthealthaustralia.com.au/wp-content/uploads/2024/01/australian_cherry_production_guide.pdf" target="_blank" rel="noopener">Australian Cherry Production Guide</a>, pp. 73–76. Pollination, environmental conditions and crop development provide the wider block and cultivar context.</li>
-          <li><strong>Internal source context:</strong> Emily Corbett’s TALES reproductive-phases talk, Hamilton Rowe’s TALES cell-expansion talk, the August 2020 crop-load webinar, and the September 2025 marketing discussion with Andrew Smith and Hamilton Rowe. The crop-load webinar uses an orchard photo to explain early flowers progressing before the block reaches full bloom. Historical rates and absolute timing claims have not been carried into this draft.</li>
-          <li><a href="bud-flower-post.html" target="_blank" rel="noopener">Hybrid Ag Bud &amp; Flower review package</a>, July 2026, and <strong>Cherry Nutrition Playbook, p. 42</strong> (internal source). The planned nutrition and DSA sequence includes flowering checks before shuck fall. This post addresses flowering progression rather than replacing the block’s program.</li>
-        </ul>
-      </section>
-    </main>
-
-    <footer class="review-footer">
-      <p>Draft artwork and copy for review. Calendar placement indicates a seasonal planning window.</p>
-      <p>Hybrid Ag | Cherry flowering</p>
-    </footer>
-    <script>
-      document.body.classList.toggle('artwork-mode', new URLSearchParams(location.search).get('artwork') === '1');
-      const copyButton = document.querySelector('.copy-button');
-      copyButton.addEventListener('click', async () => {
-        const caption = Array.from(document.querySelectorAll('#review-caption p'), paragraph => paragraph.innerText).join('\n\n');
-        const status = document.querySelector('.copy-status');
-        try {
-          await navigator.clipboard.writeText(caption);
-          status.textContent = 'Draft caption copied.';
-        } catch {
-          const selection = window.getSelection();
-          const range = document.createRange();
-          range.selectNodeContents(document.getElementById('review-caption'));
-          selection.removeAllRanges();
-          selection.addRange(range);
-          status.textContent = 'Caption selected. Use Copy to copy the draft.';
-        }
+      tab.addEventListener('click', () => selectSlide(index));
+      tab.addEventListener('keydown', (event) => {
+        let target;
+        if (event.key === 'ArrowRight') target = (activeIndex + 1) % shells.length;
+        if (event.key === 'ArrowLeft') target = (activeIndex - 1 + shells.length) % shells.length;
+        if (event.key === 'Home') target = 0;
+        if (event.key === 'End') target = shells.length - 1;
+        if (target === undefined) return;
+        event.preventDefault();
+        selectSlide(target);
+        tabs.find((item) => Number(item.dataset.index) === target)?.focus();
       });
-      document.getElementById('download-artwork').addEventListener('click', async (event) => {
-        const button = event.currentTarget;
-        const status = document.querySelector('.asset-status');
-        button.disabled = true;
-        status.textContent = 'Preparing the editable artwork with its fonts and logo…';
-        try {
-          const toDataUrl = async (path) => {
-            const response = await fetch(path);
-            if (!response.ok) throw new Error('Artwork asset unavailable');
-            const blob = await response.blob();
-            return new Promise((resolve, reject) => {
-              const reader = new FileReader();
-              reader.onload = () => resolve(reader.result);
-              reader.onerror = reject;
-              reader.readAsDataURL(blob);
-            });
-          };
-          const paths = ['brochure-review/assets/inter.woff2', 'assets/marketing/frost-readiness/concept-5/oswald-variable.ttf', 'assets/marketing/frost-readiness/concept-5/hybrid-ag-logo-white.png'];
-          const [inter, oswald, logo] = await Promise.all(paths.map(toDataUrl));
-          const style = document.getElementById('flowering-art-style').textContent.replace(paths[0], inter).replace(paths[1], oswald);
-          const artwork = document.querySelector('.flower-art-shell').cloneNode(true);
-          artwork.querySelector('img').src = logo;
-          const html = '<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hybrid Ag | Cherry flowering draft artwork</title><style>' + style + 'html,body{margin:0;background:#f2efe6}.flower-art-shell{width:1080px}@page{size:1080px 1350px;margin:0}@media print{body{print-color-adjust:exact;-webkit-print-color-adjust:exact}}</style></head><body>' + artwork.outerHTML + '</body></html>';
-          const url = URL.createObjectURL(new Blob([html], { type: 'text/html;charset=utf-8' }));
-          const link = document.createElement('a');
-          link.href = url;
-          link.download = 'hybrid-ag-cherry-flowering-draft.html';
-          link.click();
-          setTimeout(() => URL.revokeObjectURL(url), 1000);
-          status.textContent = 'Editable HTML downloaded with embedded fonts and logo.';
-        } catch {
-          status.textContent = 'The download could not include every asset. Open the artwork view to print or save a PDF.';
-        } finally {
-          button.disabled = false;
-        }
+    });
+
+    function fitSlides() {
+      const width = artworkMode ? 1080 : slidesElement.clientWidth;
+      if (!width) return;
+      shells.forEach((shell) => {
+        shell.style.height = `${width * 1350 / 1080}px`;
+        const slide = shell.querySelector('.slide');
+        if (slide) slide.style.transform = artworkMode ? 'none' : `scale(${width / 1080})`;
       });
-    </script>
-  </body>
-</html>
+    }
+
+    function selectSlide(index) {
+      activeIndex = clampIndex(index);
+      shells.forEach((shell, shellIndex) => { shell.hidden = !showAll && shellIndex !== activeIndex; });
+      tabs.forEach((tab) => {
+        const selected = Number(tab.dataset.index) === activeIndex;
+        tab.setAttribute('aria-selected', String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+      });
+      if (previousButton) previousButton.disabled = activeIndex === 0;
+      if (nextButton) nextButton.disabled = activeIndex === shells.length - 1;
+      if (count) count.textContent = `${activeIndex + 1} of ${shells.length}`;
+      if (pngDownload) {
+        const path = campaign.pngPaths?.[activeIndex];
+        pngDownload.hidden = !path;
+        if (path) {
+          pngDownload.href = path;
+          pngDownload.setAttribute('download', '');
+          pngDownload.setAttribute('aria-label', `Download ${campaign.slideNames?.[activeIndex] || `slide ${activeIndex + 1}`} PNG`);
+        }
+      }
+      fitSlides();
+    }
+
+    previousButton?.addEventListener('click', () => selectSlide(activeIndex - 1));
+    nextButton?.addEventListener('click', () => selectSlide(activeIndex + 1));
+    selectSlide(activeIndex);
+    if ('ResizeObserver' in window) new ResizeObserver(fitSlides).observe(slidesElement);
+    else window.addEventListener('resize', fitSlides);
+
+    document.querySelector('.copy-button')?.addEventListener('click', async () => {
+      const caption = document.getElementById('review-caption');
+      const status = document.querySelector('.copy-status');
+      if (!caption) return;
+      const text = Array.from(caption.querySelectorAll('p'), (paragraph) => paragraph.innerText.trim()).filter(Boolean).join('\n\n');
+      if (status) {
+        status.setAttribute('role', 'status');
+        status.setAttribute('aria-live', 'polite');
+      }
+      try {
+        await navigator.clipboard.writeText(text || caption.innerText.trim());
+        if (status) status.textContent = 'Draft caption copied.';
+      } catch {
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(caption);
+        selection?.removeAllRanges();
+        selection?.addRange(range);
+        if (status) status.textContent = 'Caption selected. Use Copy to copy the draft.';
+      }
+    });
+
+    if (artworkMode) {
+      slidesElement.querySelectorAll('img').forEach((image) => { image.loading = 'eager'; });
+      if (params.get('print') === '1') {
+        const printWhenReady = async () => {
+          if (document.fonts?.ready) await document.fonts.ready;
+          await Promise.all(Array.from(slidesElement.querySelectorAll('img'), (image) => image.decode?.().catch(() => {})));
+          window.print();
+        };
+        if (document.readyState === 'complete') printWhenReady();
+        else window.addEventListener('load', printWhenReady, { once: true });
+      }
+    }
+
+    document.getElementById('download-html')?.addEventListener('click', async (event) => {
+      const button = event.currentTarget;
+      button.disabled = true;
+      if (assetStatus) assetStatus.textContent = 'Preparing all three slides with embedded fonts and images…';
+      try {
+        let nativeCSS = document.getElementById('native-style')?.textContent;
+        if (!nativeCSS) throw new Error('Native artwork styles are unavailable.');
+        if (/@import\s/i.test(nativeCSS)) throw new Error('Native artwork styles must include their font declarations directly.');
+        const assetCache = new Map();
+        function embedAsset(path) {
+          if (path.startsWith('data:') || path.startsWith('#')) return Promise.resolve(path);
+          const absolute = new URL(path, document.baseURI).href;
+          if (!assetCache.has(absolute)) {
+            assetCache.set(absolute, (async () => {
+              const response = await fetch(absolute);
+              if (!response.ok) throw new Error(`Could not include artwork asset: ${response.status}`);
+              const blob = await response.blob();
+              return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = () => resolve(String(reader.result));
+                reader.onerror = reject;
+                reader.readAsDataURL(blob);
+              });
+            })());
+          }
+          return assetCache.get(absolute);
+        }
+
+        async function embedCSS(css) {
+          const cssURLPattern = /url\(\s*(['"]?)(.*?)\1\s*\)/gs;
+          const cssURLs = Array.from(css.matchAll(cssURLPattern));
+          const replacements = new Map(await Promise.all(cssURLs.map(async (match) => [match[0], `url("${await embedAsset(match[2].trim())}")`])));
+          return css.replace(cssURLPattern, (match) => replacements.get(match));
+        }
+        nativeCSS = await embedCSS(nativeCSS);
+
+        const exportShells = await Promise.all(shells.map(async (shell) => {
+          const original = shell.querySelector('.slide');
+          if (!original) throw new Error('A native slide is missing.');
+          const clone = original.cloneNode(true);
+          clone.style.removeProperty('transform');
+          clone.querySelectorAll('source').forEach((source) => source.remove());
+          await Promise.all([clone, ...clone.querySelectorAll('[style]')].map(async (element) => {
+            const inlineCSS = element.getAttribute('style');
+            if (inlineCSS && /url\(/i.test(inlineCSS)) element.setAttribute('style', await embedCSS(inlineCSS));
+          }));
+          await Promise.all(Array.from(clone.querySelectorAll('img'), async (image, index) => {
+            const sourceImage = original.querySelectorAll('img')[index];
+            const source = sourceImage.currentSrc || sourceImage.getAttribute('src');
+            if (!source) throw new Error('An artwork image has no source.');
+            image.src = await embedAsset(source);
+            image.removeAttribute('srcset');
+            image.removeAttribute('sizes');
+            image.loading = 'eager';
+          }));
+          await Promise.all(Array.from(clone.querySelectorAll('svg image'), async (image) => {
+            const source = image.getAttribute('href') || image.getAttributeNS('http://www.w3.org/1999/xlink', 'href');
+            if (!source) return;
+            image.setAttribute('href', await embedAsset(source));
+            image.removeAttributeNS('http://www.w3.org/1999/xlink', 'href');
+          }));
+          if (Array.from(clone.querySelectorAll('svg use')).some((use) => {
+            const href = use.getAttribute('href') || use.getAttributeNS('http://www.w3.org/1999/xlink', 'href');
+            return href && !href.startsWith('#');
+          })) throw new Error('External SVG symbols must be included in the native artwork.');
+          const exportedShell = document.createElement('div');
+          exportedShell.className = 'slide-shell';
+          exportedShell.append(clone);
+          return exportedShell.outerHTML;
+        }));
+
+        const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]));
+        const exportCSS = 'html,body{margin:0;padding:0;background:#f4f1ea}.export-artworks{width:1080px;margin:0 auto}.export-artworks>.slide-shell{position:relative;width:1080px;height:1350px;overflow:hidden;break-after:page}.export-artworks>.slide-shell:last-child{break-after:auto}.export-artworks .slide{width:1080px;height:1350px;transform:none!important;box-sizing:border-box}@page{size:1080px 1350px;margin:0}@media print{html,body{width:1080px;print-color-adjust:exact;-webkit-print-color-adjust:exact}}';
+        const html = `<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHTML(campaign.title || 'Hybrid Ag cherry draft artwork')}</title><style>${nativeCSS}\n${exportCSS}</style></head><body><main class="export-artworks">${exportShells.join('\n')}</main></body></html>`;
+        const url = URL.createObjectURL(new Blob([html], { type: 'text/html;charset=utf-8' }));
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `${slug}-editable-artwork.html`;
+        link.click();
+        setTimeout(() => URL.revokeObjectURL(url), 2000);
+        if (assetStatus) assetStatus.textContent = 'All three slides downloaded in one editable HTML file, with fonts and images embedded.';
+      } catch (error) {
+        console.error('Artwork export failed:', error);
+        if (assetStatus) assetStatus.textContent = 'The HTML download could not include every asset. The artwork print view is still available.';
+      } finally {
+        button.disabled = false;
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initialiseReview, { once: true });
+  else initialiseReview();
+})();
+</script></body></html>
