@@ -36,9 +36,57 @@
       .source-list li + li { margin-top: 14px; }
       .source-list a, .review-footer a { color: #006d68; text-underline-offset: 3px; }
       .review-footer { line-height: 1.5; }
+      .asset-action { font-family: inherit; cursor: pointer; }
+      .asset-status { margin: 12px 0 0; color: var(--muted); font-size: 14px; line-height: 1.4; }
       @media (min-width: 1400px) { .review-layout { grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 42px; } }
       @media (max-width: 900px) { .campaign-cover { min-height: 325px; } .review-layout { grid-template-columns: minmax(0, 1fr); } .artwork { max-width: 660px; } .opening-options { grid-template-columns: minmax(0, 1fr); } .concept { padding: 34px 0; } }
       @media (max-width: 560px) { .campaign-cover { min-height: 300px; } .campaign-cover__top { gap: 12px; flex-wrap: wrap; } .campaign-cover__logo { max-width: 170px; height: auto; } .campaign-cover__badge { font-size: 10px; } .campaign-cover h1 { font-size: 41px; } .campaign-cover__meta { font-size: 14px; } .caption-card__header, .caption-card__body { padding: 20px; } .caption-card__body { font-size: 16px; } .caption-card__body .caption-hook { font-size: 21px; } .opening-options li { font-size: 18px; } }
+    </style>
+    <style id="flowering-art-style">
+      @font-face { font-family: 'Cherry Inter'; src: url('brochure-review/assets/inter.woff2') format('woff2'); font-style: normal; font-weight: 100 900; font-display: swap; }
+      @font-face { font-family: 'Cherry Oswald'; src: url('assets/marketing/frost-readiness/concept-5/oswald-variable.ttf') format('truetype'); font-style: normal; font-weight: 200 700; font-display: swap; }
+      .flower-art-shell { container-type: inline-size; width: 100%; }
+      .flower-art { --cream: #f2efe6; --forest: #164a46; --berry: #874d70; box-sizing: border-box; position: relative; display: flex; flex-direction: column; justify-content: space-between; width: 100%; aspect-ratio: 4 / 5; padding: 5.55%; overflow: hidden; background: var(--cream); color: var(--forest); font-family: 'Cherry Inter', Arial, sans-serif; }
+      .flower-art * { box-sizing: border-box; }
+      .flower-art p, .flower-art h3 { margin: 0; }
+      .flower-art__brand { display: flex; align-items: center; justify-content: space-between; gap: 2cqw; }
+      .flower-art__logo { display: block; width: 24cqw !important; height: auto !important; aspect-ratio: auto !important; filter: brightness(0); }
+      .flower-art__series { font-size: 1.75cqw; letter-spacing: .09em; line-height: 1.3; text-transform: uppercase; font-weight: 650; text-align: right; }
+      .flower-art__kicker { margin: 0 0 1.8cqw !important; color: var(--berry); font-size: 2.15cqw; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+      .flower-art__headline { color: var(--forest); font-family: 'Cherry Oswald', 'Arial Narrow', sans-serif; font-size: 8.4cqw; font-weight: 600; letter-spacing: -.012em; line-height: 1.075; }
+      .flower-art__headline span { display: block; }
+      .flower-art__headline .flower-art__emphasis { color: #cf5e1d; }
+      .flower-art__intro { max-width: 84cqw; margin-top: 2.7cqw !important; font-size: 2.68cqw; line-height: 1.48; text-wrap: balance; font-weight: 450; }
+      .flower-art__diagram { border-top: .15cqw solid #c1c7b8; border-bottom: .15cqw solid #c1c7b8; padding: 2.2cqw 0 1.4cqw; }
+      .flower-art__diagram-label { color: #53635a; font-size: 1.7cqw; letter-spacing: .1em; font-weight: 700; text-transform: uppercase; }
+      .flower-art__diagram svg { display: block; width: 100%; height: auto; margin-top: 1.2cqw; }
+      .flower-art__note { max-width: 83cqw; margin: 1.25cqw 0 0 !important; color: #606c62; font-size: 1.8cqw; line-height: 1.45; }
+      .flower-art__takeaway { font-size: 3.03cqw; line-height: 1.38; font-weight: 600; max-width: 82cqw; }
+      .flower-art__footer { display: flex; justify-content: space-between; align-items: center; gap: 2cqw; color: #677167; font-size: 1.63cqw; }
+      .flower-art__dots { display: flex; gap: .65cqw; }
+      .flower-art__dots i { width: .9cqw; height: .9cqw; border-radius: 50%; background: #018d8a; }
+      .flower-art__dots i:nth-child(2) { background: #dc6800; }
+      .flower-art__dots i:nth-child(3) { background: #8a4f7d; }
+    </style>
+    <style>
+      body.artwork-mode { margin: 0; background: #f2efe6; }
+      .artwork-mode .campaign-cover, .artwork-mode .campaign-cover__accent, .artwork-mode .review-footer,
+      .artwork-mode .concept__heading, .artwork-mode .timing-note, .artwork-mode .asset-actions,
+      .artwork-mode .asset-status, .artwork-mode figcaption, .artwork-mode .review-layout > div,
+      .artwork-mode .concept ~ .concept { display: none; }
+      .artwork-mode .page { width: 1080px; margin: 0; }
+      .artwork-mode .concept { padding: 0; }
+      .artwork-mode .review-layout { display: block; }
+      .artwork-mode .artwork { width: 1080px; max-width: none; }
+      @media print {
+        @page { size: 1080px 1350px; margin: 0; }
+        body { margin: 0; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+        .campaign-cover, .campaign-cover__accent, .review-footer, .concept__heading, .timing-note, .asset-actions, .asset-status, figcaption, .review-layout > div, .concept ~ .concept { display: none; }
+        .page { width: 1080px; margin: 0; }
+        .concept { padding: 0; }
+        .review-layout { display: block; }
+        .artwork { width: 1080px; max-width: none; }
+      }
     </style>
   </head>
   <body>
@@ -63,19 +111,74 @@
       <section class="concept" aria-labelledby="concept-title">
         <div class="concept__heading">
           <h2 id="concept-title">Artwork and caption</h2>
-          <p class="concept__summary">A stage-led post about flowering uniformity, pollination conditions and keeping the planned checks in view.</p>
+          <p class="concept__summary">The first flowers can be setting fruit while later flowers are still opening. Nutrition timing needs to account for both.</p>
         </div>
         <p class="timing-note"><strong>Timing follows the block.</strong> September–October is the planning window, not a fixed flowering date. Cultivar, region and seasonal conditions change the timing. Use the stage observed in each block to decide when this post is relevant.</p>
         <div class="review-layout">
           <figure class="artwork">
-            <a class="artwork__link" href="assets/cherry-spring-2026/flowering-concept.png" target="_blank" rel="noopener" aria-label="Open the draft artwork at full resolution">
-              <img src="assets/cherry-spring-2026/flowering-concept.png" width="1080" height="1350" alt="Draft cherry flowering graphic: How evenly is your cherry block flowering?">
-            </a>
-            <figcaption>4:5 portrait concept. Open the artwork to inspect it at full resolution.</figcaption>
-            <div class="asset-actions">
-              <a class="asset-action" href="assets/cherry-spring-2026/flowering-concept.png" download>Download draft PNG</a>
-              <a class="asset-action" href="https://www.figma.com/design/RWiyqXmV33S3VddjniZrn4/Hybrid-Ag-Brand-System-2026?node-id=10172-102" target="_blank" rel="noopener">Open editable Figma</a>
+            <div class="flower-art-shell">
+              <div class="flower-art" id="flowering-artwork" role="img" aria-label="The first flowers don’t wait for the rest of the block. An illustration shows newly open flowers, fertilised flowers and early fruit overlapping in one flowering block. Timing varies by block and cultivar.">
+                <div class="flower-art__brand">
+                  <img class="flower-art__logo" src="assets/marketing/frost-readiness/concept-5/hybrid-ag-logo-white.png" alt="Hybrid Ag">
+                  <p class="flower-art__series">Cherry nutrition<br>Flowering</p>
+                </div>
+                <div>
+                  <p class="flower-art__kicker">Bloom to fruit set</p>
+                  <h3 class="flower-art__headline"><span>The first flowers</span><span class="flower-art__emphasis">don’t wait for</span><span>the rest of the block.</span></h3>
+                  <p class="flower-art__intro">The earliest flowers can be setting fruit while later ones are still opening.</p>
+                </div>
+                <div class="flower-art__diagram">
+                  <p class="flower-art__diagram-label">One flowering block · Overlapping stages</p>
+                  <svg viewBox="0 0 930 365" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <defs>
+                      <g id="cherry-petal">
+                        <path d="M0 0 C-42 -18 -60 -72 -27 -96 C-8 -109 8 -106 22 -93 C55 -64 38 -18 0 0Z" fill="#fffdfa" stroke="#baa795" stroke-width="2.3"/>
+                      </g>
+                    </defs>
+                    <path d="M35 246 C205 259 373 251 489 254 S765 267 893 250" fill="none" stroke="#a88b67" stroke-width="15" stroke-linecap="round"/>
+                    <path d="M49 244 C239 250 325 248 445 254 S696 260 879 249" fill="none" stroke="#d8bf98" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M150 248 Q150 211 148 151 M465 254 Q453 221 461 156 M778 257 Q784 212 775 165" fill="none" stroke="#5d7a51" stroke-width="8" stroke-linecap="round"/>
+                    <g transform="translate(149 116) scale(.78)">
+                      <use href="#cherry-petal" transform="rotate(0)"/><use href="#cherry-petal" transform="rotate(72)"/><use href="#cherry-petal" transform="rotate(144)"/><use href="#cherry-petal" transform="rotate(216)"/><use href="#cherry-petal" transform="rotate(288)"/>
+                      <circle r="24" fill="#f0cb68"/>
+                      <g fill="#996f20"><circle cx="-15" cy="-10" r="4"/><circle cx="9" cy="-15" r="4"/><circle cx="18" cy="6" r="4"/><circle cx="-4" cy="15" r="4"/><circle cx="-17" cy="8" r="4"/></g>
+                      <circle r="9" fill="#8ca375"/>
+                    </g>
+                    <g transform="translate(463 133)">
+                      <path d="M-13 0 C-58 -8 -85 -36 -68 -55 C-45 -70 -14 -39 -5 -12 M13 0 C49 -20 78 -58 66 -69 C37 -80 13 -38 9 -12 M-6 7 C-37 18 -48 55 -35 63 C-15 71 -1 40 4 12 M9 8 C38 15 58 44 45 54 C27 62 16 34 9 8" fill="#fffaf4" stroke="#bdab99" stroke-width="2.3"/>
+                      <path d="M-12 17 L-26 4 L-13 -5 L-20 -23 L0 -17 L15 -30 L22 -9 L37 -3 L22 10 L21 28 L3 19Z" fill="#87906d"/>
+                      <ellipse cx="5" cy="2" rx="20" ry="28" fill="#98a873" stroke="#60784f" stroke-width="2.3"/>
+                      <path d="M5 -24 L7 -49" fill="none" stroke="#6d724c" stroke-width="3" stroke-linecap="round"/>
+                    </g>
+                    <g transform="translate(773 120)">
+                      <path d="M0 62 L-19 38 L-7 19 L-18 1 L4 -9 L21 4 L13 24 L27 42 L10 66Z" fill="#9c7651"/>
+                      <ellipse cx="0" cy="5" rx="43" ry="48" fill="#7d985d" stroke="#476c48" stroke-width="2.3"/>
+                      <path d="M-17 -27 C-31 -12 -31 4 -25 15" fill="none" stroke="#adc384" stroke-width="7" stroke-linecap="round"/>
+                      <path d="M2 -43 L5 -62" stroke="#638150" stroke-width="3" stroke-linecap="round"/>
+                    </g>
+                    <path d="M285 141 H326 M316 131 L327 141 L316 151 M600 141 H641 M631 131 L642 141 L631 151" fill="none" stroke="#aeafa0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <g font-family="'Cherry Inter',Arial,sans-serif" text-anchor="middle" fill="#164a46">
+                      <text x="149" y="298" font-size="26" font-weight="650">Newly open</text>
+                      <text x="464" y="298" font-size="26" font-weight="650">Fertilised</text>
+                      <text x="776" y="298" font-size="26" font-weight="650">Early fruit</text>
+                      <text x="149" y="331" font-size="20" fill="#606c62">Later flowers</text>
+                      <text x="464" y="331" font-size="20" fill="#606c62">Development underway</text>
+                      <text x="776" y="331" font-size="20" fill="#606c62">Earlier flowers</text>
+                    </g>
+                  </svg>
+                  <p class="flower-art__note">Illustration of overlapping stages. Timing varies by block and cultivar.</p>
+                </div>
+                <p class="flower-art__takeaway">Time nutrition to the flowers’ progress,<br>not just the look of the whole block.</p>
+                <div class="flower-art__footer"><span>hybridag.com.au</span><span class="flower-art__dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+              </div>
             </div>
+            <figcaption>Draft 4:5 artwork built in editable HTML and SVG. Open the artwork at 1080 × 1350 to inspect or export it.</figcaption>
+            <div class="asset-actions">
+              <a class="asset-action" href="?artwork=1" target="_blank" rel="noopener">Open artwork at 1080 × 1350</a>
+              <a class="asset-action" href="assets/cherry-spring-2026/flowering-concept-v2.png" download>Download draft PNG</a>
+              <button class="asset-action" type="button" id="download-artwork">Download editable HTML</button>
+            </div>
+            <p class="asset-status" role="status" aria-live="polite">The HTML download includes the artwork, fonts and logo. Use the artwork view to print or save a PDF.</p>
           </figure>
           <div>
             <article class="caption-card" aria-labelledby="caption-title">
@@ -84,10 +187,10 @@
                 <button class="copy-button" type="button">Copy caption</button>
               </header>
               <div class="caption-card__body" id="review-caption">
-                <p class="caption-hook">How evenly is your cherry block flowering?</p>
-                <p>Two cherry blocks can be at different stages on the same day. As bloom progresses, check flowering uniformity within each cultivar, the overlap with compatible pollinisers and the conditions for bee activity. Keep those observations with the block’s weather, soil moisture and nutrition records.</p>
-                <p>If Differential Sap Analysis (DSA) is part of your program, keep the planned flowering checks. Read the results alongside growth stage and recent inputs before deciding what to change.</p>
-                <p>Talk to your Hybrid Ag agronomist about the stage your blocks have reached and the next check in your program.</p>
+                <p class="caption-hook">The first flowers don’t wait for the rest of the block.</p>
+                <p>A cherry block can still look full of blossom while some of its earliest flowers have already set fruit. That spread matters when you’re timing nutrition.</p>
+                <p>The tree is supporting flowers and early fruit with stored reserves and a changing supply from its roots and leaves. Waiting for the whole block to look ready can overlook what the earliest flowers already need.</p>
+                <p>When you review your bud and flower program, look at how far the first flowers have progressed as well as what is still opening. Your Hybrid Ag agronomist can help match the next nutrition decision to that progression.</p>
               </div>
             </article>
             <p class="copy-status" role="status" aria-live="polite"></p>
@@ -101,22 +204,23 @@
           <p class="concept__summary">Three alternatives for review. Use one opening with the caption, rather than stacking them.</p>
         </div>
         <ol class="opening-options">
-            <li>Two cherry blocks can be at different stages on the same day.</li>
-            <li>Good pollination depends on more than open flowers.</li>
-            <li>Before changing the nutrition plan, check where each block is in bloom.</li>
+            <li>The block is still flowering. Some of the first flowers have already set fruit.</li>
+            <li>Full bloom doesn’t mean every flower is at the same stage.</li>
+            <li>What are the earliest flowers doing while the rest of the block opens?</li>
         </ol>
       </section>
 
       <section class="concept" aria-labelledby="sources-title">
         <div class="concept__heading">
           <h2 id="sources-title">Source notes</h2>
-          <p class="concept__summary">Relevant production, sampling and Playbook sections checked for this draft.</p>
+          <p class="concept__summary">The flowering story is supported by cherry research and informed by Hybrid Ag’s internal agronomy and marketing discussions.</p>
         </div>
         <ul class="source-list">
-          <li><a href="https://www.planthealthaustralia.com.au/wp-content/uploads/2024/01/australian_cherry_production_guide.pdf" target="_blank" rel="noopener">Australian Cherry Production Guide</a>. Pollination and bee activity, pp. 73–75; growth and development, p. 76. Supports reading cultivar and block conditions alongside flowering stage.</li>
-          <li><a href="https://www.novacropcontrol.nl/images/sampledata/20170209_NCC_Sweet_cherry_sampling_guide.pdf" target="_blank" rel="noopener">NovaCropControl sweet cherry sampling guide</a>, pp. 2–3. Supports paired sampling of the youngest fully developed and oldest still-vital leaves. Use the current Hybrid Ag sampling kit instructions for collection, packing and dispatch.</li>
-          <li><a href="bud-flower-post.html" target="_blank" rel="noopener">Hybrid Ag Bud &amp; Flower review package</a>, July 2026. Paired results need crop-stage, conditions and program context. Its DSA graph is illustrative, not a universal sampling schedule.</li>
-          <li><strong>Hybrid Ag Cherry Nutrition Playbook, p. 42</strong> (internal source). The final Cherry Nutrition Playbook, p. 42, includes DSA checks at 20–30% flowering, 80–90% flowering and shuck fall. This concept retains flowering checks where they are part of the agreed program.</li>
+          <li><a href="https://www.horticulture.com.au/media/Sub-pages/Information-hub/Project-reports/C/CY12003Understanding-flowering-fruit-set-and-crop-load-in-cherries.pdf" target="_blank" rel="noopener">Hort Innovation: Understanding flowering, fruit set and crop load in cherries (CY12003)</a>. Cherry flowering and fruit-set research supports treating flowering as a progression. The artwork illustrates overlapping stages; it is not a timeline or a prediction that every flower will set fruit.</li>
+          <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5314649/" target="_blank" rel="noopener">Cherry reproductive-development research, Annals of Botany</a>. Primary research on sweet cherry flower and early fruit development. No universal day count or fixed cell-division window is used in this concept.</li>
+          <li><a href="https://www.planthealthaustralia.com.au/wp-content/uploads/2024/01/australian_cherry_production_guide.pdf" target="_blank" rel="noopener">Australian Cherry Production Guide</a>, pp. 73–76. Pollination, environmental conditions and crop development provide the wider block and cultivar context.</li>
+          <li><strong>Internal source context:</strong> Emily Corbett’s TALES reproductive-phases talk, Hamilton Rowe’s TALES cell-expansion talk, the August 2020 crop-load webinar, and the September 2025 marketing discussion with Andrew Smith and Hamilton Rowe. The crop-load webinar uses an orchard photo to explain early flowers progressing before the block reaches full bloom. Historical rates and absolute timing claims have not been carried into this draft.</li>
+          <li><a href="bud-flower-post.html" target="_blank" rel="noopener">Hybrid Ag Bud &amp; Flower review package</a>, July 2026, and <strong>Cherry Nutrition Playbook, p. 42</strong> (internal source). The planned nutrition and DSA sequence includes flowering checks before shuck fall. This post addresses flowering progression rather than replacing the block’s program.</li>
         </ul>
       </section>
     </main>
@@ -126,6 +230,7 @@
       <p>Hybrid Ag | Cherry flowering</p>
     </footer>
     <script>
+      document.body.classList.toggle('artwork-mode', new URLSearchParams(location.search).get('artwork') === '1');
       const copyButton = document.querySelector('.copy-button');
       copyButton.addEventListener('click', async () => {
         const caption = Array.from(document.querySelectorAll('#review-caption p'), paragraph => paragraph.innerText).join('\n\n');
@@ -140,6 +245,42 @@
           selection.removeAllRanges();
           selection.addRange(range);
           status.textContent = 'Caption selected. Use Copy to copy the draft.';
+        }
+      });
+      document.getElementById('download-artwork').addEventListener('click', async (event) => {
+        const button = event.currentTarget;
+        const status = document.querySelector('.asset-status');
+        button.disabled = true;
+        status.textContent = 'Preparing the editable artwork with its fonts and logo…';
+        try {
+          const toDataUrl = async (path) => {
+            const response = await fetch(path);
+            if (!response.ok) throw new Error('Artwork asset unavailable');
+            const blob = await response.blob();
+            return new Promise((resolve, reject) => {
+              const reader = new FileReader();
+              reader.onload = () => resolve(reader.result);
+              reader.onerror = reject;
+              reader.readAsDataURL(blob);
+            });
+          };
+          const paths = ['brochure-review/assets/inter.woff2', 'assets/marketing/frost-readiness/concept-5/oswald-variable.ttf', 'assets/marketing/frost-readiness/concept-5/hybrid-ag-logo-white.png'];
+          const [inter, oswald, logo] = await Promise.all(paths.map(toDataUrl));
+          const style = document.getElementById('flowering-art-style').textContent.replace(paths[0], inter).replace(paths[1], oswald);
+          const artwork = document.querySelector('.flower-art-shell').cloneNode(true);
+          artwork.querySelector('img').src = logo;
+          const html = '<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hybrid Ag | Cherry flowering draft artwork</title><style>' + style + 'html,body{margin:0;background:#f2efe6}.flower-art-shell{width:1080px}@page{size:1080px 1350px;margin:0}@media print{body{print-color-adjust:exact;-webkit-print-color-adjust:exact}}</style></head><body>' + artwork.outerHTML + '</body></html>';
+          const url = URL.createObjectURL(new Blob([html], { type: 'text/html;charset=utf-8' }));
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = 'hybrid-ag-cherry-flowering-draft.html';
+          link.click();
+          setTimeout(() => URL.revokeObjectURL(url), 1000);
+          status.textContent = 'Editable HTML downloaded with embedded fonts and logo.';
+        } catch {
+          status.textContent = 'The download could not include every asset. Open the artwork view to print or save a PDF.';
+        } finally {
+          button.disabled = false;
         }
       });
     </script>

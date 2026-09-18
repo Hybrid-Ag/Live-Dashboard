@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hybrid Ag | Cherry shuck fall concept</title>
+    <link rel="icon" href="data:,">
     <link rel="stylesheet" href="frost-post.css">
     <style>
       .campaign-cover { min-height: 325px; }
@@ -16,11 +17,15 @@
       .concept + .concept { border-top: 1px solid var(--line); }
       .review-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: start; }
       .artwork { margin: 0; min-width: 0; }
-      .artwork__link { display: block; border: 1px solid var(--line); background: #eeeae3; box-shadow: 0 8px 24px #1a171412; }
-      .artwork img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: contain; }
+      body.artwork-only { width: 1080px; background: #f4f1e9; }
+      .artwork-only .campaign-cover, .artwork-only .campaign-cover__accent, .artwork-only .review-footer, .artwork-only .concept__heading, .artwork-only .timing-note, .artwork-only .review-layout > div, .artwork-only .artwork figcaption, .artwork-only .asset-actions, .artwork-only .asset-status, .artwork-only .concept + .concept { display: none; }
+      .artwork-only .page, .artwork-only .concept, .artwork-only .review-layout, .artwork-only .artwork { display: block; width: 1080px; max-width: none; padding: 0; margin: 0; }
+      .artwork-only .poster-stage { width: 1080px; height: 1350px; border: 0; box-shadow: none; }
       .artwork figcaption { margin: 13px 0 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
       .asset-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
       .asset-action { display: inline-block; padding: 11px 16px; border: 1px solid #b5c5c1; border-radius: 3px; background: #fff; color: #006d68; font-size: 15px; font-weight: 700; text-decoration: none; }
+      .asset-action { font-family: inherit; cursor: pointer; }
+      .asset-status { margin: 12px 0 0; color: var(--muted); font-size: 14px; line-height: 1.4; }
       .asset-action:hover { background: #e9f3f0; }
       .asset-action:focus-visible, a:focus-visible, button:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
       .caption-card__header { flex-wrap: wrap; padding: 20px 25px; gap: 12px; }
@@ -39,6 +44,55 @@
       @media (min-width: 1400px) { .review-layout { grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 42px; } }
       @media (max-width: 900px) { .campaign-cover { min-height: 325px; } .review-layout { grid-template-columns: minmax(0, 1fr); } .artwork { max-width: 660px; } .opening-options { grid-template-columns: minmax(0, 1fr); } .concept { padding: 34px 0; } }
       @media (max-width: 560px) { .campaign-cover { min-height: 300px; } .campaign-cover__top { gap: 12px; flex-wrap: wrap; } .campaign-cover__logo { max-width: 170px; height: auto; } .campaign-cover__badge { font-size: 10px; } .campaign-cover h1 { font-size: 41px; } .campaign-cover__meta { font-size: 14px; } .caption-card__header, .caption-card__body { padding: 20px; } .caption-card__body { font-size: 16px; } .caption-card__body .caption-hook { font-size: 21px; } .opening-options li { font-size: 18px; } }
+    </style>
+    <style id="shuck-art-style">
+      @font-face { font-family: 'Inter'; src: url('brochure-review/assets/inter.woff2') format('woff2'); font-style: normal; font-weight: 100 900; font-display: swap; }
+      @font-face { font-family: 'Oswald'; src: url('assets/marketing/frost-readiness/concept-5/oswald-variable.ttf') format('truetype'); font-style: normal; font-weight: 200 700; font-display: swap; }
+      .poster-stage { width: 100%; aspect-ratio: 4 / 5; overflow: hidden; background: #f4f1e9; border: 1px solid var(--line); box-shadow: 0 8px 24px #1a171412; }
+      .shuck-poster { box-sizing: border-box; position: relative; width: 1080px; height: 1350px; padding: 58px 66px 48px; overflow: hidden; transform-origin: top left; background: #f4f1e9; color: #133e3c; font-family: Inter, Arial, sans-serif; }
+      .shuck-poster * { box-sizing: border-box; }
+      .poster-brand { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+      .poster-brand__logo { display: flex; align-items: center; padding: 16px 21px; background: #006d68; }
+      .poster-brand__logo img { display: block; width: 196px; height: auto; }
+      .poster-brand p { margin: 0; font-size: 23px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+      .shuck-poster .poster-hook { color: #1a1714; margin: 0; max-width: 920px; font: 600 81px/1.08 Oswald, sans-serif; text-transform: uppercase; letter-spacing: -.02em; }
+      .poster-hook span { color: #ae4a18; }
+      .poster-intro { margin: 26px 0 33px; max-width: 900px; font-size: 27px; line-height: 1.45; }
+      .crop-process { position: relative; padding: 24px 0 26px; border-top: 2px solid #c8d0c6; }
+      .process-label { margin: 0; font: 500 25px/1.2 Oswald, sans-serif; text-transform: uppercase; letter-spacing: .06em; }
+      .crop-process .process-label { color: #006d68; }
+      .crop-stages { position: relative; display: flex; justify-content: space-between; align-items: end; height: 185px; margin: 3px 20px 0; }
+      .crop-stages::before { content: ''; position: absolute; top: 113px; left: 70px; right: 65px; border-top: 3px solid #a6b9a8; }
+      .crop-stages::after { content: ''; position: absolute; top: 105px; right: 65px; width: 16px; height: 16px; border-top: 3px solid #a6b9a8; border-right: 3px solid #a6b9a8; transform: rotate(45deg); }
+      .fruit-stage { width: 245px; position: relative; text-align: center; }
+      .fruit-stage > p { margin: 8px 0 0; font-size: 23px; font-weight: 600; line-height: 1.3; }
+      .fruit-drawing { height: 142px; position: relative; width: 130px; margin: 0 auto; background: #f4f1e9; }
+      .fruit { position: absolute; left: 50%; bottom: 14px; width: 62px; height: 68px; border: 2px solid #547954; border-radius: 47% 47% 48% 48%; background: #bed18c; transform: translateX(-50%); box-shadow: inset 10px 1px 0 #cddb9e; }
+      .fruit::before { content: ''; position: absolute; width: 30px; height: 56px; left: 29px; top: -53px; border-left: 4px solid #5e7954; border-radius: 50%; transform: rotate(10deg); }
+      .fruit::after { content: ''; position: absolute; top: 7px; left: 30px; height: 43px; border-left: 1px solid #8aa563; transform: rotate(-9deg); }
+      .fruit--second { width: 81px; height: 89px; bottom: 5px; }
+      .fruit--second::before { left: 39px; }
+      .fruit--second::after { left: 40px; height: 64px; }
+      .fruit--third { width: 99px; height: 104px; bottom: 0; background: #adc879; }
+      .fruit--third::before { left: 48px; height: 48px; top: -45px; }
+      .fruit--third::after { left: 50px; height: 79px; }
+      .shuck { position: absolute; left: 20px; top: 88px; width: 40px; height: 37px; border: 3px solid #a8896d; border-top: 0; border-radius: 8px 8px 40px 20px; background: #d3baa0; transform: rotate(34deg); }
+      .shuck::after { content: ''; position: absolute; width: 31px; height: 30px; left: 36px; top: -7px; border: 3px solid #a8896d; border-top: 0; background: #dfc8ac; border-radius: 5px 7px 15px 30px; transform: rotate(-63deg); }
+      .sample-process { border-top: 2px solid #c8d0c6; padding: 26px 0 29px; }
+      .sample-process .process-label { color: #884570; }
+      .sample-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; margin-top: 24px; padding: 0; list-style: none; }
+      .sample-steps li { position: relative; padding: 20px 8px 19px; min-height: 126px; border: 2px solid #d5c5cf; border-radius: 10px; background: #ede5e9; text-align: center; color: #663755; font-size: 23px; font-weight: 600; line-height: 1.2; }
+      .sample-steps li:not(:last-child)::after { content: '→'; position: absolute; right: -18px; top: 48px; width: 17px; font-size: 24px; font-weight: 400; }
+      .sample-steps .step-number { display: block; margin-bottom: 12px; color: #9d6c8d; font-size: 17px; letter-spacing: .05em; }
+      .sample-steps li:last-child { background: #006d68; color: #fff; border-color: #006d68; }
+      .sample-steps li:last-child .step-number { color: #b7d8cd; }
+      .poster-takeaway { margin: 0; padding: 21px 29px 23px; border-left: 7px solid #dc6800; background: #e3e9de; font: 500 34px/1.25 Oswald, sans-serif; }
+      .poster-small { margin: 17px 0 0; color: #66756c; font-size: 21px; line-height: 1.4; }
+      .poster-footer { position: absolute; left: 66px; right: 66px; bottom: 47px; display: flex; justify-content: space-between; align-items: center; color: #627168; font-size: 19px; }
+      .poster-dots { display: flex; gap: 9px; }
+      .poster-dots i { width: 13px; height: 13px; border-radius: 50%; background: #006d68; }
+      .poster-dots i:nth-child(2) { background: #dc6800; }
+      .poster-dots i:nth-child(3) { background: #884570; }
     </style>
   </head>
   <body>
@@ -63,19 +117,49 @@
       <section class="concept" aria-labelledby="concept-title">
         <div class="concept__heading">
           <h2 id="concept-title">Artwork and caption</h2>
-          <p class="concept__summary">A separate post about early fruit development and using paired DSA results to inform the next nutrition decision.</p>
+          <p class="concept__summary">A post about getting the sample, the result and the nutrition decision into the same growing window.</p>
         </div>
         <p class="timing-note"><strong>Timing follows the block.</strong> September is the calendar prompt. Shuck fall follows the block’s flowering and fruit development, so the observed stage sets the sampling timing. It is a program checkpoint; flowering checks may already have taken place.</p>
         <div class="review-layout">
           <figure class="artwork">
-            <a class="artwork__link" href="assets/cherry-spring-2026/shuck-fall-concept.png" target="_blank" rel="noopener" aria-label="Open the draft artwork at full resolution">
-              <img src="assets/cherry-spring-2026/shuck-fall-concept.png" width="1080" height="1350" alt="Draft cherry shuck fall graphic: At shuck fall, what do the leaf results say?">
-            </a>
-            <figcaption>4:5 portrait concept. Open the artwork to inspect it at full resolution.</figcaption>
-            <div class="asset-actions">
-              <a class="asset-action" href="assets/cherry-spring-2026/shuck-fall-concept.png" download>Download draft PNG</a>
-              <a class="asset-action" href="https://www.figma.com/design/RWiyqXmV33S3VddjniZrn4/Hybrid-Ag-Brand-System-2026?node-id=10172-106" target="_blank" rel="noopener">Open editable Figma</a>
+            <div class="poster-stage">
+              <div class="shuck-poster" id="shuck-poster" role="img" aria-label="Cherry shuck fall: your cherries keep developing while the sample is at the lab. An illustrative sequence shows early fruit development alongside sample collection, dispatch, analysis, review and a nutrition decision. No fixed growth interval or laboratory turnaround is shown.">
+                <div class="poster-brand">
+                  <div class="poster-brand__logo"><img src="assets/marketing/frost-readiness/concept-5/hybrid-ag-logo-white.png" alt="Hybrid Ag"></div>
+                  <p>Cherries · Shuck fall</p>
+                </div>
+                <h2 class="poster-hook">Your cherries keep<br>developing <span>while the<br>sample is at the lab.</span></h2>
+                <p class="poster-intro">Plan time to review the result before the next nutrition decision.</p>
+                <div class="crop-process">
+                  <p class="process-label">The block keeps developing</p>
+                  <div class="crop-stages" aria-hidden="true">
+                    <div class="fruit-stage"><div class="fruit-drawing"><span class="fruit"></span><span class="shuck"></span></div><p>Shuck fall</p></div>
+                    <div class="fruit-stage"><div class="fruit-drawing"><span class="fruit fruit--second"></span></div><p>Young fruit</p></div>
+                    <div class="fruit-stage"><div class="fruit-drawing"><span class="fruit fruit--third"></span></div><p>Growth continues</p></div>
+                  </div>
+                </div>
+                <div class="sample-process">
+                  <p class="process-label">Meanwhile, the sample moves through</p>
+                  <ol class="sample-steps" aria-hidden="true">
+                    <li><span class="step-number">01</span>Sample</li>
+                    <li><span class="step-number">02</span>Dispatch</li>
+                    <li><span class="step-number">03</span>Analysis</li>
+                    <li><span class="step-number">04</span>Review</li>
+                    <li><span class="step-number">05</span>Nutrition<br>decision</li>
+                  </ol>
+                </div>
+                <p class="poster-takeaway">Plan the review with your agronomist<br>when you plan the sample.</p>
+                <p class="poster-small">Illustrative process. No fixed turnaround or growth interval.</p>
+                <div class="poster-footer"><span>Optimising Inputs. Maximising Outcomes.</span><span class="poster-dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+              </div>
             </div>
+            <figcaption>Editable HTML artwork, 1080 × 1350. The crop and sample sequences are illustrative; their positions do not represent measured or matched intervals.</figcaption>
+            <div class="asset-actions">
+              <a class="asset-action" href="cherry-shuck-fall-post.html?artwork=1" target="_blank" rel="noopener">Open full-size artwork</a>
+              <a class="asset-action" href="assets/cherry-spring-2026/shuck-fall-concept-v2.png" download>Download draft PNG</a>
+              <button class="asset-action" type="button" id="download-artwork">Download editable HTML</button>
+            </div>
+            <p class="asset-status" role="status" aria-live="polite">The HTML download includes the artwork, fonts and logo. Use the artwork view to print or save a PDF.</p>
           </figure>
           <div>
             <article class="caption-card" aria-labelledby="caption-title">
@@ -84,10 +168,10 @@
                 <button class="copy-button" type="button">Copy caption</button>
               </header>
               <div class="caption-card__body" id="review-caption">
-                <p class="caption-hook">At shuck fall, what do the leaf results say?</p>
-                <p>Young fruit are developing quickly, with cell division contributing to that early growth. A Differential Sap Analysis (DSA) check can help inform the next nutrition decision.</p>
-                <p>Use paired samples of the youngest fully developed leaves and the oldest still-vital leaves, collected using the agreed protocol. Read the pair alongside earlier results, growth stage and recent inputs. A difference between leaf ages is not automatically good or bad.</p>
-                <p>Talk to your Hybrid Ag agronomist about arranging the shuck-fall check for your block.</p>
+                <p class="caption-hook">Your cherries keep developing while the sample is at the lab.</p>
+                <p>At shuck fall, cell division in young fruit is helping to establish their size potential. A sap result is most useful when there is still time to act on what it tells us.</p>
+                <p>That means planning collection, dispatch and the discussion of the results around the block’s progress. We read the paired DSA results alongside earlier tests, recent inputs and the stage the trees have reached before deciding whether the nutrition program needs to change.</p>
+                <p>If your block is nearing shuck fall, speak with your Hybrid Ag agronomist about the sample and when you’ll review the results together.</p>
               </div>
             </article>
             <p class="copy-status" role="status" aria-live="polite"></p>
@@ -101,9 +185,9 @@
           <p class="concept__summary">Three alternatives for review. Use one opening with the caption, rather than stacking them.</p>
         </div>
         <ol class="opening-options">
-            <li>Shuck fall is a useful point to review your cherry nutrition program.</li>
-            <li>How do your shuck-fall leaf results compare with earlier checks?</li>
-            <li>Before the next nutrition decision, put the leaf results beside your block records.</li>
+            <li>Will the sap result arrive in time for your next nutrition decision?</li>
+            <li>The sample has left the orchard. Your cherries are still growing.</li>
+            <li>At shuck fall, plan the review as well as the sample.</li>
         </ol>
       </section>
 
@@ -115,7 +199,7 @@
         <ul class="source-list">
           <li><a href="https://www.planthealthaustralia.com.au/wp-content/uploads/2024/01/australian_cherry_production_guide.pdf" target="_blank" rel="noopener">Australian Cherry Production Guide</a>. Growth and development, p. 76. Supports the distinction between early cell division and subsequent fruit growth; this concept makes no fixed-day, fruit-size or yield promise.</li>
           <li><a href="https://www.novacropcontrol.nl/images/sampledata/20170209_NCC_Sweet_cherry_sampling_guide.pdf" target="_blank" rel="noopener">NovaCropControl sweet cherry sampling guide</a>, pp. 2–3. Supports paired sampling of the youngest fully developed and oldest still-vital leaves. Use the current Hybrid Ag sampling kit instructions for collection, packing and dispatch.</li>
-          <li><a href="bud-flower-post.html" target="_blank" rel="noopener">Hybrid Ag Bud &amp; Flower review package</a>, July 2026. Paired results need crop-stage, conditions and program context. Its DSA graph is illustrative, not a universal sampling schedule.</li>
+          <li><strong>Hybrid Ag Technical &amp; Sales Meeting, 28 August 2026</strong> (internal discussion). The team discussed results arriving in time for a nutrition decision, and the trade-off between turnaround and consistency of historical test data. This concept makes no laboratory turnaround promise.</li>
           <li><strong>Hybrid Ag Cherry Nutrition Playbook, p. 42</strong> (internal source). The final Cherry Nutrition Playbook, p. 42, includes flowering and shuck-fall DSA checks. Shuck fall is described here as a checkpoint, not the first sample of the season.</li>
         </ul>
       </section>
@@ -126,6 +210,15 @@
       <p>Hybrid Ag | Cherry shuck fall</p>
     </footer>
     <script>
+      if (new URLSearchParams(window.location.search).get('artwork') === '1') {
+        document.body.classList.add('artwork-only');
+        document.title = 'Hybrid Ag | Shuck fall artwork · 1080 × 1350';
+      }
+      const posterStage = document.querySelector('.poster-stage');
+      const poster = document.getElementById('shuck-poster');
+      const fitPoster = () => { poster.style.transform = `scale(${posterStage.clientWidth / 1080})`; };
+      new ResizeObserver(fitPoster).observe(posterStage);
+      fitPoster();
       const copyButton = document.querySelector('.copy-button');
       copyButton.addEventListener('click', async () => {
         const caption = Array.from(document.querySelectorAll('#review-caption p'), paragraph => paragraph.innerText).join('\n\n');
@@ -140,6 +233,43 @@
           selection.removeAllRanges();
           selection.addRange(range);
           status.textContent = 'Caption selected. Use Copy to copy the draft.';
+        }
+      });
+      document.getElementById('download-artwork').addEventListener('click', async (event) => {
+        const button = event.currentTarget;
+        const status = document.querySelector('.asset-status');
+        button.disabled = true;
+        status.textContent = 'Preparing the editable artwork with its fonts and logo…';
+        try {
+          const toDataUrl = async (path) => {
+            const response = await fetch(path);
+            if (!response.ok) throw new Error('Artwork asset unavailable');
+            const blob = await response.blob();
+            return new Promise((resolve, reject) => {
+              const reader = new FileReader();
+              reader.onload = () => resolve(reader.result);
+              reader.onerror = reject;
+              reader.readAsDataURL(blob);
+            });
+          };
+          const paths = ['brochure-review/assets/inter.woff2', 'assets/marketing/frost-readiness/concept-5/oswald-variable.ttf', 'assets/marketing/frost-readiness/concept-5/hybrid-ag-logo-white.png'];
+          const [inter, oswald, logo] = await Promise.all(paths.map(toDataUrl));
+          const style = document.getElementById('shuck-art-style').textContent.replace(paths[0], inter).replace(paths[1], oswald);
+          const artwork = document.getElementById('shuck-poster').cloneNode(true);
+          artwork.style.removeProperty('transform');
+          artwork.querySelector('img').src = logo;
+          const html = '<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hybrid Ag | Cherry shuck fall draft artwork</title><style>' + style + 'html,body{margin:0;background:#f4f1e9}@page{size:1080px 1350px;margin:0}@media print{body{print-color-adjust:exact;-webkit-print-color-adjust:exact}}</style></head><body>' + artwork.outerHTML + '</body></html>';
+          const url = URL.createObjectURL(new Blob([html], { type: 'text/html;charset=utf-8' }));
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = 'hybrid-ag-cherry-shuck-fall-draft.html';
+          link.click();
+          setTimeout(() => URL.revokeObjectURL(url), 1000);
+          status.textContent = 'Editable HTML downloaded with embedded fonts and logo.';
+        } catch {
+          status.textContent = 'The download could not include every asset. Open the artwork view to print or save a PDF.';
+        } finally {
+          button.disabled = false;
         }
       });
     </script>
