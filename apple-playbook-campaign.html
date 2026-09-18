@@ -24,9 +24,7 @@
       .fact ul { margin: 0; padding-left: 18px; font-size: 13.5px; line-height: 1.6; }
       .fact li { margin-bottom: 4px; }
       .decision { border-left: 4px solid #dc6800; background: #fff6ee; padding: 14px 18px; border-radius: 0 4px 4px 0; font-size: 14px; line-height: 1.6; }
-      .ad-card__media.is-missing { position: relative; aspect-ratio: 4 / 5; background: #eae5df; }
-      .ad-card__media.is-missing a { display: none; }
-      .ad-card__media.is-missing::after { content: "Static layout: full-size file being added"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px; font-size: 14px; color: #867764; }
+      .ad-card__media--pending { aspect-ratio: 4 / 5; background: #eae5df; display: flex; align-items: center; justify-content: center; text-align: center; padding: 28px; font-size: 14px; line-height: 1.6; color: #867764; }
       @media (max-width: 900px) { .ad-grid, .facts { grid-template-columns: minmax(0, 1fr); } }
     </style>
   </head>
@@ -57,7 +55,7 @@
           <p class="concept__summary">The campaign is built in Meta Ads Manager and ready to switch on. It was waiting on two videos from the horticulture team; both arrived on 18 September.</p>
         </div>
         <div class="decision">
-          <strong>Decision needed:</strong> Nathan and Jamie Granger to review the two videos and call it &mdash; run these as our best play, or go again for a stronger cut. The static is ready. Once the call is made the campaign launches and runs for seven days.
+          <strong>Decision needed:</strong> Nathan and Jamie Granger to review the two videos and call it &mdash; run these as our best play, or go again for a stronger cut. The static is being reworked after feedback. Once the videos are called and the static lands, the campaign launches and runs for seven days.
         </div>
       </section>
 
@@ -100,14 +98,10 @@
             </figcaption>
           </figure>
           <figure class="ad-card">
-            <div class="ad-card__media ad-card__media--static">
-              <a href="assets/marketing/apple-playbook/03-apple-playbook-static-ad.jpg" target="_blank" rel="noreferrer" class="slide-link">
-                <img onerror="this.closest('.ad-card__media').classList.add('is-missing')" src="assets/marketing/apple-playbook/03-apple-playbook-static-ad.jpg" alt="Static ad &mdash; Better Apple Pack-Out Starts Long Before Harvest, with the Playbook cover">
-              </a>
-            </div>
+            <div class="ad-card__media ad-card__media--pending" aria-label="Static ad in progress"><span>Working on it &mdash; Pia is reworking the static after feedback (18 Sep). New layout lands here.</span></div>
             <figcaption>
               <p class="ad-card__num"><span>03</span> Static</p>
-              <p class="ad-card__role">&ldquo;Better Apple Pack-Out Starts Long Before Harvest.&rdquo; Focuses on consistent pack-out. Layout by Pia.</p>
+              <p class="ad-card__role">Focuses on consistent apple pack-out. First layout reviewed 18 September and sent back to Pia with feedback; the revised version goes here.</p>
               <div class="caption-card__body">
                 <p>Better apple pack-out is built across the whole season.</p>
                 <p>Download the free Apple Nutrition Playbook for a practical look at how testing, tree demand, water and nutrient timing connect from soil to storage.</p>
@@ -169,7 +163,7 @@
     </main>
 
     <footer class="review-footer">
-      <p>Play the videos here; the static opens at full size. Campaign detail lives in Notion &rarr; Paid Lead Generation.</p>
+      <p>Play the videos here; the static will be added once revised. Campaign detail lives in Notion &rarr; Paid Lead Generation.</p>
       <p>Hybrid Ag | Apple Nutrition Playbook lead campaign</p>
     </footer>
 
