@@ -1572,6 +1572,18 @@
     "FYTD $3.33M"
    ],
    "note": "Frozen automatically from the 11 September, 11:05am AEST Odoo pull, confirmed orders ex GST. The September budget is $1.40M and budget to 11 September is $513k on the dashboard&rsquo;s calendar-day pacing, hence &minus;30.6%. Open orders, open quotes, 139 enquiries tracked and 2,081 tests calendar YTD are as at the same pull. The live tabs move on from here."
+  },
+  "Friday 18 September 2026": {
+   "chips": [
+    "MTD $534k",
+    "MTD &minus;36.4% vs budget",
+    "Open $488k &middot; 48",
+    "Open quotes $62k &middot; 17",
+    "Enquiries 141",
+    "Tests 2,110 YTD",
+    "FYTD $3.51M"
+   ],
+   "note": "Frozen automatically from the 18 September, 10:34am AEST Odoo pull, confirmed orders ex GST. The September budget is $1.40M and budget to 18 September is $840k on the dashboard&rsquo;s calendar-day pacing, hence &minus;36.4%. Open orders, open quotes, 141 enquiries tracked and 2,110 tests calendar YTD are as at the same pull. The live tabs move on from here."
   }
  },
  "gsbNotes": [
