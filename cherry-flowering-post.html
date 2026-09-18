@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hybrid Ag | Cherry flowering concept</title>
+    <link rel="stylesheet" href="frost-post.css">
+    <style>
+      .campaign-cover { min-height: 325px; }
+      .campaign-cover__kicker { color: #b8c9c6; }
+      .campaign-cover__meta { color: #d1d4d1; font-size: 15px; }
+      .campaign-cover__small { color: #aaa8a4; }
+      .campaign-cover__badge { color: #a7e3da; border-color: #3c706b; font-size: 11px; }
+      .campaign-cover h1 { line-height: 1.05; }
+      .concept { padding: 44px 0; }
+      .concept + .concept { border-top: 1px solid var(--line); }
+      .review-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: start; }
+      .artwork { margin: 0; min-width: 0; }
+      .artwork__link { display: block; border: 1px solid var(--line); background: #eeeae3; box-shadow: 0 8px 24px #1a171412; }
+      .artwork img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: contain; }
+      .artwork figcaption { margin: 13px 0 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+      .asset-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+      .asset-action { display: inline-block; padding: 11px 16px; border: 1px solid #b5c5c1; border-radius: 3px; background: #fff; color: #006d68; font-size: 15px; font-weight: 700; text-decoration: none; }
+      .asset-action:hover { background: #e9f3f0; }
+      .asset-action:focus-visible, a:focus-visible, button:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+      .caption-card__header { flex-wrap: wrap; padding: 20px 25px; gap: 12px; }
+      .caption-card__body { font-size: 17px; line-height: 1.55; padding: 25px; }
+      .caption-card__body .caption-hook { color: var(--black); font-weight: 700; font-size: 22px; line-height: 1.25; }
+      .copy-button { padding: 7px 12px; border: 1px solid #bec8c3; border-radius: 3px; background: #fff; color: #006d68; font: 700 14px 'Proxima Nova', Arial, sans-serif; cursor: pointer; }
+      .copy-status { min-height: 1.4em; margin: 12px 0 0; color: var(--muted); font-size: 14px; }
+      .timing-note { margin: 0 0 27px; padding: 17px 20px; background: #eeece7; border-left: 4px solid var(--orange); color: #47433d; line-height: 1.55; font-size: 16px; }
+      .opening-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; list-style: none; margin: 0; padding: 0; counter-reset: openings; }
+      .opening-options li { counter-increment: openings; min-width: 0; padding: 23px; border: 1px solid var(--line); border-top: 3px solid var(--purple); background: #fff; font-size: 20px; line-height: 1.35; }
+      .opening-options li::before { content: '0' counter(openings); display: block; margin-bottom: 14px; color: #82607c; font-family: 'Oswald', sans-serif; font-size: 15px; }
+      .source-list { margin: 0; padding-left: 22px; max-width: 1100px; color: #4a4d4d; font-size: 16px; line-height: 1.6; }
+      .source-list li + li { margin-top: 14px; }
+      .source-list a, .review-footer a { color: #006d68; text-underline-offset: 3px; }
+      .review-footer { line-height: 1.5; }
+      @media (min-width: 1400px) { .review-layout { grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 42px; } }
+      @media (max-width: 900px) { .campaign-cover { min-height: 325px; } .review-layout { grid-template-columns: minmax(0, 1fr); } .artwork { max-width: 660px; } .opening-options { grid-template-columns: minmax(0, 1fr); } .concept { padding: 34px 0; } }
+      @media (max-width: 560px) { .campaign-cover { min-height: 300px; } .campaign-cover__top { gap: 12px; flex-wrap: wrap; } .campaign-cover__logo { max-width: 170px; height: auto; } .campaign-cover__badge { font-size: 10px; } .campaign-cover h1 { font-size: 41px; } .campaign-cover__meta { font-size: 14px; } .caption-card__header, .caption-card__body { padding: 20px; } .caption-card__body { font-size: 16px; } .caption-card__body .caption-hook { font-size: 21px; } .opening-options li { font-size: 18px; } }
+    </style>
+  </head>
+  <body>
+    <header class="campaign-cover">
+      <div class="campaign-cover__top">
+        <img class="campaign-cover__logo" src="assets/marketing/frost-readiness/concept-5/hybrid-ag-logo-white.png" alt="Hybrid Ag">
+        <p class="campaign-cover__badge">Horticulture · Cherries</p>
+      </div>
+      <div class="campaign-cover__centre">
+        <p class="campaign-cover__kicker">Draft concept · For review</p>
+        <h1>Cherry <em>Flowering</em></h1>
+        <p class="campaign-cover__meta">Main flowering · September–October 2026<br>Follow bloom in each block</p>
+      </div>
+      <div class="campaign-cover__bottom">
+        <p class="campaign-cover__small">Spring 2026 · Hybrid Ag</p>
+        <div class="campaign-cover__dots" aria-hidden="true"><span></span><span></span><span></span></div>
+      </div>
+    </header>
+    <div class="campaign-cover__accent" aria-hidden="true"></div>
+
+    <main class="page">
+      <section class="concept" aria-labelledby="concept-title">
+        <div class="concept__heading">
+          <h2 id="concept-title">Artwork and caption</h2>
+          <p class="concept__summary">A stage-led post about flowering uniformity, pollination conditions and keeping the planned checks in view.</p>
+        </div>
+        <p class="timing-note"><strong>Timing follows the block.</strong> September–October is the planning window, not a fixed flowering date. Cultivar, region and seasonal conditions change the timing. Use the stage observed in each block to decide when this post is relevant.</p>
+        <div class="review-layout">
+          <figure class="artwork">
+            <a class="artwork__link" href="assets/cherry-spring-2026/flowering-concept.png" target="_blank" rel="noopener" aria-label="Open the draft artwork at full resolution">
+              <img src="assets/cherry-spring-2026/flowering-concept.png" width="1080" height="1350" alt="Draft cherry flowering graphic: How evenly is your cherry block flowering?">
+            </a>
+            <figcaption>4:5 portrait concept. Open the artwork to inspect it at full resolution.</figcaption>
+            <div class="asset-actions">
+              <a class="asset-action" href="assets/cherry-spring-2026/flowering-concept.png" download>Download draft PNG</a>
+              <a class="asset-action" href="https://www.figma.com/design/RWiyqXmV33S3VddjniZrn4/Hybrid-Ag-Brand-System-2026?node-id=10172-102" target="_blank" rel="noopener">Open editable Figma</a>
+            </div>
+          </figure>
+          <div>
+            <article class="caption-card" aria-labelledby="caption-title">
+              <header class="caption-card__header">
+                <p id="caption-title">Draft caption</p>
+                <button class="copy-button" type="button">Copy caption</button>
+              </header>
+              <div class="caption-card__body" id="review-caption">
+                <p class="caption-hook">How evenly is your cherry block flowering?</p>
+                <p>Two cherry blocks can be at different stages on the same day. As bloom progresses, check flowering uniformity within each cultivar, the overlap with compatible pollinisers and the conditions for bee activity. Keep those observations with the block’s weather, soil moisture and nutrition records.</p>
+                <p>If Differential Sap Analysis (DSA) is part of your program, keep the planned flowering checks. Read the results alongside growth stage and recent inputs before deciding what to change.</p>
+                <p>Talk to your Hybrid Ag agronomist about the stage your blocks have reached and the next check in your program.</p>
+              </div>
+            </article>
+            <p class="copy-status" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="concept" aria-labelledby="openings-title">
+        <div class="concept__heading">
+          <h2 id="openings-title">Other first lines</h2>
+          <p class="concept__summary">Three alternatives for review. Use one opening with the caption, rather than stacking them.</p>
+        </div>
+        <ol class="opening-options">
+            <li>Two cherry blocks can be at different stages on the same day.</li>
+            <li>Good pollination depends on more than open flowers.</li>
+            <li>Before changing the nutrition plan, check where each block is in bloom.</li>
+        </ol>
+      </section>
+
+      <section class="concept" aria-labelledby="sources-title">
+        <div class="concept__heading">
+          <h2 id="sources-title">Source notes</h2>
+          <p class="concept__summary">Relevant production, sampling and Playbook sections checked for this draft.</p>
+        </div>
+        <ul class="source-list">
+          <li><a href="https://www.planthealthaustralia.com.au/wp-content/uploads/2024/01/australian_cherry_production_guide.pdf" target="_blank" rel="noopener">Australian Cherry Production Guide</a>. Pollination and bee activity, pp. 73–75; growth and development, p. 76. Supports reading cultivar and block conditions alongside flowering stage.</li>
+          <li><a href="https://www.novacropcontrol.nl/images/sampledata/20170209_NCC_Sweet_cherry_sampling_guide.pdf" target="_blank" rel="noopener">NovaCropControl sweet cherry sampling guide</a>, pp. 2–3. Supports paired sampling of the youngest fully developed and oldest still-vital leaves. Use the current Hybrid Ag sampling kit instructions for collection, packing and dispatch.</li>
+          <li><a href="bud-flower-post.html" target="_blank" rel="noopener">Hybrid Ag Bud &amp; Flower review package</a>, July 2026. Paired results need crop-stage, conditions and program context. Its DSA graph is illustrative, not a universal sampling schedule.</li>
+          <li><strong>Hybrid Ag Cherry Nutrition Playbook, p. 42</strong> (internal source). The final Cherry Nutrition Playbook, p. 42, includes DSA checks at 20–30% flowering, 80–90% flowering and shuck fall. This concept retains flowering checks where they are part of the agreed program.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="review-footer">
+      <p>Draft artwork and copy for review. Calendar placement indicates a seasonal planning window.</p>
+      <p>Hybrid Ag | Cherry flowering</p>
+    </footer>
+    <script>
+      const copyButton = document.querySelector('.copy-button');
+      copyButton.addEventListener('click', async () => {
+        const caption = Array.from(document.querySelectorAll('#review-caption p'), paragraph => paragraph.innerText).join('\n\n');
+        const status = document.querySelector('.copy-status');
+        try {
+          await navigator.clipboard.writeText(caption);
+          status.textContent = 'Draft caption copied.';
+        } catch {
+          const selection = window.getSelection();
+          const range = document.createRange();
+          range.selectNodeContents(document.getElementById('review-caption'));
+          selection.removeAllRanges();
+          selection.addRange(range);
+          status.textContent = 'Caption selected. Use Copy to copy the draft.';
+        }
+      });
+    </script>
+  </body>
+</html>
