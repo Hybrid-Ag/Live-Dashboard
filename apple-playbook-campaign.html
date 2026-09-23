@@ -25,6 +25,22 @@
       .fact li { margin-bottom: 4px; }
       .decision { border-left: 4px solid #dc6800; background: #fff6ee; padding: 14px 18px; border-radius: 0 4px 4px 0; font-size: 14px; line-height: 1.6; }
       .ad-card__media--pending { aspect-ratio: 4 / 5; background: #eae5df; display: flex; align-items: center; justify-content: center; text-align: center; padding: 28px; font-size: 14px; line-height: 1.6; color: #867764; }
+      .stat-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-bottom: 24px; }
+      .stat { border: 1px solid #d0d1ce; border-radius: 4px; background: #fff; padding: 16px 18px; }
+      .stat b { display: block; font-family: "Alternate Gothic", "Oswald", sans-serif; font-size: 44px; line-height: 1; color: #018d8a; }
+      .stat--hot b { color: #dc6800; } .stat--warm b { color: #7b3f8c; }
+      .stat span { display: block; margin-top: 6px; font-size: 14px; font-weight: 600; }
+      .stat small { display: block; margin-top: 4px; font-size: 12px; color: #867764; line-height: 1.5; }
+      .note { margin: 18px 0 0; font-size: 13px; color: #867764; }
+      .offers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+      .offer { border: 1px solid #d0d1ce; border-radius: 4px; background: #fff; padding: 18px 20px; font-size: 13.5px; line-height: 1.6; }
+      .offer--pia { border-top: 4px solid #018d8a; }
+      .offer:not(.offer--pia) { border-top: 4px solid #dc6800; }
+      .offer__tag { margin: 0 0 6px; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #867764; }
+      .offer h3 { margin: 0 0 10px; font-family: "Alternate Gothic", "Oswald", sans-serif; font-size: 20px; letter-spacing: .4px; text-transform: uppercase; line-height: 1.15; }
+      .offer p { margin: 0 0 8px; }
+      .decision a { color: inherit; }
+      @media (max-width: 900px) { .stat-row, .offers { grid-template-columns: minmax(0, 1fr); } }
       @media (max-width: 900px) { .ad-grid, .facts { grid-template-columns: minmax(0, 1fr); } }
     </style>
   </head>
@@ -35,7 +51,7 @@
         <p class="campaign-cover__badge">&#x2B21; Horticulture</p>
       </div>
       <div class="campaign-cover__centre">
-        <p class="campaign-cover__kicker">Paid lead campaign &middot; creatives in review</p>
+        <p class="campaign-cover__kicker">Paid lead campaign &middot; live 22&ndash;29 September</p>
         <h1>Apple Nutrition <em>Playbook</em></h1>
         <p class="campaign-cover__meta">Meta instant-form campaign &middot; apple regions in VIC, NSW, QLD and SA<br>Facebook &middot; Instagram</p>
       </div>
@@ -52,10 +68,10 @@
           <div>
             <h2 id="apple-decision-title">Where it&rsquo;s at</h2>
           </div>
-          <p class="concept__summary">The campaign is built in Meta Ads Manager and ready to switch on. It was waiting on two videos from the horticulture team; both arrived on 18 September.</p>
+          <p class="concept__summary">Live. Switched on Tuesday 22 September at 8am and runs to Tuesday 29 September, $200 lifetime. The two videos went as supplied; Pia reworked the static on 21 September and is resizing the creatives for more placements. Leads land in Meta Leads Center and get the Playbook straight away.</p>
         </div>
         <div class="decision">
-          <strong>Decision needed:</strong> Nathan and Jamie Granger to review the two videos and call it &mdash; run these as our best play, or go again for a stronger cut. The static is being reworked after feedback. Once the videos are called and the static lands, the campaign launches and runs for seven days.
+          <strong>For management this week:</strong> the follow-up offer. Two ideas from Pia and four alternatives are set out under <a href="#apple-offers-title">Follow-up offer options</a> below. Pick one to run to the 40-odd Playbook-only leads before the campaign closes on 29 September; the four warm leads are being called regardless.
         </div>
       </section>
 
@@ -98,10 +114,10 @@
             </figcaption>
           </figure>
           <figure class="ad-card">
-            <div class="ad-card__media ad-card__media--pending" aria-label="Static ad in progress"><span>Working on it &mdash; Pia is reworking the static after feedback (18 Sep). New layout lands here.</span></div>
+            <div class="ad-card__media ad-card__media--pending" aria-label="Static ad in progress"><span>Revised by Pia on 21 September and running in Meta; the new layout is still to be added here.</span></div>
             <figcaption>
               <p class="ad-card__num"><span>03</span> Static</p>
-              <p class="ad-card__role">Focuses on consistent apple pack-out. First layout reviewed 18 September and sent back to Pia with feedback; the revised version goes here.</p>
+              <p class="ad-card__role">Focuses on consistent apple pack-out. First layout was sent back with feedback on 18 September; Pia&rsquo;s revised version is the one running.</p>
               <div class="caption-card__body">
                 <p>Better apple pack-out is built across the whole season.</p>
                 <p>Download the free Apple Nutrition Playbook for a practical look at how testing, tree demand, water and nutrient timing connect from soil to storage.</p>
@@ -113,12 +129,124 @@
         </div>
       </section>
 
+      <section class="concept" aria-labelledby="apple-leads-title">
+        <div class="concept__heading">
+          <div>
+            <h2 id="apple-leads-title">Leads so far</h2>
+          </div>
+          <p class="concept__summary">Read from Meta Leads Center on Thursday 24 September, 7am AWST &mdash; day three of seven. The Cherry Playbook finished on 78 leads in seven days at $2.39 a lead; Apple is already past half that after two full days.</p>
+        </div>
+        <div class="stat-row">
+          <div class="stat"><b>41</b><span>leads in 2&frac12; days</span><small>5 on 22 Sep &middot; 27 on 23 Sep &middot; 9 by 7am on 24 Sep</small></div>
+          <div class="stat stat--hot"><b>1</b><span>wants a chat with Chelsea</span><small>Iain MacLennan &middot; grower &middot; NSW</small></div>
+          <div class="stat stat--warm"><b>3</b><span>maybe, later this season</span><small>Phil Shepherd (VIC) &middot; Paul Mason (SA) &middot; Dougal Munro (NSW), all growers</small></div>
+          <div class="stat"><b>37</b><span>&ldquo;I&rsquo;ll reach out if I need help&rdquo;</span><small>Playbook-only &mdash; the nurture list</small></div>
+        </div>
+        <div class="facts">
+          <div class="fact">
+            <h3>Who they are</h3>
+            <ul>
+              <li>22 growers or owners</li>
+              <li>2 farm, orchard or block managers</li>
+              <li>8 agronomists or advisers</li>
+              <li>9 other &mdash; worth a look at names and companies before judging; Cherry had 20 &ldquo;other&rdquo; and several were relevant</li>
+            </ul>
+          </div>
+          <div class="fact">
+            <h3>Where they are</h3>
+            <ul>
+              <li>Victoria 20 &middot; South Australia 15 &middot; New South Wales 3 &middot; Queensland 3</li>
+              <li>Two clear clusters for Chelsea and Nate: Goulburn Valley / Yarra Valley and the Adelaide Hills</li>
+              <li>None of the 41 are in the shared lead sheet yet; the dashboard Leads view still reads zero for Apple until they are entered</li>
+            </ul>
+          </div>
+        </div>
+        <p class="note">Contact details stay in Leads Center and the lead sheet; this page carries counts and the four warm names only. Spend and cost per lead to be added from Ads Manager at the wrap-up.</p>
+      </section>
+
+      <section class="concept" aria-labelledby="apple-offers-title">
+        <div class="concept__heading">
+          <div>
+            <h2 id="apple-offers-title">Follow-up offer options</h2>
+          </div>
+          <p class="concept__summary">What we send the 37 Playbook-only leads and the 3 maybes after the Playbook. Pia&rsquo;s two ideas first, as written in Notion on 23 September, then four alternatives to run over with management. Nothing here is decided.</p>
+        </div>
+        <div class="offers">
+          <article class="offer offer--pia">
+            <p class="offer__tag">Pia &middot; idea 1</p>
+            <h3>Apple Playbook follow-up drip</h3>
+            <p><strong>Audience:</strong> leads who chose &ldquo;Maybe, later this season&rdquo; or &ldquo;I&rsquo;ll reach out if I need help&rdquo;.</p>
+            <p>After the Playbook, ask the grower which topic matters most on their orchard: testing and understanding results &middot; tree demand at growth stages (nutrition by crop stage) &middot; water quality and nutrient timing / building the block program &middot; fruit quality and pack-out / products and application options.</p>
+            <p>The pick triggers a follow-up email, or a call where it fits, with the matching Playbook pages, a video, or product and service information. Anyone who asks for pricing or contact goes to sales. No pick = general nurture list until they unsubscribe.</p>
+          </article>
+          <article class="offer offer--pia">
+            <p class="offer__tag">Pia &middot; idea 2</p>
+            <h3>Test fee credited on the first order</h3>
+            <p>&ldquo;Pay for an eligible test on an apple block. Place your first order with Hybrid-Ag within the agreed period and we credit the full test fee to that order.&rdquo;</p>
+            <p>Paying up front means they intend to use the test; the credit gives them a reason to buy. If no order follows, the test stays a paid service. Promoted through the Playbook follow-up emails; growers reply or submit a request and we confirm test, cost and conditions before booking.</p>
+            <p><strong>To confirm:</strong> which tests qualify &middot; maximum credit &middot; minimum order value &middot; products covered &middot; how long the credit stays valid &middot; one offer per business.</p>
+          </article>
+          <article class="offer">
+            <p class="offer__tag">Alternative A</p>
+            <h3>15-minute block review with Chelsea &mdash; limited spring slots</h3>
+            <p>A booked call, not &ldquo;reply if you want&rdquo;. Ten slots in the first two weeks of October, first come. Cherry showed the chat option pulls low volume but real quality (both yes-leads turned into commercial follow-up); this puts the same door in front of the 37 who didn&rsquo;t take it on the form. Costs Chelsea&rsquo;s time only.</p>
+          </article>
+          <article class="offer">
+            <p class="offer__tag">Alternative B</p>
+            <h3>Spring DSA at cost, interpreted</h3>
+            <p>One paired young-leaf / old-leaf DSA on a block of their choice at our cost price, with Chelsea or Nate reading it back to them. It is the Playbook&rsquo;s own &ldquo;test, don&rsquo;t guess&rdquo; message made real, and the read-back is the sales conversation. Cheaper for the grower than idea 2 and no order condition to police; the sample and the conversation are the qualifier.</p>
+          </article>
+          <article class="offer">
+            <p class="offer__tag">Alternative C</p>
+            <h3>Andrew Smith spring Q&amp;A, one hour online</h3>
+            <p>One session in early October for all Apple and Cherry Playbook leads: what to check from bloom to fruit set, questions taken live. Scales to the whole list at once, gives Andrew&rsquo;s credibility to people who only saw a 29-second video, and the registration itself is a second qualifier. Record it and it becomes the nurture email for everyone who doesn&rsquo;t show.</p>
+          </article>
+          <article class="offer">
+            <p class="offer__tag">Alternative D</p>
+            <h3>Orchard visit when we&rsquo;re in your district</h3>
+            <p>Thirty-five of the 41 sit in two clusters, Goulburn/Yarra and the Adelaide Hills. Email each cluster a week we&rsquo;ll be through and offer a free half-hour walk of one block. Turns the lead list into a route for Chelsea and Nate rather than 37 individual chases, and a visit is the strongest converter we have.</p>
+          </article>
+        </div>
+        <p class="note">Pia&rsquo;s drip (idea 1) can sit under any of the four; it is the delivery mechanism, the others are the offer.</p>
+      </section>
+
+      <section class="concept" aria-labelledby="apple-followup-title">
+        <div class="concept__heading">
+          <div>
+            <h2 id="apple-followup-title">Follow-up email and lead handling</h2>
+          </div>
+          <p class="concept__summary">The first email is drafted in Odoo and not yet sent; no recipient list is attached. Lead handling follows the Cherry pattern.</p>
+        </div>
+        <div class="facts">
+          <div class="fact">
+            <h3>Email draft (Odoo mailing #87)</h3>
+            <ul>
+              <li><strong>Subject:</strong> Your Apple Nutrition Playbook &middot; <strong>Preview:</strong> Any apple questions? Our team can help</li>
+              <li>Thanks for downloading; spring is the time to review testing, tree demand and nutrition across the block &middot; &ldquo;View the Playbook&rdquo; button</li>
+              <li>Chelsea Hall and the horticulture team can talk through how it applies to your orchard &mdash; reply or call (03) 5722 7555</li>
+              <li>Inside the Playbook: Key Levers &middot; The Science &middot; The Playbook</li>
+              <li>Cherry benchmark: 57% open, 22% click; the &ldquo;maybe&rdquo; segment opened 50% and clicked 29%, so it is worth a separate send</li>
+            </ul>
+          </div>
+          <div class="fact">
+            <h3>Who does what</h3>
+            <ul>
+              <li><strong>Yes, chat with Chelsea</strong> &rarr; Chelsea calls within the day; Nathan logs the lead and tags Jamie</li>
+              <li><strong>Maybe, later this season</strong> &rarr; follow-up email now, a call booked for later in spring</li>
+              <li><strong>I&rsquo;ll reach out</strong> &rarr; Playbook email, then the chosen offer above, then nurture</li>
+              <li>Every lead into the shared lead sheet with the action taken, then the helpdesk ticket and CRM per the lead lifecycle</li>
+              <li>Wrap-up at 29 September: leads, spend, CPL per creative, and a 1 / 6 / 12-month review of what the leads turned into &mdash; figures to Amos at month end</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <section class="concept" aria-labelledby="apple-setup-title">
         <div class="concept__heading">
           <div>
             <h2 id="apple-setup-title">Campaign setup</h2>
           </div>
-          <p class="concept__summary">As built in Meta. Full detail on the Paid Lead Generation page in Notion.</p>
+          <p class="concept__summary">As built in Meta. Full detail, including the Cherry trial write-up it was modelled on, is on the Paid Lead Generation page in Notion.</p>
         </div>
         <div class="facts">
           <div class="fact">
@@ -127,8 +255,9 @@
               <li>Name: Apple Playbook &ndash; Leads &ndash; September 2026</li>
               <li>Objective: leads via Meta instant form</li>
               <li>Budget: $200 lifetime, about $28/day over 7 days; low performers switched off as data comes in</li>
-              <li>Launch: on sign-off (originally planned 9&ndash;15 September)</li>
-              <li>One ad set, three creatives</li>
+              <li>Live 22 September 8am to 29 September 8am</li>
+              <li>One ad set, three creatives; low performers switched off as data comes in</li>
+              <li>Changes from Cherry: apple regions instead of cherry, spring and whole-season messaging, &ldquo;where are the orchards you work with&rdquo; region question, a friendlier &ldquo;I&rsquo;ll reach out&rdquo; option, Apple submitters excluded for 90 days while Cherry leads stay eligible</li>
             </ul>
           </div>
           <div class="fact">
@@ -155,7 +284,7 @@
             <ul>
               <li>&ldquo;Download the Playbook&rdquo; opens the digital Playbook straight away: <a href="https://hybrid-ag.odoo.com/documents/7NVG_U8BRYKjP8tE3GQCLwo138" target="_blank" rel="noopener">Apple Nutrition Playbook (Odoo Documents)</a></li>
               <li>Leads land in the tracking sheet and helpdesk; &ldquo;Yes&rdquo; answers go to Chelsea</li>
-              <li>Nurture email sequence to follow (Pia)</li>
+              <li>First follow-up email drafted (Odoo #87), offer and nurture sequence to be chosen &mdash; see above</li>
             </ul>
           </div>
         </div>
@@ -163,7 +292,7 @@
     </main>
 
     <footer class="review-footer">
-      <p>Play the videos here; the static will be added once revised. Campaign detail lives in Notion &rarr; Paid Lead Generation.</p>
+      <p>Play the videos here. Lead counts update at each read of Leads Center; contact details never appear on this page. Campaign detail lives in Notion &rarr; Paid Lead Generation.</p>
       <p>Hybrid Ag | Apple Nutrition Playbook lead campaign</p>
     </footer>
 
