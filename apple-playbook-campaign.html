@@ -43,6 +43,16 @@
       .offer--wide .pc { margin: 0; padding: 0 0 0 28px; border-top: 0; border-left: 1px solid #e6e1d9; align-self: start; }
       @media (max-width: 900px) { .offer--wide { display: block; } .offer--wide .pc { padding: 10px 0 0; border-left: 0; border-top: 1px solid #e6e1d9; } }
       .decision a { color: inherit; }
+      .sharpen { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+      .sharp { border: 1px solid #d0d1ce; border-radius: 4px; background: #fff; padding: 18px 20px; font-size: 13px; line-height: 1.6; }
+      .sharp--top { border-top: 4px solid #7b3f8c; }
+      .sharp:not(.sharp--top) { border-top: 4px solid #d0d1ce; background: #fbf9f5; }
+      .sharp h3 { margin: 0 0 10px; font-family: "Alternate Gothic", "Oswald", sans-serif; font-size: 19px; letter-spacing: .4px; text-transform: uppercase; line-height: 1.15; }
+      .sharp p { margin: 0 0 8px; } .sharp em { font-style: italic; }
+      .sharp__why { margin-top: 10px; padding-top: 10px; border-top: 1px solid #e6e1d9; font-size: 12.5px; }
+      .sharp b { color: #018d8a; margin-right: 4px; } .sharp b + span { margin-left: 0; }
+      .sharp p b:nth-of-type(2) { color: #dc6800; margin-left: 6px; }
+      @media (max-width: 900px) { .sharpen { grid-template-columns: minmax(0, 1fr); } }
       .draft { margin-top: 24px; padding: 22px 26px; border: 1px solid #d0d1ce; border-left: 4px solid #7b3f8c; border-radius: 0 4px 4px 0; background: #fff; font-size: 13.5px; line-height: 1.65; max-width: 860px; }
       .draft p { margin: 0 0 10px; } .draft em { color: #018d8a; font-style: normal; font-weight: 600; }
       .draft__note { margin-top: 14px; padding-top: 12px; border-top: 1px solid #e6e1d9; font-size: 12.5px; color: #867764; }
@@ -92,7 +102,7 @@
           <p class="concept__summary">Live. Switched on Tuesday 22 September at 8am and runs to Tuesday 29 September, $200 lifetime. The two videos went as supplied; Pia reworked the static on 21 September and is resizing the creatives for more placements. Leads land in Meta Leads Center and get the Playbook straight away.</p>
         </div>
         <div class="decision">
-          <strong>For management today, in two steps.</strong> First, the <a href="#apple-offers-title">seven follow-up tools</a>: which ones do the Sales Manager and Operations Manager want on the table? Second, with the approved tools, agree the route &mdash; the <a href="#apple-ladder-title">suggested ladder</a> below them, or a variation. The four warm leads are being called regardless; this is for the other 37 and for everyone the campaign adds before it closes on 29 September.
+          <strong>For management today, in two steps.</strong> First, the <a href="#apple-offers-title">seven follow-up tools</a>: which ones do the Sales Manager and Operations Manager want on the table? Second, with the approved tools, agree the route &mdash; the <a href="#apple-ladder-title">suggested ladder</a>, or a variation. In between sit <a href="#apple-sharpen-title">eight ways to sharpen</a> whatever is approved; the guarantee is the one to argue about. The four warm leads are being called regardless; this is for the other 37 and for everyone the campaign adds before it closes on 29 September.
         </div>
       </section>
 
@@ -179,6 +189,60 @@
           </article>
         </div>
         <p class="note">Tools 1 and 6 are the same lever in two forms; run one. Whatever is chosen goes out through the Playbook email in Odoo.</p>
+      </section>
+
+      <section class="concept" aria-labelledby="apple-sharpen-title">
+        <div class="concept__heading">
+          <div>
+            <h2 id="apple-sharpen-title">Sharpening the tools</h2>
+          </div>
+          <p class="concept__summary">Eight ways to make whichever tools are approved convert harder, drawn from Alex Hormozi&rsquo;s <em>$100M Offers</em> and <em>$100M Leads</em>. None is a new tool; each is a multiplier on the ones above. The first three are the ones worth arguing for.</p>
+        </div>
+        <div class="sharpen">
+          <article class="sharp sharp--top">
+            <p class="offer__tag">1 &middot; Guarantee</p>
+            <h3>Put a guarantee on the program</h3>
+            <p>The one lever none of the six tools uses, and the biggest one in the book. Conditional and tied to compliance so the season can&rsquo;t sink us: <em>&ldquo;Run the program on one block as written. If the follow-up DSA hasn&rsquo;t moved the deficient nutrients into range by the agreed date, the second round of product is on us.&rdquo;</em> A softer version for the call: <em>&ldquo;If the read-back wasn&rsquo;t worth 15 minutes, the next test is free anyway.&rdquo;</em></p>
+            <p class="sharp__why"><b>Why</b> Removes the grower&rsquo;s risk, which is the real reason cold leads don&rsquo;t buy. <b>Watch</b> Needs Amos and Tom to agree the terms; only works where we control the program and the re-test.</p>
+          </article>
+          <article class="sharp sharp--top">
+            <p class="offer__tag">2 &middot; Name and stack</p>
+            <h3>Sell a named program, not a free test</h3>
+            <p>Hormozi&rsquo;s value equation: dream outcome and likelihood up, time and effort down. &ldquo;A free DSA&rdquo; is a test; <em>&ldquo;the Spring Pack-Out Block Program&rdquo;</em> is an outcome. Stack what is already in the tools and price each line: paired DSA + agronomist read-back + written block program + first-order credit + the recorded Q&amp;A + the printed Playbook posted. &ldquo;All of it for the cost of the product.&rdquo;</p>
+            <p class="sharp__why"><b>Why</b> Same tools, four times the perceived value; gives Josh one thing to say on every call. <b>Watch</b> The name and the dollar values need signing off before it goes in an email.</p>
+          </article>
+          <article class="sharp sharp--top">
+            <p class="offer__tag">3 &middot; Channel</p>
+            <h3>A different offer for the eight advisers</h3>
+            <p>Agronomists and advisers aren&rsquo;t orchard leads, they are potential Certified Partners. Offer them <em>DSA at partner rates for their growers, read-back included on the first three.</em> One adviser who converts is worth ten grower leads, and they already influence the nutrition decisions on the blocks we want.</p>
+            <p class="sharp__why"><b>Why</b> Turns the least-valuable segment on the form into the most valuable one. <b>Watch</b> Uses the existing CP terms; Jamie owns the conversation, not Josh.</p>
+          </article>
+          <article class="sharp">
+            <p class="offer__tag">4 &middot; Proof</p>
+            <h3>Put a grower story in the first email and the call script</h3>
+            <p>Nothing on this page yet proves the program works. Vince Blefari (Cherry lead, two visits, program in place) and Matt Batinich (came back after years, first order around $40k) are two sentences each. <b>Watch</b> Both need to be happy to be named.</p>
+          </article>
+          <article class="sharp">
+            <p class="offer__tag">5 &middot; Effort</p>
+            <h3>Done-for-you DSA beats a posted kit</h3>
+            <p>A kit still asks the grower to sample correctly and send it back. Where a district visit (tool 5) is on, we take the sample; the free DSA and the visit become one offer. <b>Watch</b> Only where the route runs; posted kits everywhere else.</p>
+          </article>
+          <article class="sharp">
+            <p class="offer__tag">6 &middot; Deadline</p>
+            <h3>Date every offer</h3>
+            <p>The urgency is real (bloom to fruit set is an eight-week window) but nothing on the page has a date. <em>&ldquo;Claim by Friday 3 October&rdquo;</em> on both offers, and the 15-DSA cap stated in the email. <b>Watch</b> Honour it; a deadline that slides trains people to ignore the next one.</p>
+          </article>
+          <article class="sharp">
+            <p class="offer__tag">7 &middot; Next magnet</p>
+            <h3>Block Nutrition Scorecard</h3>
+            <p>The Playbook gave the &ldquo;what&rdquo;; the next lead magnet solves the next narrow problem. Six questions (variety, last pack-out, inputs, tests done) and a scored one-pager back. It is the interactive program concept already on the website roadmap, pointed at apples, and every submission is warmer than a PDF download. <b>Watch</b> Two weeks to build; a follow-on, not for this campaign.</p>
+          </article>
+          <article class="sharp">
+            <p class="offer__tag">8 &middot; Cadence</p>
+            <h3>Follow up until they buy or say no</h3>
+            <p>Cherry&rsquo;s 62 Playbook-only leads got one email. Plan the touches now: email &rarr; Josh call &rarr; SMS receipt on any claim &rarr; email 2 with the Q&amp;A recording &rarr; call 2 at fruit set. Five touches over six weeks. Ask for a referral on every read-back: <em>&ldquo;Know another apple grower who&rsquo;d want one? We&rsquo;ll test their block too.&rdquo;</em> <b>Watch</b> Needs a simple tracker so nobody is chased twice or missed.</p>
+          </article>
+        </div>
       </section>
 
       <section class="concept" aria-labelledby="apple-ladder-title">
