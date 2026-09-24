@@ -31,28 +31,22 @@
       .stat span { display: block; margin-top: 6px; font-size: 14px; font-weight: 600; }
       .stat small { display: block; margin-top: 4px; font-size: 12px; color: #867764; line-height: 1.5; }
       .note { margin: 18px 0 0; font-size: 13px; color: #867764; }
-      .offers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-      .offer { border: 1px solid #d0d1ce; border-radius: 4px; background: #fff; padding: 18px 20px; font-size: 13.5px; line-height: 1.6; }
-      .offer--pia { border-top: 4px solid #018d8a; }
-      .offer:not(.offer--pia) { border-top: 4px solid #dc6800; }
-      .offer__tag { margin: 0 0 6px; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #867764; }
-      .offer h3 { margin: 0 0 10px; font-family: "Alternate Gothic", "Oswald", sans-serif; font-size: 20px; letter-spacing: .4px; text-transform: uppercase; line-height: 1.15; }
-      .offer p { margin: 0 0 8px; }
-      .offer--wide { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); column-gap: 28px; }
-      .offer--wide .offer__tag, .offer--wide h3 { grid-column: 1 / -1; }
-      .offer--wide .pc { margin: 0; padding: 0 0 0 28px; border-top: 0; border-left: 1px solid #e6e1d9; align-self: start; }
-      @media (max-width: 900px) { .offer--wide { display: block; } .offer--wide .pc { padding: 10px 0 0; border-left: 0; border-top: 1px solid #e6e1d9; } }
       .decision a { color: inherit; }
-      .sharpen { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-      .sharp { border: 1px solid #d0d1ce; border-radius: 4px; background: #fff; padding: 18px 20px; font-size: 13px; line-height: 1.6; }
-      .sharp--top { border-top: 4px solid #7b3f8c; }
-      .sharp:not(.sharp--top) { border-top: 4px solid #d0d1ce; background: #fbf9f5; }
-      .sharp h3 { margin: 0 0 10px; font-family: "Alternate Gothic", "Oswald", sans-serif; font-size: 19px; letter-spacing: .4px; text-transform: uppercase; line-height: 1.15; }
-      .sharp p { margin: 0 0 8px; } .sharp em { font-style: italic; }
-      .sharp__why { margin-top: 10px; padding-top: 10px; border-top: 1px solid #e6e1d9; font-size: 12.5px; }
-      .sharp b { color: #018d8a; margin-right: 4px; } .sharp b + span { margin-left: 0; }
-      .sharp p b:nth-of-type(2) { color: #dc6800; margin-left: 6px; }
-      @media (max-width: 900px) { .sharpen { grid-template-columns: minmax(0, 1fr); } }
+      .offer__tag { margin: 0 0 6px; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #867764; }
+      .decisions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: start; }
+      .dec { border: 1px solid #d0d1ce; border-top: 4px solid #018d8a; border-radius: 4px; background: #fff; padding: 20px 22px 8px; }
+      .dec:nth-child(2) { border-top-color: #0d2826; } .dec:nth-child(3) { border-top-color: #7b3f8c; }
+      .dec__kicker { margin: 0 0 6px; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #867764; }
+      .dec h3 { margin: 0 0 16px; font-family: "Alternate Gothic", "Oswald", sans-serif; font-size: 26px; letter-spacing: .4px; text-transform: uppercase; line-height: 1.1; }
+      .opt { padding: 14px 16px; margin: 0 0 12px; border: 1px solid #e6e1d9; border-radius: 4px; background: #fbf9f5; font-size: 13.5px; line-height: 1.6; }
+      .opt--rec { background: #fff; border-color: #018d8a; box-shadow: 0 0 0 1px #018d8a inset; }
+      .opt p { margin: 0 0 8px; } .opt p:last-child { margin: 0; }
+      .opt__label { font-family: "Alternate Gothic", "Oswald", sans-serif; font-size: 17px; letter-spacing: .3px; text-transform: uppercase; }
+      .rec { display: inline-block; margin-left: 8px; padding: 2px 8px; border-radius: 999px; background: #018d8a; color: #fff; font-family: "Proxima Nova", sans-serif; font-size: 10.5px; letter-spacing: 1px; text-transform: uppercase; vertical-align: middle; }
+      .fa { padding-top: 8px; border-top: 1px solid #e6e1d9; font-size: 12.5px; }
+      .fa b { color: #018d8a; margin-right: 4px; } .fa b:nth-of-type(2) { color: #dc6800; margin-left: 6px; }
+      .opt__note { margin: 4px 0 12px; font-size: 12.5px; color: #867764; line-height: 1.55; }
+      @media (max-width: 900px) { .decisions { grid-template-columns: minmax(0, 1fr); } }
       .draft { margin-top: 24px; padding: 22px 26px; border: 1px solid #d0d1ce; border-left: 4px solid #7b3f8c; border-radius: 0 4px 4px 0; background: #fff; font-size: 13.5px; line-height: 1.65; max-width: 860px; }
       .draft p { margin: 0 0 10px; } .draft em { color: #018d8a; font-style: normal; font-weight: 600; }
       .draft__note { margin-top: 14px; padding-top: 12px; border-top: 1px solid #e6e1d9; font-size: 12.5px; color: #867764; }
@@ -69,9 +63,7 @@
       .ladder-notes { margin-top: 22px; padding: 16px 20px; border: 1px solid #d0d1ce; border-left: 4px solid #018d8a; border-radius: 0 4px 4px 0; background: #fff; font-size: 13.5px; line-height: 1.6; }
       .ladder-notes p { margin: 0 0 8px; } .ladder-notes p:last-child { margin: 0; }
       @media (max-width: 900px) { .ladder { grid-template-columns: minmax(0, 1fr); } .rung { margin: 0 0 14px; } .rung::after { display: none; } }
-      .pc { margin-top: 10px; padding-top: 10px; border-top: 1px solid #e6e1d9; font-size: 12.5px; line-height: 1.55; }
-      .pc p { margin: 0 0 6px; } .pc b { color: #018d8a; margin-right: 4px; } .pc p + p b { color: #dc6800; }
-      @media (max-width: 900px) { .stat-row, .offers { grid-template-columns: minmax(0, 1fr); } }
+      @media (max-width: 900px) { .stat-row { grid-template-columns: minmax(0, 1fr); } }
       @media (max-width: 900px) { .ad-grid, .facts { grid-template-columns: minmax(0, 1fr); } }
     </style>
   </head>
@@ -84,7 +76,7 @@
       <div class="campaign-cover__centre">
         <p class="campaign-cover__kicker">Paid lead campaign &middot; live 22&ndash;29 September</p>
         <h1>Apple Nutrition <em>Playbook</em></h1>
-        <p class="campaign-cover__meta">Meta instant-form campaign &middot; apple regions in VIC, NSW, QLD and SA<br>41 leads by day three &middot; follow-up play for approval</p>
+        <p class="campaign-cover__meta">Meta instant-form campaign &middot; apple regions in VIC, NSW, QLD and SA<br>41 leads by day three &middot; three decisions for management</p>
       </div>
       <div class="campaign-cover__bottom">
         <p class="campaign-cover__small">September 2026 &middot; Hybrid Ag</p>
@@ -102,7 +94,7 @@
           <p class="concept__summary">Live. Switched on Tuesday 22 September at 8am and runs to Tuesday 29 September, $200 lifetime. The two videos went as supplied; Pia reworked the static on 21 September and is resizing the creatives for more placements. Leads land in Meta Leads Center and get the Playbook straight away.</p>
         </div>
         <div class="decision">
-          <strong>For management today, in two steps.</strong> First, the <a href="#apple-offers-title">seven follow-up tools</a>: which ones do the Sales Manager and Operations Manager want on the table? Second, with the approved tools, agree the route &mdash; the <a href="#apple-ladder-title">suggested ladder</a>, or a variation. In between sit <a href="#apple-sharpen-title">eight ways to sharpen</a> whatever is approved; the guarantee is the one to argue about. The four warm leads are being called regardless; this is for the other 37 and for everyone the campaign adds before it closes on 29 September.
+          <strong>For management today: <a href="#apple-decisions-title">three decisions</a>.</strong> The offer (free test or paid-and-credited), the reach (Josh works the list or we wait for replies) and the sweetener (a guarantee or not). Our recommendation is marked on each. Make the three calls and <a href="#apple-ladder-title">the route</a> is set. The four warm leads are being called regardless; this is for the other 37 and for everyone the campaign adds before it closes on 29 September.
         </div>
       </section>
 
@@ -141,106 +133,55 @@
         <p class="note">Contact details stay in Leads Center and the lead sheet; this page carries counts and the four warm names only. Spend: the whole $200 lifetime budget is committed. At the planned $28/day pace about $70 had gone out by this read, which puts the cost per lead near $1.70 so far; even if all $200 bought only these 41 it would be $4.88 a lead. Final CPL per creative at the wrap-up.</p>
       </section>
 
-      <section class="concept" aria-labelledby="apple-offers-title">
+      <section class="concept" aria-labelledby="apple-decisions-title">
         <div class="concept__heading">
           <div>
-            <h2 id="apple-offers-title">Tools in the arsenal</h2>
+            <h2 id="apple-decisions-title">Three decisions</h2>
           </div>
-          <p class="concept__summary">Step one: approve the tools. Six follow-up plays the team could use on these leads &mdash; Pia&rsquo;s test credit, as written in Notion on 23 September, then five more &mdash; each with the case for and against. Tick the ones that are in; the route comes next.</p>
+          <p class="concept__summary">Everything we could do with these leads comes down to three choices. Our recommendation is marked on each; the case for and against sits underneath. Make the three calls and the route below fills itself in.</p>
         </div>
-        <div class="offers">
-          <article class="offer offer--pia">
-            <p class="offer__tag">Tool 1 &middot; Pia</p>
-            <h3>Test fee credited on the first order</h3>
-            <p>&ldquo;Pay for an eligible test on an apple block. Place your first order with Hybrid-Ag within the agreed period and we credit the full test fee to that order.&rdquo;</p>
-            <p>Paying up front means they intend to use the test; the credit gives them a reason to buy. If no order follows, the test stays a paid service. Promoted through the Playbook follow-up emails; growers reply or submit a request and we confirm test, cost and conditions before booking.</p>
-            <p><strong>To confirm:</strong> which tests qualify &middot; maximum credit &middot; minimum order value &middot; products covered &middot; how long the credit stays valid &middot; one offer per business.</p>
-            <div class="pc"><p><b>Pros</b> Self-qualifying &mdash; only growers who mean it pay for a test; the credit ties the test to a first order; no free giveaway to police; fits the &ldquo;test, don&rsquo;t guess&rdquo; message.</p><p><b>Cons</b> Asks a cold lead to pay before we have spoken to them, so take-up will be low from a $2 lead; six conditions to agree and administer in Odoo; a grower who tests and buys nothing feels sold to; competes with the &ldquo;free Nutrient Audit&rdquo; the ad copy already promises.</p></div>
+        <div class="decisions">
+          <article class="dec">
+            <p class="dec__kicker">Decision 1 &middot; the offer</p>
+            <h3>Free test, or paid test credited?</h3>
+            <div class="opt opt--rec">
+              <p class="opt__label">A &middot; Free spring DSA <span class="rec">Recommended</span></p>
+              <p>One paired young-leaf / old-leaf DSA on a block of their choice, on us, read back by Josh, Chelsea or Nate. Capped at the first 15 growers or managers.</p>
+              <p class="fa"><b>For</b> Removes the last objection; the read-back is where the program conversation starts; one test costs a fraction of the first order it opens. <b>Against</b> Real lab and freight cost, so the cap matters; spring is the agronomists&rsquo; busiest time to interpret.</p>
+            </div>
+            <div class="opt">
+              <p class="opt__label">B &middot; Grower pays, credited on the first order</p>
+              <p>Pia&rsquo;s idea and the Henty Testing Investment Match are the same lever: they pay for one block test, the full amount comes off their first order that season.</p>
+              <p class="fa"><b>For</b> Self-qualifying, only growers who mean it pay; the credit is tied to an order; the Henty landing page already exists. <b>Against</b> Asks a $2 lead for money before we have spoken; take-up will be low; six conditions to administer; competes with the free audit the ads already promise.</p>
+            </div>
           </article>
-          <article class="offer">
-            <p class="offer__tag">Tool 2</p>
-            <h3>15-minute block review with Josh or Chelsea</h3>
-            <p>A booked call, not &ldquo;reply if you want&rdquo;. Josh takes the calls as the default &mdash; he is new to the team, agronomy-trained and in the office far more than Chelsea &mdash; with Chelsea for anyone who asks for her or where a block needs her. Offer slots through the first two weeks of October. Cherry showed the chat option pulls low volume but real quality (both yes-leads turned into commercial follow-up); this puts the same door in front of the 37 who didn&rsquo;t take it on the form.</p>
-            <div class="pc"><p><b>Pros</b> No hard cost and Josh has the time now; a booked slot is a real commitment; every call is a qualification and a sales conversation in one; Josh learns the apple accounts from day one; can be live in a day with a booking link, and Josh can phone the ones who don&rsquo;t book.</p><p><b>Cons</b> Josh is new, so the first calls need a script and Chelsea behind him for the technical questions; a 15-minute call rarely closes anything on its own, it needs a next step behind it; take-up from people who ticked &ldquo;I&rsquo;ll reach out&rdquo; may be a handful.</p></div>
+          <article class="dec">
+            <p class="dec__kicker">Decision 2 &middot; the reach</p>
+            <h3>Worked, or offered?</h3>
+            <div class="opt opt--rec">
+              <p class="opt__label">A &middot; Josh phones every grower and manager <span class="rec">Recommended</span></p>
+              <p>Josh books 15-minute block calls with the 24 growers and managers, Chelsea where a block calls for her, and phones the ones who don&rsquo;t book. He is new, agronomy-trained and in the office; this is the best use of that time.</p>
+              <p class="fa"><b>For</b> No hard cost; a call is a qualification and a sales conversation in one; Josh learns the apple accounts from day one. <b>Against</b> He needs a script and Chelsea behind him on technical questions; a 15-minute call needs a next step (Decision 1) behind it.</p>
+            </div>
+            <div class="opt">
+              <p class="opt__label">B &middot; Offered by email only</p>
+              <p>The offer goes out in the Playbook email and we wait for replies. Same rungs, slower, and most of the 37 stay Playbook-only.</p>
+              <p class="fa"><b>For</b> Zero time cost; nothing to coordinate. <b>Against</b> Cherry&rsquo;s 62 Playbook-only leads got one email and went nowhere; we already know how this ends.</p>
+            </div>
+            <p class="opt__note">Add-ons for people who won&rsquo;t take a call, no decision needed today: a one-hour Andrew Smith spring Q&amp;A online, and a free half-hour block walk when Chelsea or Nate are next through Goulburn/Yarra or the Adelaide Hills (35 of the 41 sit in those two districts).</p>
           </article>
-          <article class="offer">
-            <p class="offer__tag">Tool 3</p>
-            <h3>Free spring DSA, interpreted</h3>
-            <p>One paired young-leaf / old-leaf DSA on a block of their choice, on us, with Josh, Chelsea or Nate reading it back to them. It is the Playbook&rsquo;s own &ldquo;test, don&rsquo;t guess&rdquo; message made real, and the read-back is the sales conversation. The lab cost of one DSA is a fraction of the first order it opens, and nothing to police: the sample and the conversation are the qualifier.</p>
-            <div class="pc"><p><b>Pros</b> Free removes the last objection; puts our core product (DSA + interpretation) in their hands at the moment it matters; the read-back is a natural program conversation; the result stays in our system for follow-up and the V2 app; the cost per test is small against a single first order.</p><p><b>Cons</b> Real lab and freight cost per test, so cap it (say the first 15 growers or managers); sampling has to be done properly (kits, instructions, timing) so there is coordination; spring is the busiest time for the agronomists to interpret; a bad or late result reflects on us.</p></div>
-          </article>
-          <article class="offer">
-            <p class="offer__tag">Tool 4</p>
-            <h3>Andrew Smith spring Q&amp;A, one hour online</h3>
-            <p>One session in early October for all Apple and Cherry Playbook leads: what to check from bloom to fruit set, questions taken live. Scales to the whole list at once, gives Andrew&rsquo;s credibility to people who only saw a 29-second video, and the registration itself is a second qualifier. Record it and it becomes the nurture email for everyone who doesn&rsquo;t show.</p>
-            <div class="pc"><p><b>Pros</b> One hour of Andrew reaches all 120-odd Apple and Cherry leads at once; registrations show who is engaged; the recording becomes reusable content and a nurture email; timely for bloom to fruit set.</p><p><b>Cons</b> Webinar attendance from growers is typically 10&ndash;20% of registrations; needs Andrew&rsquo;s buy-in and a date inside two weeks; setup, invite and hosting fall on marketing; no direct commercial ask unless we build one into the close.</p></div>
-          </article>
-          <article class="offer">
-            <p class="offer__tag">Tool 5</p>
-            <h3>Orchard visit when we&rsquo;re in your district</h3>
-            <p>Thirty-five of the 41 sit in two clusters, Goulburn/Yarra and the Adelaide Hills. Email each cluster a week we&rsquo;ll be through and offer a free half-hour walk of one block. Turns the lead list into a route for Chelsea and Nate rather than 37 individual chases, and a visit is the strongest converter we have.</p>
-            <div class="pc"><p><b>Pros</b> A visit is how we actually win orchards (Vince Blefari went from Cherry lead to program after two visits); batching by district makes it efficient; a named week creates urgency; the offer costs nothing until someone says yes.</p><p><b>Cons</b> Depends on Chelsea and Nate being in those districts in the window; a half-hour walk can stretch to a morning; only the growers and managers (24 of 41) are worth a visit; needs a simple booking mechanism so we are not trading emails.</p></div>
-          </article>
-          <article class="offer offer--wide">
-            <p class="offer__tag">Tool 6</p>
-            <h3>Extend the Testing Investment Match</h3>
-            <div><p>Pia rebuilt the Testing Investment Match landing page for Henty this week: the grower&rsquo;s testing spend matched as product credit. Point Apple leads at the same page. It is Tool 1 with the mechanics, wording and landing page already built.</p></div>
-            <div class="pc"><p><b>Pros</b> Nothing new to build or explain; one offer across broadacre and horticulture; the credit is tied to product, so redeeming it is an order; already approved for Henty.</p><p><b>Cons</b> The match terms were set for broadacre testing and may not suit a single apple block; still asks for money up front; two credit offers (Tools 1 and 6) cannot both run, pick one.</p></div>
-          </article>
-        </div>
-        <p class="note">Tools 1 and 6 are the same lever in two forms; run one. Whatever is chosen goes out through the Playbook email in Odoo.</p>
-      </section>
-
-      <section class="concept" aria-labelledby="apple-sharpen-title">
-        <div class="concept__heading">
-          <div>
-            <h2 id="apple-sharpen-title">Sharpening the tools</h2>
-          </div>
-          <p class="concept__summary">Eight ways to make whichever tools are approved convert harder, drawn from Alex Hormozi&rsquo;s <em>$100M Offers</em> and <em>$100M Leads</em>. None is a new tool; each is a multiplier on the ones above. The first three are the ones worth arguing for.</p>
-        </div>
-        <div class="sharpen">
-          <article class="sharp sharp--top">
-            <p class="offer__tag">1 &middot; Guarantee</p>
-            <h3>Put a guarantee on the program</h3>
-            <p>The one lever none of the six tools uses, and the biggest one in the book. Conditional and tied to compliance so the season can&rsquo;t sink us: <em>&ldquo;Run the program on one block as written. If the follow-up DSA hasn&rsquo;t moved the deficient nutrients into range by the agreed date, the second round of product is on us.&rdquo;</em> A softer version for the call: <em>&ldquo;If the read-back wasn&rsquo;t worth 15 minutes, the next test is free anyway.&rdquo;</em></p>
-            <p class="sharp__why"><b>Why</b> Removes the grower&rsquo;s risk, which is the real reason cold leads don&rsquo;t buy. <b>Watch</b> Needs Amos and Tom to agree the terms; only works where we control the program and the re-test.</p>
-          </article>
-          <article class="sharp sharp--top">
-            <p class="offer__tag">2 &middot; Name and stack</p>
-            <h3>Sell a named program, not a free test</h3>
-            <p>Hormozi&rsquo;s value equation: dream outcome and likelihood up, time and effort down. &ldquo;A free DSA&rdquo; is a test; <em>&ldquo;the Spring Pack-Out Block Program&rdquo;</em> is an outcome. Stack what is already in the tools and price each line: paired DSA + agronomist read-back + written block program + first-order credit + the recorded Q&amp;A + the printed Playbook posted. &ldquo;All of it for the cost of the product.&rdquo;</p>
-            <p class="sharp__why"><b>Why</b> Same tools, four times the perceived value; gives Josh one thing to say on every call. <b>Watch</b> The name and the dollar values need signing off before it goes in an email.</p>
-          </article>
-          <article class="sharp sharp--top">
-            <p class="offer__tag">3 &middot; Channel</p>
-            <h3>A different offer for the eight advisers</h3>
-            <p>Agronomists and advisers aren&rsquo;t orchard leads, they are potential Certified Partners. Offer them <em>DSA at partner rates for their growers, read-back included on the first three.</em> One adviser who converts is worth ten grower leads, and they already influence the nutrition decisions on the blocks we want.</p>
-            <p class="sharp__why"><b>Why</b> Turns the least-valuable segment on the form into the most valuable one. <b>Watch</b> Uses the existing CP terms; Jamie owns the conversation, not Josh.</p>
-          </article>
-          <article class="sharp">
-            <p class="offer__tag">4 &middot; Proof</p>
-            <h3>Put a grower story in the first email and the call script</h3>
-            <p>Nothing on this page yet proves the program works. Vince Blefari (Cherry lead, two visits, program in place) and Matt Batinich (came back after years, first order around $40k) are two sentences each. <b>Watch</b> Both need to be happy to be named.</p>
-          </article>
-          <article class="sharp">
-            <p class="offer__tag">5 &middot; Effort</p>
-            <h3>Done-for-you DSA beats a posted kit</h3>
-            <p>A kit still asks the grower to sample correctly and send it back. Where a district visit (tool 5) is on, we take the sample; the free DSA and the visit become one offer. <b>Watch</b> Only where the route runs; posted kits everywhere else.</p>
-          </article>
-          <article class="sharp">
-            <p class="offer__tag">6 &middot; Deadline</p>
-            <h3>Date every offer</h3>
-            <p>The urgency is real (bloom to fruit set is an eight-week window) but nothing on the page has a date. <em>&ldquo;Claim by Friday 3 October&rdquo;</em> on both offers, and the 15-DSA cap stated in the email. <b>Watch</b> Honour it; a deadline that slides trains people to ignore the next one.</p>
-          </article>
-          <article class="sharp">
-            <p class="offer__tag">7 &middot; Next magnet</p>
-            <h3>Block Nutrition Scorecard</h3>
-            <p>The Playbook gave the &ldquo;what&rdquo;; the next lead magnet solves the next narrow problem. Six questions (variety, last pack-out, inputs, tests done) and a scored one-pager back. It is the interactive program concept already on the website roadmap, pointed at apples, and every submission is warmer than a PDF download. <b>Watch</b> Two weeks to build; a follow-on, not for this campaign.</p>
-          </article>
-          <article class="sharp">
-            <p class="offer__tag">8 &middot; Cadence</p>
-            <h3>Follow up until they buy or say no</h3>
-            <p>Cherry&rsquo;s 62 Playbook-only leads got one email. Plan the touches now: email &rarr; Josh call &rarr; SMS receipt on any claim &rarr; email 2 with the Q&amp;A recording &rarr; call 2 at fruit set. Five touches over six weeks. Ask for a referral on every read-back: <em>&ldquo;Know another apple grower who&rsquo;d want one? We&rsquo;ll test their block too.&rdquo;</em> <b>Watch</b> Needs a simple tracker so nobody is chased twice or missed.</p>
+          <article class="dec">
+            <p class="dec__kicker">Decision 3 &middot; the sweetener</p>
+            <h3>Guarantee, yes or no?</h3>
+            <div class="opt opt--rec">
+              <p class="opt__label">Yes &middot; a conditional guarantee on the program <span class="rec">Recommended</span></p>
+              <p><em>&ldquo;Run the program on one block as written. If the follow-up DSA hasn&rsquo;t moved the deficient nutrients into range by the agreed date, the second round of product is on us.&rdquo;</em></p>
+              <p class="fa"><b>For</b> Takes the grower&rsquo;s risk off the table, which is the real reason cold leads don&rsquo;t buy; tied to compliance and a re-test we control, so the season can&rsquo;t sink us. <b>Against</b> Amos and Tom have to agree the terms; only offered where we write the program and do the re-test.</p>
+            </div>
+            <div class="opt">
+              <p class="opt__label">No &middot; run without it</p>
+              <p>The offer and the route still work; they convert less. A softer line for the call stays available either way: <em>&ldquo;if the read-back wasn&rsquo;t worth 15 minutes, the next test is free anyway.&rdquo;</em></p>
+            </div>
           </article>
         </div>
       </section>
@@ -248,39 +189,38 @@
       <section class="concept" aria-labelledby="apple-ladder-title">
         <div class="concept__heading">
           <div>
-            <h2 id="apple-ladder-title">Suggested route: a ladder, not a single offer</h2>
+            <h2 id="apple-ladder-title">The route, with the recommendations filled in</h2>
           </div>
-          <p class="concept__summary">Step two: agree the route. With the approved tools in hand, this is the suggested way to run them: every lead gets the same first two rungs, then the team chooses the tool that fits the grower. Each rung is a small yes that earns the next. How hard Josh pushes leads up the ladder by phone is the dial management sets.</p>
+          <p class="concept__summary">One route for every lead. Each rung is a small yes that earns the next; the three decisions above set what sits on rungs 2, 3 and 4. Swap the options and the rungs change, the shape doesn&rsquo;t.</p>
         </div>
         <ol class="ladder">
           <li class="rung">
             <span class="rung__n">1</span>
             <h3>Playbook email with the offer in it</h3>
             <p>Odoo #87 to every lead within 24 hours, rewritten to carry two clear asks: book 15 minutes with Josh, or claim a free spring DSA on one block. Two versions, one for &ldquo;maybe, later this season&rdquo;, one for &ldquo;I&rsquo;ll reach out&rdquo;.</p>
-            <small>Owner: Pia &middot; tools: the email carries tools 2 and 3 &middot; the ask: pick one</small>
+            <small>Owner: Pia &middot; the ask: pick one</small>
           </li>
           <li class="rung">
             <span class="rung__n">2</span>
             <h3>Block call with Josh</h3>
             <p>A booked 15-minute slot, Josh by default and Chelsea where the block calls for her. Josh phones the growers and managers who don&rsquo;t book (24 of 41). Anyone who won&rsquo;t take a call is offered the Q&amp;A or a district visit instead.</p>
-            <small>Owner: Josh / Chelsea &middot; tools 2, 4, 5 &middot; the ask: tell us about one block</small>
+            <small>Owner: Josh / Chelsea &middot; Decision 2 &middot; the ask: tell us about one block</small>
           </li>
           <li class="rung">
             <span class="rung__n">3</span>
             <h3>Free DSA on that block</h3>
             <p>The nutrient audit the ads promised, made concrete: one paired DSA on the block they named, kit sent after the call, read back by Josh, Chelsea or Nate. Capped at the first 15 growers or managers.</p>
-            <small>Owner: Josh / Chelsea / Nate &middot; tool 3 &middot; the ask: let us test it</small>
+            <small>Owner: Josh / Chelsea / Nate &middot; Decision 1 &middot; the ask: let us test it</small>
           </li>
           <li class="rung">
             <span class="rung__n">4</span>
             <h3>Block program and first order</h3>
-            <p>The DSA read-back becomes a program; the program becomes a quote. The approved credit &mdash; test credit or investment match &mdash; is applied here, on the first order, as the reason to start this season.</p>
-            <small>Owner: Chelsea + Jamie &middot; tool 1 or 6 &middot; the ask: run the program this season</small>
+            <p>The DSA read-back becomes a program; the program becomes a quote. The guarantee, if approved, is offered here, on the first order, as the reason to start this season.</p>
+            <small>Owner: Chelsea + Jamie &middot; Decision 3 &middot; the ask: run the program this season</small>
           </li>
         </ol>
         <div class="ladder-notes">
-          <p><strong>Why this order.</strong> The email puts both offers in front of everyone at once, so nobody has to be chased to hear them. The call is cheap for us and a real yes from them. The free DSA is the same &ldquo;test, don&rsquo;t guess&rdquo; message the Playbook sells, and its read-back is where the program conversation starts. The credit only appears once there is an order to attach it to. Anyone who stalls stays on the Playbook email list until spring gives them a reason.</p>
-          <p><strong>The dial.</strong> With Josh on the phones the ladder is worked: every grower and manager gets a call whether they booked or not. Without him it is offered and we wait for replies. Same rungs either way, different speed.</p>
+          <p><strong>Already in the plan, no decision needed.</strong> A grower story (Vince Blefari, Matt Batinich) in the first email and the call script &middot; a deadline on both offers, claim by Friday 3 October &middot; five touches over six weeks: email, Josh&rsquo;s call, an SMS receipt on any claim, a second email with the Q&amp;A recording, a second call at fruit set &middot; a referral ask on every read-back &middot; a different conversation for the 8 agronomists and advisers, who are potential Certified Partners rather than orchard leads (Jamie) &middot; a Block Nutrition Scorecard as the next lead magnet, after this campaign.</p>
         </div>
       </section>
 
@@ -289,7 +229,7 @@
           <div>
             <h2 id="apple-followup-title">Follow-up email and lead handling</h2>
           </div>
-          <p class="concept__summary">The first email is drafted in Odoo and not yet sent; no recipient list is attached. A stronger version that carries the approved offers is proposed below. Lead handling follows the Cherry pattern.</p>
+          <p class="concept__summary">The first email is drafted in Odoo and not yet sent; no recipient list is attached. A stronger version that carries the offer from Decision 1 is proposed below. Lead handling follows the Cherry pattern.</p>
         </div>
         <div class="facts">
           <div class="fact">
@@ -313,7 +253,7 @@
           </div>
         </div>
         <div class="draft">
-          <p class="offer__tag">Proposed rewrite &middot; sends once tools 2 and 3 are approved</p>
+          <p class="offer__tag">Proposed rewrite &middot; sends once Decisions 1 and 2 are made</p>
           <p><strong>Subject:</strong> Your Apple Nutrition Playbook, and one block we&rsquo;d like to test for you<br><strong>Preview:</strong> 15 minutes with Josh, or a free spring DSA on the block you choose</p>
           <p>Hi [first name],</p>
           <p>Thanks for grabbing the Apple Nutrition Playbook. It&rsquo;s written for exactly this point in the season: bloom is on, the crop&rsquo;s potential is being set now, and most of what decides pack-out in March is decided in the next eight weeks.</p>
