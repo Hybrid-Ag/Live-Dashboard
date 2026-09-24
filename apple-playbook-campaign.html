@@ -43,6 +43,9 @@
       .offer--wide .pc { margin: 0; padding: 0 0 0 28px; border-top: 0; border-left: 1px solid #e6e1d9; align-self: start; }
       @media (max-width: 900px) { .offer--wide { display: block; } .offer--wide .pc { padding: 10px 0 0; border-left: 0; border-top: 1px solid #e6e1d9; } }
       .decision a { color: inherit; }
+      .draft { margin-top: 24px; padding: 22px 26px; border: 1px solid #d0d1ce; border-left: 4px solid #7b3f8c; border-radius: 0 4px 4px 0; background: #fff; font-size: 13.5px; line-height: 1.65; max-width: 860px; }
+      .draft p { margin: 0 0 10px; } .draft em { color: #018d8a; font-style: normal; font-weight: 600; }
+      .draft__note { margin-top: 14px; padding-top: 12px; border-top: 1px solid #e6e1d9; font-size: 12.5px; color: #867764; }
       .ladder { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; counter-reset: rung; }
       .rung { position: relative; padding: 22px 22px 20px; border: 1px solid #d0d1ce; background: #fff; border-radius: 4px; margin-right: 18px; }
       .rung:last-child { margin-right: 0; }
@@ -188,32 +191,32 @@
         <ol class="ladder">
           <li class="rung">
             <span class="rung__n">1</span>
-            <h3>Playbook email</h3>
-            <p>Odoo #87 goes to every lead within 24 hours. Two versions: one for &ldquo;maybe, later this season&rdquo;, one for &ldquo;I&rsquo;ll reach out&rdquo;.</p>
-            <small>Owner: Pia &middot; the ask: read it, reply if it raises a question</small>
+            <h3>Playbook email with the offer in it</h3>
+            <p>Odoo #87 to every lead within 24 hours, rewritten to carry two clear asks: book 15 minutes with Josh, or claim a free spring DSA on one block. Two versions, one for &ldquo;maybe, later this season&rdquo;, one for &ldquo;I&rsquo;ll reach out&rdquo;.</p>
+            <small>Owner: Pia &middot; tools: the email carries tools 2 and 3 &middot; the ask: pick one</small>
           </li>
           <li class="rung">
             <span class="rung__n">2</span>
-            <h3>15-minute block call</h3>
-            <p>A booked slot with Josh, Chelsea where a block calls for her, and Josh working the list by phone for those who don&rsquo;t book. Growers and managers first (24 of 41), advisers second.</p>
-            <small>Owner: Josh / Chelsea &middot; the ask: tell us about one block</small>
+            <h3>Block call with Josh</h3>
+            <p>A booked 15-minute slot, Josh by default and Chelsea where the block calls for her. Josh phones the growers and managers who don&rsquo;t book (24 of 41). Anyone who won&rsquo;t take a call is offered the Q&amp;A or a district visit instead.</p>
+            <small>Owner: Josh / Chelsea &middot; tools 2, 4, 5 &middot; the ask: tell us about one block</small>
           </li>
           <li class="rung">
             <span class="rung__n">3</span>
-            <h3>Nutrient Audit on that block</h3>
-            <p>The free audit the ads already promise: soil and paired DSA on the block they named, read back by Chelsea or Nate. Capped at the first ten who book.</p>
-            <small>Owner: Josh / Chelsea / Nate &middot; the ask: let us test it</small>
+            <h3>Free DSA on that block</h3>
+            <p>The nutrient audit the ads promised, made concrete: one paired DSA on the block they named, kit sent after the call, read back by Josh, Chelsea or Nate. Capped at the first 15 growers or managers.</p>
+            <small>Owner: Josh / Chelsea / Nate &middot; tool 3 &middot; the ask: let us test it</small>
           </li>
           <li class="rung">
             <span class="rung__n">4</span>
             <h3>Block program and first order</h3>
-            <p>The audit read-back becomes a program; the program becomes a quote. Any test-credit or match offer is applied here, on the first order.</p>
-            <small>Owner: Chelsea + Jamie &middot; the ask: run the program this season</small>
+            <p>The DSA read-back becomes a program; the program becomes a quote. The approved credit &mdash; test credit or investment match &mdash; is applied here, on the first order, as the reason to start this season.</p>
+            <small>Owner: Chelsea + Jamie &middot; tool 1 or 6 &middot; the ask: run the program this season</small>
           </li>
         </ol>
         <div class="ladder-notes">
-          <p><strong>Where the approved tools sit.</strong> The cards above are the arsenal, not competing plans. The block call (tool 2) is the second rung; the Q&amp;A (tool 4) and district visits (tool 5) are second-rung alternatives for people who won&rsquo;t take a call; the free DSA (tool 3) is a lighter third rung than the full audit; the test credit or investment match (tools 1 and 6) sharpen the fourth. Anyone who stalls stays on the Playbook email list until spring gives them a reason.</p>
-          <p><strong>The dial.</strong> With Josh on the phones the ladder is worked; without him it is offered. Same rungs either way, different speed.</p>
+          <p><strong>Why this order.</strong> The email puts both offers in front of everyone at once, so nobody has to be chased to hear them. The call is cheap for us and a real yes from them. The free DSA is the same &ldquo;test, don&rsquo;t guess&rdquo; message the Playbook sells, and its read-back is where the program conversation starts. The credit only appears once there is an order to attach it to. Anyone who stalls stays on the Playbook email list until spring gives them a reason.</p>
+          <p><strong>The dial.</strong> With Josh on the phones the ladder is worked: every grower and manager gets a call whether they booked or not. Without him it is offered and we wait for replies. Same rungs either way, different speed.</p>
         </div>
       </section>
 
@@ -222,16 +225,15 @@
           <div>
             <h2 id="apple-followup-title">Follow-up email and lead handling</h2>
           </div>
-          <p class="concept__summary">The first email is drafted in Odoo and not yet sent; no recipient list is attached. Lead handling follows the Cherry pattern.</p>
+          <p class="concept__summary">The first email is drafted in Odoo and not yet sent; no recipient list is attached. A stronger version that carries the approved offers is proposed below. Lead handling follows the Cherry pattern.</p>
         </div>
         <div class="facts">
           <div class="fact">
-            <h3>Email draft (Odoo mailing #87)</h3>
+            <h3>Email as drafted (Odoo mailing #87)</h3>
             <ul>
               <li><strong>Subject:</strong> Your Apple Nutrition Playbook &middot; <strong>Preview:</strong> Any apple questions? Our team can help</li>
-              <li>Thanks for downloading; spring is the time to review testing, tree demand and nutrition across the block &middot; &ldquo;View the Playbook&rdquo; button</li>
-              <li>Chelsea Hall and the horticulture team can talk through how it applies to your orchard &mdash; reply or call (03) 5722 7555</li>
-              <li>Inside the Playbook: Key Levers &middot; The Science &middot; The Playbook</li>
+              <li>Thanks for downloading; spring is the time to review testing, tree demand and nutrition &middot; &ldquo;View the Playbook&rdquo; &middot; Chelsea and the team can help, reply or call (03) 5722 7555 &middot; the three Playbook sections</li>
+              <li><strong>The gap:</strong> it ends on &ldquo;reply if useful&rdquo;. Once the tools are approved it should carry the two offers as buttons, so the first rung does the asking. Proposed rewrite below.</li>
               <li>Cherry benchmark: 57% open, 22% click; the &ldquo;maybe&rdquo; segment opened 50% and clicked 29%, so it is worth a separate send</li>
             </ul>
           </div>
@@ -245,6 +247,18 @@
               <li>Wrap-up at 29 September: leads, spend, CPL per creative, and a 1 / 6 / 12-month review of what the leads turned into &mdash; figures to Amos at month end</li>
             </ul>
           </div>
+        </div>
+        <div class="draft">
+          <p class="offer__tag">Proposed rewrite &middot; sends once tools 2 and 3 are approved</p>
+          <p><strong>Subject:</strong> Your Apple Nutrition Playbook, and one block we&rsquo;d like to test for you<br><strong>Preview:</strong> 15 minutes with Josh, or a free spring DSA on the block you choose</p>
+          <p>Hi [first name],</p>
+          <p>Thanks for grabbing the Apple Nutrition Playbook. It&rsquo;s written for exactly this point in the season: bloom is on, the crop&rsquo;s potential is being set now, and most of what decides pack-out in March is decided in the next eight weeks.</p>
+          <p>Two ways we can make it useful on your own orchard, both on us:</p>
+          <p><strong>Book 15 minutes with Josh.</strong> Josh Richardson is one of our agronomists. Pick a block, tell him what it did last season, and he&rsquo;ll tell you what he&rsquo;d look at first. No pitch, one block, 15 minutes. <em>[Book a time &rarr;]</em></p>
+          <p><strong>Or claim a free spring DSA.</strong> One paired young-leaf and old-leaf sap test on a block of your choice, kit posted to you, results read back by our horticulture team. It&rsquo;s the &ldquo;test, don&rsquo;t guess&rdquo; part of the Playbook done for you. First 15 growers. <em>[Claim the DSA &rarr;]</em></p>
+          <p>If neither suits right now, the Playbook is yours to keep: <em>[View the Playbook &rarr;]</em></p>
+          <p>Josh, Chelsea and the Hybrid-Ag horticulture team<br>(03) 5722 7555</p>
+          <p class="draft__note">&ldquo;Maybe, later this season&rdquo; version: same email, opening line changed to &ldquo;You said later this season might suit better &mdash; no problem. When it does, here are the two easiest places to start.&rdquo; Both versions link the DSA claim to a short form (name, block, variety, postal address) so the kit goes out the same day.</p>
         </div>
       </section>
 
