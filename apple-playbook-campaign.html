@@ -38,18 +38,41 @@
       .offer h3 { margin: 0 0 10px; font-family: "Alternate Gothic", "Oswald", sans-serif; font-size: 20px; letter-spacing: .4px; text-transform: uppercase; line-height: 1.15; }
       .offer p { margin: 0 0 8px; }
       .decision a { color: inherit; }
-      .big-offers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: start; }
-      .big { border: 1px solid #d0d1ce; border-top: 5px solid #018d8a; border-radius: 4px; background: #fff; padding: 22px 24px 20px; font-size: 13.5px; line-height: 1.6; }
-      .big--cherry { border-top-color: #dc6800; }
-      .big h3 { margin: 0 0 12px; font-family: "Alternate Gothic", "Oswald", sans-serif; font-size: 30px; letter-spacing: .4px; text-transform: uppercase; line-height: 1.05; }
-      .big p { margin: 0 0 10px; }
-      .big__who { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+      .big__who { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 4px; }
+      .offer--apple { border-top-color: #018d8a; } .offer--cherry { border-top-color: #dc6800; } .offer--excl { border-top-color: #7b3f8c; background: #fbf8fc; }
+      .offer .track { margin: 10px 0; padding: 10px 12px; font-size: 13px; }
+      .offer--cherry .track b.t { color: #dc6800; }
+      .flow { position: relative; display: grid; gap: 34px 0; }
+      .flow__row { display: grid; gap: 22px; align-items: stretch; }
+      .flow__row--1 { grid-template-columns: minmax(0, 720px); justify-content: center; }
+      .flow__row--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 900px; margin: 0 auto; width: 100%; }
+      .flow__row--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .fnode { position: relative; z-index: 1; border: 1px solid #d0d1ce; border-radius: 4px; background: #fff; padding: 14px 16px; font-size: 12.5px; line-height: 1.5; text-align: center; }
+      .fnode b { display: block; font-family: "Alternate Gothic", "Oswald", sans-serif; font-size: 19px; letter-spacing: .4px; text-transform: uppercase; line-height: 1.1; margin-bottom: 6px; }
+      .fnode em { display: block; font-style: normal; font-size: 10.5px; letter-spacing: 1px; text-transform: uppercase; color: #867764; margin-bottom: 6px; }
+      .fnode span { display: block; color: #3d3730; }
+      .fnode small { display: block; margin-top: 8px; font-size: 11px; color: #867764; }
+      .fnode--email { border-top: 4px solid #1a1714; }
+      .fnode--apple { border-top: 4px solid #018d8a; } .fnode--apple em { color: #018d8a; }
+      .fnode--cherry { border-top: 4px solid #dc6800; } .fnode--cherry em { color: #dc6800; }
+      .fnode--excl { border: 2px solid #7b3f8c; background: #fbf8fc; }
+      .fnode--excl b { color: #7b3f8c; }
+      .fnode--tool { border-top: 4px solid #7b3f8c; }
+      .fnode--end { border-top: 4px solid #1a1714; background: #f4f1ea; }
+      .flow__lines { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: visible; }
+      .flow__lines path { fill: none; stroke: #b9b1a5; stroke-width: 2; }
+      .flow__lines path.l-apple { stroke: #018d8a; } .flow__lines path.l-cherry { stroke: #dc6800; } .flow__lines path.l-excl { stroke: #7b3f8c; }
+      .flow__lines circle { fill: #fff; stroke: #b9b1a5; stroke-width: 2; }
+      @media (max-width: 900px) {
+        .flow { gap: 18px; } .flow__row--2, .flow__row--3 { grid-template-columns: minmax(0, 1fr); }
+        .flow__lines { display: none; }
+        .flow__row + .flow__row::before { content: "\2193"; display: block; grid-column: 1 / -1; text-align: center; color: #867764; font-size: 20px; line-height: 1; margin-bottom: -6px; }
+      }
       .pill { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 10.5px; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; }
       .pill--go { background: #018d8a; color: #fff; } .pill--wait { background: #fff1e4; color: #b55300; border: 1px solid #f0c9a3; }
       .track { margin: 12px 0; padding: 12px 14px; border-radius: 4px; background: #fbf9f5; border: 1px solid #e6e1d9; }
       .track p { margin: 0 0 6px; } .track p:last-child { margin: 0; }
       .track b.t { display: inline-block; min-width: 74px; color: #018d8a; }
-      .big--cherry .track b.t { color: #dc6800; }
       .tools { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: start; }
       .offer { border: 1px solid #d0d1ce; border-top: 4px solid #7b3f8c; border-radius: 4px; background: #fff; padding: 18px 20px; font-size: 13.5px; line-height: 1.6; }
       .offer h3 { margin: 0 0 10px; font-family: "Alternate Gothic", "Oswald", sans-serif; font-size: 21px; letter-spacing: .4px; text-transform: uppercase; line-height: 1.15; }
@@ -64,7 +87,7 @@
       .lane--cherry b { color: #dc6800; }
       .rung p.shared { margin-top: 2px; }
       .draft + .draft { margin-top: 18px; }
-      @media (max-width: 900px) { .big-offers, .tools, .split, .loop { grid-template-columns: minmax(0, 1fr); } }
+      @media (max-width: 900px) { .tools, .split, .loop { grid-template-columns: minmax(0, 1fr); } }
       .draft { margin-top: 24px; padding: 22px 26px; border: 1px solid #d0d1ce; border-left: 4px solid #7b3f8c; border-radius: 0 4px 4px 0; background: #fff; font-size: 13.5px; line-height: 1.65; max-width: 860px; }
       .draft p { margin: 0 0 10px; } .draft em { color: #018d8a; font-style: normal; font-weight: 600; }
       .draft__note { margin-top: 14px; padding-top: 12px; border-top: 1px solid #e6e1d9; font-size: 12.5px; color: #867764; }
@@ -106,6 +129,65 @@
     <div class="campaign-cover__accent" aria-hidden="true"></div>
 
     <main class="page">
+      <section class="concept" aria-labelledby="apple-flow-title">
+        <div class="concept__heading">
+          <div>
+            <h2 id="apple-flow-title">The play at a glance</h2>
+          </div>
+          <p class="concept__summary">One email per list, three ways in, one exclusive offer for the people who take the call or stay to the end, and one place it all leads. Everything below is the detail behind this picture.</p>
+        </div>
+        <div class="flow" id="flow">
+          <div class="flow__row flow__row--1">
+            <div class="fnode fnode--email" data-n="email">
+              <b>The email</b>
+              <span>Apple leads get Josh&rsquo;s invitation; Cherry leads get Andrew&rsquo;s. Grower and adviser versions of each. Both promise an offer at the end that is only for the people who show up.</span>
+              <small>Owner: Pia &middot; Apple sends now &middot; Cherry sends once Andrew confirms</small>
+            </div>
+          </div>
+          <div class="flow__row flow__row--3">
+            <div class="fnode fnode--apple" data-n="o1">
+              <em>Apple leads &middot; growers and advisers</em>
+              <b>1 &middot; The Problem Block call</b>
+              <span>Josh Richardson &middot; 15 minutes on the one block that let them down &middot; opens with the out-of-ten question</span>
+            </div>
+            <div class="fnode fnode--cherry" data-n="o2">
+              <em>Cherry leads &middot; growers</em>
+              <b>2 &middot; Andrew&rsquo;s grower session</b>
+              <span>Andrew Smith online, one hour &middot; what we saw in cherries this season and what fixed it &middot; questions live</span>
+            </div>
+            <div class="fnode fnode--cherry" data-n="o3">
+              <em>Cherry and Apple advisers</em>
+              <b>3 &middot; Andrew&rsquo;s adviser session</b>
+              <span>Andrew Smith online, one hour &middot; testing cherry blocks: what to test, when, and how to use the numbers</span>
+            </div>
+          </div>
+          <div class="flow__row flow__row--1">
+            <div class="fnode fnode--excl" data-n="excl">
+              <b>The exclusive offer &middot; revealed at the end</b>
+              <span>Only for people who took the call or stayed to the end of the session. Advertised in the email, never spelled out until the close.</span>
+            </div>
+          </div>
+          <div class="flow__row flow__row--2">
+            <div class="fnode fnode--tool" data-n="dsa">
+              <b>Free spring DSA on your problem block</b>
+              <span>One paired sap test, kit posted the same day, read back by Josh, Chelsea or Nate &middot; first 15 across both lists</span>
+            </div>
+            <div class="fnode fnode--tool" data-n="credit">
+              <b>Test credited to your first order</b>
+              <span>Want more than one block tested? Pay for the tests, the full amount comes off the first order this season</span>
+            </div>
+          </div>
+          <div class="flow__row flow__row--1">
+            <div class="fnode fnode--end" data-n="end">
+              <b>Block program and first order</b>
+              <span>The read-back becomes a program, the program becomes a quote, the out-of-ten score is revisited after the season &middot; the success story feeds the next campaign</span>
+            </div>
+          </div>
+          <svg class="flow__lines" aria-hidden="true"></svg>
+        </div>
+        <p class="note">Spots and registrations held until Friday 10 October. Josh drives the Apple lane, Andrew the Cherry lane; Jamie takes the quote and any Certified Partner conversation with an adviser.</p>
+      </section>
+
       <section class="concept" aria-labelledby="apple-decision-title">
         <div class="concept__heading">
           <div>
@@ -114,7 +196,7 @@
           <p class="concept__summary"><strong>Apple:</strong> live since Tuesday 22 September, $200 lifetime, closes Tuesday 29 September; 41 leads at the last read. <strong>Cherry:</strong> the June campaign&rsquo;s 77 leads sit in the lead sheet. Two are now clients; the other 75 have had one email since July and are the re-engagement list. One page, two lists, one follow-up play.</p>
         </div>
         <div class="decision">
-          <strong>Agreed with the Sales Manager, Thursday 25 September.</strong> Two first offers: <a href="#apple-offers-title">Josh runs the Apple leads with the Problem Block call; Andrew Smith runs the Cherry leads with two online sessions</a> (Andrew&rsquo;s yes still to be asked, verbally, by Nathan). Growers and advisers get their own version of each. The <a href="#apple-tools-title">free DSA and the test credit</a> are follow-on tools for Josh and Andrew to close with. District visits dropped; the guarantee and the named program parked until <a href="#apple-proof-title">this round produces proof</a>. Spots held until Friday 10 October; follow-up is regular and runs until they buy or opt out. Record uptake and outcomes, then <a href="#apple-ladder-title">rerun the route</a> with better assets and targeting.
+          <strong>Agreed with the Sales Manager, Thursday 25 September.</strong> Three ways in: <a href="#apple-offers-title">Josh&rsquo;s Problem Block call for the Apple leads, Andrew&rsquo;s grower session and adviser session for the Cherry leads</a> (Andrew&rsquo;s yes still to be asked, verbally, by Nathan). Growers and advisers get their own version of each. The <a href="#apple-tools-title">free DSA and the test credit</a> are packaged as one exclusive offer for people who take the call or stay to the end &mdash; promised in the email, revealed at the close. District visits dropped; the guarantee and the named program parked until <a href="#apple-proof-title">this round produces proof</a>. Spots held until Friday 10 October; follow-up runs until they buy or opt out. Record uptake and outcomes, then <a href="#apple-ladder-title">rerun the route</a> with better assets and targeting.
         </div>
       </section>
 
@@ -145,32 +227,36 @@
       <section class="concept" aria-labelledby="apple-offers-title">
         <div class="concept__heading">
           <div>
-            <h2 id="apple-offers-title">The two first offers</h2>
+            <h2 id="apple-offers-title">The three ways in</h2>
           </div>
-          <p class="concept__summary">One person owns each list, one offer opens each conversation. Both are free, both take under an hour of the grower&rsquo;s time, and both end with a benchmark written down.</p>
+          <p class="concept__summary">Each list gets one door. The call is for the Apple leads and runs now; the two sessions are for the Cherry leads and wait on Andrew. Every one of them ends the same way: with the exclusive offer.</p>
         </div>
-        <div class="big-offers">
-          <article class="big">
-            <div class="big__who"><p class="offer__tag">Apple Playbook leads &middot; Josh Richardson</p><span class="pill pill--go">Ready to run</span></div>
+        <div class="tools">
+          <article class="offer offer--apple">
+            <div class="big__who"><p class="offer__tag">1 &middot; Apple leads &middot; Josh Richardson</p><span class="pill pill--go">Ready to run</span></div>
             <h3>The Problem Block call</h3>
-            <p>Fifteen minutes on the phone about the one block that let them down last season. Josh opens with the question &mdash; <em>&ldquo;out of ten, how did that block pack out?&rdquo;</em> &mdash; and writes the answer down. Then what went wrong, what he&rsquo;d look at first, and whether a spring sap test on that block would tell us more.</p>
+            <p>Fifteen minutes on the phone about the one block that let them down last season. Josh opens with <em>&ldquo;out of ten, how did that block pack out?&rdquo;</em> and writes the answer down. Then what went wrong, what he&rsquo;d look at first, and whether a spring sap test would settle it.</p>
             <div class="track">
-              <p><b class="t">Growers</b> Their block, their season, their number. Problems to solutions. Ends with the free DSA offered on that block.</p>
-              <p><b class="t">Advisers</b> Bring one client&rsquo;s result. Josh reads it with them and shows how we get from the numbers to a decision. Ends with a DSA on a client block, and a word to Jamie where a partner conversation fits.</p>
+              <p><b class="t">Growers</b> Their block, their season, their score. Problems to solutions.</p>
+              <p><b class="t">Advisers</b> Bring one client&rsquo;s result; Josh reads it with them and shows how we get from the numbers to a decision.</p>
             </div>
-            <p>Booked by link from the Playbook email; Josh phones the growers and managers who don&rsquo;t book. Chelsea only for the questions Josh can&rsquo;t answer. Spots held until Friday 10 October.</p>
+            <p>Booked by link from the email; Josh phones the growers and managers who don&rsquo;t book. Chelsea for the questions Josh can&rsquo;t answer. The exclusive offer is made in the last two minutes of the call.</p>
             <div class="pc"><p><b>For</b> No hard cost and Josh has the time now; a booked slot is a real commitment; every call is a qualification and a sales conversation in one; Josh learns the apple accounts from day one. <b>Against</b> Josh is new, so the first calls need a script and Chelsea behind him; take-up from people who ticked &ldquo;I&rsquo;ll reach out&rdquo; may be a handful, which is why he also phones.</p></div>
           </article>
-          <article class="big big--cherry">
-            <div class="big__who"><p class="offer__tag">Cherry Playbook leads &middot; Andrew Smith</p><span class="pill pill--wait">Awaiting Andrew&rsquo;s yes</span></div>
-            <h3>Two online sessions with Andrew</h3>
-            <p>Andrew as a cherry grower first and the team&rsquo;s cherry lead second: the person who wrote most of the Playbook talking about the season just gone. One hour each, online, questions taken live, recorded. Registration is the qualifier; the recording becomes the second email for everyone who doesn&rsquo;t show.</p>
-            <div class="track">
-              <p><b class="t">Growers</b> <em>What we saw in cherries this season, and what fixed it.</em> Problems to solutions, block by block, and what he&rsquo;d be doing now before harvest. Ends with the free DSA offered on their problem block.</p>
-              <p><b class="t">Advisers</b> <em>Testing cherry blocks: what to test, when, and how to use the numbers.</em> Data first. Ends with a DSA on a client block and, where it fits, a partner conversation with Jamie.</p>
-            </div>
-            <p>Dates set once Andrew says yes; invitations go to the 75 the day after. Registrations held until Friday 10 October.</p>
-            <div class="pc"><p><b>For</b> One hour of Andrew reaches all 75 at once; the people who lapsed after one email get a reason to come back; registrations show who is still interested; the recording is reusable content. <b>Against</b> Grower attendance runs 10&ndash;20% of registrations; needs Andrew&rsquo;s buy-in and a date inside three weeks; setup and hosting fall on marketing.</p></div>
+          <article class="offer offer--cherry">
+            <div class="big__who"><p class="offer__tag">2 &middot; Cherry leads &middot; Andrew Smith</p><span class="pill pill--wait">Awaiting Andrew&rsquo;s yes</span></div>
+            <h3>The grower session</h3>
+            <p><em>What we saw in cherries this season, and what fixed it.</em> Andrew as a cherry grower first and the team&rsquo;s cherry lead second: the person who wrote most of the Playbook, one hour online, problems to solutions block by block, what he&rsquo;d be doing now before harvest, questions taken live.</p>
+            <p>Recorded; the recording becomes the second email for everyone who registered and didn&rsquo;t show. The exclusive offer is announced in the invite and made in the last five minutes, so the room stays.</p>
+            <p>Audience: the 61 Playbook-only and 14 &ldquo;maybe&rdquo; Cherry leads who are growers or managers (43), plus anyone from the Apple list who asks.</p>
+            <div class="pc"><p><b>For</b> One hour of Andrew reaches the whole list at once; people who lapsed after one email get a reason to come back; registrations show who is still interested; the recording is reusable; the offer at the end lifts attendance and stay-through. <b>Against</b> Grower attendance runs 10&ndash;20% of registrations; needs Andrew&rsquo;s buy-in and a date inside three weeks; setup and hosting fall on marketing.</p></div>
+          </article>
+          <article class="offer offer--cherry">
+            <div class="big__who"><p class="offer__tag">3 &middot; Advisers from both lists &middot; Andrew Smith</p><span class="pill pill--wait">Awaiting Andrew&rsquo;s yes</span></div>
+            <h3>The adviser session</h3>
+            <p><em>Testing cherry blocks: what to test, when, and how to use the numbers.</em> Data first, product last. One hour online for the 11 Cherry advisers and the 8 Apple advisers: paired DSA, timing against crop stage, reading a result, and turning it into a recommendation for a client.</p>
+            <p>The exclusive offer here is a DSA on a client block, read back with them, and, where it fits, Jamie opens the Certified Partner conversation afterwards.</p>
+            <div class="pc"><p><b>For</b> Nineteen advisers, each influencing many blocks; the data angle is what they want from us; opens partner conversations for Jamie; one adviser converting is worth many grower leads. <b>Against</b> A small room; a different deck from the grower session; some will want the recording, not the hour.</p></div>
           </article>
         </div>
       </section>
@@ -178,28 +264,28 @@
       <section class="concept" aria-labelledby="apple-tools-title">
         <div class="concept__heading">
           <div>
-            <h2 id="apple-tools-title">Follow-on tools for Josh and Andrew</h2>
+            <h2 id="apple-tools-title">The exclusive offer</h2>
           </div>
-          <p class="concept__summary">In the kit, used at their discretion once the first offer has been taken. The first two secure the next piece of business; the third is how we measure it.</p>
+          <p class="concept__summary">The free DSA and the test credit are no longer loose follow-on tools. They are packaged as one offer, only for people who took the call or stayed to the end of a session. The email promises it, the close reveals it. That gives a reason to turn up, a reason to stay, and a reason to buy.</p>
         </div>
         <div class="tools">
-          <article class="offer">
-            <p class="offer__tag">After the call or session</p>
-            <h3>Free spring DSA on the block</h3>
+          <article class="offer offer--excl">
+            <p class="offer__tag">The headline &middot; revealed at the close</p>
+            <h3>Free spring DSA on your problem block</h3>
             <p>One paired young-leaf / old-leaf DSA on the block they named, on us, kit posted the same day, read back by Josh, Chelsea or Nate. The &ldquo;test, don&rsquo;t guess&rdquo; message of both Playbooks made real; the read-back is where the program conversation starts.</p>
-            <p>Capped at the first 15 growers or managers across both lists. Lab and freight cost is small against the first order it opens.</p>
+            <p>First 15 across both lists. Lab and freight cost is small against the first order it opens.</p>
           </article>
-          <article class="offer">
-            <p class="offer__tag">At the quote</p>
-            <h3>Test credited to the first order</h3>
-            <p>Pia&rsquo;s idea, and the same lever as the Henty Testing Investment Match: the grower pays for a block test, and the full amount comes off their first order this season. Used where the free DSA has already been claimed or the grower wants more than one block tested.</p>
+          <article class="offer offer--excl">
+            <p class="offer__tag">The second half &middot; for anyone who wants more</p>
+            <h3>Test credited to your first order</h3>
+            <p>Want more than one block tested? Pay for the tests, and the full amount comes off the first order this season. Pia&rsquo;s idea, and the same lever as the Henty Testing Investment Match, so the landing page exists.</p>
             <p><strong>To confirm before it is offered:</strong> which tests qualify &middot; maximum credit &middot; minimum order &middot; how long the credit stays valid &middot; one per business.</p>
           </article>
           <article class="offer">
-            <p class="offer__tag">The benchmark</p>
-            <h3>The out-of-ten question</h3>
-            <p>Growers are cagey about pack-out and the team is hesitant to ask. So don&rsquo;t ask for the number, ask for the score: <em>&ldquo;out of ten, how did that block pack out?&rdquo;</em> They answer with a score or, often, the real figure. Either way it is written down with the block and the date.</p>
-            <p>Revisit it after the program. The before and after is the success story, and the success story is the next campaign&rsquo;s creative.</p>
+            <p class="offer__tag">How the email sells it</p>
+            <h3>Promise it, don&rsquo;t spell it out</h3>
+            <p>Apple: <em>&ldquo;There&rsquo;s an offer at the end of the call that we only make to the people who take it.&rdquo;</em> Cherry: <em>&ldquo;Stay to the end &mdash; there&rsquo;s something on us for everyone in the room.&rdquo;</em></p>
+            <p>The out-of-ten score is taken before the offer is made, so every DSA claimed already has a benchmark against it. Revisit after the program; the before and after is the success story.</p>
           </article>
         </div>
       </section>
@@ -218,7 +304,7 @@
               <li>Hear problems and what fixed them, never a product list</li>
               <li>Josh: the Problem Block call on their block, opened with the out-of-ten question</li>
               <li>Andrew: the grower session, season just gone, what he&rsquo;d be doing now</li>
-              <li>Follow-on: free DSA on that block &rarr; read-back &rarr; program &rarr; first order with the test credit</li>
+              <li>The exclusive offer at the close: free DSA on that block &rarr; read-back &rarr; program &rarr; first order with the test credit</li>
             </ul>
           </div>
           <div class="fact">
@@ -227,7 +313,7 @@
               <li>Hear testing and data: what to test, when, and how to turn the numbers into a decision</li>
               <li>Josh: reads one of their client results with them on the call</li>
               <li>Andrew: the adviser session on testing cherry blocks</li>
-              <li>Follow-on: a DSA on a client block; where it fits, Jamie opens the Certified Partner conversation &mdash; one adviser converting is worth many grower leads</li>
+              <li>The exclusive offer at the close: a DSA on a client block; where it fits, Jamie opens the Certified Partner conversation &mdash; one adviser converting is worth many grower leads</li>
             </ul>
           </div>
         </div>
@@ -246,7 +332,7 @@
             <ul>
               <li><strong>Friday 10 October.</strong> Wording in the emails and on the calls: <em>&ldquo;We&rsquo;re holding call spots until Friday 10 October&rdquo;</em> / <em>&ldquo;Registrations close Friday 10 October&rdquo;</em>. A date, not a countdown.</li>
               <li>It is real: bloom to fruit set is an eight-week window and the DSA has to land inside it. Say so if asked, and hold it.</li>
-              <li>The 15-DSA cap is stated once, in the email, and not repeated.</li>
+              <li>The exclusive offer is promised in the email but never spelled out there; the 15-DSA cap is said once, at the close.</li>
             </ul>
           </div>
           <div class="fact">
@@ -279,16 +365,16 @@
       <section class="concept" aria-labelledby="apple-ladder-title">
         <div class="concept__heading">
           <div>
-            <h2 id="apple-ladder-title">The route</h2>
+            <h2 id="apple-ladder-title">The route, step by step</h2>
           </div>
-          <p class="concept__summary">Two lanes, one shape. Josh drives the Apple lane, Andrew the Cherry lane; growers and advisers get their own version of the first two rungs, then the lanes merge. Each rung is a small yes that earns the next.</p>
+          <p class="concept__summary">The same picture as the top of the page, as a sequence with owners. Josh drives the Apple lane, Andrew the Cherry lane; the lanes merge at the exclusive offer.</p>
         </div>
         <ol class="ladder">
           <li class="rung">
             <span class="rung__n">1</span>
             <h3>The email</h3>
-            <div class="lane"><b>Apple &middot; Josh</b>Playbook email with the Problem Block call as the one ask. Grower and adviser versions; &ldquo;maybe&rdquo; leads get a softer opening line.</div>
-            <div class="lane lane--cherry"><b>Cherry &middot; Andrew</b>Re-engagement email inviting them to Andrew&rsquo;s session. Grower and adviser versions, sent the day after Andrew confirms.</div>
+            <div class="lane"><b>Apple &middot; Josh</b>Playbook email with the Problem Block call as the one ask and the exclusive offer promised. Grower and adviser versions; &ldquo;maybe&rdquo; leads get a softer opening line.</div>
+            <div class="lane lane--cherry"><b>Cherry &middot; Andrew</b>Re-engagement email inviting them to Andrew&rsquo;s session, with &ldquo;stay to the end&rdquo; and the offer promised. Grower and adviser versions, sent the day after Andrew confirms.</div>
             <small>Owner: Pia &middot; the ask: pick a time</small>
           </li>
           <li class="rung">
@@ -300,8 +386,8 @@
           </li>
           <li class="rung">
             <span class="rung__n">3</span>
-            <h3>Free DSA on that block</h3>
-            <p class="shared">Offered at the end of the call or the session. One paired DSA on the problem block, kit posted the same day, read back by Josh, Chelsea or Nate. First 15 across both lanes.</p>
+            <h3>The exclusive offer</h3>
+            <p class="shared">Made in the last minutes of the call or the session, only to those still there: the free DSA on the problem block (first 15 across both lanes), with the test credit for anyone who wants more blocks tested. Kit posted the same day.</p>
             <small>Owner: Josh / Andrew / Nate &middot; the ask: let us test it</small>
           </li>
           <li class="rung">
@@ -351,10 +437,11 @@
           <p>Hi [first name],</p>
           <p>Thanks for grabbing the Apple Nutrition Playbook. It&rsquo;s written for exactly this point in the season: bloom is on, and most of what decides pack-out in March is decided in the next eight weeks.</p>
           <p>Every orchard has one block that didn&rsquo;t pack out the way it should have last season. Pick yours. Josh Richardson, one of our agronomists, will spend 15 minutes on the phone with you on that block: what he&rsquo;d look at first, what it might be telling you, and whether a spring sap test would settle it. No pitch. One block, 15 minutes, on us.</p>
+          <p>And there&rsquo;s an offer at the end of the call that we only make to the people who take it.</p>
           <p><em>[Book a time with Josh &rarr;]</em></p>
           <p>We&rsquo;re holding call spots until Friday 10 October. If the timing doesn&rsquo;t suit, the Playbook is yours to keep: <em>[View the Playbook &rarr;]</em></p>
           <p>Josh and the Hybrid-Ag horticulture team<br>(03) 5722 7555</p>
-          <p class="draft__note"><strong>Adviser version:</strong> second paragraph becomes &ldquo;Bring one client&rsquo;s test result. Josh will read it with you, 15 minutes, and show how we get from the numbers to a decision on the block.&rdquo; <strong>&ldquo;Maybe, later this season&rdquo; version:</strong> opens with &ldquo;You said later in the season might suit better. No problem &mdash; when it does, this is the easiest place to start.&rdquo; The free DSA is not in the email; Josh offers it on the call.</p>
+          <p class="draft__note"><strong>Adviser version:</strong> second paragraph becomes &ldquo;Bring one client&rsquo;s test result. Josh will read it with you, 15 minutes, and show how we get from the numbers to a decision on the block.&rdquo; <strong>&ldquo;Maybe, later this season&rdquo; version:</strong> opens with &ldquo;You said later in the season might suit better. No problem &mdash; when it does, this is the easiest place to start.&rdquo; The free DSA is never named in the email; Josh makes the offer in the last two minutes of the call.</p>
         </div>
         <div class="draft">
           <p class="offer__tag">Cherry &middot; invitation to Andrew&rsquo;s session &middot; sends once Andrew confirms and the date is set &middot; 75 recipients</p>
@@ -362,6 +449,7 @@
           <p>Hi [first name],</p>
           <p>Back in July you grabbed the Cherry Nutrition Playbook. Since then Andrew Smith &mdash; a cherry grower himself, and the one who wrote most of it &mdash; has been through a season&rsquo;s worth of blocks with growers across Victoria, South Australia and New South Wales.</p>
           <p>He&rsquo;s putting an hour aside online on [date] to go through the problems he saw most, what fixed them, and what he&rsquo;d be doing on a cherry block right now, before harvest. Questions taken live. Everyone who registers gets the recording.</p>
+          <p>Stay to the end: there&rsquo;s something on us for everyone in the room, and it&rsquo;s only for the people who are.</p>
           <p><em>[Save your spot &rarr;]</em></p>
           <p>Registrations close Friday 10 October.</p>
           <p>Andrew and the Hybrid-Ag horticulture team<br>(03) 5722 7555</p>
@@ -487,6 +575,46 @@
       <img class="asset-viewer__image" alt="">
     </div>
 
+    <script>
+      (() => {
+        const flow = document.getElementById('flow');
+        if (!flow) return;
+        const svg = flow.querySelector('.flow__lines');
+        const NS = 'http://www.w3.org/2000/svg';
+        const edges = [
+          ['email', 'o1', 'l-apple'], ['email', 'o2', 'l-cherry'], ['email', 'o3', 'l-cherry'],
+          ['o1', 'excl', 'l-apple'], ['o2', 'excl', 'l-cherry'], ['o3', 'excl', 'l-cherry'],
+          ['excl', 'dsa', 'l-excl'], ['excl', 'credit', 'l-excl'],
+          ['dsa', 'end', ''], ['credit', 'end', ''],
+        ];
+        const box = (n) => {
+          const el = flow.querySelector('[data-n="' + n + '"]');
+          const r = el.getBoundingClientRect(), f = flow.getBoundingClientRect();
+          return { x: r.left - f.left + r.width / 2, top: r.top - f.top, bottom: r.bottom - f.top };
+        };
+        const draw = () => {
+          if (getComputedStyle(svg).display === 'none') return;
+          while (svg.firstChild) svg.removeChild(svg.firstChild);
+          for (const [a, b, cls] of edges) {
+            const A = box(a), B = box(b);
+            const midY = (A.bottom + B.top) / 2;
+            const d = 'M' + A.x + ' ' + A.bottom + ' V' + midY + ' H' + B.x + ' V' + B.top;
+            const path = document.createElementNS(NS, 'path');
+            path.setAttribute('d', d);
+            if (cls) path.setAttribute('class', cls);
+            svg.appendChild(path);
+            const dot = document.createElementNS(NS, 'circle');
+            dot.setAttribute('cx', B.x); dot.setAttribute('cy', B.top); dot.setAttribute('r', 3.5);
+            svg.appendChild(dot);
+          }
+        };
+        draw();
+        window.addEventListener('resize', draw);
+        window.addEventListener('load', draw);
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
+        if (typeof ResizeObserver !== 'undefined') new ResizeObserver(draw).observe(flow);
+      })();
+    </script>
     <script>
       (() => {
         const viewer = document.getElementById('asset-viewer');
