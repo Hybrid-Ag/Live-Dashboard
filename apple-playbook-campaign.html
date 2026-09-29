@@ -169,6 +169,9 @@
       .fx:not(.fx--held) .fx__copy { color: #1a1714; border-color: #c9c1b5; }
       .fx:not(.fx--held) .fx__copy--main { background: #dc6800; border-color: #dc6800; color: #fff; }
       .fx:not(.fx--held) .fx__copy:hover, .fx:not(.fx--held) .fx__copy:focus-visible, .fx:not(.fx--held) .fx__copy.is-done { background: #1a1714; border-color: #1a1714; color: #fff; }
+      .fx p.fx__mail-label { margin: 18px 0 0; font-size: 11px; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; color: #a94f00; }
+      .fx p.fx__mail-label + .fx__mail { margin-top: 8px; }
+      .fx p + p.fx__mail-label { margin-top: 14px; }
       .fx p.fx__mail-hint { margin: 0 0 12px; font-size: 12px; line-height: 1.55; color: #867764; }
       .fx--held p.fx__mail-hint { margin: 0 0 12px; font-size: 12px; line-height: 1.55; color: rgba(244,241,234,.72); }
       .fx__next { margin: 0 0 12px; padding: 9px 12px 10px; border-radius: 4px; background: #eef7f6; border-left: 3px solid #018d8a; font-size: 12px; line-height: 1.55; color: #3d4a49; }
@@ -293,7 +296,7 @@
               <li><strong>Josh</strong> &middot; the Apple calls, his cards, his log of what works</li>
               <li><strong>Andrew</strong> &middot; the Cherry session and the offer at its close</li>
               <li><strong>Jamie</strong> &middot; quotes, the CRM review of July&rsquo;s Cherry leads</li>
-              <li><strong>Pia</strong> &middot; the Cherry invitation, registration form, session setup, lead sheet</li>
+              <li><strong>Pia</strong> &middot; the Cherry email and text, registration form, session setup, lead sheet</li>
               <li><strong>Rey</strong> &middot; lab data and trends for the data clean-up, with Nathan</li>
               <li><strong>Nathan</strong> &middot; draft questions to Andrew, leads to Josh, numbers to Amos</li>
             </ul>
@@ -514,7 +517,7 @@ Hybrid-Ag &middot; (03) 5722 7555</pre>
             <div class="flowx__brief">
               <div class="flowx__brief-body">
                 <p>An hour online with Andrew, as a cherry grower first and the team&rsquo;s cherry lead second. One session for growers and advisers alike. <strong>About 25 minutes is planned,</strong> built around the questions that need answering at this stage of the cherry season: one photo or chart per question, no slide deck to sit through. <strong>The rest is Q&amp;A.</strong> Two or three growers we already work with are invited to open the floor with a problem from their own blocks, so the room starts talking, and Andrew brings each one back to what a test would show.</p>
-                <p>The invitation goes to the 75 the day after the date is set. It asks each person for the question they most want answered, and promises an offer at the end that is only for the people in the room, so they turn up and they stay. The session is recorded; the recording becomes the second email for everyone who registered and didn&rsquo;t show.</p>
+                <p>The invitation goes to the 75 the day after the date is set. It goes by email and by text on the same day, both from Andrew and both subject to his approval, and asks each person for the question they most want answered. The offer is not mentioned; Andrew makes it in the room. The session is recorded; the recording becomes the second email for everyone who registered and didn&rsquo;t show.</p>
                 <p><strong>It runs in the evening.</strong> Andrew and Nathan have both seen recent webinars do better later in the day, when growers are off the tools. 7pm is pencilled in; Andrew confirms the best time.</p>
               </div>
               <div class="flowx__brief-side">
@@ -528,32 +531,39 @@ Hybrid-Ag &middot; (03) 5722 7555</pre>
           <div class="flowx__label"><span>01</span>First contact</div>
           <div class="flowx__nodes flowx__nodes--one">
             <article class="fx" data-n="email">
-              <div class="fx__top"><span class="chip chip--cherry">All 75 Cherry leads</span><span class="pill pill--wait">Draft &middot; sends once the date is set</span></div>
-              <h3>The invitation</h3>
-              <p>An email inviting them to an hour online with Andrew, asking for the question they most want answered, and promising an offer at the end that is only for the people in the room. The draft in its current form:</p>
+              <div class="fx__top"><span class="chip chip--cherry">All 75 Cherry leads</span><span class="pill pill--wait">Draft &middot; subject to Andrew&rsquo;s approval</span></div>
+              <h3>The invitation: email and text</h3>
+              <p>An email and a text on the same day, once the date is set. Both are written from Andrew, so they wait on his approval and his own wording. Each asks for the question the grower most wants answered.</p>
+              <p class="fx__mail-label">Email</p>
               <div class="fx__mail" id="cherry-invite-mail">
-                <div class="fx__mail-subject"><span>Subject</span><b id="cherry-invite-subject">Five cherry questions worth answering before harvest</b></div>
-                <div class="fx__mail-subject"><span>Preview</span><b id="cherry-invite-preview">An hour online with Andrew Smith and a few growers &middot; [date], 7pm &middot; bring your own question</b></div>
+                <div class="fx__mail-subject"><span>Subject</span><b id="cherry-invite-subject">Cherry growers online, [date] at 7pm</b></div>
+                <div class="fx__mail-subject"><span>Preview</span><b id="cherry-invite-preview">Did you get any value out of the Cherry Nutrition Playbook?</b></div>
                 <pre class="fx__mail-body" id="cherry-invite-body">Hi [first name],
 
-Back in July you grabbed the Cherry Nutrition Playbook. Andrew Smith, a cherry grower himself and the one who wrote most of it, is putting an hour aside online on [date] at 7pm, once the day&rsquo;s work is done, for the questions that matter at this point in the season.
+You downloaded our Cherry Nutrition Playbook back in July, so I wanted to check in. Did you get any value out of it?
 
-It isn&rsquo;t a lecture. Andrew takes five questions in the first 25 minutes, things like what is still up for grabs before harvest, and how to know calcium is reaching the fruit. Then the floor opens: a few growers share what they&rsquo;re seeing in their own blocks, and you can put yours to him. Tell us your question when you register and we&rsquo;ll make sure it gets asked. Everyone who registers gets the recording.
+I&rsquo;m getting a few cherry growers together online on [date] at 7pm to talk through the questions that come up at this point in the season: what is still up for grabs before harvest, whether calcium is reaching the fruit, which test tells you what. About 25 minutes from me, then it&rsquo;s open for questions and whatever you&rsquo;re seeing in your own blocks.
 
-Save your spot: [registration link]
+If you&rsquo;d like to join, register here: [registration link]. Tell me your question when you do and I&rsquo;ll make sure we get to it. Everyone who registers gets the recording.
 
-Stay to the end. There&rsquo;s something on us for everyone in the room, and it&rsquo;s only for the people who are. Registrations close [the Friday before].
-
-Andrew and the Hybrid-Ag horticulture team
-(03) 5722 7555</pre>
+Cheers,
+Andrew Smith
+Cherry grower, Smith&rsquo;s Fruit &middot; Hybrid-Ag horticulture team</pre>
               </div>
               <div class="fx__mail-actions">
                 <button type="button" class="fx__copy fx__copy--main" data-copy="cherry-invite-body">Copy email</button>
                 <button type="button" class="fx__copy" data-copy="cherry-invite-subject">Copy subject</button>
                 <button type="button" class="fx__copy" data-copy="cherry-invite-preview">Copy preview</button>
               </div>
-              <p class="fx__mail-hint">Blanks to fill: the first name, the date, 7pm once Andrew confirms it, the registration link and the closing Friday. The two example questions follow whichever five Andrew chooses. One version for growers and advisers. Not sent to Matt Batinich or Vince Blefari, who are clients now. The registration form asks for name, orchard or business, region and the question they want answered.</p>
-              <div class="fx__owner"><span class="av">PO</span><span><b>Pia Ong</b> &middot; sent from Odoo to the 75</span></div>
+              <p class="fx__mail-label">Text message, same day</p>
+              <div class="fx__mail" id="cherry-invite-sms">
+                <pre class="fx__mail-body" id="cherry-invite-sms-body">Hi [first name], Andrew Smith from Hybrid-Ag here. I&rsquo;m getting a few cherry growers together online on [date] at 7pm to talk through what&rsquo;s still up for grabs before harvest. I&rsquo;ll send the details by email as well. Register here: [registration link]. Reply STOP to opt out.</pre>
+              </div>
+              <div class="fx__mail-actions">
+                <button type="button" class="fx__copy fx__copy--main" data-copy="cherry-invite-sms-body">Copy text</button>
+              </div>
+              <p class="fx__mail-hint">Blanks to fill: the first name, the date, 7pm once Andrew confirms it, and the registration link. All 75 have an email address and 74 have a mobile. The text has to go from a number that can receive a STOP reply. One version for growers and advisers. Not sent to Matt Batinich or Vince Blefari, who are clients now. The registration form asks for name, orchard or business, region and the question they want answered.</p>
+              <div class="fx__owner"><span class="av">AS</span><span class="av">PO</span><span><b>Andrew Smith</b> to approve &middot; Pia sends both</span></div>
             </article>
           </div>
           <aside class="fx fx--side" data-n="crm">
@@ -577,7 +587,7 @@ Andrew and the Hybrid-Ag horticulture team
           <div class="flowx__nodes flowx__nodes--3">
             <article class="fx fx--excl" data-n="excl">
               <h3>Only for the people who show up</h3>
-              <p>Promised in the email, never spelled out. Made by Andrew in the last minutes of the session, to the people still there.</p>
+              <p>Not mentioned in the invitation. Made by Andrew in the last minutes of the session, to the people still there.</p>
             </article>
             <div class="flowx__trio">
               <article class="fx fx--tool" data-n="data">
@@ -645,6 +655,7 @@ Andrew and the Hybrid-Ag horticulture team
               <li><strong>The day and the final start time.</strong> Week of 13 or 20 October; 7pm is the placeholder until he confirms</li>
               <li>Which two or three growers to invite, and who asks them</li>
               <li>One hour in total, or shorter?</li>
+              <li>His OK on the invitation email and text, in his own words</li>
               <li>Happy for it to be recorded and sent to everyone who registered?</li>
               <li>Anyone alongside him: Chelsea, Nate?</li>
             </ul>
@@ -704,7 +715,7 @@ Andrew and the Hybrid-Ag horticulture team
           <div class="fact">
             <h3>Who does what</h3>
             <ul>
-              <li><strong>From Andrew:</strong> his five questions, the day and final start time, the growers to invite, one photo or chart per question</li>
+              <li><strong>From Andrew:</strong> his five questions, the day and final start time, the growers to invite, one photo or chart per question, and his OK on the invitation email and text</li>
               <li><strong>Marketing handles:</strong> the invitation, the registration form with a &ldquo;your question&rdquo; field, reminders, hosting, the recording and the follow-up email</li>
               <li><strong>Afterwards:</strong> Andrew or Josh calls the people who took the offer</li>
             </ul>
@@ -766,8 +777,8 @@ Andrew and the Hybrid-Ag horticulture team
           </article>
         </div>
         <div class="aside-note">
-          <p class="offer__tag">How the Cherry invitation sells it</p>
-          <p><strong>Promise it, don&rsquo;t spell it out.</strong> <em>&ldquo;Stay to the end &mdash; there&rsquo;s something on us for everyone in the room.&rdquo;</em> On Josh&rsquo;s calls there is nothing to promise in advance; the offer comes when the conversation has earned it. Either way the out-of-ten score is taken first, so every data clean-up starts with a benchmark against it. Revisit after the program; the before and after is the success story.</p>
+          <p class="offer__tag">How the offer is made</p>
+          <p><strong>In the room, not in writing.</strong> The Cherry invitation does not mention it; Andrew makes it in the last minutes of the session, to the people still there. On Josh&rsquo;s calls there is nothing to promise in advance either; the offer comes when the conversation has earned it. Either way the out-of-ten score is taken first, so every data clean-up starts with a benchmark against it. Revisit after the program; the before and after is the success story.</p>
         </div>
       </section>
       <section class="concept" aria-labelledby="apple-cadence-title">
@@ -783,14 +794,14 @@ Andrew and the Hybrid-Ag horticulture team
             <ul>
               <li><strong>Friday 10 October for Josh&rsquo;s meeting spots; the Friday before the session for Cherry registrations.</strong> Wording on the calls and in the emails: <em>&ldquo;I&rsquo;m holding meeting spots until Friday 10 October&rdquo;</em> / <em>&ldquo;Registrations close Friday [date]&rdquo;</em>. A date, not a countdown.</li>
               <li>It is real: bloom to fruit set is an eight-week window and the picture has to be clear while it can still change this season&rsquo;s decisions. Say so if asked, and hold it.</li>
-              <li>The Cherry invitation promises the offer but never spells it out. The two held-back tools are never mentioned in writing.</li>
+              <li>The Cherry invitation does not mention the offer; Andrew makes it in the room. The two held-back tools are never mentioned in writing.</li>
             </ul>
           </div>
           <div class="fact">
             <h3>The rhythm</h3>
             <ul>
               <li><strong>Apple:</strong> Josh&rsquo;s call &rarr; a second try &rarr; the missed-call email offering two times &rarr; the next meeting &rarr; a call at fruit set &rarr; and on, until they buy or opt out</li>
-              <li><strong>Cherry:</strong> the invitation &rarr; a reminder &rarr; the session &rarr; the recording to everyone who registered &rarr; a call from Andrew or Josh to those who took the offer &rarr; and on</li>
+              <li><strong>Cherry:</strong> the invitation by email and text &rarr; a reminder &rarr; the session &rarr; the recording to everyone who registered &rarr; a call from Andrew or Josh to those who took the offer &rarr; and on</li>
               <li>Five touches over six weeks is the floor, not the ceiling; Cherry&rsquo;s 61 Playbook-only leads got one email and went quiet</li>
               <li>A referral ask on every read-back: <em>&ldquo;know another grower who&rsquo;d want one? We&rsquo;ll test their block too&rdquo;</em></li>
               <li>Every touch logged against the lead in the shared sheet so nobody is chased twice or missed</li>
@@ -812,7 +823,7 @@ Andrew and the Hybrid-Ag horticulture team
               <li><strong>Josh</strong> &rarr; calls every Apple lead from the Enquiries list, warm five first, and each new one as it lands; updates the notes there; sends the missed-call email himself after two tries; decides which cards to lead with and keeps a note of what works and what doesn&rsquo;t; the score, the next step, the held-back tools when needed, and the program with Chelsea&rsquo;s sign-off</li>
               <li><strong>Andrew</strong> &rarr; his five questions and the growers to invite, the Cherry session, the offer at the close, the held-back tools when needed, the read-backs on his leads</li>
               <li><strong>Jamie</strong> &rarr; the CRM review of July&rsquo;s Cherry leads and any re-flagging; quotes; the sounding board before a testing-investment match is offered</li>
-              <li><strong>Pia</strong> &rarr; the Cherry invitation and registration form, SMS receipts, session setup and recording, the lead sheet</li>
+              <li><strong>Pia</strong> &rarr; the Cherry invitation by email and text, the registration form, SMS receipts, session setup and recording, the lead sheet</li>
               <li><strong>Rey, with Nathan</strong> &rarr; once the grower has agreed the scope and given the go-ahead: requesting their data from the labs, pulling it into trends and building the quick dashboard Josh and Andrew use with that grower</li>
               <li><strong>Nathan</strong> &rarr; the draft questions to Andrew and his date, the Apple leads into Enquiries for Josh (done 29 September), the round&rsquo;s numbers to Amos at month end</li>
               <li><strong>Chelsea</strong> &rarr; backup for technical questions on apples; with what she has on, Josh drives the calls</li>
