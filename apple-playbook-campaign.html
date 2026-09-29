@@ -42,7 +42,11 @@
       .offer h3 { margin: 0 0 10px; font-family: "Alternate Gothic", "Oswald", sans-serif; font-size: 20px; letter-spacing: .4px; text-transform: uppercase; line-height: 1.15; }
       .offer p { margin: 0 0 8px; }
       .decision a { color: inherit; }
-      .concept--tight { padding-top: 0; }
+      html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+      .page .concept { padding: 40px 0 44px; }
+      .page .concept--tight { padding-top: 30px; }
+      .page .concept__heading { margin-bottom: 22px; }
+      .chapter > .concept:last-child { padding-bottom: 28px; }
       .leadnums { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 20px; }
       .leadnum { border: 1px solid #d0d1ce; border-top: 4px solid #018d8a; border-radius: 4px; background: #fff; padding: 16px 20px 14px; }
       .leadnum--cherry { border-top-color: #dc6800; }
@@ -61,7 +65,8 @@
       .jump__link span { display: block; font-family: "Alternate Gothic", "Oswald", "Arial Narrow", sans-serif; font-size: 20px; letter-spacing: .5px; text-transform: uppercase; line-height: 1.1; margin-bottom: 2px; }
       .jump__link:hover, .jump__link:focus-visible { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(0,0,0,.1); outline: none; }
       .jump__link--apple { border-left-color: #018d8a; } .jump__link--cherry { border-left-color: #dc6800; }
-      .chapter { margin-top: 72px; scroll-margin-top: 24px; }
+      .chapter { margin-top: 36px; scroll-margin-top: 24px; }
+      .page > .chapter:last-of-type > .concept:last-child { padding-bottom: 48px; }
       .chapter__head { position: relative; padding: 30px 34px 28px; border-radius: 6px; background: #1a1714; color: #f4f1ea; overflow: hidden; }
       .chapter__head::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 8px; background: #867764; }
       .chapter--apple .chapter__head::before { background: #018d8a; } .chapter--cherry .chapter__head::before { background: #dc6800; } .chapter--shared .chapter__head::before { background: #8a4f7d; }
@@ -72,6 +77,8 @@
       .chapter__owner .av { background: #f4f1ea; color: #1a1714; } .chapter__owner .av + .av { margin-left: -4px; box-shadow: 0 0 0 2px #1a1714; }
       .draftbar { margin-top: 18px; padding: 14px 18px; border: 1.5px dashed #e0a468; border-radius: 4px; background: #fff6ee; font-size: 14px; line-height: 1.6; }
       .plays.plays--one, .facts.facts--one { grid-template-columns: minmax(0, 920px); }
+      .facts.facts--wide { grid-template-columns: minmax(0, 1fr); }
+      .facts--wide .fact ul { columns: 2; column-gap: 48px; } .facts--wide .fact li { break-inside: avoid; margin-bottom: 8px; }
       .outline { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
       .qbank { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: start; }
       .qgroup { border: 1px solid #d0d1ce; border-top: 4px solid #dc6800; border-radius: 4px; background: #fff; padding: 18px 20px 8px; }
@@ -95,8 +102,15 @@
         .qbank { grid-template-columns: minmax(0, 1fr); }
         .qgroup { padding-left: 16px; padding-right: 16px; }
         .leadnums { grid-template-columns: minmax(0, 1fr); }
+        .facts--wide .fact ul { columns: 1; }
+        .leadnum h3 span { display: block; margin: 4px 0 0; }
         .inshort, .outline, .stat-row, .tools, .plays, .plays.plays--one, .hand, .loop, .future, .facts, .facts.facts--one, .ad-grid { grid-template-columns: minmax(0, 1fr); }
-        .chapter { margin-top: 48px; } .chapter__head { padding: 24px 20px 22px 26px; }
+        .page .concept { padding: 28px 0 30px; } .page .concept--tight { padding-top: 22px; } .page .concept__heading { margin-bottom: 16px; gap: 10px; }
+        .chapter { margin-top: 24px; } .chapter__head { padding: 24px 20px 22px 26px; }
+        .fx__copy { padding: 11px 18px; font-size: 12px; }
+        .fx__next, .fx p.fx__mail-hint, .fx--held p.fx__mail-hint, .leadnum p, .leadnum dd, .qlist .m, .qgroup > p, .pc, .note, .fx__owner, .flowx__brief .bx p, .stat small { font-size: 13.5px; }
+        .fx, .card, .fut, .fact ul, .offer, .outline__col, .aside-note, .draftbar, .loop__step { font-size: 14.5px; }
+        .jump__link { padding: 16px 16px; }
         .draft { padding: 18px 18px; } .fx { padding: 16px 16px 14px; } .fx h3 { font-size: 22px; } .fx--excl h3 { font-size: 24px; }
         .offer, .card, .fut, .fact, .outline__col, .loop__step, .stat, .aside-note { padding-left: 16px; padding-right: 16px; }
         .track b.t { display: block; min-width: 0; margin-bottom: 2px; }
@@ -150,8 +164,6 @@
       .bx b { display: block; margin-bottom: 4px; font-size: 11px; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; color: rgba(244,241,234,.95); }
       .flowx__brief .bx p { margin: 0; font-size: 13px; line-height: 1.6; color: rgba(244,241,234,.8); }
       .bx--for { border-left-color: #2bb3af; } .bx--for b { color: #7adbd7; }
-      .bx--where { margin-top: 18px; border-left-color: #f4f1ea; background: rgba(255,255,255,.07); }
-      .flowx__brief .bx--where a { color: #7adbd7; text-decoration: underline; text-underline-offset: 2px; }
       .bx--against { border-left-color: #f08a2c; } .bx--against b { color: #f6b074; }
       .flowx__nodes--top { align-items: start; }
       .fx__mail { margin: 14px 0 14px; border-radius: 6px; background: #fbf9f5; color: #1a1714; box-shadow: 0 10px 28px rgba(0,0,0,.28); overflow: hidden; }
@@ -175,6 +187,8 @@
       .fx p.fx__mail-hint { margin: 0 0 12px; font-size: 12px; line-height: 1.55; color: #867764; }
       .fx--held p.fx__mail-hint { margin: 0 0 12px; font-size: 12px; line-height: 1.55; color: rgba(244,241,234,.72); }
       .fx__next { margin: 0 0 12px; padding: 9px 12px 10px; border-radius: 4px; background: #eef7f6; border-left: 3px solid #018d8a; font-size: 12px; line-height: 1.55; color: #3d4a49; }
+      .fx__next a { color: #016e6c; text-decoration: underline; text-underline-offset: 2px; }
+      .fx__next + .fx__next { margin-top: -2px; }
       .fx__next b { display: block; margin-bottom: 2px; font-size: 10.5px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: #016e6c; }
       .flowx__nodes--3 { grid-template-columns: minmax(0, 1fr); row-gap: 44px; }
       .flowx__nodes--3 > .fx--excl { justify-self: center; width: min(100%, 560px); }
@@ -251,6 +265,20 @@
       .pc p { margin: 0 0 6px; } .pc b { color: #018d8a; margin-right: 4px; } .pc p + p b { color: #dc6800; }
       @media (max-width: 900px) { .stat-row, .offers { grid-template-columns: minmax(0, 1fr); } }
       @media (max-width: 900px) { .ad-grid, .facts { grid-template-columns: minmax(0, 1fr); } }
+    
+      /* Phone pass, last in the cascade so it wins over the component rules above */
+      @media (max-width: 900px) {
+        .flowx .chip, .flowx .pill, .page .chip, .page .pill, .page .offer__tag, .page .chapter__num, .fx p.fx__mail-label { font-size: 11px; }
+        .flowx__title .chip, .fx__top .chip, .fx__top .pill, .flowx__title .pill { white-space: normal; line-height: 1.35; }
+        .flowx__title .pill { margin-left: 0; }
+        .flowx .fx__copy { padding: 12px 18px; font-size: 12px; min-height: 44px; }
+        .fx__mail-actions { gap: 10px; }
+        .flowx .fx__next, .flowx .fx p.fx__mail-hint, .flowx__brief .bx p, .flowx .fx__owner { font-size: 13.5px; }
+        .flowx .fx, .flowx .fx p { font-size: 14.5px; }
+        .flowx .fx__mail-body { font-size: 14px; line-height: 1.6; }
+        .flowx .fx__mail-subject { font-size: 13.5px; }
+        .note a, .fx__next a { padding: 4px 0; }
+      }
     </style>
   </head>
   <body>
@@ -296,9 +324,8 @@
               <li><strong>Josh</strong> &middot; the Apple calls, his cards, his log of what works</li>
               <li><strong>Andrew</strong> &middot; the Cherry session and the offer at its close</li>
               <li><strong>Jamie</strong> &middot; quotes, the CRM review of July&rsquo;s Cherry leads</li>
-              <li><strong>Pia</strong> &middot; the Cherry email and text, registration form, session setup, lead sheet</li>
               <li><strong>Rey</strong> &middot; lab data and trends for the data clean-up, with Nathan</li>
-              <li><strong>Nathan</strong> &middot; draft questions to Andrew, leads to Josh, numbers to Amos</li>
+              <li><strong>Nathan</strong> &middot; the Cherry email and text, registration form, session setup, lead sheet, draft questions to Andrew, numbers to Amos</li>
             </ul>
           </div>
           <div class="fact">
@@ -364,10 +391,8 @@
               <div class="flowx__brief-body">
                 <p>All 64 so far, and each new one as it lands until the campaign closes. The five who ticked a chat on the form go first: Iain MacLennan and Ram Atwal, who asked for a call straight away, then Phil Shepherd, Paul Mason and Dougal Munro. There is no harm in touching base early with the &ldquo;later this season&rdquo; leads; Josh books the later time while he has them.</p>
                 <p>The call is fifteen minutes on whatever is making them scratch their head: a block that didn&rsquo;t pack out, a soil or sap result they can&rsquo;t make sense of, a constraint they keep running into. Josh takes the out-of-ten score, finds out what is possible, and plays the card that gets a next step.</p>
-                <div class="bx bx--where"><b>Where the leads are</b><p>All 64 are loaded into <a href="https://hybrid-ag.github.io/Live-Dashboard/#enquiries">Enquiries on the dashboard</a> (29 September), under Agronomist Transfer with Josh Richardson as the owner and Apple Booklet as the source. <strong>Asking About</strong> shows what each person ticked on the form: a call straight away, maybe later this season, or Playbook only. Josh works through them there and keeps his notes against each lead.</p></div>
               </div>
               <div class="flowx__brief-side">
-                <div class="bx"><b>No answer</b><p>Two tries, then a short email from Josh offering two times for a call: this day or that day, morning or afternoon. He changes it to suit. The draft is in the tile below.</p></div>
                 <div class="bx bx--for"><b>For</b><p>Josh is a returning member of the team and knows horticulture; he has the time and is keen; a call reaches people an email never will; he learns first-hand which cards work, which shapes the next campaign; every conversation is a qualification and a sales conversation in one.</p></div>
                 <div class="bx bx--against"><b>Against</b><p>Sixty-plus calls is a real block of time; Chelsea has a full load at the moment, so Josh drives this and she is the backup for technical questions on apples; some leads only wanted the Playbook and will say so.</p></div>
               </div>
@@ -380,6 +405,7 @@
               <div class="fx__top"><span class="chip chip--apple">Every Apple lead</span><span class="pill pill--go">Now</span></div>
               <h3>Josh picks up the phone</h3>
               <p>Every lead gets a call, the five who asked for a chat first. No email before it: a call gets more people to a next step than an invitation does.</p>
+              <div class="fx__next"><b>Where the leads are</b>All 64 are loaded into <a href="https://hybrid-ag.github.io/Live-Dashboard/#enquiries">Enquiries on the dashboard</a> (29 September), under Agronomist Transfer with Josh Richardson as the owner and Apple Booklet as the source. <strong style="font-weight:600">Asking About</strong> shows what each person ticked on the form: a call straight away, maybe later this season, or Playbook only. Josh works through them there and keeps his notes against each lead.</div>
               <div class="fx__next"><b>From the next campaign</b>The form drops the &ldquo;call now, maybe later or not at all&rdquo; question. Consent to be contacted sits in the form&rsquo;s terms instead, and every lead gets a call. All agreed: the best early contact is a call.</div>
               <div class="fx__owner"><span class="av">JR</span><span><b>Josh Richardson</b></span></div>
             </article>
@@ -563,7 +589,7 @@ Cherry grower, Smith&rsquo;s Fruit &middot; Hybrid-Ag horticulture team</pre>
                 <button type="button" class="fx__copy fx__copy--main" data-copy="cherry-invite-sms-body">Copy text</button>
               </div>
               <p class="fx__mail-hint">Blanks to fill: the first name, the date, 7pm once Andrew confirms it, and the registration link. All 75 have an email address and 74 have a mobile. The text has to go from a number that can receive a STOP reply. One version for growers and advisers. Not sent to Matt Batinich or Vince Blefari, who are clients now. The registration form asks for name, orchard or business, region and the question they want answered.</p>
-              <div class="fx__owner"><span class="av">AS</span><span class="av">PO</span><span><b>Andrew Smith</b> to approve &middot; Pia sends both</span></div>
+              <div class="fx__owner"><span class="av">AS</span><span class="av">NK</span><span><b>Andrew Smith</b> to approve &middot; Nathan sends both</span></div>
             </article>
           </div>
           <aside class="fx fx--side" data-n="crm">
@@ -723,19 +749,6 @@ Cherry grower, Smith&rsquo;s Fruit &middot; Hybrid-Ag horticulture team</pre>
         </div>
       </section>
 
-      <section class="concept" aria-labelledby="cherry-crm-title">
-        <div class="concept__heading">
-          <div>
-            <h2 id="cherry-crm-title">Alongside: where did July&rsquo;s Cherry leads get to?</h2>
-          </div>
-          <p class="concept__summary">Outside the play, and worth doing regardless: it tells us how well the last round actually converted.</p>
-        </div>
-        <div class="aside-note">
-          <p class="offer__tag">Alongside the campaign &middot; Jamie Granger</p>
-          <p><strong>Where did July&rsquo;s Cherry leads get to?</strong> The Cherry leads that were called in July and transferred to the CRM are reviewed one by one: where each got to, what outcome was reached, and which have stalled. Stalled ones are re-flagged so the agronomist picks them back up. It sits outside both plays, and it tells us how well the last round actually converted.</p>
-        </div>
-      </section>
-
       </div>
 
       <div class="chapter chapter--shared" id="shared">
@@ -743,7 +756,7 @@ Cherry grower, Smith&rsquo;s Fruit &middot; Hybrid-Ag horticulture team</pre>
           <p class="chapter__num">Shared</p>
           <h2 class="chapter__title">Used by both plays</h2>
           <p class="chapter__sub">The three offers, the deadline and follow-up rhythm, who does what, and what this round is for.</p>
-          <div class="chapter__owner"><span class="av">JR</span><span class="av">AS</span><span class="av">JG</span><span class="av">PO</span><span>Josh &middot; Andrew &middot; Jamie &middot; Pia</span></div>
+          <div class="chapter__owner"><span class="av">JR</span><span class="av">AS</span><span class="av">JG</span><span class="av">NK</span><span>Josh &middot; Andrew &middot; Jamie &middot; Nathan</span></div>
         </header>
 
       <section class="concept" aria-labelledby="apple-tools-title">
@@ -816,16 +829,14 @@ Cherry grower, Smith&rsquo;s Fruit &middot; Hybrid-Ag horticulture team</pre>
           </div>
           <p class="concept__summary">One line each. Chelsea is backup for technical apple questions this spring.</p>
         </div>
-        <div class="facts facts--one">
+        <div class="facts facts--wide">
           <div class="fact">
-            <h3>Who does what</h3>
             <ul>
               <li><strong>Josh</strong> &rarr; calls every Apple lead from the Enquiries list, warm five first, and each new one as it lands; updates the notes there; sends the missed-call email himself after two tries; decides which cards to lead with and keeps a note of what works and what doesn&rsquo;t; the score, the next step, the held-back tools when needed, and the program with Chelsea&rsquo;s sign-off</li>
               <li><strong>Andrew</strong> &rarr; his five questions and the growers to invite, the Cherry session, the offer at the close, the held-back tools when needed, the read-backs on his leads</li>
               <li><strong>Jamie</strong> &rarr; the CRM review of July&rsquo;s Cherry leads and any re-flagging; quotes; the sounding board before a testing-investment match is offered</li>
-              <li><strong>Pia</strong> &rarr; the Cherry invitation by email and text, the registration form, SMS receipts, session setup and recording, the lead sheet</li>
               <li><strong>Rey, with Nathan</strong> &rarr; once the grower has agreed the scope and given the go-ahead: requesting their data from the labs, pulling it into trends and building the quick dashboard Josh and Andrew use with that grower</li>
-              <li><strong>Nathan</strong> &rarr; the draft questions to Andrew and his date, the Apple leads into Enquiries for Josh (done 29 September), the round&rsquo;s numbers to Amos at month end</li>
+              <li><strong>Nathan</strong> &rarr; the Cherry invitation by email and text, the registration form, SMS receipts, session setup and recording, the lead sheet; the draft questions to Andrew and his date; the Apple leads into Enquiries for Josh (done 29 September); the round&rsquo;s numbers to Amos at month end</li>
               <li><strong>Chelsea</strong> &rarr; backup for technical questions on apples; with what she has on, Josh drives the calls</li>
             </ul>
           </div>
@@ -894,7 +905,7 @@ Cherry grower, Smith&rsquo;s Fruit &middot; Hybrid-Ag horticulture team</pre>
           <p class="chapter__num">Reference</p>
           <h2 class="chapter__title">The Apple campaign as it ran</h2>
           <p class="chapter__sub">The three ad creatives and the setup in Meta.</p>
-          <div class="chapter__owner"><span class="av">PO</span><span>Pia Ong</span></div>
+          <div class="chapter__owner"><span class="av">NK</span><span>Nathan Katseli</span></div>
         </header>
 
       <section class="concept" aria-labelledby="apple-assets-title">
@@ -997,7 +1008,7 @@ Cherry grower, Smith&rsquo;s Fruit &middot; Hybrid-Ag horticulture team</pre>
             <ul>
               <li>&ldquo;Download the Playbook&rdquo; opens the digital Playbook straight away: <a href="https://hybrid-ag.odoo.com/documents/7NVG_U8BRYKjP8tE3GQCLwo138" target="_blank" rel="noopener">Apple Nutrition Playbook (Odoo Documents)</a></li>
               <li>As built, &ldquo;Yes&rdquo; answers were to go to Chelsea. As run: every lead is loaded into Enquiries on the dashboard and assigned to Josh Richardson, who calls them all</li>
-              <li>First follow-up email drafted (Odoo #87), offer and nurture sequence to be chosen &mdash; see above</li>
+              <li>Follow-up is by phone: Josh calls every lead. The missed-call email draft sits in the flowchart</li>
             </ul>
           </div>
         </div>
@@ -1148,8 +1159,8 @@ Cherry grower, Smith&rsquo;s Fruit &middot; Hybrid-Ag horticulture team</pre>
           return new Promise(function (resolve, reject) {
             var ta = document.createElement('textarea');
             ta.value = text; ta.setAttribute('readonly', '');
-            ta.style.position = 'fixed'; ta.style.top = '0'; ta.style.opacity = '0';
-            document.body.appendChild(ta); ta.select();
+            ta.style.position = 'fixed'; ta.style.top = '0'; ta.style.opacity = '0'; ta.style.fontSize = '16px';
+            document.body.appendChild(ta); ta.focus(); ta.select(); try { ta.setSelectionRange(0, text.length); } catch (e) {}
             var ok = false;
             try { ok = document.execCommand('copy'); } catch (e) {}
             ta.remove();
