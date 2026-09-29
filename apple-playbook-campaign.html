@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
+<!-- favicon: same links as the dashboard, added at publish -->
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFX0lEQVR42r2XaWxUVRTHf+e+92baaZGloiKiIBhqGwlGgx8wKRqXGmMIJtO4ABGVD2gkKAHUKFOipbjENQaNxgTRBFtpQlJDLHGJSDQq+kEtChp3paYt1S52Zt571w9znr4O01LcbnJz39x7lnv+Z7lnYPxDAGccdI7S/mfD/M2zf6ywGlges7KU5QA3AbNiqP3j4ep6A2CBq0pcIvq+VmmuLuL9Vy7wIBACvcAZap3RKYrQgNLcO94LHE1grdDY+Jd1mzZFX6eqosnAQ0CDKrc6HwUqlHYawHkgD2f+0rFoE4EUaMeM9NF8+6IqygEBUBujWRA7s8DW0WLFFulwR1guYmlqmmoqy1ZZMTNt3t/H2nXb9KxHKQPAU3/fo3tLdfUBT6AbYGMNzg11rEw6LMhbDvUOsFW20WctIlJAwv1TOcDmzVVS5r5tU6lqcjkkNWEFzU11VmQ5xnQShnGULo6hVhe32DV0+hbSC9lxYoolgzmYnIC8T/rAjdQBAxZEwBZSrLHRQcTiOcuprKym79csw1mf3/p9UuXLaGubTRjuRiRU6wFmA0lgEjBT9zwj5PMhHcNrmV9VxpKuQfL9OfyuQbJVKc4VjwYR7FuZwmVHFA4RmU5ofYwRwCUMwRg4eOBM4DtE3leLLTARqAQm6AxV4FtAz8FeZotGnAguIKElMDAdYNGIIlPbaQFsYHdjrYsxCawNSaVcctlufun5GBBEmmMXKA5cC4g1bLEgXT7vDWQZmODhhZYw4ZDIBTh+QAdAa2dBRuECDa0BmYxhw4bXZaD/Tow5guMI2ezXdnj4Oh55pIeaGo8gaAdeVb5eYBDoB/rU/y8HAW9cMYfEJS/w429Zlg4HfO8axAjdfb+zuuY53rMZTEMrASVrAMCaNdNo2T4Xx4l8U1yaP9UZ/f4G+GCkOwtr0gF7F9U7l3BSQcXINJSjcl4kwFrUr/WIXIi1p6u/h4FO4ATgJ+A+5WsGyjVF52pw9jvCN4FlL/AaMGQEQoujdKMWnFmIPIPIkViVK5779RKezirg81K0AtYI3QJPAKeN8ZgBsALoiQnIAr/rGu29pOgUjylAWwneXGyvC7imGH2jkG0dw2ILfAIsiyk8CagHLgNOjO2vHA2N2HxYkTOublTojd6hkKcV6u+fFe7dQIdaMx9YDSwGvgQSytNGAeZn9d24HLgCOBc4RekGgR/U4HLNoKNGUiEuK3HWXATp9cCq2O8hYGMJvjKVmRjrFXRLZIVRqCqBdlUSqH/7tBpOU8VZrYYWaFGliRJtmjlWnyCx6ShDe+y5jQLyzhjP5ljgRQjtiL24cZnjHlGqNMaUR8L31s+pT0aE806eVwF8VILujmOl3ViNqGhRyQH5mOWfAVMBMnW3VK69dGnUBc0AvoohkdegOz3Wvo1qZakLhEBTobPCVdo3U6QWd2Q6es+eOOOx8lTlUyckq269+KyF0944tG9nkuQuH/8CfZ6juAqAPcofjqePF2WarJ2wAxwG1rekWy4dYujwu/v3bJmSmnQbMN1aO2NKxaR191+5PjPM8Lf1c+ov0qa0W+WvBFLaLcl4esDI+gu01rcBr6hA0jXpxPlzqg96xjnNt77Fgud4kgv9Lzbsuu+cmJWnAGmtF7drITPFKJRCICL4UKvc06rcBSRdSyCEORGDtVggNGIEa3NAmCETpdlh4EngEn3AGK8LiDWfJpZGfku6xTS0tgaB5cnyRNJJegkv4SUTnusZER4HqE3XSgxuV2UEx9OGjzksVgSxDyy+52ZX3GVAmPXzz9/d3rQ9OuN/GHKsfv94/3YdNxCZuozLooJPaztrRVobgr8j6A8HYumR6ZnUCgAAAABJRU5ErkJggg==">
+<link rel="icon" type="image/png" sizes="32x32" media="(prefers-color-scheme: dark)" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hybrid Ag | Playbook lead campaigns</title>
@@ -38,6 +42,42 @@
       .offer h3 { margin: 0 0 10px; font-family: "Alternate Gothic", "Oswald", sans-serif; font-size: 20px; letter-spacing: .4px; text-transform: uppercase; line-height: 1.15; }
       .offer p { margin: 0 0 8px; }
       .decision a { color: inherit; }
+      .concept--tight { padding-top: 0; }
+      .inshort { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+      .jump { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 22px; }
+      .jump__link { display: block; padding: 14px 16px; border: 1px solid #d0d1ce; border-left: 4px solid #1a1714; border-radius: 4px; background: #fff; color: #1a1714; text-decoration: none; font-size: 13.5px; line-height: 1.4; transition: transform .15s ease, box-shadow .15s ease; }
+      .jump__link span { display: block; font-family: "Alternate Gothic", "Oswald", "Arial Narrow", sans-serif; font-size: 20px; letter-spacing: .5px; text-transform: uppercase; line-height: 1.1; margin-bottom: 2px; }
+      .jump__link:hover, .jump__link:focus-visible { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(0,0,0,.1); outline: none; }
+      .jump__link--apple { border-left-color: #018d8a; } .jump__link--cherry { border-left-color: #dc6800; }
+      .chapter { margin-top: 72px; scroll-margin-top: 24px; }
+      .chapter__head { position: relative; padding: 30px 34px 28px; border-radius: 6px; background: #1a1714; color: #f4f1ea; overflow: hidden; }
+      .chapter__head::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 8px; background: #867764; }
+      .chapter--apple .chapter__head::before { background: #018d8a; } .chapter--cherry .chapter__head::before { background: #dc6800; } .chapter--shared .chapter__head::before { background: #8a4f7d; }
+      .chapter__num { margin: 0 0 6px; font-size: 11.5px; letter-spacing: 2px; text-transform: uppercase; color: rgba(244,241,234,.7); }
+      .chapter__title { margin: 0 0 8px; font-family: "Alternate Gothic", "Oswald", "Arial Narrow", sans-serif; font-size: clamp(34px, 5vw, 56px); letter-spacing: .5px; text-transform: uppercase; line-height: 1; color: #fff; }
+      .chapter__sub { margin: 0 0 16px; max-width: 760px; font-size: 15px; line-height: 1.55; color: rgba(244,241,234,.82); }
+      .chapter__owner { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: rgba(244,241,234,.8); }
+      .chapter__owner .av { background: #f4f1ea; color: #1a1714; } .chapter__owner .av + .av { margin-left: -4px; box-shadow: 0 0 0 2px #1a1714; }
+      .draftbar { margin-top: 18px; padding: 14px 18px; border: 1.5px dashed #e0a468; border-radius: 4px; background: #fff6ee; font-size: 14px; line-height: 1.6; }
+      .plays.plays--one, .facts.facts--one { grid-template-columns: minmax(0, 920px); }
+      .outline { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+      .outline__col { border: 1.5px dashed #c9c1b5; border-radius: 4px; background: #fff; padding: 18px 20px; font-size: 13.5px; line-height: 1.6; }
+      .outline__col h3 { margin: 0 0 10px; font-family: "Alternate Gothic", "Oswald", "Arial Narrow", sans-serif; font-size: 20px; letter-spacing: .4px; text-transform: uppercase; line-height: 1.15; }
+      .outline__col ul { margin: 0; padding-left: 18px; } .outline__col li { margin-bottom: 6px; }
+      .runsheet { list-style: none; margin: 0; padding: 0; } .runsheet li { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 10px; padding: 8px 0; border-top: 1px solid #ece7df; } .runsheet li:first-child { border-top: 0; padding-top: 0; }
+      .runsheet b { font-family: "Alternate Gothic", "Oswald", "Arial Narrow", sans-serif; font-size: 18px; letter-spacing: .4px; color: #dc6800; }
+      .big__who { flex-wrap: wrap; }
+      @media (max-width: 1100px) { .jump { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+      @media (max-width: 900px) {
+        .inshort, .outline, .stat-row, .tools, .plays, .plays.plays--one, .hand, .loop, .future, .facts, .facts.facts--one, .ad-grid { grid-template-columns: minmax(0, 1fr); }
+        .chapter { margin-top: 48px; } .chapter__head { padding: 24px 20px 22px 26px; }
+        .draft { padding: 18px 18px; } .fx { padding: 16px 16px 14px; } .fx h3 { font-size: 22px; } .fx--excl h3 { font-size: 24px; }
+        .offer, .card, .fut, .fact, .outline__col, .loop__step, .stat, .aside-note { padding-left: 16px; padding-right: 16px; }
+        .track b.t { display: block; min-width: 0; margin-bottom: 2px; }
+        .flowx__title h3 { font-size: 26px; }
+        .chip, .pill, .offer__tag, .chapter__num { font-size: 11px; }
+      }
+      @media (max-width: 520px) { .jump { grid-template-columns: minmax(0, 1fr); } .runsheet li { grid-template-columns: 54px minmax(0, 1fr); } .stat b { font-size: 38px; } }
       .note a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
       article.offer.offer--apple { border-top-color: #018d8a; } article.offer.offer--cherry { border-top-color: #dc6800; } article.offer.offer--excl { border-top-color: #8a4f7d; }
       .fx--held .fx__owner { border-top-color: rgba(244,241,234,.18); color: rgba(244,241,234,.7); } .fx--held .fx__owner b { color: #f4f1ea; }
@@ -134,28 +174,12 @@
       .loop { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-bottom: 18px; }
       .loop__step { border: 1px solid #d0d1ce; border-radius: 4px; background: #fff; padding: 16px 18px; font-size: 13.5px; line-height: 1.55; }
       .loop__step b { display: block; font-family: "Alternate Gothic", "Oswald", sans-serif; font-size: 22px; letter-spacing: .4px; text-transform: uppercase; margin-bottom: 6px; color: #7b3f8c; }
-      .lane { margin: 0 0 8px; padding: 8px 10px; border-radius: 3px; background: #fbf9f5; border: 1px solid #e6e1d9; font-size: 12.5px; line-height: 1.5; }
-      .lane b { display: block; font-size: 10.5px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2px; color: #018d8a; }
-      .lane--cherry b { color: #dc6800; }
-      .rung p.shared { margin-top: 2px; }
       .draft + .draft { margin-top: 18px; }
       @media (max-width: 900px) { .tools, .split, .loop { grid-template-columns: minmax(0, 1fr); } }
       .draft { margin-top: 24px; padding: 22px 26px; border: 1px solid #d0d1ce; border-left: 4px solid #7b3f8c; border-radius: 0 4px 4px 0; background: #fff; font-size: 13.5px; line-height: 1.65; max-width: 860px; }
       .draft p { margin: 0 0 10px; } .draft em { color: #018d8a; font-style: normal; font-weight: 600; }
       .draft__note { margin-top: 14px; padding-top: 12px; border-top: 1px solid #e6e1d9; font-size: 12.5px; color: #867764; }
-      .ladder { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; counter-reset: rung; }
-      .rung { position: relative; padding: 22px 22px 20px; border: 1px solid #d0d1ce; background: #fff; border-radius: 4px; margin-right: 18px; }
-      .rung:last-child { margin-right: 0; }
-      .rung::after { content: ""; position: absolute; right: -14px; top: 50%; width: 0; height: 0; border-top: 9px solid transparent; border-bottom: 9px solid transparent; border-left: 10px solid #d0d1ce; transform: translateY(-50%); }
-      .rung:last-child::after { display: none; }
-      .rung__n { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: #018d8a; color: #fff; font-family: "Alternate Gothic", "Oswald", sans-serif; font-size: 20px; margin-bottom: 12px; }
-      .rung:nth-child(2) .rung__n { background: #0d2826; } .rung:nth-child(3) .rung__n { background: #dc6800; } .rung:nth-child(4) .rung__n { background: #7b3f8c; }
-      .rung h3 { margin: 0 0 8px; font-family: "Alternate Gothic", "Oswald", sans-serif; font-size: 22px; letter-spacing: .4px; text-transform: uppercase; line-height: 1.1; }
-      .rung p { margin: 0 0 10px; font-size: 13.5px; line-height: 1.55; }
-      .rung small { display: block; font-size: 11.5px; color: #867764; line-height: 1.5; }
-      .ladder-notes { margin-top: 22px; padding: 16px 20px; border: 1px solid #d0d1ce; border-left: 4px solid #018d8a; border-radius: 0 4px 4px 0; background: #fff; font-size: 13.5px; line-height: 1.6; }
-      .ladder-notes p { margin: 0 0 8px; } .ladder-notes p:last-child { margin: 0; }
-      @media (max-width: 900px) { .ladder { grid-template-columns: minmax(0, 1fr); } .rung { margin: 0 0 14px; } .rung::after { display: none; } }
+      @media (max-width: 900px) { }
       .pc { margin-top: 10px; padding-top: 10px; border-top: 1px solid #e6e1d9; font-size: 12.5px; line-height: 1.55; }
       .pc p { margin: 0 0 6px; } .pc b { color: #018d8a; margin-right: 4px; } .pc p + p b { color: #dc6800; }
       @media (max-width: 900px) { .stat-row, .offers { grid-template-columns: minmax(0, 1fr); } }
@@ -181,14 +205,68 @@
     <div class="campaign-cover__accent" aria-hidden="true"></div>
 
     <main class="page">
+      <section class="concept concept--tight" aria-labelledby="apple-decision-title">
+        <div class="concept__heading">
+          <div>
+            <h2 id="apple-decision-title">In short</h2>
+          </div>
+          <p class="concept__summary">Two lists, a play for each. Agreed with the Sales Manager on 25 September, refined with Josh on 29 September. Andrew&rsquo;s session is still a draft until he has shaped it.</p>
+        </div>
+        <div class="inshort">
+          <div class="fact">
+            <h3>What&rsquo;s agreed</h3>
+            <ul>
+              <li>Josh phones every Apple lead and works out which card gets a next step</li>
+              <li>Cherry leads get an email and one online session with Andrew</li>
+              <li>The standard offer is a data clean-up; a free soil or DSA test is held back for objections; matching their testing investment is the last resort for large prospects</li>
+              <li>Growers and advisers are treated the same this round</li>
+              <li>The win we are after is a block or stage program, then a first order</li>
+            </ul>
+          </div>
+          <div class="fact">
+            <h3>Who owns what</h3>
+            <ul>
+              <li><strong>Josh</strong> &middot; the Apple calls, his cards, his log of what works</li>
+              <li><strong>Andrew</strong> &middot; the Cherry session and the offer at its close</li>
+              <li><strong>Jamie</strong> &middot; quotes, the CRM review of July&rsquo;s Cherry leads</li>
+              <li><strong>Pia</strong> &middot; emails, booking page, session setup, lead sheet</li>
+              <li><strong>Nathan</strong> &middot; Andrew&rsquo;s yes, leads to Josh, numbers to Amos</li>
+            </ul>
+          </div>
+          <div class="fact">
+            <h3>Dates</h3>
+            <ul>
+              <li><strong>29 September</strong> &middot; Apple campaign closes</li>
+              <li><strong>Now</strong> &middot; Josh&rsquo;s calls, warm four first</li>
+              <li><strong>To be set</strong> &middot; Andrew&rsquo;s session, once he has given two options</li>
+              <li><strong>Friday 10 October</strong> &middot; spots and registrations held until</li>
+              <li><strong>Month end</strong> &middot; the round&rsquo;s numbers to Amos</li>
+            </ul>
+          </div>
+        </div>
+        <nav class="jump" aria-label="Chapters">
+          <a class="jump__link jump__link--apple" href="#play-apple"><span>Play 1</span>Apple leads &middot; Josh</a>
+          <a class="jump__link jump__link--cherry" href="#play-cherry"><span>Play 2</span>Cherry leads &middot; Andrew</a>
+          <a class="jump__link" href="#shared"><span>Shared</span>Offers, follow-up, owners</a>
+          <a class="jump__link" href="#reference"><span>Reference</span>Apple creatives and setup</a>
+        </nav>
+      </section>
+
+      <div class="chapter chapter--apple" id="play-apple">
+        <header class="chapter__head">
+          <p class="chapter__num">Play 1</p>
+          <h2 class="chapter__title">Apple Playbook leads</h2>
+          <p class="chapter__sub">Josh phones every lead, takes the out-of-ten score, and plays the card that gets a next step.</p>
+          <div class="chapter__owner"><span class="av">JR</span><span>Josh Richardson</span></div>
+        </header>
+
       <section class="concept" aria-labelledby="apple-flow-title">
         <div class="concept__heading">
           <div>
-            <h2 id="apple-flow-title">The plays at a glance</h2>
+            <h2 id="apple-flow-title">How the Apple leads are handled</h2>
           </div>
-          <p class="concept__summary">Two lists, two plays. Josh phones every Apple lead and works out on the call which card gets them to a next step. The Cherry leads get an email inviting them to Andrew&rsquo;s session, with an offer at the end for the people who show up.</p>
+          <p class="concept__summary">A phone call first, because a call gets more people to a next step than an invitation does. Josh reads the conversation and plays the card that fits.</p>
         </div>
-
         <div class="flowx flowx--solo" data-edges="[[&quot;call&quot;, &quot;talk&quot;, 0.5, 0.36], [&quot;miss&quot;, &quot;talk&quot;, 0.5, 0.64, 1], [&quot;talk&quot;, &quot;meet&quot;, 0.2, 0.5], [&quot;talk&quot;, &quot;data&quot;, 0.4, 0.5], [&quot;talk&quot;, &quot;test&quot;, 0.6, 0.5, 1], [&quot;talk&quot;, &quot;match&quot;, 0.8, 0.5, 1], [&quot;meet&quot;, &quot;end&quot;, 0.5, 0.2], [&quot;data&quot;, &quot;end&quot;, 0.5, 0.4], [&quot;test&quot;, &quot;end&quot;, 0.5, 0.6, 1], [&quot;match&quot;, &quot;end&quot;, 0.5, 0.8, 1]]">
           <svg class="flowx__lines" aria-hidden="true"></svg>
           <div class="flowx__title"><span class="chip chip--apple">Play 1 &middot; Apple Playbook leads</span><h3>Josh calls every lead</h3><p>41 leads by day three, more landing until the campaign closes on 29 September.</p></div>
@@ -224,7 +302,7 @@
             <article class="fx fx--tool" data-n="meet">
               <div class="fx__top"><span class="chip chip--excl">Next step</span></div>
               <h3>A second meeting on their block data</h3>
-              <p>A longer sit-down, booked before the call ends, with one block&rsquo;s results on the table.</p>
+              <p>A longer sit-down, booked before the call ends, with one block&rsquo;s or one stage&rsquo;s results on the table.</p>
             </article>
             <article class="fx fx--tool" data-n="data">
               <div class="fx__top"><span class="chip chip--excl">Next step</span></div>
@@ -246,17 +324,141 @@
           <div class="flowx__label"><span>04</span>The outcome</div>
           <div class="flowx__nodes flowx__nodes--one">
             <article class="fx fx--end" data-n="end">
-              <h3>Block program and first order</h3>
-              <p>The data becomes a program, the program becomes a quote. The out-of-ten score is revisited after the season, and the success story feeds the next campaign.</p>
+              <h3>Block or stage program, then first order</h3>
+              <p>Isolate one block, or one stage or window in the season where a fast result is possible. Land it, then use that credibility to open up more of the program and further sales. The out-of-ten score is revisited after, and the success story feeds the next campaign.</p>
               <div class="fx__owner"><span class="av">JR</span><span class="av">JG</span><span><b>Josh</b> &middot; Jamie on the quote</span></div>
             </article>
           </div>
         </div>
         <p class="note">The four cards shown are the main ones. Everything Josh has to work with is laid out under <a href="#apple-cards-title">Josh&rsquo;s cards</a>. He keeps a note of what works and what doesn&rsquo;t on every call.</p>
+      </section>
 
+      <section class="concept" aria-labelledby="apple-leads-title">
+        <div class="concept__heading">
+          <div>
+            <h2 id="apple-leads-title">The list</h2>
+          </div>
+          <p class="concept__summary">Read from Meta Leads Center on Thursday 24 September, 7am AWST, day three of seven. More land until the campaign closes on the 29th.</p>
+        </div>
+        <p class="offer__tag">Apple Playbook &middot; Josh&rsquo;s list</p>
+        <div class="stat-row">
+          <div class="stat"><b>41</b><span>leads in 2&frac12; days</span><small>5 on 22 Sep &middot; 27 on 23 Sep &middot; 9 by 7am on 24 Sep &middot; campaign runs to 29 Sep</small></div>
+          <div class="stat stat--hot"><b>1</b><span>asked for a chat</span><small>Iain MacLennan &middot; grower &middot; NSW &middot; first on Josh&rsquo;s list</small></div>
+          <div class="stat stat--warm"><b>3</b><span>maybe, later this season</span><small>Phil Shepherd (VIC) &middot; Paul Mason (SA) &middot; Dougal Munro (NSW), all growers &middot; called next; Josh books a later time if that suits</small></div>
+          <div class="stat"><b>37</b><span>&ldquo;I&rsquo;ll reach out&rdquo; &middot; Josh calls these too</span><small>22 growers, 2 managers, 8 advisers, 9 other &middot; VIC 20 &middot; SA 15 &middot; NSW 3 &middot; QLD 3</small></div>
+        </div>
+        <p class="note">Contact details stay in Leads Center and the lead sheet; this page carries counts and the warm names only. Apple spend is the $200 budget; cost per lead per creative comes at the wrap-up. None of the 41 Apple leads are in the shared lead sheet yet.</p>
+      </section>
+
+      <section class="concept" aria-labelledby="apple-offers-title">
+        <div class="concept__heading">
+          <div>
+            <h2 id="apple-offers-title">The play</h2>
+          </div>
+          <p class="concept__summary">What Josh does, in what order, and the case for and against.</p>
+        </div>
+        <div class="plays plays--one">
+          <article class="offer offer--apple">
+            <div class="big__who"><p class="offer__tag">Play 1 &middot; Apple Playbook leads &middot; Josh Richardson</p><span class="pill pill--go">Ready to run</span></div>
+            <h3>Josh calls every lead</h3>
+            <p>All 41, and each new one as it lands until the campaign closes. The four who ticked a chat on the form go first: Iain MacLennan, then Phil Shepherd, Paul Mason and Dougal Munro. There is no harm in touching base early with the &ldquo;later this season&rdquo; leads; Josh books the later time while he has them.</p>
+            <p>The call is fifteen minutes on whatever is making them scratch their head: a block that didn&rsquo;t pack out, a soil or sap result they can&rsquo;t make sense of, a constraint they keep running into. Josh takes the out-of-ten score, finds out what is possible, and plays the card that gets a next step.</p>
+            <div class="track">
+              <p><b class="t">No answer</b> Two tries, then a short email from Josh with a pick-a-time link. Odoo Appointments is already installed with website booking and lead creation, so each booking lands in the CRM against the lead.</p>
+            </div>
+            <div class="pc"><p><b>For</b> Josh has the time and is keen; a call reaches people an email never will; he learns first-hand which cards work, which shapes the next campaign; every conversation is a qualification and a sales conversation in one. <b>Against</b> Forty-plus calls is a real block of time; Josh is new and needs Chelsea behind him for the technical questions; some leads only wanted the Playbook and will say so.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="concept" aria-labelledby="apple-cards-title">
+        <div class="concept__heading">
+          <div>
+            <h2 id="apple-cards-title">Josh&rsquo;s cards</h2>
+          </div>
+          <p class="concept__summary">Everything discussed so far that Josh can reach for on a call. He is working out which to lead with, and keeping a note of what works and what doesn&rsquo;t as he goes; this is the full hand, not a script. Andrew has the same cards at the close of his session.</p>
+        </div>
+        <div class="hand">
+          <div class="hand__group">
+            <p class="hand__label"><span>A</span>To open the call</p>
+            <article class="card"><h3>The out-of-ten question</h3><p><em>&ldquo;Out of ten, how did the orchard pack out last season?&rdquo;</em> Growers are cagey about the real number; a score is easy to give, and many offer the figure anyway. Written down either way, with the block and the date.</p></article>
+            <article class="card"><h3>What did you make of the Playbook?</h3><p>Which part they read, Key Levers, The Science or The Playbook itself, tells Josh what they care about and where to take the call.</p></article>
+            <article class="card"><h3>A grower story</h3><p>Vince Blefari: a Cherry Playbook lead in July, two visits, soil and tissue tests, a program now being built. Matt Batinich: came back after years away. Used with their OK to be named.</p></article>
+          </div>
+          <div class="hand__group">
+            <p class="hand__label"><span>B</span>To get a next step</p>
+            <article class="card card--lead"><h3>A second meeting on their block data</h3><p>A longer sit-down, by phone or online, with one block&rsquo;s, or one stage&rsquo;s, soil, sap and pack-out figures on the table. Booked before the call ends through the pick-a-time link.</p></article>
+            <article class="card card--lead"><h3>Data clean-up and trends</h3><p>We request their results from every lab they have used, take whatever paperwork they hold, clean it up and chart the trends, so both sides see where the orchard is heading and what would move it. Detail below.</p></article>
+            <article class="card"><h3>The Nutrient Audit the ads promised</h3><p>Every ad caption says &ldquo;ask our horticulture team about a free Nutrient Audit&rdquo;. If a lead raises it, Josh can honour it. What the audit includes still needs agreeing with Jamie.</p></article>
+            <article class="card"><h3>Andrew&rsquo;s online session</h3><p>For the lead who would rather listen before they talk, or who grows cherries as well. An invitation to the session once the date is set.</p></article>
+          </div>
+          <div class="hand__group">
+            <p class="hand__label"><span>C</span>Held back</p>
+            <article class="card card--held"><h3>Free soil test or DSA</h3><p>One test on a block of their choice so they can see what our reports give them. Only when there is an objection, or no next step will land on knowledge and sales craft alone. Never offered first.</p></article>
+            <article class="card card--held"><h3>We&rsquo;ll match your testing investment</h3><p>The last resort. Reserved for genuinely large prospects who are on the fence about going further. If the account isn&rsquo;t big enough to justify it, it stays in the pocket. If in doubt, check with Jamie.</p></article>
+          </div>
+          <div class="hand__group">
+            <p class="hand__label"><span>D</span>To close and keep it moving</p>
+            <article class="card"><h3>The next date</h3><p>Never hang up without one: the second meeting booked, or a time to call back. For the &ldquo;later this season&rdquo; leads, the later date goes in the calendar now.</p></article>
+            <article class="card"><h3>The referral ask</h3><p><em>&ldquo;Know another grower who&rsquo;d want the same? I&rsquo;ll give them a call too.&rdquo;</em> Asked once there is something of value on the table.</p></article>
+            <article class="card"><h3>The hand-off</h3><p>Chelsea for the technical question Josh can&rsquo;t answer. Jamie for a quote, or for an adviser who could become a Certified Partner.</p></article>
+            <article class="card card--lead"><h3>Josh&rsquo;s log</h3><p>After every call: the score, the card he played, whether it landed, and why or why not. Kept against the lead in the lead sheet. What works leads the next round; what doesn&rsquo;t comes off the list.</p></article>
+          </div>
+        </div>
+        <p class="note"><strong>Off the table this round:</strong> orchard visits &ldquo;when we&rsquo;re in the district&rdquo; (dropped as weak), the test credited to a first order (replaced by the investment match), and the guarantee and named program (parked until there is proof).</p>
+      </section>
+      <section class="concept" aria-labelledby="apple-email-title">
+        <div class="concept__heading">
+          <div>
+            <h2 id="apple-email-title">The missed-call email</h2>
+          </div>
+          <p class="concept__summary">Not the opener. It goes only to leads Josh has tried twice and not reached, with a link to pick a time.</p>
+        </div>
+        <div class="facts facts--one">
+          <div class="fact">
+            <h3>Apple email as drafted (Odoo mailing #87)</h3>
+            <ul>
+              <li><strong>Subject:</strong> Your Apple Nutrition Playbook &middot; <strong>Preview:</strong> Any apple questions? Our team can help</li>
+              <li>Thanks for downloading; spring is the time to review testing, tree demand and nutrition &middot; &ldquo;View the Playbook&rdquo; &middot; Chelsea and the team can help, reply or call</li>
+              <li><strong>What changes:</strong> Josh now phones every lead first, so this becomes the email for the ones he couldn&rsquo;t reach. It names Josh, carries the pick-a-time link, and says he tried to call. Rewrite below.</li>
+              <li>Cherry benchmark from July: 57% open, 22% click; the &ldquo;maybe&rdquo; segment 50% and 29%</li>
+            </ul>
+          </div>
+        </div>
+        <div class="draft">
+          <p class="offer__tag">Apple &middot; missed-call email &middot; sent only after Josh has tried twice</p>
+          <p><strong>Subject:</strong> Sorry I missed you &mdash; Josh from Hybrid-Ag<br><strong>Preview:</strong> Fifteen minutes on whatever&rsquo;s going on in the orchard &middot; pick a time that suits</p>
+          <p>Hi [first name],</p>
+          <p>I tried to call after you grabbed our Apple Nutrition Playbook. No pitch: I&rsquo;m ringing everyone who downloaded it to hear what&rsquo;s going on in the orchard this spring.</p>
+          <p>If there&rsquo;s something making you scratch your head right now &mdash; a block that didn&rsquo;t pack out the way it should have, a soil or sap result you can&rsquo;t make sense of, a constraint you keep running into &mdash; I&rsquo;ve got fifteen minutes for you. We&rsquo;ll unpack what&rsquo;s possible and what the next step should be.</p>
+          <p><em>[Lock in a time with Josh &rarr;]</em></p>
+          <p>I&rsquo;m holding spots until Friday 10 October. If the timing doesn&rsquo;t suit, the Playbook is yours to keep: <em>[View the Playbook &rarr;]</em></p>
+          <p>Josh Richardson<br>Hybrid-Ag &middot; (03) 5722 7555</p>
+          <p class="draft__note">Written from Josh, in the first person. No offer is named; Josh plays his cards on the call. One version for growers and advisers.</p>
+        </div>
+      </section>
+
+      </div>
+
+      <div class="chapter chapter--cherry" id="play-cherry">
+        <header class="chapter__head">
+          <p class="chapter__num">Play 2</p>
+          <h2 class="chapter__title">Cherry Playbook leads</h2>
+          <p class="chapter__sub">An email, then an hour online with Andrew, with an offer at the end for the people who show up.</p>
+          <div class="chapter__owner"><span class="av">AS</span><span>Andrew Smith</span></div>
+        </header>
+        <div class="draftbar"><strong>Draft, still to be run by Andrew.</strong> The session in this chapter is a starting point for that conversation. The topic, the format and the date are his call: what is most useful to cherry growers at this time of year, and what is still up for grabs, is for him to say.</div>
+
+      <section class="concept" aria-labelledby="cherry-flow-title">
+        <div class="concept__heading">
+          <div>
+            <h2 id="cherry-flow-title">How the Cherry leads are handled</h2>
+          </div>
+          <p class="concept__summary">An email first, because one hour of Andrew reaches all 75 at once. The offer at the end is only for the people who show up.</p>
+        </div>
         <div class="flowx flowx--side" data-edges="[[&quot;email&quot;, &quot;session&quot;, 0.5, 0.5], [&quot;session&quot;, &quot;excl&quot;, 0.5, 0.5], [&quot;excl&quot;, &quot;data&quot;, 0.25, 0.5], [&quot;excl&quot;, &quot;test&quot;, 0.5, 0.5, 1], [&quot;excl&quot;, &quot;match&quot;, 0.75, 0.5, 1], [&quot;data&quot;, &quot;end&quot;, 0.5, 0.25], [&quot;test&quot;, &quot;end&quot;, 0.5, 0.5, 1], [&quot;match&quot;, &quot;end&quot;, 0.5, 0.75, 1]]">
           <svg class="flowx__lines" aria-hidden="true"></svg>
-          <div class="flowx__title"><span class="chip chip--cherry">Play 2 &middot; Cherry Playbook leads</span><h3>The email, then Andrew&rsquo;s session</h3><p>75 leads from July&rsquo;s campaign, one email since. Waiting on Andrew&rsquo;s yes and a date.</p></div>
+          <div class="flowx__title"><span class="chip chip--cherry">Play 2 &middot; Cherry Playbook leads</span><h3>The email, then Andrew&rsquo;s session</h3><p>75 leads from July&rsquo;s campaign, one email since. A draft until Andrew has shaped the session and given a date.</p></div>
 
           <div class="flowx__label"><span>01</span>First contact</div>
           <div class="flowx__nodes flowx__nodes--one">
@@ -277,9 +479,9 @@
           <div class="flowx__label"><span>02</span>The conversation</div>
           <div class="flowx__nodes flowx__nodes--one">
             <article class="fx" data-n="session">
-              <div class="fx__top"><span class="chip chip--cherry">One hour online</span><span class="pill pill--wait">Awaiting Andrew&rsquo;s yes</span></div>
+              <div class="fx__top"><span class="chip chip--cherry">One hour online</span><span class="pill pill--wait">Draft &middot; Andrew to shape</span></div>
               <h3>Andrew&rsquo;s online session</h3>
-              <p>Andrew Smith, cherry grower and the team&rsquo;s cherry lead: what we saw this season, what fixed it, what he&rsquo;d be doing now. Questions live, recorded, one session for everyone.</p>
+              <p>Andrew Smith, cherry grower and the team&rsquo;s cherry lead, live with questions from the room. The topic is his call: whatever is most useful to cherry growers at this point in the season.</p>
               <div class="fx__owner"><span class="av">AS</span><span><b>Andrew Smith</b></span></div>
             </article>
           </div>
@@ -312,8 +514,8 @@
           <div class="flowx__label"><span>04</span>The outcome</div>
           <div class="flowx__nodes flowx__nodes--one">
             <article class="fx fx--end" data-n="end">
-              <h3>Block program and first order</h3>
-              <p>The trends become a program, the program becomes a quote. The out-of-ten score is revisited after the season, and the success story feeds the next campaign.</p>
+              <h3>Block or stage program, then first order</h3>
+              <p>Isolate one block, or one stage or window in the season where a fast result is possible. Land it, then use that credibility to open up more of the program and further sales. The out-of-ten score is revisited after, and the success story feeds the next campaign.</p>
               <div class="fx__owner"><span class="av">AS</span><span class="av">JG</span><span><b>Andrew</b> &middot; Jamie on the quote</span></div>
             </article>
           </div>
@@ -321,31 +523,12 @@
         <p class="note">Session registrations held until Friday 10 October. Follow-up on both plays continues until the lead buys or opts out.</p>
       </section>
 
-      <section class="concept" aria-labelledby="apple-decision-title">
+      <section class="concept" aria-labelledby="cherry-leads-title">
         <div class="concept__heading">
           <div>
-            <h2 id="apple-decision-title">Where it&rsquo;s at</h2>
+            <h2 id="cherry-leads-title">The list</h2>
           </div>
-          <p class="concept__summary"><strong>Apple:</strong> live since Tuesday 22 September, $200 lifetime, closes Tuesday 29 September; 41 leads at the last read, all to be called by Josh. <strong>Cherry:</strong> the June campaign&rsquo;s 77 leads sit in the lead sheet. Two are now clients; the other 75 have had one email since July and are the re-engagement list. One page, two lists, a play for each.</p>
-        </div>
-        <div class="decision">
-          <strong>Agreed with the Sales Manager on 25 September, refined with Josh on 29 September.</strong> Two separate plays. <a href="#apple-offers-title">Josh phones every Apple lead</a>, the four who asked for a chat first, and works out on the call which of <a href="#apple-cards-title">his cards</a> gets them to a next step. The Cherry leads get the email and <a href="#apple-offers-title">Andrew Smith&rsquo;s online session</a> (Andrew&rsquo;s yes still to be asked, verbally, by Nathan), with a data clean-up offered at the end to the people who show up. A free soil or DSA test is held back for objections and matching their testing investment is the last resort for large prospects, both at Josh&rsquo;s and Andrew&rsquo;s discretion. Growers and advisers are treated the same this round. Jamie reviews July&rsquo;s Cherry leads in the CRM alongside. Follow-up runs until they buy or opt out. What we parked is under <a href="#apple-future-title">refinements for future campaigns</a>.
-        </div>
-      </section>
-
-      <section class="concept" aria-labelledby="apple-leads-title">
-        <div class="concept__heading">
-          <div>
-            <h2 id="apple-leads-title">The two lists</h2>
-          </div>
-          <p class="concept__summary">Apple read from Meta Leads Center on Thursday 24 September, 7am AWST, day three of seven. Cherry from the shared lead sheet. Together: 41 Apple leads for Josh to call, the four warm ones first, and 75 Cherry leads to invite to Andrew&rsquo;s session.</p>
-        </div>
-        <p class="offer__tag">Apple Playbook &middot; Josh&rsquo;s list</p>
-        <div class="stat-row">
-          <div class="stat"><b>41</b><span>leads in 2&frac12; days</span><small>5 on 22 Sep &middot; 27 on 23 Sep &middot; 9 by 7am on 24 Sep &middot; campaign runs to 29 Sep</small></div>
-          <div class="stat stat--hot"><b>1</b><span>asked for a chat</span><small>Iain MacLennan &middot; grower &middot; NSW &middot; first on Josh&rsquo;s list</small></div>
-          <div class="stat stat--warm"><b>3</b><span>maybe, later this season</span><small>Phil Shepherd (VIC) &middot; Paul Mason (SA) &middot; Dougal Munro (NSW), all growers &middot; called next; Josh books a later time if that suits</small></div>
-          <div class="stat"><b>37</b><span>&ldquo;I&rsquo;ll reach out&rdquo; &middot; Josh calls these too</span><small>22 growers, 2 managers, 8 advisers, 9 other &middot; VIC 20 &middot; SA 15 &middot; NSW 3 &middot; QLD 3</small></div>
+          <p class="concept__summary">From the shared lead sheet. July&rsquo;s campaign brought in 77; two are now clients, and the other 75 have had one email since.</p>
         </div>
         <p class="offer__tag">Cherry Playbook &middot; Andrew&rsquo;s list</p>
         <div class="stat-row">
@@ -354,31 +537,20 @@
           <div class="stat"><b>61</b><span>Playbook-only</span><small>One email in July, nothing since</small></div>
           <div class="stat"><b>11</b><span>agronomists and advisers</span><small>Invited to the same session as the growers this round &middot; the rest: 38 growers, 5 managers, 3 packhouse, 20 other</small></div>
         </div>
-        <p class="note">Contact details stay in Leads Center and the lead sheet; this page carries counts and the warm names only. Apple spend is the $200 budget; cost per lead per creative comes at the wrap-up. None of the 41 Apple leads are in the shared lead sheet yet.</p>
       </section>
 
-      <section class="concept" aria-labelledby="apple-offers-title">
+      <section class="concept" aria-labelledby="cherry-offers-title">
         <div class="concept__heading">
           <div>
-            <h2 id="apple-offers-title">The two plays</h2>
+            <h2 id="cherry-offers-title">The play</h2>
           </div>
-          <p class="concept__summary">A phone call for the Apple list, because a call gets more people to a next step than an invitation. An email and a session for the Cherry list, because one hour of Andrew reaches all 75 at once.</p>
+          <p class="concept__summary">What goes out, what Andrew does, and the case for and against.</p>
         </div>
-        <div class="plays">
-          <article class="offer offer--apple">
-            <div class="big__who"><p class="offer__tag">Play 1 &middot; Apple Playbook leads &middot; Josh Richardson</p><span class="pill pill--go">Ready to run</span></div>
-            <h3>Josh calls every lead</h3>
-            <p>All 41, and each new one as it lands until the campaign closes. The four who ticked a chat on the form go first: Iain MacLennan, then Phil Shepherd, Paul Mason and Dougal Munro. There is no harm in touching base early with the &ldquo;later this season&rdquo; leads; Josh books the later time while he has them.</p>
-            <p>The call is fifteen minutes on whatever is making them scratch their head: a block that didn&rsquo;t pack out, a soil or sap result they can&rsquo;t make sense of, a constraint they keep running into. Josh takes the out-of-ten score, finds out what is possible, and plays the card that gets a next step.</p>
-            <div class="track">
-              <p><b class="t">No answer</b> Two tries, then a short email from Josh with a pick-a-time link. Odoo Appointments is already installed with website booking and lead creation, so each booking lands in the CRM against the lead.</p>
-            </div>
-            <div class="pc"><p><b>For</b> Josh has the time and is keen; a call reaches people an email never will; he learns first-hand which cards work, which shapes the next campaign; every conversation is a qualification and a sales conversation in one. <b>Against</b> Forty-plus calls is a real block of time; Josh is new and needs Chelsea behind him for the technical questions; some leads only wanted the Playbook and will say so.</p></div>
-          </article>
+        <div class="plays plays--one">
           <article class="offer offer--cherry">
-            <div class="big__who"><p class="offer__tag">Play 2 &middot; Cherry Playbook leads &middot; Andrew Smith</p><span class="pill pill--wait">Awaiting Andrew&rsquo;s yes</span></div>
+            <div class="big__who"><p class="offer__tag">Play 2 &middot; Cherry Playbook leads &middot; Andrew Smith</p><span class="pill pill--wait">Draft &middot; Andrew to shape</span></div>
             <h3>The email, then Andrew&rsquo;s session</h3>
-            <p><em>What we saw in cherries this season, and what fixed it.</em> Andrew as a cherry grower first and the team&rsquo;s cherry lead second: one hour online, problems to solutions, what he&rsquo;d be doing now before harvest, questions taken live. One session for growers and advisers alike.</p>
+            <p>An hour online with Andrew, as a cherry grower first and the team&rsquo;s cherry lead second, questions taken live. One session for growers and advisers alike. <strong>The topic is Andrew&rsquo;s to set:</strong> what is most useful to cherry growers at this time of year, and what is still up for grabs before harvest. <em>&ldquo;What we saw in cherries this season, and what fixed it&rdquo;</em> is a working title only.</p>
             <p>The invitation goes to the 75 the day after Andrew confirms. It promises an offer at the end that is only for the people in the room, so they turn up and they stay. The session is recorded; the recording becomes the second email for everyone who registered and didn&rsquo;t show.</p>
             <div class="track">
               <p><b class="t">At the close</b> Andrew asks the out-of-ten question, then makes the offer: the data clean-up and trends.</p>
@@ -386,48 +558,89 @@
             <div class="pc"><p><b>For</b> One hour of Andrew reaches all 75 at once; people who lapsed after one email get a reason to come back; registrations show who is still interested; the recording is reusable. <b>Against</b> Attendance runs 10&ndash;20% of registrations; needs Andrew&rsquo;s buy-in and a date inside three weeks; setup and hosting fall on marketing.</p></div>
           </article>
         </div>
+      </section>
+
+      <section class="concept" aria-labelledby="cherry-session-title">
+        <div class="concept__heading">
+          <div>
+            <h2 id="cherry-session-title">The session, in draft</h2>
+          </div>
+          <p class="concept__summary">Something for Andrew to react to, not a plan he has agreed. His answers to the first column rewrite the other two.</p>
+        </div>
+        <div class="outline">
+          <div class="outline__col">
+            <h3>Questions for Andrew</h3>
+            <ul>
+              <li>What is the most useful thing to talk about with cherry growers at this time of year?</li>
+              <li>What is still up for grabs in a cherry block between now and harvest?</li>
+              <li>Q&amp;A led, or a short talk and then questions?</li>
+              <li>Which two dates and times in the next three weeks would suit?</li>
+              <li>Happy for it to be recorded and sent to everyone who registered?</li>
+              <li>Anyone he would want alongside him: Nate, Chelsea, a grower?</li>
+            </ul>
+          </div>
+          <div class="outline__col">
+            <h3>Working run sheet, one hour</h3>
+            <ol class="runsheet">
+              <li><b>0&ndash;10</b>Andrew opens: what he is seeing in cherry blocks right now</li>
+              <li><b>10&ndash;45</b>Live questions, from the room and collected at registration</li>
+              <li><b>45&ndash;55</b>What he would be doing on a block between now and harvest</li>
+              <li><b>55&ndash;60</b>The out-of-ten question, then the offer for the people still there</li>
+            </ol>
+          </div>
+          <div class="outline__col">
+            <h3>Who does what</h3>
+            <ul>
+              <li><strong>From Andrew:</strong> a yes, the topic, two date options, three or four talking points</li>
+              <li><strong>Marketing handles:</strong> the invitation, the registration form, reminders, hosting, the recording and the follow-up email</li>
+              <li><strong>Afterwards:</strong> Andrew or Josh calls the people who took the offer</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="concept" aria-labelledby="cherry-email-title">
+        <div class="concept__heading">
+          <div>
+            <h2 id="cherry-email-title">The invitation</h2>
+          </div>
+          <p class="concept__summary">Goes to the 75 the day after Andrew confirms. Subject line and topic follow whatever he decides the session is about.</p>
+        </div>
+        <div class="draft">
+          <p class="offer__tag">Cherry &middot; invitation to Andrew&rsquo;s session &middot; draft &middot; subject and topic change once Andrew sets the theme &middot; 75 recipients</p>
+          <p><strong>Subject:</strong> What we saw in cherries this season, and what fixed it<br><strong>Preview:</strong> An hour online with Andrew Smith &middot; [date] &middot; registrations close Friday 10 October</p>
+          <p>Hi [first name],</p>
+          <p>Back in July you grabbed the Cherry Nutrition Playbook. Since then Andrew Smith &mdash; a cherry grower himself, and the one who wrote most of it &mdash; has been through a season&rsquo;s worth of blocks with growers across Victoria, South Australia and New South Wales.</p>
+          <p>He&rsquo;s putting an hour aside online on [date] to go through the problems he saw most, what fixed them, and what he&rsquo;d be doing on a cherry block right now, before harvest. Questions taken live. Everyone who registers gets the recording.</p>
+          <p><em>[Save your spot &rarr;]</em></p>
+          <p>Stay to the end: there&rsquo;s something on us for everyone in the room, and it&rsquo;s only for the people who are. Registrations close Friday 10 October.</p>
+          <p>Andrew and the Hybrid-Ag horticulture team<br>(03) 5722 7555</p>
+          <p class="draft__note">One version for growers and advisers. <strong>Excluded:</strong> Matt Batinich and Vince Blefari, now clients. Links to a short registration form (name, orchard or business, region) so the SMS receipt and the recording can follow.</p>
+        </div>
+      </section>
+
+      <section class="concept" aria-labelledby="cherry-crm-title">
+        <div class="concept__heading">
+          <div>
+            <h2 id="cherry-crm-title">Alongside: where did July&rsquo;s Cherry leads get to?</h2>
+          </div>
+          <p class="concept__summary">Outside the play, and worth doing regardless: it tells us how well the last round actually converted.</p>
+        </div>
         <div class="aside-note">
           <p class="offer__tag">Alongside the campaign &middot; Jamie Granger</p>
           <p><strong>Where did July&rsquo;s Cherry leads get to?</strong> The Cherry leads that were called in July and transferred to the CRM are reviewed one by one: where each got to, what outcome was reached, and which have stalled. Stalled ones are re-flagged so the agronomist picks them back up. It sits outside both plays, and it tells us how well the last round actually converted.</p>
         </div>
       </section>
 
-      <section class="concept" aria-labelledby="apple-cards-title">
-        <div class="concept__heading">
-          <div>
-            <h2 id="apple-cards-title">Josh&rsquo;s cards</h2>
-          </div>
-          <p class="concept__summary">Everything discussed so far that Josh can reach for on a call. He is working out which to lead with, and keeping a note of what works and what doesn&rsquo;t as he goes; this is the full hand, not a script. Andrew has the same cards at the close of his session.</p>
-        </div>
-        <div class="hand">
-          <div class="hand__group">
-            <p class="hand__label"><span>A</span>To open the call</p>
-            <article class="card"><h3>The out-of-ten question</h3><p><em>&ldquo;Out of ten, how did the orchard pack out last season?&rdquo;</em> Growers are cagey about the real number; a score is easy to give, and many offer the figure anyway. Written down either way, with the block and the date.</p></article>
-            <article class="card"><h3>What did you make of the Playbook?</h3><p>Which part they read, Key Levers, The Science or The Playbook itself, tells Josh what they care about and where to take the call.</p></article>
-            <article class="card"><h3>A grower story</h3><p>Vince Blefari: a Cherry Playbook lead in July, two visits, soil and tissue tests, a program now being built. Matt Batinich: came back after years away. Used with their OK to be named.</p></article>
-          </div>
-          <div class="hand__group">
-            <p class="hand__label"><span>B</span>To get a next step</p>
-            <article class="card card--lead"><h3>A second meeting on their block data</h3><p>A longer sit-down, by phone or online, with one block&rsquo;s soil, sap and pack-out figures on the table. Booked before the call ends through the pick-a-time link.</p></article>
-            <article class="card card--lead"><h3>Data clean-up and trends</h3><p>We request their results from every lab they have used, take whatever paperwork they hold, clean it up and chart the trends, so both sides see where the orchard is heading and what would move it. Detail below.</p></article>
-            <article class="card"><h3>The Nutrient Audit the ads promised</h3><p>Every ad caption says &ldquo;ask our horticulture team about a free Nutrient Audit&rdquo;. If a lead raises it, Josh can honour it. What the audit includes still needs agreeing with Jamie.</p></article>
-            <article class="card"><h3>Andrew&rsquo;s online session</h3><p>For the lead who would rather listen before they talk, or who grows cherries as well. An invitation to the session once the date is set.</p></article>
-          </div>
-          <div class="hand__group">
-            <p class="hand__label"><span>C</span>Held back</p>
-            <article class="card card--held"><h3>Free soil test or DSA</h3><p>One test on a block of their choice so they can see what our reports give them. Only when there is an objection, or no next step will land on knowledge and sales craft alone. Never offered first.</p></article>
-            <article class="card card--held"><h3>We&rsquo;ll match your testing investment</h3><p>The last resort. Reserved for genuinely large prospects who are on the fence about going further. If the account isn&rsquo;t big enough to justify it, it stays in the pocket. If in doubt, check with Jamie.</p></article>
-          </div>
-          <div class="hand__group">
-            <p class="hand__label"><span>D</span>To close and keep it moving</p>
-            <article class="card"><h3>The next date</h3><p>Never hang up without one: the second meeting booked, or a time to call back. For the &ldquo;later this season&rdquo; leads, the later date goes in the calendar now.</p></article>
-            <article class="card"><h3>The referral ask</h3><p><em>&ldquo;Know another grower who&rsquo;d want the same? I&rsquo;ll give them a call too.&rdquo;</em> Asked once there is something of value on the table.</p></article>
-            <article class="card"><h3>The hand-off</h3><p>Chelsea for the technical question Josh can&rsquo;t answer. Jamie for a quote, or for an adviser who could become a Certified Partner.</p></article>
-            <article class="card card--lead"><h3>Josh&rsquo;s log</h3><p>After every call: the score, the card he played, whether it landed, and why or why not. Kept against the lead in the lead sheet. What works leads the next round; what doesn&rsquo;t comes off the list.</p></article>
-          </div>
-        </div>
-        <p class="note"><strong>Off the table this round:</strong> orchard visits &ldquo;when we&rsquo;re in the district&rdquo; (dropped as weak), the test credited to a first order (replaced by the investment match), and the guarantee and named program (parked until there is proof).</p>
-      </section>
+      </div>
+
+      <div class="chapter chapter--shared" id="shared">
+        <header class="chapter__head">
+          <p class="chapter__num">Shared</p>
+          <h2 class="chapter__title">Used by both plays</h2>
+          <p class="chapter__sub">The three offers, the deadline and follow-up rhythm, who does what, and what this round is for.</p>
+          <div class="chapter__owner"><span class="av">JR</span><span class="av">AS</span><span class="av">JG</span><span class="av">PO</span><span>Josh &middot; Andrew &middot; Jamie &middot; Pia</span></div>
+        </header>
 
       <section class="concept" aria-labelledby="apple-tools-title">
         <div class="concept__heading">
@@ -464,7 +677,6 @@
           <p><strong>Promise it, don&rsquo;t spell it out.</strong> <em>&ldquo;Stay to the end &mdash; there&rsquo;s something on us for everyone in the room.&rdquo;</em> On Josh&rsquo;s calls there is nothing to promise in advance; the offer comes when the conversation has earned it. Either way the out-of-ten score is taken first, so every data clean-up starts with a benchmark against it. Revisit after the program; the before and after is the success story.</p>
         </div>
       </section>
-
       <section class="concept" aria-labelledby="apple-cadence-title">
         <div class="concept__heading">
           <div>
@@ -493,13 +705,35 @@
           </div>
         </div>
       </section>
+      <section class="concept" aria-labelledby="apple-followup-title">
+        <div class="concept__heading">
+          <div>
+            <h2 id="apple-followup-title">Who does what</h2>
+          </div>
+          <p class="concept__summary">One line each. Chelsea is escalations only this spring.</p>
+        </div>
+        <div class="facts facts--one">
+          <div class="fact">
+            <h3>Who does what</h3>
+            <ul>
+              <li><strong>Josh</strong> &rarr; calls every Apple lead, warm four first, and each new one as it lands; decides which cards to lead with and keeps a note of what works and what doesn&rsquo;t; the score, the next step, the held-back tools when needed, and the program with Chelsea&rsquo;s sign-off</li>
+              <li><strong>Andrew</strong> &rarr; the Cherry session, the offer at the close, the held-back tools when needed, the read-backs on his leads</li>
+              <li><strong>Jamie</strong> &rarr; the CRM review of July&rsquo;s Cherry leads and any re-flagging; quotes; the sounding board before a testing-investment match is offered</li>
+              <li><strong>Pia</strong> &rarr; the missed-call email and the Cherry invitation, the booking page in Odoo Appointments, SMS receipts, session setup and recording, the lead sheet</li>
+              <li><strong>Agronomic support</strong> &rarr; requesting lab data with the grower&rsquo;s OK, cleaning it and building the trends for the read-back</li>
+              <li><strong>Nathan</strong> &rarr; Andrew&rsquo;s yes, the 41 into the lead sheet with phone numbers for Josh, the round&rsquo;s numbers to Amos at month end</li>
+              <li><strong>Chelsea</strong> &rarr; escalations only this spring</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       <section class="concept" aria-labelledby="apple-proof-title">
         <div class="concept__heading">
           <div>
             <h2 id="apple-proof-title">What this round is for</h2>
           </div>
-          <p class="concept__summary">The offers above are good; the proof behind them is thin. This round runs to fix that. Every prospect who takes the DSA and the program becomes a block story with a number in front and a number behind, and those stories are what the next version of these campaigns is built on.</p>
+          <p class="concept__summary">The offers above are good; the proof behind them is thin. This round runs to fix that. Every prospect who takes the offer and the program becomes a block or stage story with a number in front and a number behind, and those stories are what the next version of these campaigns is built on.</p>
         </div>
         <div class="loop">
           <div class="loop__step"><b>1 &middot; Run</b>Josh calls his list and notes what works and what doesn&rsquo;t; Andrew runs his session. Uptake recorded per play: calls made and reached, cards played and which landed, registrations and attendance, data clean-ups taken, held-back tools used and why, programs quoted, orders.</div>
@@ -507,8 +741,8 @@
           <div class="loop__step"><b>3 &middot; Retell</b>Each success becomes a testimonial, a block-transformation post and a line in the next Playbook email. The next campaign leads with proof, and the offers can then carry a guarantee.</div>
         </div>
         <p class="note">What this round deliberately leaves out is listed under <a href="#apple-future-title">refinements for future campaigns</a>.</p>
+        <p class="note"><strong>Both plays report the same five numbers at the end of the round:</strong> contacted, conversations had, next steps taken, quoted, ordered. That, plus how often the held-back tools were needed, decides the next version.</p>
       </section>
-
       <section class="concept" aria-labelledby="apple-future-title">
         <div class="concept__heading">
           <div>
@@ -549,101 +783,15 @@
           </article>
         </div>
       </section>
+      </div>
 
-      <section class="concept" aria-labelledby="apple-ladder-title">
-        <div class="concept__heading">
-          <div>
-            <h2 id="apple-ladder-title">The route, step by step</h2>
-          </div>
-          <p class="concept__summary">The two plays side by side, as a sequence with owners and asks. Different first contact, same destination.</p>
-        </div>
-        <ol class="ladder">
-          <li class="rung">
-            <span class="rung__n">1</span>
-            <h3>First contact</h3>
-            <div class="lane"><b>Apple &middot; Josh</b>A phone call to every lead, warm four first. Two tries, then the missed-call email with a pick-a-time link.</div>
-            <div class="lane lane--cherry"><b>Cherry &middot; Andrew</b>The invitation to Andrew&rsquo;s session, sent the day after he confirms.</div>
-            <small>Owner: Josh / Pia &middot; the ask: fifteen minutes, or an hour online</small>
-          </li>
-          <li class="rung">
-            <span class="rung__n">2</span>
-            <h3>The conversation</h3>
-            <div class="lane"><b>Apple &middot; Josh</b>The call itself. Out-of-ten score written down; Josh reads which card fits.</div>
-            <div class="lane lane--cherry"><b>Cherry &middot; Andrew</b>The online session. Recording to everyone who registered. Andrew asks the out-of-ten question live.</div>
-            <small>Owner: Josh / Andrew &middot; the ask: tell us what&rsquo;s going on</small>
-          </li>
-          <li class="rung">
-            <span class="rung__n">3</span>
-            <h3>The card or the offer</h3>
-            <div class="lane"><b>Apple &middot; Josh</b>A second meeting on their block data, or the data clean-up. Held-back tools only if needed.</div>
-            <div class="lane lane--cherry"><b>Cherry &middot; Andrew</b>The data clean-up, offered at the close to the people still there. Held-back tools only if needed.</div>
-            <small>Owner: Josh / Andrew &middot; the ask: let us pull your data together</small>
-          </li>
-          <li class="rung">
-            <span class="rung__n">4</span>
-            <h3>Program and first order</h3>
-            <p class="shared">The trends are read back to the grower and become a block program; the program becomes a quote. Out-of-ten score revisited after the program.</p>
-            <small>Owner: Josh / Andrew with Jamie on the quote &middot; the ask: run it this season</small>
-          </li>
-        </ol>
-        <div class="ladder-notes">
-          <p><strong>Then rerun it.</strong> At the end of the round, both plays report the same five numbers: contacted, conversations had, next steps taken, quoted, ordered. That, plus how often the held-back tools were needed and the success stories from the proof loop, decides the next version: better creative, tighter targeting, and a stronger offer with a track record under it.</p>
-        </div>
-      </section>
-
-      <section class="concept" aria-labelledby="apple-followup-title">
-        <div class="concept__heading">
-          <div>
-            <h2 id="apple-followup-title">The emails and who does what</h2>
-          </div>
-          <p class="concept__summary">Two emails, neither of them the opener for the Apple list. Josh&rsquo;s is the missed-call follow-up; the Cherry invitation waits on Andrew&rsquo;s yes and a date.</p>
-        </div>
-        <div class="facts">
-          <div class="fact">
-            <h3>Apple email as drafted (Odoo mailing #87)</h3>
-            <ul>
-              <li><strong>Subject:</strong> Your Apple Nutrition Playbook &middot; <strong>Preview:</strong> Any apple questions? Our team can help</li>
-              <li>Thanks for downloading; spring is the time to review testing, tree demand and nutrition &middot; &ldquo;View the Playbook&rdquo; &middot; Chelsea and the team can help, reply or call</li>
-              <li><strong>What changes:</strong> Josh now phones every lead first, so this becomes the email for the ones he couldn&rsquo;t reach. It names Josh, carries the pick-a-time link, and says he tried to call. Rewrite below.</li>
-              <li>Cherry benchmark from July: 57% open, 22% click; the &ldquo;maybe&rdquo; segment 50% and 29%</li>
-            </ul>
-          </div>
-          <div class="fact">
-            <h3>Who does what</h3>
-            <ul>
-              <li><strong>Josh</strong> &rarr; calls every Apple lead, warm four first, and each new one as it lands; decides which cards to lead with and keeps a note of what works and what doesn&rsquo;t; the score, the next step, the held-back tools when needed, and the program with Chelsea&rsquo;s sign-off</li>
-              <li><strong>Andrew</strong> &rarr; the Cherry session, the offer at the close, the held-back tools when needed, the read-backs on his leads</li>
-              <li><strong>Jamie</strong> &rarr; the CRM review of July&rsquo;s Cherry leads and any re-flagging; quotes; the sounding board before a testing-investment match is offered</li>
-              <li><strong>Pia</strong> &rarr; the missed-call email and the Cherry invitation, the booking page in Odoo Appointments, SMS receipts, session setup and recording, the lead sheet</li>
-              <li><strong>Agronomic support</strong> &rarr; requesting lab data with the grower&rsquo;s OK, cleaning it and building the trends for the read-back</li>
-              <li><strong>Nathan</strong> &rarr; Andrew&rsquo;s yes, the 41 into the lead sheet with phone numbers for Josh, the round&rsquo;s numbers to Amos at month end</li>
-              <li><strong>Chelsea</strong> &rarr; escalations only this spring</li>
-            </ul>
-          </div>
-        </div>
-        <div class="draft">
-          <p class="offer__tag">Apple &middot; missed-call email &middot; sent only after Josh has tried twice</p>
-          <p><strong>Subject:</strong> Sorry I missed you &mdash; Josh from Hybrid-Ag<br><strong>Preview:</strong> Fifteen minutes on whatever&rsquo;s going on in the orchard &middot; pick a time that suits</p>
-          <p>Hi [first name],</p>
-          <p>I tried to call after you grabbed our Apple Nutrition Playbook. No pitch: I&rsquo;m ringing everyone who downloaded it to hear what&rsquo;s going on in the orchard this spring.</p>
-          <p>If there&rsquo;s something making you scratch your head right now &mdash; a block that didn&rsquo;t pack out the way it should have, a soil or sap result you can&rsquo;t make sense of, a constraint you keep running into &mdash; I&rsquo;ve got fifteen minutes for you. We&rsquo;ll unpack what&rsquo;s possible and what the next step should be.</p>
-          <p><em>[Lock in a time with Josh &rarr;]</em></p>
-          <p>I&rsquo;m holding spots until Friday 10 October. If the timing doesn&rsquo;t suit, the Playbook is yours to keep: <em>[View the Playbook &rarr;]</em></p>
-          <p>Josh Richardson<br>Hybrid-Ag &middot; (03) 5722 7555</p>
-          <p class="draft__note">Written from Josh, in the first person. No offer is named; Josh plays his cards on the call. One version for growers and advisers.</p>
-        </div>
-        <div class="draft">
-          <p class="offer__tag">Cherry &middot; invitation to Andrew&rsquo;s session &middot; sends once Andrew confirms and the date is set &middot; 75 recipients</p>
-          <p><strong>Subject:</strong> What we saw in cherries this season, and what fixed it<br><strong>Preview:</strong> An hour online with Andrew Smith &middot; [date] &middot; registrations close Friday 10 October</p>
-          <p>Hi [first name],</p>
-          <p>Back in July you grabbed the Cherry Nutrition Playbook. Since then Andrew Smith &mdash; a cherry grower himself, and the one who wrote most of it &mdash; has been through a season&rsquo;s worth of blocks with growers across Victoria, South Australia and New South Wales.</p>
-          <p>He&rsquo;s putting an hour aside online on [date] to go through the problems he saw most, what fixed them, and what he&rsquo;d be doing on a cherry block right now, before harvest. Questions taken live. Everyone who registers gets the recording.</p>
-          <p><em>[Save your spot &rarr;]</em></p>
-          <p>Stay to the end: there&rsquo;s something on us for everyone in the room, and it&rsquo;s only for the people who are. Registrations close Friday 10 October.</p>
-          <p>Andrew and the Hybrid-Ag horticulture team<br>(03) 5722 7555</p>
-          <p class="draft__note">One version for growers and advisers. <strong>Excluded:</strong> Matt Batinich and Vince Blefari, now clients. Links to a short registration form (name, orchard or business, region) so the SMS receipt and the recording can follow.</p>
-        </div>
-      </section>
+      <div class="chapter chapter--ref" id="reference">
+        <header class="chapter__head">
+          <p class="chapter__num">Reference</p>
+          <h2 class="chapter__title">The Apple campaign as it ran</h2>
+          <p class="chapter__sub">The three ad creatives and the setup in Meta.</p>
+          <div class="chapter__owner"><span class="av">PO</span><span>Pia Ong</span></div>
+        </header>
 
       <section class="concept" aria-labelledby="apple-assets-title">
         <div class="concept__heading">
@@ -702,7 +850,6 @@
           </figure>
         </div>
       </section>
-
       <section class="concept" aria-labelledby="apple-setup-title">
         <div class="concept__heading">
           <div>
@@ -751,6 +898,8 @@
           </div>
         </div>
       </section>
+      </div>
+
     </main>
 
     <footer class="review-footer">
