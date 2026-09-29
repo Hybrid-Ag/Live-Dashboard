@@ -61,6 +61,17 @@
       .draftbar { margin-top: 18px; padding: 14px 18px; border: 1.5px dashed #e0a468; border-radius: 4px; background: #fff6ee; font-size: 14px; line-height: 1.6; }
       .plays.plays--one, .facts.facts--one { grid-template-columns: minmax(0, 920px); }
       .outline { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+      .qbank { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: start; }
+      .qgroup { border: 1px solid #d0d1ce; border-top: 4px solid #dc6800; border-radius: 4px; background: #fff; padding: 18px 20px 8px; }
+      .qgroup h3 { margin: 0 0 4px; font-family: "Alternate Gothic", "Oswald", "Arial Narrow", sans-serif; font-size: 20px; letter-spacing: .4px; text-transform: uppercase; line-height: 1.15; }
+      .qgroup > p { margin: 0 0 6px; font-size: 12.5px; color: #867764; }
+      .qlist { list-style: none; margin: 0; padding: 0; }
+      .qlist li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 10px; padding: 14px 0; border-top: 1px solid #ece7df; }
+      .qlist b.n { font-family: "Alternate Gothic", "Oswald", "Arial Narrow", sans-serif; font-size: 24px; line-height: 1; color: #dc6800; }
+      .qlist .q { margin: 0 0 6px; font-size: 15px; line-height: 1.4; font-weight: 600; color: #1a1714; }
+      .qlist .m { margin: 0; font-size: 12.5px; line-height: 1.55; color: #5a5148; }
+      .qlist .m b { color: #016e6c; font-weight: 600; }
+      .pill--set { background: #e3f3f2; color: #016e6c; border: 1px solid #a9d8d6; }
       .outline__col { border: 1.5px dashed #c9c1b5; border-radius: 4px; background: #fff; padding: 18px 20px; font-size: 13.5px; line-height: 1.6; }
       .outline__col h3 { margin: 0 0 10px; font-family: "Alternate Gothic", "Oswald", "Arial Narrow", sans-serif; font-size: 20px; letter-spacing: .4px; text-transform: uppercase; line-height: 1.15; }
       .outline__col ul { margin: 0; padding-left: 18px; } .outline__col li { margin-bottom: 6px; }
@@ -69,6 +80,8 @@
       .big__who { flex-wrap: wrap; }
       @media (max-width: 1100px) { .jump { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
       @media (max-width: 900px) {
+        .qbank { grid-template-columns: minmax(0, 1fr); }
+        .qgroup { padding-left: 16px; padding-right: 16px; }
         .inshort, .outline, .stat-row, .tools, .plays, .plays.plays--one, .hand, .loop, .future, .facts, .facts.facts--one, .ad-grid { grid-template-columns: minmax(0, 1fr); }
         .chapter { margin-top: 48px; } .chapter__head { padding: 24px 20px 22px 26px; }
         .draft { padding: 18px 18px; } .fx { padding: 16px 16px 14px; } .fx h3 { font-size: 22px; } .fx--excl h3 { font-size: 24px; }
@@ -210,14 +223,14 @@
           <div>
             <h2 id="apple-decision-title">In short</h2>
           </div>
-          <p class="concept__summary">Two lists, a play for each. Agreed with the Sales Manager on 25 September, refined with Josh on 29 September. Andrew&rsquo;s session is still a draft until he has shaped it.</p>
+          <p class="concept__summary">Two lists, a play for each. Agreed with the Sales Manager on 25 September, refined with Josh and with Andrew on 29 September. Andrew is in; the questions for his session are drafts until he has been through them.</p>
         </div>
         <div class="inshort">
           <div class="fact">
             <h3>What&rsquo;s agreed</h3>
             <ul>
               <li>Josh phones every Apple lead and works out which card gets a next step</li>
-              <li>Cherry leads get an email and one online session with Andrew</li>
+              <li>Cherry leads get an email and one online session with Andrew: about 25 minutes planned around questions, the rest open Q&amp;A, brought back to testing</li>
               <li>The standard offer is a data clean-up; a free soil or DSA test is held back for objections; matching their testing investment is the last resort for large prospects</li>
               <li>Growers and advisers are treated the same this round</li>
               <li>The win we are after is a block or stage program, then a first order</li>
@@ -230,7 +243,7 @@
               <li><strong>Andrew</strong> &middot; the Cherry session and the offer at its close</li>
               <li><strong>Jamie</strong> &middot; quotes, the CRM review of July&rsquo;s Cherry leads</li>
               <li><strong>Pia</strong> &middot; emails, booking page, session setup, lead sheet</li>
-              <li><strong>Nathan</strong> &middot; Andrew&rsquo;s yes, leads to Josh, numbers to Amos</li>
+              <li><strong>Nathan</strong> &middot; draft questions to Andrew, leads to Josh, numbers to Amos</li>
             </ul>
           </div>
           <div class="fact">
@@ -238,8 +251,8 @@
             <ul>
               <li><strong>29 September</strong> &middot; Apple campaign closes</li>
               <li><strong>Now</strong> &middot; Josh&rsquo;s calls, warm four first</li>
-              <li><strong>To be set</strong> &middot; Andrew&rsquo;s session, once he has given two options</li>
-              <li><strong>Friday 10 October</strong> &middot; spots and registrations held until</li>
+              <li><strong>Friday 10 October</strong> &middot; Josh&rsquo;s meeting spots held until</li>
+              <li><strong>Week of 13 or 20 October</strong> &middot; Andrew&rsquo;s session, day to be set; registrations close the Friday before</li>
               <li><strong>Month end</strong> &middot; the round&rsquo;s numbers to Amos</li>
             </ul>
           </div>
@@ -444,28 +457,28 @@
         <header class="chapter__head">
           <p class="chapter__num">Play 2</p>
           <h2 class="chapter__title">Cherry Playbook leads</h2>
-          <p class="chapter__sub">An email, then an hour online with Andrew, with an offer at the end for the people who show up.</p>
+          <p class="chapter__sub">An email, then an hour online with Andrew and a few growers: questions first, slides last, and an offer at the end for the people who show up.</p>
           <div class="chapter__owner"><span class="av">AS</span><span>Andrew Smith</span></div>
         </header>
-        <div class="draftbar"><strong>Draft, still to be run by Andrew.</strong> The session in this chapter is a starting point for that conversation. The topic, the format and the date are his call: what is most useful to cherry growers at this time of year, and what is still up for grabs, is for him to say.</div>
+        <div class="draftbar"><strong>Andrew is in. Format agreed on the call, 29 September.</strong> About 25 minutes planned around the questions cherry growers need answered at this stage of the season, then open Q&amp;A, with a few growers invited to get the room talking. <strong>The questions below are drafts:</strong> Andrew keeps, swaps or rewrites them. Date to be set inside the next two to three weeks.</div>
 
       <section class="concept" aria-labelledby="cherry-flow-title">
         <div class="concept__heading">
           <div>
             <h2 id="cherry-flow-title">How the Cherry leads are handled</h2>
           </div>
-          <p class="concept__summary">An email first, because one hour of Andrew reaches all 75 at once. The offer at the end is only for the people who show up.</p>
+          <p class="concept__summary">An email first, because one hour of Andrew reaches all 75 at once. The session is built around questions and growers talking, not a slide deck. The offer at the end is only for the people who show up.</p>
         </div>
         <div class="flowx flowx--side" data-edges="[[&quot;email&quot;, &quot;session&quot;, 0.5, 0.5], [&quot;session&quot;, &quot;excl&quot;, 0.5, 0.5], [&quot;excl&quot;, &quot;data&quot;, 0.25, 0.5], [&quot;excl&quot;, &quot;test&quot;, 0.5, 0.5, 1], [&quot;excl&quot;, &quot;match&quot;, 0.75, 0.5, 1], [&quot;data&quot;, &quot;end&quot;, 0.5, 0.25], [&quot;test&quot;, &quot;end&quot;, 0.5, 0.5, 1], [&quot;match&quot;, &quot;end&quot;, 0.5, 0.75, 1]]">
           <svg class="flowx__lines" aria-hidden="true"></svg>
-          <div class="flowx__title"><span class="chip chip--cherry">Play 2 &middot; Cherry Playbook leads</span><h3>The email, then Andrew&rsquo;s session</h3><p>75 leads from July&rsquo;s campaign, one email since. A draft until Andrew has shaped the session and given a date.</p></div>
+          <div class="flowx__title"><span class="chip chip--cherry">Play 2 &middot; Cherry Playbook leads</span><h3>The email, then Andrew&rsquo;s session</h3><p>75 leads from July&rsquo;s campaign, one email since. Andrew is in; the day is to be set inside the next two to three weeks.</p></div>
 
           <div class="flowx__label"><span>01</span>First contact</div>
           <div class="flowx__nodes flowx__nodes--one">
             <article class="fx" data-n="email">
-              <div class="fx__top"><span class="chip chip--cherry">All 75 Cherry leads</span><span class="pill pill--wait">Once Andrew confirms</span></div>
+              <div class="fx__top"><span class="chip chip--cherry">All 75 Cherry leads</span><span class="pill pill--wait">Once the date is set</span></div>
               <h3>The invitation</h3>
-              <p>An email inviting them to an hour online with Andrew, promising an offer at the end that is only for the people in the room.</p>
+              <p>An email inviting them to an hour online with Andrew, asking for the question they most want answered, and promising an offer at the end that is only for the people in the room.</p>
               <div class="fx__owner"><span class="av">PO</span><span><b>Pia Ong</b></span></div>
             </article>
           </div>
@@ -479,9 +492,9 @@
           <div class="flowx__label"><span>02</span>The conversation</div>
           <div class="flowx__nodes flowx__nodes--one">
             <article class="fx" data-n="session">
-              <div class="fx__top"><span class="chip chip--cherry">One hour online</span><span class="pill pill--wait">Draft &middot; Andrew to shape</span></div>
+              <div class="fx__top"><span class="chip chip--cherry">One hour online</span><span class="pill pill--set">Format agreed &middot; date to set</span></div>
               <h3>Andrew&rsquo;s online session</h3>
-              <p>Andrew Smith, cherry grower and the team&rsquo;s cherry lead, live with questions from the room. The topic is his call: whatever is most useful to cherry growers at this point in the season.</p>
+              <p>About 25 minutes planned, built around five questions cherry growers need answered at this stage. Then the floor opens: a few invited growers share a problem from their own blocks, the room joins in, and every thread is brought back to testing.</p>
               <div class="fx__owner"><span class="av">AS</span><span><b>Andrew Smith</b></span></div>
             </article>
           </div>
@@ -520,7 +533,7 @@
             </article>
           </div>
         </div>
-        <p class="note">Session registrations held until Friday 10 October. Follow-up on both plays continues until the lead buys or opts out.</p>
+        <p class="note">Session registrations close the Friday before the session. Follow-up on both plays continues until the lead buys or opts out.</p>
       </section>
 
       <section class="concept" aria-labelledby="cherry-leads-title">
@@ -548,14 +561,14 @@
         </div>
         <div class="plays plays--one">
           <article class="offer offer--cherry">
-            <div class="big__who"><p class="offer__tag">Play 2 &middot; Cherry Playbook leads &middot; Andrew Smith</p><span class="pill pill--wait">Draft &middot; Andrew to shape</span></div>
+            <div class="big__who"><p class="offer__tag">Play 2 &middot; Cherry Playbook leads &middot; Andrew Smith</p><span class="pill pill--set">Format agreed &middot; date to set</span></div>
             <h3>The email, then Andrew&rsquo;s session</h3>
-            <p>An hour online with Andrew, as a cherry grower first and the team&rsquo;s cherry lead second, questions taken live. One session for growers and advisers alike. <strong>The topic is Andrew&rsquo;s to set:</strong> what is most useful to cherry growers at this time of year, and what is still up for grabs before harvest. <em>&ldquo;What we saw in cherries this season, and what fixed it&rdquo;</em> is a working title only.</p>
-            <p>The invitation goes to the 75 the day after Andrew confirms. It promises an offer at the end that is only for the people in the room, so they turn up and they stay. The session is recorded; the recording becomes the second email for everyone who registered and didn&rsquo;t show.</p>
+            <p>An hour online with Andrew, as a cherry grower first and the team&rsquo;s cherry lead second. One session for growers and advisers alike. <strong>About 25 minutes is planned,</strong> built around the questions that need answering at this stage of the cherry season: one photo or chart per question, no slide deck to sit through. <strong>The rest is Q&amp;A.</strong> Two or three growers we already work with are invited to open the floor with a problem from their own blocks, so the room starts talking, and Andrew brings each one back to what a test would show.</p>
+            <p>The invitation goes to the 75 the day after the date is set. It asks each person for the question they most want answered, and promises an offer at the end that is only for the people in the room, so they turn up and they stay. The session is recorded; the recording becomes the second email for everyone who registered and didn&rsquo;t show.</p>
             <div class="track">
               <p><b class="t">At the close</b> Andrew asks the out-of-ten question, then makes the offer: the data clean-up and trends.</p>
             </div>
-            <div class="pc"><p><b>For</b> One hour of Andrew reaches all 75 at once; people who lapsed after one email get a reason to come back; registrations show who is still interested; the recording is reusable. <b>Against</b> Attendance runs 10&ndash;20% of registrations; needs Andrew&rsquo;s buy-in and a date inside three weeks; setup and hosting fall on marketing.</p></div>
+            <div class="pc"><p><b>For</b> One hour of Andrew reaches all 75 at once; people who lapsed after one email get a reason to come back; registrations show who is still interested; the recording is reusable. <b>Against</b> Attendance runs 10&ndash;20% of registrations; needs a date inside three weeks; the invited growers need a short briefing; setup and hosting fall on marketing.</p></div>
           </article>
         </div>
       </section>
@@ -563,36 +576,98 @@
       <section class="concept" aria-labelledby="cherry-session-title">
         <div class="concept__heading">
           <div>
-            <h2 id="cherry-session-title">The session, in draft</h2>
+            <h2 id="cherry-session-title">The session</h2>
           </div>
-          <p class="concept__summary">Something for Andrew to react to, not a plan he has agreed. His answers to the first column rewrite the other two.</p>
+          <p class="concept__summary">The shape Andrew and Nathan agreed on the call. Questions and growers talking carry it; the planned part is kept short so it never becomes death by PowerPoint.</p>
         </div>
         <div class="outline">
           <div class="outline__col">
-            <h3>Questions for Andrew</h3>
+            <h3>Agreed with Andrew, 29 September</h3>
             <ul>
-              <li>What is the most useful thing to talk about with cherry growers at this time of year?</li>
-              <li>What is still up for grabs in a cherry block between now and harvest?</li>
-              <li>Q&amp;A led, or a short talk and then questions?</li>
-              <li>Which two dates and times in the next three weeks would suit?</li>
-              <li>Happy for it to be recorded and sent to everyone who registered?</li>
-              <li>Anyone he would want alongside him: Nate, Chelsea, a grower?</li>
+              <li>He is keen, and it happens inside the next two to three weeks</li>
+              <li>About 25 minutes planned, built around the questions that need answering at this stage of the cherry season</li>
+              <li>The rest is Q&amp;A: growers talking, sharing problems</li>
+              <li>A few growers who think along the same lines are invited to get the conversation going</li>
+              <li>Everything is brought back to testing</li>
             </ul>
           </div>
           <div class="outline__col">
             <h3>Working run sheet, one hour</h3>
             <ol class="runsheet">
-              <li><b>0&ndash;10</b>Andrew opens: what he is seeing in cherry blocks right now</li>
-              <li><b>10&ndash;45</b>Live questions, from the room and collected at registration</li>
-              <li><b>45&ndash;55</b>What he would be doing on a block between now and harvest</li>
+              <li><b>0&ndash;5</b>Andrew opens: where cherry blocks are at right now</li>
+              <li><b>5&ndash;30</b>Five questions, five minutes each. One photo or chart per question</li>
+              <li><b>30&ndash;55</b>The floor opens. Invited growers go first with a problem from their block; questions from registration and the room follow. Each one is brought back to what a test would show</li>
               <li><b>55&ndash;60</b>The out-of-ten question, then the offer for the people still there</li>
             </ol>
           </div>
           <div class="outline__col">
+            <h3>Still to settle with Andrew</h3>
+            <ul>
+              <li>Which five of the ten questions below, and any he would swap in</li>
+              <li>The day and time, week of 13 or 20 October</li>
+              <li>Which two or three growers to invite, and who asks them</li>
+              <li>One hour in total, or shorter?</li>
+              <li>Happy for it to be recorded and sent to everyone who registered?</li>
+              <li>Anyone alongside him: Chelsea, Nate?</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="concept" id="cherry-questions" aria-labelledby="cherry-questions-title">
+        <div class="concept__heading">
+          <div>
+            <h2 id="cherry-questions-title">Draft questions for Andrew</h2>
+          </div>
+          <p class="concept__summary">Ten options, drawn from the Cherry Playbook, Andrew&rsquo;s Hidden Season talk and this spring&rsquo;s cherry posts. Five make the 25 minutes. Andrew keeps, swaps or rewrites them, and each one leads back to testing.</p>
+        </div>
+        <div class="qbank">
+          <div class="qgroup">
+            <h3>What&rsquo;s locked in, what&rsquo;s still open</h3>
+            <p>Where the crop stands, and what can still move.</p>
+            <ol class="qlist">
+              <li><b class="n">01</b><div><p class="q">Cell division is closing. What has it already decided, and what is still up for grabs before harvest?</p><p class="m">Draws on Cherry Playbook, &ldquo;Cell division decides cell number&rdquo; and &ldquo;What&rsquo;s up for grabs&rdquo;.<br><b>Back to testing:</b> a sap test now shows what the fruit is being built from.</p></div></li>
+              <li><b class="n">02</b><div><p class="q">Size, firmness, Brix: which one is my block most likely to fall short on?</p><p class="m">Draws on Cherry Playbook, key take-homes.<br><b>Back to testing:</b> this season&rsquo;s results read against last season&rsquo;s pack-out.</p></div></li>
+              <li><b class="n">03</b><div><p class="q">What should I be setting up for post-harvest while the bins are still filling?</p><p class="m">Draws on Andrew&rsquo;s talk, &ldquo;The Hidden Season&rdquo;.<br><b>Back to testing:</b> a post-harvest DSA planned now, not remembered in February.</p></div></li>
+            </ol>
+          </div>
+          <div class="qgroup">
+            <h3>Getting it into the fruit</h3>
+            <p>Supply is one thing. Delivery is another.</p>
+            <ol class="qlist">
+              <li><b class="n">04</b><div><p class="q">Calcium in the leaf isn&rsquo;t calcium in the cherry. How do I know it is reaching the fruit?</p><p class="m">Draws on this spring&rsquo;s shuck fall post; Cherry Playbook, order of hierarchy.<br><b>Back to testing:</b> young and old leaf read side by side on a DSA.</p></div></li>
+              <li><b class="n">05</b><div><p class="q">When does potassium take over from calcium, and how do I stop one crowding out the other?</p><p class="m">Draws on Cherry Playbook, calcium and potassium rule; cell expansion.<br><b>Back to testing:</b> the two tracked in sap across the season, not a single reading.</p></div></li>
+              <li><b class="n">06</b><div><p class="q">Soil, foliar or fertigation: from here to harvest, where does each one earn its place?</p><p class="m">Draws on Cherry Playbook, &ldquo;How you apply matters as much as when&rdquo;.<br><b>Back to testing:</b> soil test for the baseline, sap for what is arriving.</p></div></li>
+              <li><b class="n">07</b><div><p class="q">Rain close to harvest: what can nutrition do about cracking, and what can&rsquo;t it?</p><p class="m">Draws on Cherry Playbook, cell-wall integrity and rain-risk windows.<br><b>Back to testing:</b> calcium status going into the rain window.</p></div></li>
+            </ol>
+          </div>
+          <div class="qgroup">
+            <h3>Reading the block</h3>
+            <p>Which test answers which question.</p>
+            <ol class="qlist">
+              <li><b class="n">08</b><div><p class="q">One leaf test tells the story. Does it?</p><p class="m">Draws on Cherry Playbook, misconception five; dry ash, sap and DSA compared.<br><b>Back to testing:</b> what each test can and can&rsquo;t tell you at this stage.</p></div></li>
+              <li><b class="n">09</b><div><p class="q">My soil test says balanced. Why does the tree still run short when demand peaks?</p><p class="m">Draws on Cherry Playbook, misconception four.<br><b>Back to testing:</b> soil as the starting point, sap as the check on delivery.</p></div></li>
+              <li><b class="n">10</b><div><p class="q">The canopy is carrying the crop now. How do I tell whether the leaves are keeping up?</p><p class="m">Draws on this spring&rsquo;s flowering post; Cherry Playbook, fruit fill stack.<br><b>Back to testing:</b> manganese, iron and copper in the sap, the trace elements behind photosynthesis.</p></div></li>
+            </ol>
+          </div>
+        </div>
+        <p class="note">Drafts only. Timing differs by region and variety, so Andrew picks the five that fit where most blocks will be on the day. Questions sent in at registration can replace any of them.</p>
+        <div class="facts" style="margin-top:24px">
+          <div class="fact">
+            <h3>The invited growers</h3>
+            <ul>
+              <li>Two or three growers we already work with, named by Andrew</li>
+              <li>Each is asked ahead to bring one real problem from this season and what the testing showed</li>
+              <li>They go first when the floor opens, so the first question is never silence</li>
+              <li>Introduced as growers we work with; their stories are their own</li>
+              <li>A ten-minute call with each beforehand, no script</li>
+            </ul>
+          </div>
+          <div class="fact">
             <h3>Who does what</h3>
             <ul>
-              <li><strong>From Andrew:</strong> a yes, the topic, two date options, three or four talking points</li>
-              <li><strong>Marketing handles:</strong> the invitation, the registration form, reminders, hosting, the recording and the follow-up email</li>
+              <li><strong>From Andrew:</strong> his five questions, the day, the growers to invite, one photo or chart per question</li>
+              <li><strong>Marketing handles:</strong> the invitation, the registration form with a &ldquo;your question&rdquo; field, reminders, hosting, the recording and the follow-up email</li>
               <li><strong>Afterwards:</strong> Andrew or Josh calls the people who took the offer</li>
             </ul>
           </div>
@@ -604,18 +679,18 @@
           <div>
             <h2 id="cherry-email-title">The invitation</h2>
           </div>
-          <p class="concept__summary">Goes to the 75 the day after Andrew confirms. Subject line and topic follow whatever he decides the session is about.</p>
+          <p class="concept__summary">Goes to the 75 the day after the date is set. The questions named in it follow whichever five Andrew chooses.</p>
         </div>
         <div class="draft">
-          <p class="offer__tag">Cherry &middot; invitation to Andrew&rsquo;s session &middot; draft &middot; subject and topic change once Andrew sets the theme &middot; 75 recipients</p>
-          <p><strong>Subject:</strong> What we saw in cherries this season, and what fixed it<br><strong>Preview:</strong> An hour online with Andrew Smith &middot; [date] &middot; registrations close Friday 10 October</p>
+          <p class="offer__tag">Cherry &middot; invitation to Andrew&rsquo;s session &middot; draft &middot; questions change once Andrew has chosen his five &middot; 75 recipients</p>
+          <p><strong>Subject:</strong> Five cherry questions worth answering before harvest<br><strong>Preview:</strong> An hour online with Andrew Smith and a few growers &middot; [date] &middot; bring your own question</p>
           <p>Hi [first name],</p>
-          <p>Back in July you grabbed the Cherry Nutrition Playbook. Since then Andrew Smith &mdash; a cherry grower himself, and the one who wrote most of it &mdash; has been through a season&rsquo;s worth of blocks with growers across Victoria, South Australia and New South Wales.</p>
-          <p>He&rsquo;s putting an hour aside online on [date] to go through the problems he saw most, what fixed them, and what he&rsquo;d be doing on a cherry block right now, before harvest. Questions taken live. Everyone who registers gets the recording.</p>
+          <p>Back in July you grabbed the Cherry Nutrition Playbook. Andrew Smith &mdash; a cherry grower himself, and the one who wrote most of it &mdash; is putting an hour aside online on [date] for the questions that matter at this point in the season.</p>
+          <p>It isn&rsquo;t a lecture. Andrew takes five questions in the first 25 minutes, things like <em>what is still up for grabs before harvest</em> and <em>how do I know calcium is reaching the fruit</em>. Then the floor opens: a few growers share what they&rsquo;re seeing in their own blocks, and you can put yours to him. Tell us your question when you register and we&rsquo;ll make sure it gets asked. Everyone who registers gets the recording.</p>
           <p><em>[Save your spot &rarr;]</em></p>
-          <p>Stay to the end: there&rsquo;s something on us for everyone in the room, and it&rsquo;s only for the people who are. Registrations close Friday 10 October.</p>
+          <p>Stay to the end: there&rsquo;s something on us for everyone in the room, and it&rsquo;s only for the people who are. Registrations close [the Friday before].</p>
           <p>Andrew and the Hybrid-Ag horticulture team<br>(03) 5722 7555</p>
-          <p class="draft__note">One version for growers and advisers. <strong>Excluded:</strong> Matt Batinich and Vince Blefari, now clients. Links to a short registration form (name, orchard or business, region) so the SMS receipt and the recording can follow.</p>
+          <p class="draft__note">One version for growers and advisers. <strong>Excluded:</strong> Matt Batinich and Vince Blefari, now clients. Links to a short registration form (name, orchard or business, region, the question they want answered) so the SMS receipt and the recording can follow, and the questions feed the Q&amp;A.</p>
         </div>
       </section>
 
@@ -688,7 +763,7 @@
           <div class="fact">
             <h3>The deadline</h3>
             <ul>
-              <li><strong>Friday 10 October.</strong> Wording on the calls and in the emails: <em>&ldquo;I&rsquo;m holding meeting spots until Friday 10 October&rdquo;</em> / <em>&ldquo;Registrations close Friday 10 October&rdquo;</em>. A date, not a countdown.</li>
+              <li><strong>Friday 10 October for Josh&rsquo;s meeting spots; the Friday before the session for Cherry registrations.</strong> Wording on the calls and in the emails: <em>&ldquo;I&rsquo;m holding meeting spots until Friday 10 October&rdquo;</em> / <em>&ldquo;Registrations close Friday [date]&rdquo;</em>. A date, not a countdown.</li>
               <li>It is real: bloom to fruit set is an eight-week window and the picture has to be clear while it can still change this season&rsquo;s decisions. Say so if asked, and hold it.</li>
               <li>The Cherry invitation promises the offer but never spells it out. The two held-back tools are never mentioned in writing.</li>
             </ul>
@@ -717,11 +792,11 @@
             <h3>Who does what</h3>
             <ul>
               <li><strong>Josh</strong> &rarr; calls every Apple lead, warm four first, and each new one as it lands; decides which cards to lead with and keeps a note of what works and what doesn&rsquo;t; the score, the next step, the held-back tools when needed, and the program with Chelsea&rsquo;s sign-off</li>
-              <li><strong>Andrew</strong> &rarr; the Cherry session, the offer at the close, the held-back tools when needed, the read-backs on his leads</li>
+              <li><strong>Andrew</strong> &rarr; his five questions and the growers to invite, the Cherry session, the offer at the close, the held-back tools when needed, the read-backs on his leads</li>
               <li><strong>Jamie</strong> &rarr; the CRM review of July&rsquo;s Cherry leads and any re-flagging; quotes; the sounding board before a testing-investment match is offered</li>
               <li><strong>Pia</strong> &rarr; the missed-call email and the Cherry invitation, the booking page in Odoo Appointments, SMS receipts, session setup and recording, the lead sheet</li>
               <li><strong>Agronomic support</strong> &rarr; requesting lab data with the grower&rsquo;s OK, cleaning it and building the trends for the read-back</li>
-              <li><strong>Nathan</strong> &rarr; Andrew&rsquo;s yes, the 41 into the lead sheet with phone numbers for Josh, the round&rsquo;s numbers to Amos at month end</li>
+              <li><strong>Nathan</strong> &rarr; the draft questions to Andrew and his date, the 41 into the lead sheet with phone numbers for Josh, the round&rsquo;s numbers to Amos at month end</li>
               <li><strong>Chelsea</strong> &rarr; escalations only this spring</li>
             </ul>
           </div>
