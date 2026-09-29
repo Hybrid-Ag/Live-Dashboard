@@ -27,6 +27,7 @@
       .fact h3 { margin: 0 0 10px; font-family: "Alternate Gothic", "Oswald", sans-serif; font-size: 20px; letter-spacing: .5px; text-transform: uppercase; }
       .fact ul { margin: 0; padding-left: 18px; font-size: 13.5px; line-height: 1.6; }
       .fact li { margin-bottom: 4px; }
+      .fact--now li { margin-bottom: 10px; }
       .decision { border-left: 4px solid #dc6800; background: #fff6ee; padding: 14px 18px; border-radius: 0 4px 4px 0; font-size: 14px; line-height: 1.6; }
       .stat-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-bottom: 24px; }
       .stat { border: 1px solid #d0d1ce; border-radius: 4px; background: #fff; padding: 16px 18px; }
@@ -78,6 +79,9 @@
       .draftbar { margin-top: 18px; padding: 14px 18px; border: 1.5px dashed #e0a468; border-radius: 4px; background: #fff6ee; font-size: 14px; line-height: 1.6; }
       .plays.plays--one, .facts.facts--one { grid-template-columns: minmax(0, 920px); }
       .facts.facts--wide { grid-template-columns: minmax(0, 1fr); }
+      .facts.facts--three { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+      .fact--now { border-top: 4px solid #018d8a; }
+      .fact--now .when { display: block; font-size: 11px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: #016e6c; }
       .facts--wide .fact ul { columns: 2; column-gap: 48px; } .facts--wide .fact li { break-inside: avoid; margin-bottom: 8px; }
       .outline { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
       .qbank { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: start; }
@@ -103,6 +107,7 @@
         .qgroup { padding-left: 16px; padding-right: 16px; }
         .leadnums { grid-template-columns: minmax(0, 1fr); }
         .facts--wide .fact ul { columns: 1; }
+        .facts.facts--three { grid-template-columns: minmax(0, 1fr); }
         .leadnum h3 span { display: block; margin: 4px 0 0; }
         .inshort, .outline, .stat-row, .tools, .plays, .plays.plays--one, .hand, .loop, .future, .facts, .facts.facts--one, .ad-grid { grid-template-columns: minmax(0, 1fr); }
         .page .concept { padding: 28px 0 30px; } .page .concept--tight { padding-top: 22px; } .page .concept__heading { margin-bottom: 16px; gap: 10px; }
@@ -331,8 +336,9 @@
           <div class="fact">
             <h3>Dates</h3>
             <ul>
-              <li><strong>29 September</strong> &middot; Apple campaign closes</li>
-              <li><strong>Now</strong> &middot; Josh&rsquo;s calls, warm five first, from the Enquiries list</li>
+              <li><strong>Tuesday 29 September</strong> &middot; Apple campaign closes; Josh and Andrew briefed by phone, this page emailed to both</li>
+              <li><strong>Wednesday 30 September</strong> &middot; Josh starts his calls, warm five first, from the Enquiries list</li>
+              <li><strong>By Friday 2 October</strong> &middot; questions and session details firmed up with Andrew; mid next week if he is flat out</li>
               <li><strong>Friday 10 October</strong> &middot; Josh&rsquo;s meeting spots held until</li>
               <li><strong>Week of 13 or 20 October</strong> &middot; Andrew&rsquo;s session, an evening, 7pm pencilled in; Andrew confirms the day and time; registrations close the Friday before</li>
               <li><strong>Month end</strong> &middot; the round&rsquo;s numbers to Amos</li>
@@ -528,7 +534,7 @@ Hybrid-Ag &middot; (03) 5722 7555</pre>
           <p class="chapter__sub">An email, then an hour online with Andrew and a few growers: questions first, slides last, and an offer at the end for the people who show up.</p>
           <div class="chapter__owner"><span class="av">AS</span><span>Andrew Smith</span></div>
         </header>
-        <div class="draftbar"><strong>Andrew is in. Format agreed on the call, 29 September.</strong> About 25 minutes planned around the questions cherry growers need answered at this stage of the season, then open Q&amp;A, with a few growers invited to get the room talking. <strong>The questions below are drafts:</strong> Andrew keeps, swaps or rewrites them. An evening session inside the next two to three weeks: 7pm is pencilled in, and Andrew confirms the day and the best time.</div>
+        <div class="draftbar"><strong>Andrew is in. Format agreed on the call, 29 September.</strong> About 25 minutes planned around the questions cherry growers need answered at this stage of the season, then open Q&amp;A, with a few growers invited to get the room talking. <strong>The questions below are drafts:</strong> Andrew keeps, swaps or rewrites them. An evening session inside the next two to three weeks: 7pm is pencilled in, and Andrew confirms the day and the best time. The aim is to have the questions and the session details firm by Friday 2 October, or mid next week if Andrew is flat out.</div>
 
       <section class="concept" aria-labelledby="cherry-flow-title">
         <div class="concept__heading">
@@ -675,7 +681,7 @@ Cherry grower, Smith&rsquo;s Fruit &middot; Hybrid-Ag horticulture team</pre>
             </ol>
           </div>
           <div class="outline__col">
-            <h3>Still to settle with Andrew</h3>
+            <h3>Still to settle with Andrew, this week or next</h3>
             <ul>
               <li>Which five of the ten questions below, and any he would swap in</li>
               <li><strong>The day and the final start time.</strong> Week of 13 or 20 October; 7pm is the placeholder until he confirms</li>
@@ -799,9 +805,17 @@ Cherry grower, Smith&rsquo;s Fruit &middot; Hybrid-Ag horticulture team</pre>
           <div>
             <h2 id="apple-cadence-title">Deadline and follow-up</h2>
           </div>
-          <p class="concept__summary">A date on both offers, said plainly, and a follow-up rhythm that keeps going until the grower buys or asks us to stop.</p>
+          <p class="concept__summary">Where it stands this week, a date on both offers, said plainly, and a follow-up rhythm that keeps going until the grower buys or asks us to stop.</p>
         </div>
-        <div class="facts">
+        <div class="facts facts--three">
+          <div class="fact fact--now">
+            <h3>This week</h3>
+            <ul>
+              <li><span class="when">Tuesday 29 September</span>Nathan phoned Josh to run him through the play and set expectations, and phoned Andrew to run the webinar past him. This page goes to both by email the same day.</li>
+              <li><span class="when">Wednesday 30 September</span>Josh starts his calls, working from the Enquiries list.</li>
+              <li><span class="when">By Friday 2 October, or mid next week</span>Nathan and Andrew sit down when Andrew is in the office to firm up the webinar: his five questions, the day, the start time and the growers to invite. End of this week if he can, mid next week if he is flat out.</li>
+            </ul>
+          </div>
           <div class="fact">
             <h3>The deadline</h3>
             <ul>
