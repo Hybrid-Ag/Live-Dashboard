@@ -38,21 +38,43 @@
       .offer h3 { margin: 0 0 10px; font-family: "Alternate Gothic", "Oswald", sans-serif; font-size: 20px; letter-spacing: .4px; text-transform: uppercase; line-height: 1.15; }
       .offer p { margin: 0 0 8px; }
       .decision a { color: inherit; }
-      .flowx { position: relative; display: grid; grid-template-columns: 130px minmax(0, 1fr) 250px; column-gap: 28px; row-gap: 56px; padding: 44px 40px 46px; border-radius: 8px; background: radial-gradient(1200px 500px at 20% -10%, rgba(1,141,138,.22), transparent 60%), radial-gradient(900px 500px at 100% 110%, rgba(138,79,125,.20), transparent 60%), #0f1c1b; color: #f4f1ea; overflow: hidden; }
+      .note a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+      article.offer.offer--apple { border-top-color: #018d8a; } article.offer.offer--cherry { border-top-color: #dc6800; } article.offer.offer--excl { border-top-color: #8a4f7d; }
+      .fx--held .fx__owner { border-top-color: rgba(244,241,234,.18); color: rgba(244,241,234,.7); } .fx--held .fx__owner b { color: #f4f1ea; }
+      .fx--held .av { background: #f4f1ea; color: #0f1c1b; }
+      .plays { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: start; }
+      .plays .offer h3 { font-size: 28px; }
+      .hand { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; align-items: start; }
+      .hand__group { display: grid; gap: 12px; align-content: start; }
+      .hand__label { margin: 0 0 2px; display: flex; align-items: center; gap: 10px; font-family: "Alternate Gothic", "Oswald", "Arial Narrow", sans-serif; font-size: 18px; letter-spacing: .6px; text-transform: uppercase; }
+      .hand__label span { flex: none; width: 26px; height: 26px; border-radius: 50%; background: #0f1c1b; color: #f4f1ea; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; }
+      .card { border: 1px solid #d0d1ce; border-left: 4px solid #d0d1ce; border-radius: 4px; background: #fff; padding: 14px 16px; font-size: 13px; line-height: 1.55; }
+      .card h3 { margin: 0 0 6px; font-family: "Alternate Gothic", "Oswald", "Arial Narrow", sans-serif; font-size: 18px; letter-spacing: .4px; text-transform: uppercase; line-height: 1.15; }
+      .card p { margin: 0; color: #4a443d; }
+      .card--lead { border-left-color: #018d8a; }
+      .card--held { border-style: dashed; border-left: 4px solid #b9b1a5; background: #fbf9f5; }
+      @media (max-width: 1100px) { .hand { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+      .flowx { position: relative; display: grid; grid-auto-flow: row; grid-template-columns: 130px minmax(0, 1fr) 250px; column-gap: 28px; row-gap: 56px; padding: 44px 40px 46px; border-radius: 8px; background: radial-gradient(1200px 500px at 20% -10%, rgba(1,141,138,.22), transparent 60%), radial-gradient(900px 500px at 100% 110%, rgba(138,79,125,.20), transparent 60%), #0f1c1b; color: #f4f1ea; overflow: hidden; }
       .flowx::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: linear-gradient(90deg, #018d8a 0 33.333%, #dc6800 33.333% 66.666%, #8a4f7d 66.666% 100%); }
       .flowx__lines { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: visible; }
       .flowx__lines path { fill: none; stroke: rgba(244,241,234,.55); stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
       .flowx__lines polygon { fill: rgba(244,241,234,.8); }
       .flowx__label { grid-column: 1; align-self: start; padding-top: 6px; font-family: "Alternate Gothic", "Oswald", "Arial Narrow", sans-serif; font-size: 19px; letter-spacing: 1px; text-transform: uppercase; line-height: 1.1; color: rgba(244,241,234,.92); }
       .flowx__label span { display: block; font-size: 46px; line-height: .9; letter-spacing: 0; color: transparent; -webkit-text-stroke: 1.25px rgba(244,241,234,.45); margin-bottom: 8px; }
-      .flowx__label--1, .flowx__nodes--1 { grid-row: 1; } .flowx__label--2, .flowx__nodes--2 { grid-row: 2; }
-      .flowx__label--3, .flowx__nodes--3 { grid-row: 3; } .flowx__label--4, .flowx__nodes--4 { grid-row: 4; }
       .flowx__nodes { grid-column: 2; display: grid; gap: 28px; align-items: stretch; }
-      .flowx__nodes--1, .flowx__nodes--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .flowx__nodes--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .flowx__nodes--one { grid-template-columns: minmax(0, 620px); justify-content: center; }
+      .flowx__nodes--four { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
+      .flowx__nodes--four .fx h3 { font-size: 20px; }
+      .flowx--solo { grid-template-columns: 130px minmax(0, 1fr); }
+      .flowx + .note + .flowx { margin-top: 34px; }
+      .flowx__title { grid-column: 1 / -1; position: relative; z-index: 1; display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px; padding-bottom: 22px; margin-bottom: -22px; border-bottom: 1px solid rgba(244,241,234,.14); }
+      .flowx__title h3 { margin: 0; font-family: "Alternate Gothic", "Oswald", "Arial Narrow", sans-serif; font-size: 34px; letter-spacing: .5px; text-transform: uppercase; line-height: 1; color: #f4f1ea; }
+      .flowx__title p { margin: 0; flex-basis: 100%; font-size: 13.5px; color: rgba(244,241,234,.72); }
+      .flowx__title .chip { align-self: center; }
       .flowx__nodes--3 { grid-template-columns: minmax(0, 1fr); row-gap: 44px; }
       .flowx__nodes--3 > .fx--excl { justify-self: center; width: min(100%, 560px); }
       .flowx__trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
-      .flowx__nodes--4 { grid-template-columns: minmax(0, 620px); justify-content: center; }
       .fx { position: relative; z-index: 1; display: flex; flex-direction: column; margin: 0; padding: 18px 20px 16px; border-radius: 6px; background: #fff; color: #1a1714; font-size: 13px; line-height: 1.55; box-shadow: 0 1px 0 rgba(255,255,255,.06), 0 18px 40px rgba(0,0,0,.35); }
       .fx__top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 10px; margin-bottom: 10px; }
       .fx h3 { margin: 0 0 8px; font-family: "Alternate Gothic", "Oswald", "Arial Narrow", sans-serif; font-size: 25px; letter-spacing: .4px; text-transform: uppercase; line-height: 1.05; }
@@ -64,7 +86,7 @@
       .chip { display: inline-block; padding: 3px 9px; border-radius: 3px; font-size: 10.5px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; }
       .chip--apple { background: #e3f3f2; color: #016e6c; } .chip--cherry { background: #fdeede; color: #a94f00; } .chip--both { background: #efe9e0; color: #5a5148; }
       .chip--ghost { background: transparent; color: rgba(244,241,234,.75); border: 1px solid rgba(244,241,234,.35); }
-      .fx--side { grid-column: 3; grid-row: 1 / span 2; align-self: start; background: rgba(255,255,255,.04); color: #f4f1ea; border: 1.5px dashed rgba(244,241,234,.38); box-shadow: none; }
+      .fx--side { grid-column: 3; grid-row: 2 / span 2; align-self: start; background: rgba(255,255,255,.04); color: #f4f1ea; border: 1.5px dashed rgba(244,241,234,.38); box-shadow: none; }
       .fx--side h3 { font-size: 22px; } .fx--side p { color: rgba(244,241,234,.78); }
       .fx--side .fx__owner { border-top-color: rgba(244,241,234,.18); color: rgba(244,241,234,.7); } .fx--side .fx__owner b { color: #f4f1ea; }
       .fx--side .av { background: #f4f1ea; color: #0f1c1b; }
@@ -83,12 +105,14 @@
       .fut h3 { margin: 0 0 10px; font-family: "Alternate Gothic", "Oswald", "Arial Narrow", sans-serif; font-size: 20px; letter-spacing: .4px; text-transform: uppercase; line-height: 1.15; }
       .fut p { margin: 0 0 8px; } .fut p:last-child { margin: 0; }
       @media (prefers-reduced-motion: no-preference) { .flowx__lines path.draw { transition: stroke-dashoffset .9s ease; } }
-      @media (max-width: 1100px) { .flowx { grid-template-columns: 110px minmax(0, 1fr); } .fx--side { grid-column: 2; grid-row: auto; } .flowx__label--1, .flowx__nodes--1, .flowx__label--2, .flowx__nodes--2, .flowx__label--3, .flowx__nodes--3, .flowx__label--4, .flowx__nodes--4 { grid-row: auto; } .flowx__lines { display: none; } }
+      @media (max-width: 1100px) { .flowx, .flowx--solo { grid-template-columns: 110px minmax(0, 1fr); } .fx--side { grid-column: 2; grid-row: auto; } .flowx__nodes--four { grid-template-columns: repeat(2, minmax(0, 1fr)); } .flowx__lines { display: none; } }
       @media (max-width: 900px) {
-        .flowx { grid-template-columns: minmax(0, 1fr); padding: 30px 18px 28px; row-gap: 18px; }
+        .flowx, .flowx--solo { grid-template-columns: minmax(0, 1fr); padding: 30px 18px 28px; row-gap: 18px; }
         .flowx__label, .flowx__nodes, .fx--side { grid-column: 1; }
         .flowx__label { display: flex; align-items: baseline; gap: 10px; margin-top: 14px; } .flowx__label span { font-size: 30px; margin: 0; }
-        .flowx__nodes--1, .flowx__nodes--2, .flowx__trio { grid-template-columns: minmax(0, 1fr); gap: 16px; } .flowx__nodes--3 { row-gap: 16px; }
+        .flowx__nodes--two, .flowx__nodes--four, .flowx__trio { grid-template-columns: minmax(0, 1fr); gap: 16px; } .flowx__nodes--3 { row-gap: 16px; }
+        .flowx__title { margin-bottom: 0; padding-bottom: 14px; } .flowx__title h3 { font-size: 27px; }
+        .plays, .hand { grid-template-columns: minmax(0, 1fr); }
         .future { grid-template-columns: minmax(0, 1fr); }
       }
       .big__who { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 4px; }
@@ -160,26 +184,87 @@
       <section class="concept" aria-labelledby="apple-flow-title">
         <div class="concept__heading">
           <div>
-            <h2 id="apple-flow-title">The play at a glance</h2>
+            <h2 id="apple-flow-title">The plays at a glance</h2>
           </div>
-          <p class="concept__summary">How every lead is handled, from first contact to first order. Warm leads get a call from Josh straight away; everyone else gets the email. Two conversations, one exclusive offer for the people who show up, one place it all leads.</p>
+          <p class="concept__summary">Two lists, two plays. Josh phones every Apple lead and works out on the call which card gets them to a next step. The Cherry leads get an email inviting them to Andrew&rsquo;s session, with an offer at the end for the people who show up.</p>
         </div>
-        <div class="flowx" id="flow">
-          <svg class="flowx__lines" aria-hidden="true"></svg>
 
-          <div class="flowx__label flowx__label--1"><span>01</span>First contact</div>
-          <div class="flowx__nodes flowx__nodes--1">
+        <div class="flowx flowx--solo" data-edges="[[&quot;call&quot;, &quot;talk&quot;, 0.5, 0.36], [&quot;miss&quot;, &quot;talk&quot;, 0.5, 0.64, 1], [&quot;talk&quot;, &quot;meet&quot;, 0.2, 0.5], [&quot;talk&quot;, &quot;data&quot;, 0.4, 0.5], [&quot;talk&quot;, &quot;test&quot;, 0.6, 0.5, 1], [&quot;talk&quot;, &quot;match&quot;, 0.8, 0.5, 1], [&quot;meet&quot;, &quot;end&quot;, 0.5, 0.2], [&quot;data&quot;, &quot;end&quot;, 0.5, 0.4], [&quot;test&quot;, &quot;end&quot;, 0.5, 0.6, 1], [&quot;match&quot;, &quot;end&quot;, 0.5, 0.8, 1]]">
+          <svg class="flowx__lines" aria-hidden="true"></svg>
+          <div class="flowx__title"><span class="chip chip--apple">Play 1 &middot; Apple Playbook leads</span><h3>Josh calls every lead</h3><p>41 leads by day three, more landing until the campaign closes on 29 September.</p></div>
+
+          <div class="flowx__label"><span>01</span>First contact</div>
+          <div class="flowx__nodes flowx__nodes--two">
             <article class="fx" data-n="call">
-              <div class="fx__top"><span class="chip chip--apple">Apple &middot; 4 warm leads</span><span class="pill pill--go">Now</span></div>
-              <h3>Josh calls straight away</h3>
-              <p>Anyone who asked for a chat, now or later this season, hears from Josh within the day. If later suits them better he books it in. Same as we did with the Cherry leads in July.</p>
+              <div class="fx__top"><span class="chip chip--apple">Every Apple lead</span><span class="pill pill--go">Now</span></div>
+              <h3>Josh picks up the phone</h3>
+              <p>Every lead gets a call, the four who asked for a chat first. No email before it: a call gets more people to a next step than an invitation does.</p>
               <div class="fx__owner"><span class="av">JR</span><span><b>Josh Richardson</b></span></div>
             </article>
+            <article class="fx fx--held" data-n="miss">
+              <div class="fx__top"><span class="chip chip--held">If he can&rsquo;t reach them</span></div>
+              <h3>Missed-call email</h3>
+              <p>After two tries, a short email from Josh with a pick-a-time link, so they can lock in fifteen minutes when it suits them.</p>
+              <div class="fx__owner"><span class="av">PO</span><span><b>Pia Ong</b> &middot; Odoo Appointments</span></div>
+            </article>
+          </div>
+
+          <div class="flowx__label"><span>02</span>The call</div>
+          <div class="flowx__nodes flowx__nodes--one">
+            <article class="fx" data-n="talk">
+              <div class="fx__top"><span class="chip chip--apple">Fifteen minutes</span><span class="pill pill--go">Ready to run</span></div>
+              <h3>What&rsquo;s going on in the orchard?</h3>
+              <p>Whatever is making them scratch their head: a block that under-delivered, a result to interpret, a constraint they keep hitting. Josh takes the out-of-ten score, listens, and chooses the card that fits.</p>
+              <div class="fx__owner"><span class="av">JR</span><span><b>Josh Richardson</b> &middot; Chelsea for the technical questions</span></div>
+            </article>
+          </div>
+
+          <div class="flowx__label"><span>03</span>Cards to play</div>
+          <div class="flowx__nodes flowx__nodes--four">
+            <article class="fx fx--tool" data-n="meet">
+              <div class="fx__top"><span class="chip chip--excl">Next step</span></div>
+              <h3>A second meeting on their block data</h3>
+              <p>A longer sit-down, booked before the call ends, with one block&rsquo;s results on the table.</p>
+            </article>
+            <article class="fx fx--tool" data-n="data">
+              <div class="fx__top"><span class="chip chip--excl">Next step</span></div>
+              <h3>Data clean-up and trends</h3>
+              <p>We gather their lab results and paperwork, clean it up and chart where the orchard is heading.</p>
+            </article>
+            <article class="fx fx--held" data-n="test">
+              <div class="fx__top"><span class="chip chip--held">Held back</span></div>
+              <h3>Free soil test or DSA</h3>
+              <p>Only for an objection, or when no next step will land.</p>
+            </article>
+            <article class="fx fx--held" data-n="match">
+              <div class="fx__top"><span class="chip chip--held">Last resort</span></div>
+              <h3>We match your testing investment</h3>
+              <p>Large prospects on the fence. Never offered early.</p>
+            </article>
+          </div>
+
+          <div class="flowx__label"><span>04</span>The outcome</div>
+          <div class="flowx__nodes flowx__nodes--one">
+            <article class="fx fx--end" data-n="end">
+              <h3>Block program and first order</h3>
+              <p>The data becomes a program, the program becomes a quote. The out-of-ten score is revisited after the season, and the success story feeds the next campaign.</p>
+              <div class="fx__owner"><span class="av">JR</span><span class="av">JG</span><span><b>Josh</b> &middot; Jamie on the quote</span></div>
+            </article>
+          </div>
+        </div>
+        <p class="note">The four cards shown are the main ones. Everything Josh has to work with is laid out under <a href="#apple-cards-title">Josh&rsquo;s cards</a>. He keeps a note of what works and what doesn&rsquo;t on every call.</p>
+
+        <div class="flowx flowx--side" data-edges="[[&quot;email&quot;, &quot;session&quot;, 0.5, 0.5], [&quot;session&quot;, &quot;excl&quot;, 0.5, 0.5], [&quot;excl&quot;, &quot;data&quot;, 0.25, 0.5], [&quot;excl&quot;, &quot;test&quot;, 0.5, 0.5, 1], [&quot;excl&quot;, &quot;match&quot;, 0.75, 0.5, 1], [&quot;data&quot;, &quot;end&quot;, 0.5, 0.25], [&quot;test&quot;, &quot;end&quot;, 0.5, 0.5, 1], [&quot;match&quot;, &quot;end&quot;, 0.5, 0.75, 1]]">
+          <svg class="flowx__lines" aria-hidden="true"></svg>
+          <div class="flowx__title"><span class="chip chip--cherry">Play 2 &middot; Cherry Playbook leads</span><h3>The email, then Andrew&rsquo;s session</h3><p>75 leads from July&rsquo;s campaign, one email since. Waiting on Andrew&rsquo;s yes and a date.</p></div>
+
+          <div class="flowx__label"><span>01</span>First contact</div>
+          <div class="flowx__nodes flowx__nodes--one">
             <article class="fx" data-n="email">
-              <div class="fx__top"><span class="chip chip--both">Everyone else</span><span class="pill pill--go">Apple sends now</span></div>
-              <h3>The email</h3>
-              <p>Apple leads are invited to lock in a time with Josh. Cherry leads are invited to Andrew&rsquo;s session. Both promise an offer at the end that is only for the people who show up.</p>
-              <div class="fx__owner"><span class="av">PO</span><span><b>Pia Ong</b> &middot; Cherry sends once Andrew confirms</span></div>
+              <div class="fx__top"><span class="chip chip--cherry">All 75 Cherry leads</span><span class="pill pill--wait">Once Andrew confirms</span></div>
+              <h3>The invitation</h3>
+              <p>An email inviting them to an hour online with Andrew, promising an offer at the end that is only for the people in the room.</p>
+              <div class="fx__owner"><span class="av">PO</span><span><b>Pia Ong</b></span></div>
             </article>
           </div>
           <aside class="fx fx--side" data-n="crm">
@@ -189,57 +274,51 @@
             <div class="fx__owner"><span class="av">JG</span><span><b>Jamie Granger</b></span></div>
           </aside>
 
-          <div class="flowx__label flowx__label--2"><span>02</span>The conversation</div>
-          <div class="flowx__nodes flowx__nodes--2">
-            <article class="fx" data-n="chat">
-              <div class="fx__top"><span class="chip chip--apple">Apple leads</span><span class="pill pill--go">Ready to run</span></div>
-              <h3>Lock in a time with Josh</h3>
-              <p>Fifteen minutes on whatever is making them scratch their head: a block that under-delivered, a result to interpret, a constraint they keep hitting. What&rsquo;s possible, and what the next step should be.</p>
-              <div class="fx__owner"><span class="av">JR</span><span><b>Josh Richardson</b> &middot; pick-a-time link</span></div>
-            </article>
+          <div class="flowx__label"><span>02</span>The conversation</div>
+          <div class="flowx__nodes flowx__nodes--one">
             <article class="fx" data-n="session">
-              <div class="fx__top"><span class="chip chip--cherry">Cherry leads</span><span class="pill pill--wait">Awaiting Andrew&rsquo;s yes</span></div>
+              <div class="fx__top"><span class="chip chip--cherry">One hour online</span><span class="pill pill--wait">Awaiting Andrew&rsquo;s yes</span></div>
               <h3>Andrew&rsquo;s online session</h3>
-              <p>One hour with Andrew Smith, cherry grower and the team&rsquo;s cherry lead: what we saw this season, what fixed it, what he&rsquo;d be doing now. Questions live, recorded, one session for everyone.</p>
+              <p>Andrew Smith, cherry grower and the team&rsquo;s cherry lead: what we saw this season, what fixed it, what he&rsquo;d be doing now. Questions live, recorded, one session for everyone.</p>
               <div class="fx__owner"><span class="av">AS</span><span><b>Andrew Smith</b></span></div>
             </article>
           </div>
 
-          <div class="flowx__label flowx__label--3"><span>03</span>The exclusive offer</div>
+          <div class="flowx__label"><span>03</span>The exclusive offer</div>
           <div class="flowx__nodes flowx__nodes--3">
             <article class="fx fx--excl" data-n="excl">
               <h3>Only for the people who show up</h3>
-              <p>Promised in the email, never spelled out. Made by Josh or Andrew in the last minutes of the call or the session, to the people still there.</p>
+              <p>Promised in the email, never spelled out. Made by Andrew in the last minutes of the session, to the people still there.</p>
             </article>
             <div class="flowx__trio">
               <article class="fx fx--tool" data-n="data">
                 <div class="fx__top"><span class="chip chip--excl">Everyone who shows up</span></div>
                 <h3>Data clean-up and trends</h3>
-                <p>We gather their results from every lab and whatever paperwork they hold, clean it up and chart the trends, so both sides see where the orchard is heading.</p>
+                <p>We gather their results from every lab and whatever paperwork they hold, clean it up and chart the trends.</p>
               </article>
               <article class="fx fx--held" data-n="test">
                 <div class="fx__top"><span class="chip chip--held">Held back</span></div>
                 <h3>Free soil test or DSA</h3>
-                <p>Only if there is an objection or the next step won&rsquo;t land. One test to show what our reports give them.</p>
+                <p>Only if there is an objection or the next step won&rsquo;t land.</p>
               </article>
               <article class="fx fx--held" data-n="match">
                 <div class="fx__top"><span class="chip chip--held">Last resort</span></div>
                 <h3>We match your testing investment</h3>
-                <p>Reserved for large prospects who are on the fence about going further. Never offered early.</p>
+                <p>Large prospects on the fence. Never offered early.</p>
               </article>
             </div>
           </div>
 
-          <div class="flowx__label flowx__label--4"><span>04</span>The outcome</div>
-          <div class="flowx__nodes flowx__nodes--4">
+          <div class="flowx__label"><span>04</span>The outcome</div>
+          <div class="flowx__nodes flowx__nodes--one">
             <article class="fx fx--end" data-n="end">
               <h3>Block program and first order</h3>
               <p>The trends become a program, the program becomes a quote. The out-of-ten score is revisited after the season, and the success story feeds the next campaign.</p>
-              <div class="fx__owner"><span class="av">JR</span><span class="av">AS</span><span class="av">JG</span><span><b>Josh or Andrew</b> &middot; Jamie on the quote</span></div>
+              <div class="fx__owner"><span class="av">AS</span><span class="av">JG</span><span><b>Andrew</b> &middot; Jamie on the quote</span></div>
             </article>
           </div>
         </div>
-        <p class="note">Spots and registrations held until Friday 10 October. Follow-up continues until the lead buys or opts out.</p>
+        <p class="note">Session registrations held until Friday 10 October. Follow-up on both plays continues until the lead buys or opts out.</p>
       </section>
 
       <section class="concept" aria-labelledby="apple-decision-title">
@@ -247,10 +326,10 @@
           <div>
             <h2 id="apple-decision-title">Where it&rsquo;s at</h2>
           </div>
-          <p class="concept__summary"><strong>Apple:</strong> live since Tuesday 22 September, $200 lifetime, closes Tuesday 29 September; 41 leads at the last read. <strong>Cherry:</strong> the June campaign&rsquo;s 77 leads sit in the lead sheet. Two are now clients; the other 75 have had one email since July and are the re-engagement list. One page, two lists, one follow-up play.</p>
+          <p class="concept__summary"><strong>Apple:</strong> live since Tuesday 22 September, $200 lifetime, closes Tuesday 29 September; 41 leads at the last read, all to be called by Josh. <strong>Cherry:</strong> the June campaign&rsquo;s 77 leads sit in the lead sheet. Two are now clients; the other 75 have had one email since July and are the re-engagement list. One page, two lists, a play for each.</p>
         </div>
         <div class="decision">
-          <strong>Agreed with the Sales Manager on 25 September, refined 29 September.</strong> Warm leads, anyone who asked for a chat now or later this season, get a call from Josh straight away. Everyone else gets the email: <a href="#apple-offers-title">Apple leads lock in a time with Josh, Cherry leads join Andrew Smith&rsquo;s online session</a> (Andrew&rsquo;s yes still to be asked, verbally, by Nathan). Growers and advisers are treated the same this round so we can move fast with more numbers. The <a href="#apple-tools-title">exclusive offer</a> for people who show up is a data clean-up; a free soil or DSA test is held back for objections, and matching their testing investment is the last resort for large prospects, both at Josh&rsquo;s and Andrew&rsquo;s discretion. Jamie reviews July&rsquo;s Cherry leads in the CRM alongside. Spots held until Friday 10 October; follow-up runs until they buy or opt out. What we parked is listed under <a href="#apple-future-title">refinements for future campaigns</a>.
+          <strong>Agreed with the Sales Manager on 25 September, refined with Josh on 29 September.</strong> Two separate plays. <a href="#apple-offers-title">Josh phones every Apple lead</a>, the four who asked for a chat first, and works out on the call which of <a href="#apple-cards-title">his cards</a> gets them to a next step. The Cherry leads get the email and <a href="#apple-offers-title">Andrew Smith&rsquo;s online session</a> (Andrew&rsquo;s yes still to be asked, verbally, by Nathan), with a data clean-up offered at the end to the people who show up. A free soil or DSA test is held back for objections and matching their testing investment is the last resort for large prospects, both at Josh&rsquo;s and Andrew&rsquo;s discretion. Growers and advisers are treated the same this round. Jamie reviews July&rsquo;s Cherry leads in the CRM alongside. Follow-up runs until they buy or opt out. What we parked is under <a href="#apple-future-title">refinements for future campaigns</a>.
         </div>
       </section>
 
@@ -259,14 +338,14 @@
           <div>
             <h2 id="apple-leads-title">The two lists</h2>
           </div>
-          <p class="concept__summary">Apple read from Meta Leads Center on Thursday 24 September, 7am AWST, day three of seven. Cherry from the shared lead sheet. Together: 4 warm Apple leads for Josh to call today, 37 to invite to a chat with him, and 75 Cherry leads to invite to Andrew&rsquo;s session.</p>
+          <p class="concept__summary">Apple read from Meta Leads Center on Thursday 24 September, 7am AWST, day three of seven. Cherry from the shared lead sheet. Together: 41 Apple leads for Josh to call, the four warm ones first, and 75 Cherry leads to invite to Andrew&rsquo;s session.</p>
         </div>
         <p class="offer__tag">Apple Playbook &middot; Josh&rsquo;s list</p>
         <div class="stat-row">
           <div class="stat"><b>41</b><span>leads in 2&frac12; days</span><small>5 on 22 Sep &middot; 27 on 23 Sep &middot; 9 by 7am on 24 Sep &middot; campaign runs to 29 Sep</small></div>
-          <div class="stat stat--hot"><b>1</b><span>asked for a chat</span><small>Iain MacLennan &middot; grower &middot; NSW &middot; Josh calls today</small></div>
-          <div class="stat stat--warm"><b>3</b><span>maybe, later this season</span><small>Phil Shepherd (VIC) &middot; Paul Mason (SA) &middot; Dougal Munro (NSW), all growers &middot; Josh calls today and books a later time if that suits</small></div>
-          <div class="stat"><b>37</b><span>&ldquo;I&rsquo;ll reach out if I need help&rdquo;</span><small>22 growers, 2 managers, 8 advisers, 9 other &middot; VIC 20 &middot; SA 15 &middot; NSW 3 &middot; QLD 3</small></div>
+          <div class="stat stat--hot"><b>1</b><span>asked for a chat</span><small>Iain MacLennan &middot; grower &middot; NSW &middot; first on Josh&rsquo;s list</small></div>
+          <div class="stat stat--warm"><b>3</b><span>maybe, later this season</span><small>Phil Shepherd (VIC) &middot; Paul Mason (SA) &middot; Dougal Munro (NSW), all growers &middot; called next; Josh books a later time if that suits</small></div>
+          <div class="stat"><b>37</b><span>&ldquo;I&rsquo;ll reach out&rdquo; &middot; Josh calls these too</span><small>22 growers, 2 managers, 8 advisers, 9 other &middot; VIC 20 &middot; SA 15 &middot; NSW 3 &middot; QLD 3</small></div>
         </div>
         <p class="offer__tag">Cherry Playbook &middot; Andrew&rsquo;s list</p>
         <div class="stat-row">
@@ -281,55 +360,88 @@
       <section class="concept" aria-labelledby="apple-offers-title">
         <div class="concept__heading">
           <div>
-            <h2 id="apple-offers-title">The three ways in</h2>
+            <h2 id="apple-offers-title">The two plays</h2>
           </div>
-          <p class="concept__summary">A call for the leads who put their hand up, a booked chat for the rest of the Apple list, and a session for the Cherry list. Each ends the same way: with the exclusive offer.</p>
+          <p class="concept__summary">A phone call for the Apple list, because a call gets more people to a next step than an invitation. An email and a session for the Cherry list, because one hour of Andrew reaches all 75 at once.</p>
         </div>
-        <div class="tools">
+        <div class="plays">
           <article class="offer offer--apple">
-            <div class="big__who"><p class="offer__tag">1 &middot; Warm Apple leads &middot; Josh Richardson</p><span class="pill pill--go">Now</span></div>
-            <h3>Josh calls straight away</h3>
-            <p>Four Apple leads ticked a chat on the form: Iain MacLennan asked for one now; Phil Shepherd, Paul Mason and Dougal Munro said later this season. Josh phones all four within the day, and every new one as it lands until the campaign closes.</p>
-            <p>There is no harm in touching base early with the &ldquo;later&rdquo; leads: a short hello, what they&rsquo;re growing, and a time booked for when it suits them. The Cherry leads who ticked the same boxes in July were called the same way.</p>
-            <div class="pc"><p><b>For</b> They raised their hand, so it is the shortest path to a conversation; both of July&rsquo;s &ldquo;yes&rdquo; leads turned into commercial follow-up; Josh has the time. <b>Against</b> &ldquo;Later&rdquo; can mean later, so the call offers a time rather than pushes; Josh is new and needs Chelsea behind him for the technical questions.</p></div>
-          </article>
-          <article class="offer offer--apple">
-            <div class="big__who"><p class="offer__tag">2 &middot; The rest of the Apple list &middot; Josh Richardson</p><span class="pill pill--go">Ready to run</span></div>
-            <h3>Lock in a time with Josh</h3>
-            <p>Fifteen minutes on the phone about whatever is making them scratch their head right now: a block that didn&rsquo;t pack out, a soil or sap result they can&rsquo;t make sense of, a constraint they keep running into. A quick chat to unpack what&rsquo;s possible and what the next step should be.</p>
+            <div class="big__who"><p class="offer__tag">Play 1 &middot; Apple Playbook leads &middot; Josh Richardson</p><span class="pill pill--go">Ready to run</span></div>
+            <h3>Josh calls every lead</h3>
+            <p>All 41, and each new one as it lands until the campaign closes. The four who ticked a chat on the form go first: Iain MacLennan, then Phil Shepherd, Paul Mason and Dougal Munro. There is no harm in touching base early with the &ldquo;later this season&rdquo; leads; Josh books the later time while he has them.</p>
+            <p>The call is fifteen minutes on whatever is making them scratch their head: a block that didn&rsquo;t pack out, a soil or sap result they can&rsquo;t make sense of, a constraint they keep running into. Josh takes the out-of-ten score, finds out what is possible, and plays the card that gets a next step.</p>
             <div class="track">
-              <p><b class="t">Booking</b> A pick-a-time link in the email showing Josh&rsquo;s open 15-minute slots, with a confirmation and a reminder. Odoo Appointments is already installed with website booking and lead creation, so each booking lands in the CRM against the lead. Nothing to buy; Pia sets up the page and Josh&rsquo;s availability.</p>
+              <p><b class="t">No answer</b> Two tries, then a short email from Josh with a pick-a-time link. Odoo Appointments is already installed with website booking and lead creation, so each booking lands in the CRM against the lead.</p>
             </div>
-            <p>Josh opens with the out-of-ten question and writes the score down. The exclusive offer is made in the last two minutes.</p>
-            <div class="pc"><p><b>For</b> A broad invitation gets more yeses than a narrow one; a booked slot is a real commitment; every chat is a qualification and a sales conversation in one; no hard cost. <b>Against</b> Take-up from &ldquo;I&rsquo;ll reach out&rdquo; leads may be a handful, so Josh also phones the growers and managers who don&rsquo;t book; the booking page has to exist before the email sends.</p></div>
+            <div class="pc"><p><b>For</b> Josh has the time and is keen; a call reaches people an email never will; he learns first-hand which cards work, which shapes the next campaign; every conversation is a qualification and a sales conversation in one. <b>Against</b> Forty-plus calls is a real block of time; Josh is new and needs Chelsea behind him for the technical questions; some leads only wanted the Playbook and will say so.</p></div>
           </article>
           <article class="offer offer--cherry">
-            <div class="big__who"><p class="offer__tag">3 &middot; Cherry leads &middot; Andrew Smith</p><span class="pill pill--wait">Awaiting Andrew&rsquo;s yes</span></div>
-            <h3>Andrew&rsquo;s online session</h3>
+            <div class="big__who"><p class="offer__tag">Play 2 &middot; Cherry Playbook leads &middot; Andrew Smith</p><span class="pill pill--wait">Awaiting Andrew&rsquo;s yes</span></div>
+            <h3>The email, then Andrew&rsquo;s session</h3>
             <p><em>What we saw in cherries this season, and what fixed it.</em> Andrew as a cherry grower first and the team&rsquo;s cherry lead second: one hour online, problems to solutions, what he&rsquo;d be doing now before harvest, questions taken live. One session for growers and advisers alike.</p>
-            <p>Recorded; the recording becomes the second email for everyone who registered and didn&rsquo;t show. The exclusive offer is promised in the invite and made in the last five minutes, so the room stays.</p>
+            <p>The invitation goes to the 75 the day after Andrew confirms. It promises an offer at the end that is only for the people in the room, so they turn up and they stay. The session is recorded; the recording becomes the second email for everyone who registered and didn&rsquo;t show.</p>
+            <div class="track">
+              <p><b class="t">At the close</b> Andrew asks the out-of-ten question, then makes the offer: the data clean-up and trends.</p>
+            </div>
             <div class="pc"><p><b>For</b> One hour of Andrew reaches all 75 at once; people who lapsed after one email get a reason to come back; registrations show who is still interested; the recording is reusable. <b>Against</b> Attendance runs 10&ndash;20% of registrations; needs Andrew&rsquo;s buy-in and a date inside three weeks; setup and hosting fall on marketing.</p></div>
           </article>
         </div>
         <div class="aside-note">
           <p class="offer__tag">Alongside the campaign &middot; Jamie Granger</p>
-          <p><strong>Where did July&rsquo;s Cherry leads get to?</strong> The Cherry leads that were called in July and transferred to the CRM are reviewed one by one: where each got to, what outcome was reached, and which have stalled. Stalled ones are re-flagged so the agronomist picks them back up. It sits outside the flow above, and it tells us how well the last round actually converted.</p>
+          <p><strong>Where did July&rsquo;s Cherry leads get to?</strong> The Cherry leads that were called in July and transferred to the CRM are reviewed one by one: where each got to, what outcome was reached, and which have stalled. Stalled ones are re-flagged so the agronomist picks them back up. It sits outside both plays, and it tells us how well the last round actually converted.</p>
         </div>
+      </section>
+
+      <section class="concept" aria-labelledby="apple-cards-title">
+        <div class="concept__heading">
+          <div>
+            <h2 id="apple-cards-title">Josh&rsquo;s cards</h2>
+          </div>
+          <p class="concept__summary">Everything discussed so far that Josh can reach for on a call. He is working out which to lead with, and keeping a note of what works and what doesn&rsquo;t as he goes; this is the full hand, not a script. Andrew has the same cards at the close of his session.</p>
+        </div>
+        <div class="hand">
+          <div class="hand__group">
+            <p class="hand__label"><span>A</span>To open the call</p>
+            <article class="card"><h3>The out-of-ten question</h3><p><em>&ldquo;Out of ten, how did the orchard pack out last season?&rdquo;</em> Growers are cagey about the real number; a score is easy to give, and many offer the figure anyway. Written down either way, with the block and the date.</p></article>
+            <article class="card"><h3>What did you make of the Playbook?</h3><p>Which part they read, Key Levers, The Science or The Playbook itself, tells Josh what they care about and where to take the call.</p></article>
+            <article class="card"><h3>A grower story</h3><p>Vince Blefari: a Cherry Playbook lead in July, two visits, soil and tissue tests, a program now being built. Matt Batinich: came back after years away. Used with their OK to be named.</p></article>
+          </div>
+          <div class="hand__group">
+            <p class="hand__label"><span>B</span>To get a next step</p>
+            <article class="card card--lead"><h3>A second meeting on their block data</h3><p>A longer sit-down, by phone or online, with one block&rsquo;s soil, sap and pack-out figures on the table. Booked before the call ends through the pick-a-time link.</p></article>
+            <article class="card card--lead"><h3>Data clean-up and trends</h3><p>We request their results from every lab they have used, take whatever paperwork they hold, clean it up and chart the trends, so both sides see where the orchard is heading and what would move it. Detail below.</p></article>
+            <article class="card"><h3>The Nutrient Audit the ads promised</h3><p>Every ad caption says &ldquo;ask our horticulture team about a free Nutrient Audit&rdquo;. If a lead raises it, Josh can honour it. What the audit includes still needs agreeing with Jamie.</p></article>
+            <article class="card"><h3>Andrew&rsquo;s online session</h3><p>For the lead who would rather listen before they talk, or who grows cherries as well. An invitation to the session once the date is set.</p></article>
+          </div>
+          <div class="hand__group">
+            <p class="hand__label"><span>C</span>Held back</p>
+            <article class="card card--held"><h3>Free soil test or DSA</h3><p>One test on a block of their choice so they can see what our reports give them. Only when there is an objection, or no next step will land on knowledge and sales craft alone. Never offered first.</p></article>
+            <article class="card card--held"><h3>We&rsquo;ll match your testing investment</h3><p>The last resort. Reserved for genuinely large prospects who are on the fence about going further. If the account isn&rsquo;t big enough to justify it, it stays in the pocket. If in doubt, check with Jamie.</p></article>
+          </div>
+          <div class="hand__group">
+            <p class="hand__label"><span>D</span>To close and keep it moving</p>
+            <article class="card"><h3>The next date</h3><p>Never hang up without one: the second meeting booked, or a time to call back. For the &ldquo;later this season&rdquo; leads, the later date goes in the calendar now.</p></article>
+            <article class="card"><h3>The referral ask</h3><p><em>&ldquo;Know another grower who&rsquo;d want the same? I&rsquo;ll give them a call too.&rdquo;</em> Asked once there is something of value on the table.</p></article>
+            <article class="card"><h3>The hand-off</h3><p>Chelsea for the technical question Josh can&rsquo;t answer. Jamie for a quote, or for an adviser who could become a Certified Partner.</p></article>
+            <article class="card card--lead"><h3>Josh&rsquo;s log</h3><p>After every call: the score, the card he played, whether it landed, and why or why not. Kept against the lead in the lead sheet. What works leads the next round; what doesn&rsquo;t comes off the list.</p></article>
+          </div>
+        </div>
+        <p class="note"><strong>Off the table this round:</strong> orchard visits &ldquo;when we&rsquo;re in the district&rdquo; (dropped as weak), the test credited to a first order (replaced by the investment match), and the guarantee and named program (parked until there is proof).</p>
       </section>
 
       <section class="concept" aria-labelledby="apple-tools-title">
         <div class="concept__heading">
           <div>
-            <h2 id="apple-tools-title">The exclusive offer</h2>
+            <h2 id="apple-tools-title">The three offers in detail</h2>
           </div>
-          <p class="concept__summary">Three tools for Josh and Andrew, in the order they come out. The first is offered to everyone who takes the call or stays to the end of the session. The second and third are held back, and used only when the situation calls for them.</p>
+          <p class="concept__summary">Three tools for Josh and Andrew, in the order they come out. The first is the standard next step: Josh plays it on the call, Andrew makes it to everyone who stays to the end of the session. The second and third are held back, and used only when the situation calls for them.</p>
         </div>
         <div class="tools">
           <article class="offer offer--excl">
-            <div class="big__who"><p class="offer__tag">1 &middot; The offer &middot; everyone who shows up</p><span class="pill pill--go">Standard</span></div>
+            <div class="big__who"><p class="offer__tag">1 &middot; The standard offer</p><span class="pill pill--go">Standard</span></div>
             <h3>Data clean-up and trends</h3>
             <p>Most growers have years of results scattered across labs, inboxes and folders. We request their data from every lab they have used, take whatever paperwork they hold, clean it up and pull it into trends, so they and we have a clearer picture of which way the orchard is heading and which inputs or actions would give the best result from here.</p>
-            <p>Made in the last minutes of the call or the session. It costs us time, not product, and it earns the second conversation.</p>
+            <p>Josh plays it on the call when the conversation earns it; Andrew makes it in the last minutes of the session. It costs us time, not product, and it earns the second conversation.</p>
             <div class="pc"><p><b>For</b> Useful to the grower whether or not they buy; hard for anyone else to match; gives Josh and Andrew the full history before they recommend anything; the read-back is a natural second meeting. <b>Against</b> Time for agronomic support to gather and clean each set; depends on labs releasing results and growers finding their paperwork; needs the grower&rsquo;s written OK to request their data.</p></div>
           </article>
           <article class="offer offer--held">
@@ -348,8 +460,8 @@
           </article>
         </div>
         <div class="aside-note">
-          <p class="offer__tag">How the email sells it</p>
-          <p><strong>Promise it, don&rsquo;t spell it out.</strong> Apple: <em>&ldquo;There&rsquo;s an offer at the end of the chat that we only make to the people who take it.&rdquo;</em> Cherry: <em>&ldquo;Stay to the end &mdash; there&rsquo;s something on us for everyone in the room.&rdquo;</em> The out-of-ten score is taken before the offer is made, so every data clean-up starts with a benchmark against it. Revisit after the program; the before and after is the success story.</p>
+          <p class="offer__tag">How the Cherry invitation sells it</p>
+          <p><strong>Promise it, don&rsquo;t spell it out.</strong> <em>&ldquo;Stay to the end &mdash; there&rsquo;s something on us for everyone in the room.&rdquo;</em> On Josh&rsquo;s calls there is nothing to promise in advance; the offer comes when the conversation has earned it. Either way the out-of-ten score is taken first, so every data clean-up starts with a benchmark against it. Revisit after the program; the before and after is the success story.</p>
         </div>
       </section>
 
@@ -364,15 +476,16 @@
           <div class="fact">
             <h3>The deadline</h3>
             <ul>
-              <li><strong>Friday 10 October.</strong> Wording in the emails and on the calls: <em>&ldquo;We&rsquo;re holding spots until Friday 10 October&rdquo;</em> / <em>&ldquo;Registrations close Friday 10 October&rdquo;</em>. A date, not a countdown.</li>
+              <li><strong>Friday 10 October.</strong> Wording on the calls and in the emails: <em>&ldquo;I&rsquo;m holding meeting spots until Friday 10 October&rdquo;</em> / <em>&ldquo;Registrations close Friday 10 October&rdquo;</em>. A date, not a countdown.</li>
               <li>It is real: bloom to fruit set is an eight-week window and the picture has to be clear while it can still change this season&rsquo;s decisions. Say so if asked, and hold it.</li>
-              <li>The exclusive offer is promised in the email but never spelled out there. The two held-back tools are never mentioned in writing.</li>
+              <li>The Cherry invitation promises the offer but never spells it out. The two held-back tools are never mentioned in writing.</li>
             </ul>
           </div>
           <div class="fact">
             <h3>The rhythm</h3>
             <ul>
-              <li>Email with the offer &rarr; Josh&rsquo;s call or Andrew&rsquo;s invite &rarr; SMS receipt on any booking or registration &rarr; second email with the session recording &rarr; second call at fruit set &rarr; and on, until they buy or opt out</li>
+              <li><strong>Apple:</strong> Josh&rsquo;s call &rarr; a second try &rarr; the missed-call email with a pick-a-time link &rarr; SMS receipt on any booking &rarr; the next meeting &rarr; a call at fruit set &rarr; and on, until they buy or opt out</li>
+              <li><strong>Cherry:</strong> the invitation &rarr; a reminder &rarr; the session &rarr; the recording to everyone who registered &rarr; a call from Andrew or Josh to those who took the offer &rarr; and on</li>
               <li>Five touches over six weeks is the floor, not the ceiling; Cherry&rsquo;s 61 Playbook-only leads got one email and went quiet</li>
               <li>A referral ask on every read-back: <em>&ldquo;know another grower who&rsquo;d want one? We&rsquo;ll test their block too&rdquo;</em></li>
               <li>Every touch logged against the lead in the shared sheet so nobody is chased twice or missed</li>
@@ -389,7 +502,7 @@
           <p class="concept__summary">The offers above are good; the proof behind them is thin. This round runs to fix that. Every prospect who takes the DSA and the program becomes a block story with a number in front and a number behind, and those stories are what the next version of these campaigns is built on.</p>
         </div>
         <div class="loop">
-          <div class="loop__step"><b>1 &middot; Run</b>Josh and Andrew work their lists with the two offers. Uptake recorded per lane: emails sent, bookings and registrations, calls done, data clean-ups taken, held-back tools used and why, programs quoted, orders.</div>
+          <div class="loop__step"><b>1 &middot; Run</b>Josh calls his list and notes what works and what doesn&rsquo;t; Andrew runs his session. Uptake recorded per play: calls made and reached, cards played and which landed, registrations and attendance, data clean-ups taken, held-back tools used and why, programs quoted, orders.</div>
           <div class="loop__step"><b>2 &middot; Record</b>The out-of-ten score before, the cleaned-up data and its trends, the program, and the score after. Photos of the block where the grower is happy to. Consent to be named asked on the read-back, not at the end.</div>
           <div class="loop__step"><b>3 &middot; Retell</b>Each success becomes a testimonial, a block-transformation post and a line in the next Playbook email. The next campaign leads with proof, and the offers can then carry a guarantee.</div>
         </div>
@@ -442,28 +555,28 @@
           <div>
             <h2 id="apple-ladder-title">The route, step by step</h2>
           </div>
-          <p class="concept__summary">The same picture as the top of the page, as a sequence with owners and asks. Josh drives the Apple lane, Andrew the Cherry lane; the lanes merge at the exclusive offer.</p>
+          <p class="concept__summary">The two plays side by side, as a sequence with owners and asks. Different first contact, same destination.</p>
         </div>
         <ol class="ladder">
           <li class="rung">
             <span class="rung__n">1</span>
             <h3>First contact</h3>
-            <div class="lane"><b>Warm Apple leads &middot; Josh</b>A call within the day for anyone who asked for a chat, now or later.</div>
-            <div class="lane"><b>Apple &middot; everyone else</b>The Playbook email: lock in a time with Josh, exclusive offer promised.</div>
+            <div class="lane"><b>Apple &middot; Josh</b>A phone call to every lead, warm four first. Two tries, then the missed-call email with a pick-a-time link.</div>
             <div class="lane lane--cherry"><b>Cherry &middot; Andrew</b>The invitation to Andrew&rsquo;s session, sent the day after he confirms.</div>
-            <small>Owner: Josh / Pia &middot; the ask: pick a time</small>
+            <small>Owner: Josh / Pia &middot; the ask: fifteen minutes, or an hour online</small>
           </li>
           <li class="rung">
             <span class="rung__n">2</span>
             <h3>The conversation</h3>
-            <div class="lane"><b>Apple &middot; Josh</b>The 15-minute chat, booked by link or by Josh phoning the growers and managers who don&rsquo;t book. Out-of-ten score written down.</div>
+            <div class="lane"><b>Apple &middot; Josh</b>The call itself. Out-of-ten score written down; Josh reads which card fits.</div>
             <div class="lane lane--cherry"><b>Cherry &middot; Andrew</b>The online session. Recording to everyone who registered. Andrew asks the out-of-ten question live.</div>
             <small>Owner: Josh / Andrew &middot; the ask: tell us what&rsquo;s going on</small>
           </li>
           <li class="rung">
             <span class="rung__n">3</span>
-            <h3>The exclusive offer</h3>
-            <p class="shared">Made in the last minutes of the chat or the session, only to those still there: the data clean-up and trends. The free soil or DSA test comes out only for an objection; the testing-investment match only for a large prospect on the fence.</p>
+            <h3>The card or the offer</h3>
+            <div class="lane"><b>Apple &middot; Josh</b>A second meeting on their block data, or the data clean-up. Held-back tools only if needed.</div>
+            <div class="lane lane--cherry"><b>Cherry &middot; Andrew</b>The data clean-up, offered at the close to the people still there. Held-back tools only if needed.</div>
             <small>Owner: Josh / Andrew &middot; the ask: let us pull your data together</small>
           </li>
           <li class="rung">
@@ -474,7 +587,7 @@
           </li>
         </ol>
         <div class="ladder-notes">
-          <p><strong>Then rerun it.</strong> At the end of the round, both lanes report the same five numbers: offered, taken, tested, quoted, ordered. That, plus how often the held-back tools were needed and the success stories from the proof loop, decides the next version: better creative, tighter targeting, and a stronger offer with a track record under it.</p>
+          <p><strong>Then rerun it.</strong> At the end of the round, both plays report the same five numbers: contacted, conversations had, next steps taken, quoted, ordered. That, plus how often the held-back tools were needed and the success stories from the proof loop, decides the next version: better creative, tighter targeting, and a stronger offer with a track record under it.</p>
         </div>
       </section>
 
@@ -483,7 +596,7 @@
           <div>
             <h2 id="apple-followup-title">The emails and who does what</h2>
           </div>
-          <p class="concept__summary">Two emails, one per list. The Apple one is drafted in Odoo and needs the rewrite below and the booking link before it sends; the Cherry one waits on Andrew&rsquo;s yes and a date.</p>
+          <p class="concept__summary">Two emails, neither of them the opener for the Apple list. Josh&rsquo;s is the missed-call follow-up; the Cherry invitation waits on Andrew&rsquo;s yes and a date.</p>
         </div>
         <div class="facts">
           <div class="fact">
@@ -491,34 +604,33 @@
             <ul>
               <li><strong>Subject:</strong> Your Apple Nutrition Playbook &middot; <strong>Preview:</strong> Any apple questions? Our team can help</li>
               <li>Thanks for downloading; spring is the time to review testing, tree demand and nutrition &middot; &ldquo;View the Playbook&rdquo; &middot; Chelsea and the team can help, reply or call</li>
-              <li><strong>The gap:</strong> it ends on &ldquo;reply if useful&rdquo; and names Chelsea. It needs one ask (lock in a time with Josh), the booking link, and the date. Rewrite below.</li>
+              <li><strong>What changes:</strong> Josh now phones every lead first, so this becomes the email for the ones he couldn&rsquo;t reach. It names Josh, carries the pick-a-time link, and says he tried to call. Rewrite below.</li>
               <li>Cherry benchmark from July: 57% open, 22% click; the &ldquo;maybe&rdquo; segment 50% and 29%</li>
             </ul>
           </div>
           <div class="fact">
             <h3>Who does what</h3>
             <ul>
-              <li><strong>Josh</strong> &rarr; calls the four warm Apple leads today and each new one as it lands; every booked chat; the score, the offer, the held-back tools when needed, and the program with Chelsea&rsquo;s sign-off</li>
+              <li><strong>Josh</strong> &rarr; calls every Apple lead, warm four first, and each new one as it lands; decides which cards to lead with and keeps a note of what works and what doesn&rsquo;t; the score, the next step, the held-back tools when needed, and the program with Chelsea&rsquo;s sign-off</li>
               <li><strong>Andrew</strong> &rarr; the Cherry session, the offer at the close, the held-back tools when needed, the read-backs on his leads</li>
               <li><strong>Jamie</strong> &rarr; the CRM review of July&rsquo;s Cherry leads and any re-flagging; quotes; the sounding board before a testing-investment match is offered</li>
-              <li><strong>Pia</strong> &rarr; both emails, the booking page in Odoo Appointments, SMS receipts, session setup and recording, the lead sheet</li>
+              <li><strong>Pia</strong> &rarr; the missed-call email and the Cherry invitation, the booking page in Odoo Appointments, SMS receipts, session setup and recording, the lead sheet</li>
               <li><strong>Agronomic support</strong> &rarr; requesting lab data with the grower&rsquo;s OK, cleaning it and building the trends for the read-back</li>
-              <li><strong>Nathan</strong> &rarr; Andrew&rsquo;s yes, the 41 into the lead sheet, the round&rsquo;s numbers to Amos at month end</li>
+              <li><strong>Nathan</strong> &rarr; Andrew&rsquo;s yes, the 41 into the lead sheet with phone numbers for Josh, the round&rsquo;s numbers to Amos at month end</li>
               <li><strong>Chelsea</strong> &rarr; escalations only this spring</li>
             </ul>
           </div>
         </div>
         <div class="draft">
-          <p class="offer__tag">Apple &middot; proposed rewrite of Odoo #87 &middot; sends once the booking page is live</p>
-          <p><strong>Subject:</strong> Your Apple Nutrition Playbook, and 15 minutes with Josh<br><strong>Preview:</strong> Lock in a time to chat &mdash; spots held until Friday 10 October</p>
+          <p class="offer__tag">Apple &middot; missed-call email &middot; sent only after Josh has tried twice</p>
+          <p><strong>Subject:</strong> Sorry I missed you &mdash; Josh from Hybrid-Ag<br><strong>Preview:</strong> Fifteen minutes on whatever&rsquo;s going on in the orchard &middot; pick a time that suits</p>
           <p>Hi [first name],</p>
-          <p>Thanks for grabbing the Apple Nutrition Playbook. It&rsquo;s written for exactly this point in the season: bloom is on, and most of what decides pack-out in March is decided in the next eight weeks.</p>
-          <p>If there&rsquo;s something in the orchard making you scratch your head right now &mdash; a block that didn&rsquo;t pack out the way it should have, a soil or sap result you can&rsquo;t make sense of, a constraint you keep running into &mdash; Josh Richardson, one of our agronomists, has 15 minutes for you. A quick chat to unpack what&rsquo;s possible and what the next step should be. No pitch.</p>
+          <p>I tried to call after you grabbed our Apple Nutrition Playbook. No pitch: I&rsquo;m ringing everyone who downloaded it to hear what&rsquo;s going on in the orchard this spring.</p>
+          <p>If there&rsquo;s something making you scratch your head right now &mdash; a block that didn&rsquo;t pack out the way it should have, a soil or sap result you can&rsquo;t make sense of, a constraint you keep running into &mdash; I&rsquo;ve got fifteen minutes for you. We&rsquo;ll unpack what&rsquo;s possible and what the next step should be.</p>
           <p><em>[Lock in a time with Josh &rarr;]</em></p>
-          <p>There&rsquo;s also an offer at the end of the chat that we only make to the people who take it. We&rsquo;re holding spots until Friday 10 October.</p>
-          <p>If the timing doesn&rsquo;t suit, the Playbook is yours to keep: <em>[View the Playbook &rarr;]</em></p>
-          <p>Josh and the Hybrid-Ag horticulture team<br>(03) 5722 7555</p>
-          <p class="draft__note">One version for growers and advisers. The four leads who asked for a chat don&rsquo;t get this email first; Josh phones them. The data clean-up is never named in the email; Josh makes the offer in the last two minutes of the chat.</p>
+          <p>I&rsquo;m holding spots until Friday 10 October. If the timing doesn&rsquo;t suit, the Playbook is yours to keep: <em>[View the Playbook &rarr;]</em></p>
+          <p>Josh Richardson<br>Hybrid-Ag &middot; (03) 5722 7555</p>
+          <p class="draft__note">Written from Josh, in the first person. No offer is named; Josh plays his cards on the call. One version for growers and advisers.</p>
         </div>
         <div class="draft">
           <p class="offer__tag">Cherry &middot; invitation to Andrew&rsquo;s session &middot; sends once Andrew confirms and the date is set &middot; 75 recipients</p>
@@ -653,62 +765,58 @@
 
     <script>
       (() => {
-        const flow = document.getElementById('flow');
-        if (!flow) return;
-        const svg = flow.querySelector('.flowx__lines');
         const NS = 'http://www.w3.org/2000/svg';
-        // [from, to, exit position along the bottom edge, entry position along the top edge]
-        const edges = [
-          ['call', 'chat', 0.4, 0.4], ['email', 'chat', 0.28, 0.76], ['email', 'session', 0.62, 0.62],
-          ['chat', 'excl', 0.5, 0.3], ['session', 'excl', 0.5, 0.7],
-          ['excl', 'data', 0.25, 0.5], ['excl', 'test', 0.5, 0.5, 1], ['excl', 'match', 0.75, 0.5, 1],
-          ['data', 'end', 0.5, 0.25], ['test', 'end', 0.5, 0.5, 1], ['match', 'end', 0.5, 0.75, 1],
-        ];
         const R = 12, HEAD = 7;
-        let animated = false;
-        const rect = (n) => {
-          const r = flow.querySelector('[data-n="' + n + '"]').getBoundingClientRect(), f = flow.getBoundingClientRect();
-          return { left: r.left - f.left, top: r.top - f.top, bottom: r.bottom - f.top, width: r.width };
-        };
-        const draw = () => {
-          while (svg.firstChild) svg.removeChild(svg.firstChild);
-          if (getComputedStyle(svg).display === 'none') return;
-          edges.forEach(([a, b, out, into, held], i) => {
-            const A = rect(a), B = rect(b);
-            const x1 = A.left + A.width * out, y1 = A.bottom;
-            const x2 = B.left + B.width * into, y2 = B.top - HEAD;
-            const mid = y1 + (B.top - y1) / 2;
-            let d;
-            if (Math.abs(x1 - x2) < 2) d = 'M' + x1 + ' ' + y1 + ' V' + y2;
-            else {
-              const dir = x2 > x1 ? 1 : -1, r = Math.min(R, Math.abs(x2 - x1) / 2, (mid - y1));
-              d = 'M' + x1 + ' ' + y1 + ' V' + (mid - r) + ' Q' + x1 + ' ' + mid + ' ' + (x1 + dir * r) + ' ' + mid
-                + ' H' + (x2 - dir * r) + ' Q' + x2 + ' ' + mid + ' ' + x2 + ' ' + (mid + r) + ' V' + y2;
-            }
-            const path = document.createElementNS(NS, 'path');
-            path.setAttribute('d', d);
-            if (held) path.setAttribute('class', 'held');
-            svg.appendChild(path);
-            const head = document.createElementNS(NS, 'polygon');
-            head.setAttribute('points', (x2 - 5) + ',' + y2 + ' ' + (x2 + 5) + ',' + y2 + ' ' + x2 + ',' + (y2 + HEAD));
-            svg.appendChild(head);
-            if (!held && !animated && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
-              const len = path.getTotalLength();
-              path.style.strokeDasharray = len; path.style.strokeDashoffset = len;
-              head.style.opacity = 0; head.style.transition = 'opacity .3s ease ' + (0.7 + i * 0.06) + 's';
-              requestAnimationFrame(() => requestAnimationFrame(() => {
-                path.classList.add('draw'); path.style.transitionDelay = (i * 0.06) + 's';
-                path.style.strokeDashoffset = 0; head.style.opacity = 1;
-              }));
-            }
-          });
-          animated = true;
-        };
-        draw();
-        window.addEventListener('resize', draw);
-        window.addEventListener('load', draw);
-        if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
-        if (typeof ResizeObserver !== 'undefined') new ResizeObserver(draw).observe(flow);
+        const motion = window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
+        document.querySelectorAll('.flowx').forEach((flow) => {
+          const svg = flow.querySelector('.flowx__lines');
+          // each edge: [from, to, exit position along the bottom edge, entry position along the top edge, held?]
+          const edges = JSON.parse(flow.dataset.edges || '[]');
+          let animated = false;
+          const rect = (n) => {
+            const r = flow.querySelector('[data-n="' + n + '"]').getBoundingClientRect(), f = flow.getBoundingClientRect();
+            return { left: r.left - f.left, top: r.top - f.top, bottom: r.bottom - f.top, width: r.width };
+          };
+          const draw = () => {
+            while (svg.firstChild) svg.removeChild(svg.firstChild);
+            if (getComputedStyle(svg).display === 'none') return;
+            edges.forEach(([a, b, out, into, held], i) => {
+              const A = rect(a), B = rect(b);
+              const x1 = A.left + A.width * out, y1 = A.bottom;
+              const x2 = B.left + B.width * into, y2 = B.top - HEAD;
+              const mid = y1 + (B.top - y1) / 2;
+              let d;
+              if (Math.abs(x1 - x2) < 2) d = 'M' + x1 + ' ' + y1 + ' V' + y2;
+              else {
+                const dir = x2 > x1 ? 1 : -1, r = Math.min(R, Math.abs(x2 - x1) / 2, (mid - y1));
+                d = 'M' + x1 + ' ' + y1 + ' V' + (mid - r) + ' Q' + x1 + ' ' + mid + ' ' + (x1 + dir * r) + ' ' + mid
+                  + ' H' + (x2 - dir * r) + ' Q' + x2 + ' ' + mid + ' ' + x2 + ' ' + (mid + r) + ' V' + y2;
+              }
+              const path = document.createElementNS(NS, 'path');
+              path.setAttribute('d', d);
+              if (held) path.setAttribute('class', 'held');
+              svg.appendChild(path);
+              const head = document.createElementNS(NS, 'polygon');
+              head.setAttribute('points', (x2 - 5) + ',' + y2 + ' ' + (x2 + 5) + ',' + y2 + ' ' + x2 + ',' + (y2 + HEAD));
+              svg.appendChild(head);
+              if (!held && !animated && motion) {
+                const len = path.getTotalLength();
+                path.style.strokeDasharray = len; path.style.strokeDashoffset = len;
+                head.style.opacity = 0; head.style.transition = 'opacity .3s ease ' + (0.7 + i * 0.06) + 's';
+                requestAnimationFrame(() => requestAnimationFrame(() => {
+                  path.classList.add('draw'); path.style.transitionDelay = (i * 0.06) + 's';
+                  path.style.strokeDashoffset = 0; head.style.opacity = 1;
+                }));
+              }
+            });
+            animated = true;
+          };
+          draw();
+          window.addEventListener('resize', draw);
+          window.addEventListener('load', draw);
+          if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
+          if (typeof ResizeObserver !== 'undefined') new ResizeObserver(draw).observe(flow);
+        });
       })();
     </script>
     <script>
