@@ -125,6 +125,21 @@
       .flowx__title h3 { margin: 0; font-family: "Alternate Gothic", "Oswald", "Arial Narrow", sans-serif; font-size: 34px; letter-spacing: .5px; text-transform: uppercase; line-height: 1; color: #f4f1ea; }
       .flowx__title p { margin: 0; flex-basis: 100%; font-size: 13.5px; color: rgba(244,241,234,.72); }
       .flowx__title .chip { align-self: center; }
+      .flowx__title .pill { margin-left: auto; align-self: center; }
+      .flowx__title h3 { flex-basis: 100%; margin-top: 4px; }
+      .flowx__title { padding-bottom: 32px; }
+      .flowx__brief { flex-basis: 100%; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 24px 48px; margin-top: 14px; align-items: start; }
+      .flowx__brief .flowx__brief-body p { margin: 0 0 14px; font-size: 14.5px; line-height: 1.7; color: rgba(244,241,234,.88); }
+      .flowx__brief .flowx__brief-body p:last-child { margin-bottom: 0; }
+      .flowx__brief-body strong { color: #fff; font-weight: 600; }
+      .flowx__brief-side { display: grid; gap: 10px; }
+      .bx { padding: 12px 16px 13px; border-radius: 6px; background: rgba(255,255,255,.045); border: 1px solid rgba(244,241,234,.12); border-left: 3px solid rgba(244,241,234,.45); }
+      .bx b { display: block; margin-bottom: 4px; font-size: 11px; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; color: rgba(244,241,234,.95); }
+      .flowx__brief .bx p { margin: 0; font-size: 13px; line-height: 1.6; color: rgba(244,241,234,.8); }
+      .bx--for { border-left-color: #2bb3af; } .bx--for b { color: #7adbd7; }
+      .bx--against { border-left-color: #f08a2c; } .bx--against b { color: #f6b074; }
+      .fx__next { margin: 0 0 12px; padding: 9px 12px 10px; border-radius: 4px; background: #eef7f6; border-left: 3px solid #018d8a; font-size: 12px; line-height: 1.55; color: #3d4a49; }
+      .fx__next b { display: block; margin-bottom: 2px; font-size: 10.5px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: #016e6c; }
       .flowx__nodes--3 { grid-template-columns: minmax(0, 1fr); row-gap: 44px; }
       .flowx__nodes--3 > .fx--excl { justify-self: center; width: min(100%, 560px); }
       .flowx__trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
@@ -158,13 +173,15 @@
       .fut h3 { margin: 0 0 10px; font-family: "Alternate Gothic", "Oswald", "Arial Narrow", sans-serif; font-size: 20px; letter-spacing: .4px; text-transform: uppercase; line-height: 1.15; }
       .fut p { margin: 0 0 8px; } .fut p:last-child { margin: 0; }
       @media (prefers-reduced-motion: no-preference) { .flowx__lines path.draw { transition: stroke-dashoffset .9s ease; } }
-      @media (max-width: 1100px) { .flowx, .flowx--solo { grid-template-columns: 110px minmax(0, 1fr); } .fx--side { grid-column: 2; grid-row: auto; } .flowx__nodes--four { grid-template-columns: repeat(2, minmax(0, 1fr)); } .flowx__lines { display: none; } }
+      @media (max-width: 1100px) { .flowx__brief { gap: 22px 28px; } .flowx, .flowx--solo { grid-template-columns: 110px minmax(0, 1fr); } .fx--side { grid-column: 2; grid-row: auto; } .flowx__nodes--four { grid-template-columns: repeat(2, minmax(0, 1fr)); } .flowx__lines { display: none; } }
       @media (max-width: 900px) {
         .flowx, .flowx--solo { grid-template-columns: minmax(0, 1fr); padding: 30px 18px 28px; row-gap: 18px; }
         .flowx__label, .flowx__nodes, .fx--side { grid-column: 1; }
         .flowx__label { display: flex; align-items: baseline; gap: 10px; margin-top: 14px; } .flowx__label span { font-size: 30px; margin: 0; }
         .flowx__nodes--two, .flowx__nodes--four, .flowx__trio { grid-template-columns: minmax(0, 1fr); gap: 16px; } .flowx__nodes--3 { row-gap: 16px; }
-        .flowx__title { margin-bottom: 0; padding-bottom: 14px; } .flowx__title h3 { font-size: 27px; }
+        .flowx__title { margin-bottom: 0; padding-bottom: 20px; } .flowx__title h3 { font-size: 27px; }
+        .flowx__brief { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+        .flowx__brief .flowx__brief-body p { font-size: 14px; }
         .plays, .hand { grid-template-columns: minmax(0, 1fr); }
         .future { grid-template-columns: minmax(0, 1fr); }
       }
@@ -282,7 +299,19 @@
         </div>
         <div class="flowx flowx--solo" data-edges="[[&quot;call&quot;, &quot;talk&quot;, 0.5, 0.36], [&quot;miss&quot;, &quot;talk&quot;, 0.5, 0.64, 1], [&quot;talk&quot;, &quot;meet&quot;, 0.2, 0.5], [&quot;talk&quot;, &quot;data&quot;, 0.4, 0.5], [&quot;talk&quot;, &quot;test&quot;, 0.6, 0.5, 1], [&quot;talk&quot;, &quot;match&quot;, 0.8, 0.5, 1], [&quot;meet&quot;, &quot;end&quot;, 0.5, 0.2], [&quot;data&quot;, &quot;end&quot;, 0.5, 0.4], [&quot;test&quot;, &quot;end&quot;, 0.5, 0.6, 1], [&quot;match&quot;, &quot;end&quot;, 0.5, 0.8, 1]]">
           <svg class="flowx__lines" aria-hidden="true"></svg>
-          <div class="flowx__title"><span class="chip chip--apple">Play 1 &middot; Apple Playbook leads</span><h3>Josh calls every lead</h3><p>41 leads by day three, more landing until the campaign closes on 29 September.</p></div>
+          <div class="flowx__title"><span class="chip chip--apple">Play 1 &middot; Apple Playbook leads &middot; Josh Richardson</span><span class="pill pill--go">Ready to run</span><h3>Josh calls every lead</h3>
+            <div class="flowx__brief">
+              <div class="flowx__brief-body">
+                <p>All 41, and each new one as it lands until the campaign closes. The four who ticked a chat on the form go first: Iain MacLennan, then Phil Shepherd, Paul Mason and Dougal Munro. There is no harm in touching base early with the &ldquo;later this season&rdquo; leads; Josh books the later time while he has them.</p>
+                <p>The call is fifteen minutes on whatever is making them scratch their head: a block that didn&rsquo;t pack out, a soil or sap result they can&rsquo;t make sense of, a constraint they keep running into. Josh takes the out-of-ten score, finds out what is possible, and plays the card that gets a next step.</p>
+              </div>
+              <div class="flowx__brief-side">
+                <div class="bx"><b>No answer</b><p>Two tries, then a short email from Josh with a pick-a-time link. Odoo Appointments is already installed with website booking and lead creation, so each booking lands in the CRM against the lead.</p></div>
+                <div class="bx bx--for"><b>For</b><p>Josh has the time and is keen; a call reaches people an email never will; he learns first-hand which cards work, which shapes the next campaign; every conversation is a qualification and a sales conversation in one.</p></div>
+                <div class="bx bx--against"><b>Against</b><p>Forty-plus calls is a real block of time; Josh is new and needs Chelsea behind him for the technical questions; some leads only wanted the Playbook and will say so.</p></div>
+              </div>
+            </div>
+          </div>
 
           <div class="flowx__label"><span>01</span>First contact</div>
           <div class="flowx__nodes flowx__nodes--two">
@@ -290,6 +319,7 @@
               <div class="fx__top"><span class="chip chip--apple">Every Apple lead</span><span class="pill pill--go">Now</span></div>
               <h3>Josh picks up the phone</h3>
               <p>Every lead gets a call, the four who asked for a chat first. No email before it: a call gets more people to a next step than an invitation does.</p>
+              <div class="fx__next"><b>From the next campaign</b>The form drops the &ldquo;call now, maybe later or not at all&rdquo; question. Consent to be contacted sits in the form&rsquo;s terms instead, and every lead gets a call. All agreed: the best early contact is a call.</div>
               <div class="fx__owner"><span class="av">JR</span><span><b>Josh Richardson</b></span></div>
             </article>
             <article class="fx fx--held" data-n="miss">
@@ -343,45 +373,7 @@
             </article>
           </div>
         </div>
-        <p class="note">The four cards shown are the main ones. Everything Josh has to work with is laid out under <a href="#apple-cards-title">Josh&rsquo;s cards</a>. He keeps a note of what works and what doesn&rsquo;t on every call.</p>
-      </section>
-
-      <section class="concept" aria-labelledby="apple-leads-title">
-        <div class="concept__heading">
-          <div>
-            <h2 id="apple-leads-title">The list</h2>
-          </div>
-          <p class="concept__summary">Read from Meta Leads Center on Thursday 24 September, 7am AWST, day three of seven. More land until the campaign closes on the 29th.</p>
-        </div>
-        <p class="offer__tag">Apple Playbook &middot; Josh&rsquo;s list</p>
-        <div class="stat-row">
-          <div class="stat"><b>41</b><span>leads in 2&frac12; days</span><small>5 on 22 Sep &middot; 27 on 23 Sep &middot; 9 by 7am on 24 Sep &middot; campaign runs to 29 Sep</small></div>
-          <div class="stat stat--hot"><b>1</b><span>asked for a chat</span><small>Iain MacLennan &middot; grower &middot; NSW &middot; first on Josh&rsquo;s list</small></div>
-          <div class="stat stat--warm"><b>3</b><span>maybe, later this season</span><small>Phil Shepherd (VIC) &middot; Paul Mason (SA) &middot; Dougal Munro (NSW), all growers &middot; called next; Josh books a later time if that suits</small></div>
-          <div class="stat"><b>37</b><span>&ldquo;I&rsquo;ll reach out&rdquo; &middot; Josh calls these too</span><small>22 growers, 2 managers, 8 advisers, 9 other &middot; VIC 20 &middot; SA 15 &middot; NSW 3 &middot; QLD 3</small></div>
-        </div>
-        <p class="note">Contact details stay in Leads Center and the lead sheet; this page carries counts and the warm names only. Apple spend is the $200 budget; cost per lead per creative comes at the wrap-up. None of the 41 Apple leads are in the shared lead sheet yet.</p>
-      </section>
-
-      <section class="concept" aria-labelledby="apple-offers-title">
-        <div class="concept__heading">
-          <div>
-            <h2 id="apple-offers-title">The play</h2>
-          </div>
-          <p class="concept__summary">What Josh does, in what order, and the case for and against.</p>
-        </div>
-        <div class="plays plays--one">
-          <article class="offer offer--apple">
-            <div class="big__who"><p class="offer__tag">Play 1 &middot; Apple Playbook leads &middot; Josh Richardson</p><span class="pill pill--go">Ready to run</span></div>
-            <h3>Josh calls every lead</h3>
-            <p>All 41, and each new one as it lands until the campaign closes. The four who ticked a chat on the form go first: Iain MacLennan, then Phil Shepherd, Paul Mason and Dougal Munro. There is no harm in touching base early with the &ldquo;later this season&rdquo; leads; Josh books the later time while he has them.</p>
-            <p>The call is fifteen minutes on whatever is making them scratch their head: a block that didn&rsquo;t pack out, a soil or sap result they can&rsquo;t make sense of, a constraint they keep running into. Josh takes the out-of-ten score, finds out what is possible, and plays the card that gets a next step.</p>
-            <div class="track">
-              <p><b class="t">No answer</b> Two tries, then a short email from Josh with a pick-a-time link. Odoo Appointments is already installed with website booking and lead creation, so each booking lands in the CRM against the lead.</p>
-            </div>
-            <div class="pc"><p><b>For</b> Josh has the time and is keen; a call reaches people an email never will; he learns first-hand which cards work, which shapes the next campaign; every conversation is a qualification and a sales conversation in one. <b>Against</b> Forty-plus calls is a real block of time; Josh is new and needs Chelsea behind him for the technical questions; some leads only wanted the Playbook and will say so.</p></div>
-          </article>
-        </div>
+        <p class="note">The four cards shown are the main ones. Everything Josh has to work with is laid out in <a href="#apple-cards-title">Josh&rsquo;s cards</a>, directly below. He keeps a note of what works and what doesn&rsquo;t on every call.</p>
       </section>
 
       <section class="concept" aria-labelledby="apple-cards-title">
@@ -420,6 +412,24 @@
         </div>
         <p class="note"><strong>Off the table this round:</strong> orchard visits &ldquo;when we&rsquo;re in the district&rdquo; (dropped as weak), the test credited to a first order (replaced by the investment match), and the guarantee and named program (parked until there is proof).</p>
       </section>
+
+      <section class="concept" aria-labelledby="apple-leads-title">
+        <div class="concept__heading">
+          <div>
+            <h2 id="apple-leads-title">The list</h2>
+          </div>
+          <p class="concept__summary">Read from Meta Leads Center on Thursday 24 September, 7am AWST, day three of seven. More land until the campaign closes on the 29th.</p>
+        </div>
+        <p class="offer__tag">Apple Playbook &middot; Josh&rsquo;s list</p>
+        <div class="stat-row">
+          <div class="stat"><b>41</b><span>leads in 2&frac12; days</span><small>5 on 22 Sep &middot; 27 on 23 Sep &middot; 9 by 7am on 24 Sep &middot; campaign runs to 29 Sep</small></div>
+          <div class="stat stat--hot"><b>1</b><span>asked for a chat</span><small>Iain MacLennan &middot; grower &middot; NSW &middot; first on Josh&rsquo;s list</small></div>
+          <div class="stat stat--warm"><b>3</b><span>maybe, later this season</span><small>Phil Shepherd (VIC) &middot; Paul Mason (SA) &middot; Dougal Munro (NSW), all growers &middot; called next; Josh books a later time if that suits</small></div>
+          <div class="stat"><b>37</b><span>&ldquo;I&rsquo;ll reach out&rdquo; &middot; Josh calls these too</span><small>22 growers, 2 managers, 8 advisers, 9 other &middot; VIC 20 &middot; SA 15 &middot; NSW 3 &middot; QLD 3</small></div>
+        </div>
+        <p class="note">Contact details stay in Leads Center and the lead sheet; this page carries counts and the warm names only. Apple spend is the $200 budget; cost per lead per creative comes at the wrap-up. None of the 41 Apple leads are in the shared lead sheet yet.</p>
+      </section>
+
       <section class="concept" aria-labelledby="apple-email-title">
         <div class="concept__heading">
           <div>
@@ -471,7 +481,19 @@
         </div>
         <div class="flowx flowx--side" data-edges="[[&quot;email&quot;, &quot;session&quot;, 0.5, 0.5], [&quot;session&quot;, &quot;excl&quot;, 0.5, 0.5], [&quot;excl&quot;, &quot;data&quot;, 0.25, 0.5], [&quot;excl&quot;, &quot;test&quot;, 0.5, 0.5, 1], [&quot;excl&quot;, &quot;match&quot;, 0.75, 0.5, 1], [&quot;data&quot;, &quot;end&quot;, 0.5, 0.25], [&quot;test&quot;, &quot;end&quot;, 0.5, 0.5, 1], [&quot;match&quot;, &quot;end&quot;, 0.5, 0.75, 1]]">
           <svg class="flowx__lines" aria-hidden="true"></svg>
-          <div class="flowx__title"><span class="chip chip--cherry">Play 2 &middot; Cherry Playbook leads</span><h3>The email, then Andrew&rsquo;s session</h3><p>75 leads from July&rsquo;s campaign, one email since. Andrew is in; the day is to be set inside the next two to three weeks.</p></div>
+          <div class="flowx__title"><span class="chip chip--cherry">Play 2 &middot; Cherry Playbook leads &middot; Andrew Smith</span><span class="pill pill--set">Format agreed &middot; date to set</span><h3>The email, then Andrew&rsquo;s session</h3>
+            <div class="flowx__brief">
+              <div class="flowx__brief-body">
+                <p>An hour online with Andrew, as a cherry grower first and the team&rsquo;s cherry lead second. One session for growers and advisers alike. <strong>About 25 minutes is planned,</strong> built around the questions that need answering at this stage of the cherry season: one photo or chart per question, no slide deck to sit through. <strong>The rest is Q&amp;A.</strong> Two or three growers we already work with are invited to open the floor with a problem from their own blocks, so the room starts talking, and Andrew brings each one back to what a test would show.</p>
+                <p>The invitation goes to the 75 the day after the date is set. It asks each person for the question they most want answered, and promises an offer at the end that is only for the people in the room, so they turn up and they stay. The session is recorded; the recording becomes the second email for everyone who registered and didn&rsquo;t show.</p>
+              </div>
+              <div class="flowx__brief-side">
+                <div class="bx"><b>At the close</b><p>Andrew asks the out-of-ten question, then makes the offer: the data clean-up and trends.</p></div>
+                <div class="bx bx--for"><b>For</b><p>One hour of Andrew reaches all 75 at once; people who lapsed after one email get a reason to come back; registrations show who is still interested; the recording is reusable.</p></div>
+                <div class="bx bx--against"><b>Against</b><p>Attendance runs 10&ndash;20% of registrations; needs a date inside three weeks; the invited growers need a short briefing; setup and hosting fall on marketing.</p></div>
+              </div>
+            </div>
+          </div>
 
           <div class="flowx__label"><span>01</span>First contact</div>
           <div class="flowx__nodes flowx__nodes--one">
@@ -534,43 +556,6 @@
           </div>
         </div>
         <p class="note">Session registrations close the Friday before the session. Follow-up on both plays continues until the lead buys or opts out.</p>
-      </section>
-
-      <section class="concept" aria-labelledby="cherry-leads-title">
-        <div class="concept__heading">
-          <div>
-            <h2 id="cherry-leads-title">The list</h2>
-          </div>
-          <p class="concept__summary">From the shared lead sheet. July&rsquo;s campaign brought in 77; two are now clients, and the other 75 have had one email since.</p>
-        </div>
-        <p class="offer__tag">Cherry Playbook &middot; Andrew&rsquo;s list</p>
-        <div class="stat-row">
-          <div class="stat stat--warm"><b>75</b><span>to re-engage</span><small>77 from the July campaign; Matt Batinich and Vince Blefari are clients now and stay with their agronomists</small></div>
-          <div class="stat"><b>14</b><span>maybe, later this season</span><small>Called in July at the time; opened the July email at 50% and clicked at 29% &mdash; the warmest of the 75</small></div>
-          <div class="stat"><b>61</b><span>Playbook-only</span><small>One email in July, nothing since</small></div>
-          <div class="stat"><b>11</b><span>agronomists and advisers</span><small>Invited to the same session as the growers this round &middot; the rest: 38 growers, 5 managers, 3 packhouse, 20 other</small></div>
-        </div>
-      </section>
-
-      <section class="concept" aria-labelledby="cherry-offers-title">
-        <div class="concept__heading">
-          <div>
-            <h2 id="cherry-offers-title">The play</h2>
-          </div>
-          <p class="concept__summary">What goes out, what Andrew does, and the case for and against.</p>
-        </div>
-        <div class="plays plays--one">
-          <article class="offer offer--cherry">
-            <div class="big__who"><p class="offer__tag">Play 2 &middot; Cherry Playbook leads &middot; Andrew Smith</p><span class="pill pill--set">Format agreed &middot; date to set</span></div>
-            <h3>The email, then Andrew&rsquo;s session</h3>
-            <p>An hour online with Andrew, as a cherry grower first and the team&rsquo;s cherry lead second. One session for growers and advisers alike. <strong>About 25 minutes is planned,</strong> built around the questions that need answering at this stage of the cherry season: one photo or chart per question, no slide deck to sit through. <strong>The rest is Q&amp;A.</strong> Two or three growers we already work with are invited to open the floor with a problem from their own blocks, so the room starts talking, and Andrew brings each one back to what a test would show.</p>
-            <p>The invitation goes to the 75 the day after the date is set. It asks each person for the question they most want answered, and promises an offer at the end that is only for the people in the room, so they turn up and they stay. The session is recorded; the recording becomes the second email for everyone who registered and didn&rsquo;t show.</p>
-            <div class="track">
-              <p><b class="t">At the close</b> Andrew asks the out-of-ten question, then makes the offer: the data clean-up and trends.</p>
-            </div>
-            <div class="pc"><p><b>For</b> One hour of Andrew reaches all 75 at once; people who lapsed after one email get a reason to come back; registrations show who is still interested; the recording is reusable. <b>Against</b> Attendance runs 10&ndash;20% of registrations; needs a date inside three weeks; the invited growers need a short briefing; setup and hosting fall on marketing.</p></div>
-          </article>
-        </div>
       </section>
 
       <section class="concept" aria-labelledby="cherry-session-title">
@@ -671,6 +656,22 @@
               <li><strong>Afterwards:</strong> Andrew or Josh calls the people who took the offer</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      <section class="concept" aria-labelledby="cherry-leads-title">
+        <div class="concept__heading">
+          <div>
+            <h2 id="cherry-leads-title">The list</h2>
+          </div>
+          <p class="concept__summary">From the shared lead sheet. July&rsquo;s campaign brought in 77; two are now clients, and the other 75 have had one email since.</p>
+        </div>
+        <p class="offer__tag">Cherry Playbook &middot; Andrew&rsquo;s list</p>
+        <div class="stat-row">
+          <div class="stat stat--warm"><b>75</b><span>to re-engage</span><small>77 from the July campaign; Matt Batinich and Vince Blefari are clients now and stay with their agronomists</small></div>
+          <div class="stat"><b>14</b><span>maybe, later this season</span><small>Called in July at the time; opened the July email at 50% and clicked at 29% &mdash; the warmest of the 75</small></div>
+          <div class="stat"><b>61</b><span>Playbook-only</span><small>One email in July, nothing since</small></div>
+          <div class="stat"><b>11</b><span>agronomists and advisers</span><small>Invited to the same session as the growers this round &middot; the rest: 38 growers, 5 managers, 3 packhouse, 20 other</small></div>
         </div>
       </section>
 
