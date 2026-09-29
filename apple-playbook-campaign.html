@@ -164,6 +164,12 @@
       .fx__copy--main { background: #018d8a; border-color: #018d8a; color: #fff; }
       .fx__copy:hover, .fx__copy:focus-visible { background: #f4f1ea; border-color: #f4f1ea; color: #0f1c1b; outline: none; }
       .fx__copy.is-done { background: #f4f1ea; border-color: #f4f1ea; color: #0f1c1b; }
+      .fx:not(.fx--held) .fx__mail { border: 1px solid #e0dbd2; box-shadow: none; }
+      .fx__mail-subject + .fx__mail-subject b { font-weight: 400; color: #4a443d; }
+      .fx:not(.fx--held) .fx__copy { color: #1a1714; border-color: #c9c1b5; }
+      .fx:not(.fx--held) .fx__copy--main { background: #dc6800; border-color: #dc6800; color: #fff; }
+      .fx:not(.fx--held) .fx__copy:hover, .fx:not(.fx--held) .fx__copy:focus-visible, .fx:not(.fx--held) .fx__copy.is-done { background: #1a1714; border-color: #1a1714; color: #fff; }
+      .fx p.fx__mail-hint { margin: 0 0 12px; font-size: 12px; line-height: 1.55; color: #867764; }
       .fx--held p.fx__mail-hint { margin: 0 0 12px; font-size: 12px; line-height: 1.55; color: rgba(244,241,234,.72); }
       .fx__next { margin: 0 0 12px; padding: 9px 12px 10px; border-radius: 4px; background: #eef7f6; border-left: 3px solid #018d8a; font-size: 12px; line-height: 1.55; color: #3d4a49; }
       .fx__next b { display: block; margin-bottom: 2px; font-size: 10.5px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: #016e6c; }
@@ -522,10 +528,32 @@ Hybrid-Ag &middot; (03) 5722 7555</pre>
           <div class="flowx__label"><span>01</span>First contact</div>
           <div class="flowx__nodes flowx__nodes--one">
             <article class="fx" data-n="email">
-              <div class="fx__top"><span class="chip chip--cherry">All 75 Cherry leads</span><span class="pill pill--wait">Once the date is set</span></div>
+              <div class="fx__top"><span class="chip chip--cherry">All 75 Cherry leads</span><span class="pill pill--wait">Draft &middot; sends once the date is set</span></div>
               <h3>The invitation</h3>
-              <p>An email inviting them to an hour online with Andrew, asking for the question they most want answered, and promising an offer at the end that is only for the people in the room.</p>
-              <div class="fx__owner"><span class="av">PO</span><span><b>Pia Ong</b></span></div>
+              <p>An email inviting them to an hour online with Andrew, asking for the question they most want answered, and promising an offer at the end that is only for the people in the room. The draft in its current form:</p>
+              <div class="fx__mail" id="cherry-invite-mail">
+                <div class="fx__mail-subject"><span>Subject</span><b id="cherry-invite-subject">Five cherry questions worth answering before harvest</b></div>
+                <div class="fx__mail-subject"><span>Preview</span><b id="cherry-invite-preview">An hour online with Andrew Smith and a few growers &middot; [date], 7pm &middot; bring your own question</b></div>
+                <pre class="fx__mail-body" id="cherry-invite-body">Hi [first name],
+
+Back in July you grabbed the Cherry Nutrition Playbook. Andrew Smith, a cherry grower himself and the one who wrote most of it, is putting an hour aside online on [date] at 7pm, once the day&rsquo;s work is done, for the questions that matter at this point in the season.
+
+It isn&rsquo;t a lecture. Andrew takes five questions in the first 25 minutes, things like what is still up for grabs before harvest, and how to know calcium is reaching the fruit. Then the floor opens: a few growers share what they&rsquo;re seeing in their own blocks, and you can put yours to him. Tell us your question when you register and we&rsquo;ll make sure it gets asked. Everyone who registers gets the recording.
+
+Save your spot: [registration link]
+
+Stay to the end. There&rsquo;s something on us for everyone in the room, and it&rsquo;s only for the people who are. Registrations close [the Friday before].
+
+Andrew and the Hybrid-Ag horticulture team
+(03) 5722 7555</pre>
+              </div>
+              <div class="fx__mail-actions">
+                <button type="button" class="fx__copy fx__copy--main" data-copy="cherry-invite-body">Copy email</button>
+                <button type="button" class="fx__copy" data-copy="cherry-invite-subject">Copy subject</button>
+                <button type="button" class="fx__copy" data-copy="cherry-invite-preview">Copy preview</button>
+              </div>
+              <p class="fx__mail-hint">Blanks to fill: the first name, the date, 7pm once Andrew confirms it, the registration link and the closing Friday. The two example questions follow whichever five Andrew chooses. One version for growers and advisers. Not sent to Matt Batinich or Vince Blefari, who are clients now. The registration form asks for name, orchard or business, region and the question they want answered.</p>
+              <div class="fx__owner"><span class="av">PO</span><span><b>Pia Ong</b> &middot; sent from Odoo to the 75</span></div>
             </article>
           </div>
           <aside class="fx fx--side" data-n="crm">
@@ -681,26 +709,6 @@ Hybrid-Ag &middot; (03) 5722 7555</pre>
               <li><strong>Afterwards:</strong> Andrew or Josh calls the people who took the offer</li>
             </ul>
           </div>
-        </div>
-      </section>
-
-      <section class="concept" aria-labelledby="cherry-email-title">
-        <div class="concept__heading">
-          <div>
-            <h2 id="cherry-email-title">The invitation</h2>
-          </div>
-          <p class="concept__summary">Goes to the 75 the day after the date is set. The questions named in it follow whichever five Andrew chooses.</p>
-        </div>
-        <div class="draft">
-          <p class="offer__tag">Cherry &middot; invitation to Andrew&rsquo;s session &middot; draft &middot; questions change once Andrew has chosen his five &middot; 75 recipients</p>
-          <p><strong>Subject:</strong> Five cherry questions worth answering before harvest<br><strong>Preview:</strong> An hour online with Andrew Smith and a few growers &middot; [date], 7pm [Andrew to confirm] &middot; bring your own question</p>
-          <p>Hi [first name],</p>
-          <p>Back in July you grabbed the Cherry Nutrition Playbook. Andrew Smith &mdash; a cherry grower himself, and the one who wrote most of it &mdash; is putting an hour aside online on [date] at 7pm, once the day&rsquo;s work is done, for the questions that matter at this point in the season.</p>
-          <p>It isn&rsquo;t a lecture. Andrew takes five questions in the first 25 minutes, things like <em>what is still up for grabs before harvest</em> and <em>how do I know calcium is reaching the fruit</em>. Then the floor opens: a few growers share what they&rsquo;re seeing in their own blocks, and you can put yours to him. Tell us your question when you register and we&rsquo;ll make sure it gets asked. Everyone who registers gets the recording.</p>
-          <p><em>[Save your spot &rarr;]</em></p>
-          <p>Stay to the end: there&rsquo;s something on us for everyone in the room, and it&rsquo;s only for the people who are. Registrations close [the Friday before].</p>
-          <p>Andrew and the Hybrid-Ag horticulture team<br>(03) 5722 7555</p>
-          <p class="draft__note">One version for growers and advisers. <strong>Excluded:</strong> Matt Batinich and Vince Blefari, now clients. Links to a short registration form (name, orchard or business, region, the question they want answered) so the SMS receipt and the recording can follow, and the questions feed the Q&amp;A.</p>
         </div>
       </section>
 
