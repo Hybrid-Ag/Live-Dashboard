@@ -2248,13 +2248,20 @@
  },
  "budget": {
   "fy": "FY26&ndash;27",
-  "source": "Set by the sales manager, Aug 2026. Confident to November; revised after that.",
+  "source": "July to September as set by the sales manager in August 2026. October 2026 to June 2027 from the FY27 budget workbook (Total Trading Income), supplied 2 October 2026. These stand until an updated budget is supplied.",
   "months": {
    "2026-07": 1513758,
    "2026-08": 2000000,
    "2026-09": 1400000,
-   "2026-10": 1200000,
-   "2026-11": 750000
+   "2026-10": 1250000,
+   "2026-11": 750000,
+   "2026-12": 525000,
+   "2027-01": 750000,
+   "2027-02": 1100000,
+   "2027-03": 1500000,
+   "2027-04": 1200000,
+   "2027-05": 580000,
+   "2027-06": 1250000
   }
  }
 }
