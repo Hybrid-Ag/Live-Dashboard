@@ -176,6 +176,12 @@
       .fx__mail-subject span { flex: none; font-size: 10.5px; letter-spacing: 1.2px; text-transform: uppercase; color: #867764; }
       .fx__mail-subject b { font-weight: 600; }
       .fx__mail-body { margin: 0; padding: 14px 16px 16px; font: inherit; font-size: 12.5px; line-height: 1.62; color: #2a2622; white-space: pre-wrap; word-break: break-word; }
+      .fx__mail-video { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; margin: 14px 16px 0; aspect-ratio: 16 / 9; border-radius: 6px; border: 1.5px dashed rgba(244,241,234,.45); background: radial-gradient(600px 260px at 20% 0%, rgba(220,104,0,.28), transparent 60%), #0f1c1b; color: #f4f1ea; text-align: center; }
+      .fx__mail-play { width: 54px; height: 54px; border-radius: 50%; background: #f4f1ea; position: relative; margin-bottom: 4px; }
+      .fx__mail-play::after { content: ""; position: absolute; left: 22px; top: 16px; border-style: solid; border-width: 11px 0 11px 17px; border-color: transparent transparent transparent #0f1c1b; }
+      .fx__mail-video-t { font-family: "Alternate Gothic", "Oswald", "Arial Narrow", sans-serif; font-size: 22px; letter-spacing: .5px; text-transform: uppercase; line-height: 1.1; }
+      .fx__mail-video-s { font-size: 11px; letter-spacing: 1.2px; text-transform: uppercase; color: rgba(244,241,234,.75); }
+      a.fx__copy { display: inline-flex; align-items: center; text-decoration: none; }
       .fx__mail-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin: 0 0 12px; }
       .fx__copy { appearance: none; border: 1px solid rgba(244,241,234,.55); border-radius: 999px; background: transparent; color: #f4f1ea; padding: 6px 14px; font: inherit; font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; transition: background .15s ease, color .15s ease, border-color .15s ease; }
       .fx__copy--main { background: #018d8a; border-color: #018d8a; color: #fff; }
@@ -570,9 +576,16 @@ Hybrid-Ag &middot; (03) 5722 7555</pre>
               <div class="fx__mail" id="cherry-invite-mail">
                 <div class="fx__mail-subject"><span>Subject</span><b id="cherry-invite-subject">Cherry growers online, [date] at [time + time zone]</b></div>
                 <div class="fx__mail-subject"><span>Preview</span><b id="cherry-invite-preview">Did you get any value out of the Cherry Nutrition Playbook?</b></div>
+                <div class="fx__mail-video" role="img" aria-label="Placeholder for a short video from Andrew Smith, still to be recorded">
+                  <span class="fx__mail-play" aria-hidden="true"></span>
+                  <span class="fx__mail-video-t">Video from Andrew Smith</span>
+                  <span class="fx__mail-video-s">Placeholder &middot; still to be recorded</span>
+                </div>
                 <pre class="fx__mail-body" id="cherry-invite-body">Hi [first name],
 
 You downloaded our Cherry Nutrition Playbook back in July, so I wanted to check in. Did you get any value out of it?
+
+I&rsquo;ve recorded a short video on what we&rsquo;ll cover: [video link]
 
 I&rsquo;m getting a few cherry growers together online on [date] at [time + time zone]. We&rsquo;ll look at where the crop is now and what can still be influenced before harvest. I&rsquo;ll use a few photographs and diagrams to talk through the questions, including what different tests can tell us. I&rsquo;m planning about 25 minutes, then we can discuss what you&rsquo;re seeing in your own blocks.
 
@@ -594,7 +607,7 @@ Cherry grower, Smith&rsquo;s Fruit &middot; Hybrid-Ag horticulture team</pre>
               <div class="fx__mail-actions">
                 <button type="button" class="fx__copy fx__copy--main" data-copy="cherry-invite-sms-body">Copy text</button>
               </div>
-              <p class="fx__mail-hint">Before sending, confirm the date, time and time zone with Andrew and fill in the first name and registration link. Add recording details only after Andrew agrees to recording and distribution. All 75 have an email address and 74 have a mobile. Send the text from a number that can receive STOP replies. Use the same invitation for growers and advisers; exclude Matt Batinich and Vince Blefari, who are clients now. The registration form asks for name, orchard or business, region and the question they want answered.</p>
+              <p class="fx__mail-hint">Andrew&rsquo;s video is still to be recorded. The placeholder shows where it sits at the top of the email, and [video link] is filled in once it is filmed. Before sending, confirm the date, time and time zone with Andrew and fill in the first name and registration link. Add recording details only after Andrew agrees to recording and distribution. All 75 have an email address and 74 have a mobile. Send the text from a number that can receive STOP replies. Use the same invitation for growers and advisers; exclude Matt Batinich and Vince Blefari, who are clients now. The registration form asks for name, orchard or business, region and the question they want answered.</p>
               <div class="fx__owner"><span class="av">AS</span><span class="av">NK</span><span><b>Andrew Smith</b> to approve &middot; Nathan sends both</span></div>
             </article>
           </div>
@@ -611,6 +624,10 @@ Cherry grower, Smith&rsquo;s Fruit &middot; Hybrid-Ag horticulture team</pre>
               <div class="fx__top"><span class="chip chip--cherry">Evening session &middot; length to confirm</span><span class="pill pill--set">Format agreed &middot; date to set</span></div>
               <h3>Andrew&rsquo;s online session</h3>
               <p>About 25 minutes of prepared material covers five questions, still for Andrew to confirm. Invited growers then open the discussion with a question from their own blocks. Andrew explains how observations and testing could help, including the limits of each test.</p>
+              <div class="fx__mail-actions">
+                <a class="fx__copy fx__copy--main" href="cherry-webinar-review.html" target="_blank" rel="noopener">Open the draft presentation &#8599;</a>
+              </div>
+              <p class="fx__mail-hint">The 16-slide review deck for Andrew, with speaker notes. Opens in a new tab.</p>
               <div class="fx__owner"><span class="av">AS</span><span><b>Andrew Smith</b></span></div>
             </article>
           </div>
@@ -685,6 +702,7 @@ Cherry grower, Smith&rsquo;s Fruit &middot; Hybrid-Ag horticulture team</pre>
             <ul>
               <li>The five questions and final wording. The review deck uses Q1, Q2, Q4, Q8 and Q3; Andrew can change any of them and confirm the 4&ndash;6 audience questions to pause on</li>
               <li><strong>The date, start time and time zone.</strong> The weeks of 13 or 20 October were proposed; use [time + time zone] until confirmed</li>
+              <li>A short video from Andrew for the top of the invitation email, still to be recorded</li>
               <li>Which two or three growers to invite, and who asks them</li>
               <li>The prepared and total session lengths. Rehearse the guide&rsquo;s content against the 25-minute working brief before agreeing the run time</li>
               <li>His approval of the invitation, slide wording and technical explanations, followed by final approval before external use</li>
