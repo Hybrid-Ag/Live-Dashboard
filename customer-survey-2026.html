@@ -77,10 +77,10 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
   <form id="customer-survey" action="#answers" method="get" autocomplete="off">
   <fieldset class="controls" id="draft-controls" disabled><legend class="sr-only">Jacket size and optional feedback</legend>
     <fieldset class="part"><legend>1. Your jacket</legend>
-      <p>Your name, business, email and jacket size are required. We can use these details to arrange the right jacket when the final gift is confirmed.</p>
+      <p>Your name, trading or business name, email and jacket size are required. We can use these details to arrange the right jacket when the final gift is confirmed.</p>
       <div class="contact-grid">
         <div class="field"><label for="customer-name">Your name</label><input id="customer-name" name="customer-name" type="text" required></div>
-        <div class="field"><label for="business-name">Business name</label><input id="business-name" name="business-name" type="text" required></div>
+        <div class="field"><label for="business-name">Trading Name or Business Name</label><input id="business-name" name="business-name" type="text" required></div>
         <div class="field wide"><label for="email">Email address</label><input id="email" name="email" type="email" required></div>
         <div class="field wide"><label for="jacket-size">Preferred jacket size</label>
           <select id="jacket-size" name="jacket-size" required aria-describedby="size-note">
@@ -171,7 +171,7 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
     conditionalField(topicOther, 'topic-other-wrap', form.querySelector('input[name="topics"][value="other"]').checked);
     ['customer-name', 'business-name'].forEach(id => {
       const input = document.getElementById(id);
-      input.setCustomValidity(input.value.trim() ? '' : 'Please enter ' + (id === 'customer-name' ? 'your name.' : 'your business name.'));
+      input.setCustomValidity(input.value.trim() ? '' : 'Please enter ' + (id === 'customer-name' ? 'your name.' : 'your trading or business name.'));
     });
   }
   function validateGroup(group) {
@@ -205,7 +205,7 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
     const selectedLabel = select => select.options[select.selectedIndex].textContent;
     const lines = ['YOUR JACKET',
       'Name: ' + data.get('customer-name').trim(),
-      'Business: ' + data.get('business-name').trim(),
+      'Trading or business name: ' + data.get('business-name').trim(),
       'Email: ' + data.get('email').trim(),
       'Jacket size: ' + selectedLabel(size)];
     if (!sizeOther.disabled && sizeOther.value.trim()) lines.push('Sizing details: ' + sizeOther.value.trim());
