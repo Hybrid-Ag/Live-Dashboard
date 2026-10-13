@@ -1,0 +1,831 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- favicon: same links as the dashboard, added at publish -->
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFX0lEQVR42r2XaWxUVRTHf+e+92baaZGloiKiIBhqGwlGgx8wKRqXGmMIJtO4ABGVD2gkKAHUKFOipbjENQaNxgTRBFtpQlJDLHGJSDQq+kEtChp3paYt1S52Zt571w9znr4O01LcbnJz39x7lnv+Z7lnYPxDAGccdI7S/mfD/M2zf6ywGlges7KU5QA3AbNiqP3j4ep6A2CBq0pcIvq+VmmuLuL9Vy7wIBACvcAZap3RKYrQgNLcO94LHE1grdDY+Jd1mzZFX6eqosnAQ0CDKrc6HwUqlHYawHkgD2f+0rFoE4EUaMeM9NF8+6IqygEBUBujWRA7s8DW0WLFFulwR1guYmlqmmoqy1ZZMTNt3t/H2nXb9KxHKQPAU3/fo3tLdfUBT6AbYGMNzg11rEw6LMhbDvUOsFW20WctIlJAwv1TOcDmzVVS5r5tU6lqcjkkNWEFzU11VmQ5xnQShnGULo6hVhe32DV0+hbSC9lxYoolgzmYnIC8T/rAjdQBAxZEwBZSrLHRQcTiOcuprKym79csw1mf3/p9UuXLaGubTRjuRiRU6wFmA0lgEjBT9zwj5PMhHcNrmV9VxpKuQfL9OfyuQbJVKc4VjwYR7FuZwmVHFA4RmU5ofYwRwCUMwRg4eOBM4DtE3leLLTARqAQm6AxV4FtAz8FeZotGnAguIKElMDAdYNGIIlPbaQFsYHdjrYsxCawNSaVcctlufun5GBBEmmMXKA5cC4g1bLEgXT7vDWQZmODhhZYw4ZDIBTh+QAdAa2dBRuECDa0BmYxhw4bXZaD/Tow5guMI2ezXdnj4Oh55pIeaGo8gaAdeVb5eYBDoB/rU/y8HAW9cMYfEJS/w429Zlg4HfO8axAjdfb+zuuY53rMZTEMrASVrAMCaNdNo2T4Xx4l8U1yaP9UZ/f4G+GCkOwtr0gF7F9U7l3BSQcXINJSjcl4kwFrUr/WIXIi1p6u/h4FO4ATgJ+A+5WsGyjVF52pw9jvCN4FlL/AaMGQEQoujdKMWnFmIPIPIkViVK5779RKezirg81K0AtYI3QJPAKeN8ZgBsALoiQnIAr/rGu29pOgUjylAWwneXGyvC7imGH2jkG0dw2ILfAIsiyk8CagHLgNOjO2vHA2N2HxYkTOublTojd6hkKcV6u+fFe7dQIdaMx9YDSwGvgQSytNGAeZn9d24HLgCOBc4RekGgR/U4HLNoKNGUiEuK3HWXATp9cCq2O8hYGMJvjKVmRjrFXRLZIVRqCqBdlUSqH/7tBpOU8VZrYYWaFGliRJtmjlWnyCx6ShDe+y5jQLyzhjP5ljgRQjtiL24cZnjHlGqNMaUR8L31s+pT0aE806eVwF8VILujmOl3ViNqGhRyQH5mOWfAVMBMnW3VK69dGnUBc0AvoohkdegOz3Wvo1qZakLhEBTobPCVdo3U6QWd2Q6es+eOOOx8lTlUyckq269+KyF0944tG9nkuQuH/8CfZ6juAqAPcofjqePF2WarJ2wAxwG1rekWy4dYujwu/v3bJmSmnQbMN1aO2NKxaR191+5PjPM8Lf1c+ov0qa0W+WvBFLaLcl4esDI+gu01rcBr6hA0jXpxPlzqg96xjnNt77Fgud4kgv9Lzbsuu+cmJWnAGmtF7drITPFKJRCICL4UKvc06rcBSRdSyCEORGDtVggNGIEa3NAmCETpdlh4EngEn3AGK8LiDWfJpZGfku6xTS0tgaB5cnyRNJJegkv4SUTnusZER4HqE3XSgxuV2UEx9OGjzksVgSxDyy+52ZX3GVAmPXzz9/d3rQ9OuN/GHKsfv94/3YdNxCZuozLooJPaztrRVobgr8j6A8HYumR6ZnUCgAAAABJRU5ErkJggg==">
+<link rel="icon" type="image/png" sizes="32x32" media="(prefers-color-scheme: dark)" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flowering and fruit set: three concepts</title>
+<meta name="description" content="Three social post concepts for flowering and fruit set in horticulture, built from Hybrid-Ag's own material and the Cherry session work, for Nathan to pick from. 13 October 2026.">
+<style>
+@font-face{font-family:'Alternate Gothic';src:url('https://hybrid-ag.github.io/Live-Dashboard/assets/marketing/frost-readiness/concept-5/alternate-gothic-no2-d-regular.woff2') format('woff2');font-display:swap}
+@font-face{font-family:'Proxima Nova';src:url('https://hybrid-ag.github.io/Live-Dashboard/assets/marketing/frost-readiness/concept-5/proxima-nova-regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Proxima Nova';src:url('https://hybrid-ag.github.io/Live-Dashboard/assets/marketing/frost-readiness/concept-5/proxima-nova-bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Oswald';src:url('https://hybrid-ag.github.io/Live-Dashboard/assets/marketing/frost-readiness/concept-5/oswald-variable.ttf') format('truetype');font-weight:200 700;font-display:swap}
+:root{--paper:#f4f1ea;--paper2:#fbf9f5;--cream:#ece7df;--ink:#1a1714;--muted:#867764;--rule:#d9d2c7;--teal:#018d8a;--orange:#dc6800;--berry:#8a4f7d;--stage:#0f1c1b;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.5 'Proxima Nova',Helvetica,Arial,sans-serif}
+h1,h2,h3,h4{font-family:'Alternate Gothic','Oswald','Arial Narrow',sans-serif;font-weight:400;letter-spacing:.2px;margin:0}
+h1{font-size:72px;line-height:.98}
+h2{font-size:48px;line-height:1.02}
+h3{font-size:30px;line-height:1.08}
+h4{font-size:22px;line-height:1.15}
+p{margin:0 0 12px}
+a{color:var(--teal)}
+.label{font:600 12px/1.4 'Oswald',sans-serif;letter-spacing:2.2px;text-transform:uppercase;color:var(--teal)}
+.label.o{color:var(--orange)}.label.b{color:var(--berry)}.label.m{color:var(--muted)}
+.stripe{height:5px;background:linear-gradient(90deg,var(--teal) 0 33.333%,var(--orange) 33.333% 66.666%,var(--berry) 66.666%)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+header.hero{background:var(--stage);color:var(--white);padding:56px 0 48px}
+header.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:end}
+header.hero h1{color:var(--white);margin:16px 0 18px}
+header.hero p{color:#cfc6b8;max-width:620px;font-size:18px}
+header.hero .meta{color:#cfc6b8;font-size:14px;border-left:3px solid var(--orange);padding-left:16px}
+header.hero .meta b{color:var(--white)}
+header.hero img.logo{height:44px;filter:invert(1) brightness(2)}
+section{padding:56px 0}
+section+section{border-top:1px solid var(--rule)}
+.lead{font-size:21px;line-height:1.45;max-width:860px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:var(--white);border:1px solid var(--rule);padding:22px 24px}
+.card h4{margin-bottom:8px}
+.card p{font-size:16px;color:#3b352f}
+.num{font:400 54px/1 'Alternate Gothic','Oswald',sans-serif;color:var(--teal)}
+table{border-collapse:collapse;width:100%;font-size:15px;background:var(--white)}
+th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--rule)}
+th{font:600 12px/1.3 'Oswald',sans-serif;letter-spacing:1.8px;text-transform:uppercase;color:var(--muted);background:var(--cream)}
+td b{font-weight:700}
+.rec{border-left:4px solid var(--orange);background:var(--white);padding:22px 26px;margin-top:24px}
+.rec h3{margin-bottom:8px}
+/* concept blocks */
+.concept-head{display:grid;grid-template-columns:110px 1fr;gap:28px;align-items:start;margin-bottom:30px}
+.concept-head .big{font:400 120px/.9 'Alternate Gothic','Oswald',sans-serif;color:var(--rule)}
+.concept-head h2{margin:6px 0 10px}
+.concept-head .hook{font-size:22px;line-height:1.35;max-width:820px;margin-bottom:10px}
+.concept-head .why{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:18px}
+.concept-head .why div{border-top:3px solid var(--teal);padding-top:10px;font-size:15.5px;color:#3b352f}
+.concept-head .why div:nth-child(2){border-color:var(--orange)}
+.slides{display:flex;gap:18px;flex-wrap:wrap;margin:14px 0 8px}
+.sv{width:378px;height:472.5px;overflow:hidden;background:#fff;box-shadow:0 10px 28px rgba(0,0,0,.14);position:relative;cursor:zoom-in;flex:0 0 auto}
+.sv>.slide{transform:scale(.35);transform-origin:0 0}
+.sv .tag{position:absolute;left:0;bottom:0;right:0;background:rgba(26,23,20,.86);color:#fff;font:600 11px/1.3 'Oswald',sans-serif;letter-spacing:1.6px;text-transform:uppercase;padding:6px 10px}
+.note{font-size:14.5px;color:var(--muted);margin:6px 0 0}
+.adapt{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px}
+.adapt .card{padding:18px 20px}
+.adapt .card h4{display:flex;align-items:center;gap:10px}
+.adapt .card h4 span{font:600 11px/1 'Oswald',sans-serif;letter-spacing:1.6px;text-transform:uppercase;color:#fff;background:var(--ink);padding:5px 8px}
+.cap{white-space:pre-wrap;font-size:14.5px;line-height:1.5;color:#2d2822;background:var(--paper2);border:1px solid var(--rule);padding:14px 16px;margin-top:10px;max-height:420px;overflow:auto}
+.cap b{font-weight:700}
+.meta2{font-size:14px;color:var(--muted);margin-top:8px}
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+.list{margin:0;padding-left:20px;font-size:15.5px}
+.list li{margin-bottom:6px}
+.gate{background:var(--cream);border-left:4px solid var(--berry);padding:14px 18px;font-size:14.5px;margin-top:16px}
+.bank{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.bank figure{margin:0;background:var(--white);border:1px solid var(--rule)}
+.bank img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+.bank figcaption{font-size:12.5px;line-height:1.35;padding:8px 10px;color:#3b352f}
+.bank figcaption b{display:block;font-size:12px}
+.ok{color:var(--teal);font-weight:700}.ask{color:var(--orange);font-weight:700}
+footer{background:var(--stage);color:#cfc6b8;padding:36px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+/* ---------- the slides (1080 x 1350) ---------- */
+.slide{position:relative;width:1080px;height:1350px;overflow:hidden;background:#fff;color:var(--ink);font-family:'Proxima Nova',Helvetica,Arial,sans-serif;font-size:30px;line-height:1.35;isolation:isolate}
+.slide *{box-sizing:border-box}
+.slide p,.slide h2,.slide h3,.slide h4,.slide figure,.slide ul{margin:0}
+.slide h2,.slide h3,.slide h4{font-family:'Alternate Gothic','Oswald','Arial Narrow',sans-serif;font-weight:400}
+.slide img{display:block}
+.slide .lab{font:600 19px/1.4 'Oswald',sans-serif;letter-spacing:2.2px;text-transform:uppercase}
+.slide .stripe{height:6px}
+.s-head{position:absolute;inset:0 0 auto;height:280px;background:var(--paper)}
+.s-head .logo{position:absolute;left:64px;top:44px;width:270px}
+.s-head .run{position:absolute;right:64px;top:46px;text-align:right;font:600 16px/1.6 'Oswald',sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--ink)}
+.s-head .run span{display:block;color:var(--muted);font-size:14px}
+.s-head h2{position:absolute;left:64px;right:64px;top:132px;font-size:64px;line-height:1.02}
+.s-head .sub{position:absolute;left:64px;right:64px;top:222px;font-size:23px;font-style:italic;color:var(--muted);line-height:1.25}
+.s-head .stripe{position:absolute;left:0;right:0;bottom:0}
+.s-foot{position:absolute;left:0;right:0;bottom:0;height:66px;background:var(--paper)}
+.s-foot .stripe{height:4px}
+.s-foot .brand{position:absolute;inset:4px 64px 0;display:flex;align-items:center;justify-content:space-between;font:600 15px/1 'Oswald',sans-serif;letter-spacing:2.1px;text-transform:uppercase;color:var(--teal)}
+.s-foot .brand span:nth-child(2){color:var(--orange)}.s-foot .brand span:nth-child(3){color:var(--berry)}
+.folio{position:absolute;right:64px;bottom:80px;font:600 15px/1 'Oswald',sans-serif;letter-spacing:2px;color:var(--muted)}
+.body{position:absolute;left:64px;right:64px;top:320px;font-size:30px;line-height:1.36}
+.quote{position:absolute;left:64px;right:64px;font-size:33px;line-height:1.36;padding-left:26px;border-left:5px solid var(--orange)}
+.quote .who{display:block;margin-top:14px;font-size:21px;color:var(--muted);font-style:normal}
+.cue{position:absolute;left:64px;bottom:92px;font:600 17px/1 'Oswald',sans-serif;letter-spacing:1.6px;text-transform:uppercase;color:var(--teal)}
+/* cover */
+.cover{background:var(--paper)}
+.cover .photo{position:absolute;inset:0 0 auto;height:1350px;width:1080px;object-fit:cover;z-index:-3}
+.cover .veil{position:absolute;inset:0;z-index:-2;background:linear-gradient(180deg,rgba(244,241,234,.96) 0%,rgba(244,241,234,.94) 38%,rgba(244,241,234,.55) 60%,rgba(244,241,234,0) 82%)}
+.cover .logo{position:absolute;left:64px;top:44px;width:270px}
+.cover .run{position:absolute;right:64px;top:46px;text-align:right;font:600 16px/1.6 'Oswald',sans-serif;letter-spacing:2px;text-transform:uppercase}
+.cover .run span{display:block;color:var(--muted);font-size:14px}
+.cover .copy{position:absolute;left:64px;top:190px;width:640px}
+.cover .copy .lab{color:var(--teal);margin-bottom:22px}
+.cover .copy h2{font-size:104px;line-height:.98}
+.cover .copy p{font-size:29px;line-height:1.38;margin-top:30px;max-width:560px}
+.cover .person{position:absolute;right:0;bottom:66px;width:560px;height:auto}
+.cover .credit{position:absolute;left:64px;bottom:92px;width:430px;font-size:17px;line-height:1.3;color:var(--ink);background:rgba(244,241,234,.9);padding:8px 12px}
+.cover .credit b{display:block;font:600 13px/1.4 'Oswald',sans-serif;letter-spacing:1.8px;text-transform:uppercase;color:var(--muted)}
+/* figure slide */
+.fig{position:absolute;left:64px;right:64px;top:316px;height:700px}
+.fig svg{width:100%;height:100%}
+.key{position:absolute;left:64px;right:64px;bottom:150px;display:flex;gap:28px;font-size:21px;color:var(--muted);align-items:center}
+.key i{display:inline-block;width:38px;height:0;border-top:4px dashed var(--teal);margin-right:10px;vertical-align:middle}
+.key u{display:inline-block;width:14px;height:14px;border-radius:50%;background:var(--orange);margin-right:10px;vertical-align:middle;text-decoration:none}
+/* list slide */
+.reads{position:absolute;left:64px;right:64px;top:316px}
+.reads .r{display:grid;grid-template-columns:70px 1fr;gap:18px;padding:22px 0;border-top:2px solid var(--rule)}
+.reads .r:last-child{border-bottom:2px solid var(--rule)}
+.reads .n{font:400 54px/1 'Alternate Gothic','Oswald',sans-serif;color:var(--teal)}
+.reads h3{font-size:36px;line-height:1.1;margin-bottom:6px}
+.reads p{font-size:25px;line-height:1.32;color:#2d2822}
+.then{position:absolute;left:64px;right:64px;bottom:140px;font-size:26px;line-height:1.36;padding:20px 24px;background:var(--paper);border-left:5px solid var(--orange)}
+/* ask slide */
+.ask-big{position:absolute;left:64px;right:64px;top:316px;font-size:33px;line-height:1.36}
+.ask-big p{margin-bottom:26px}
+.bring{position:absolute;left:64px;right:64px;top:600px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.bring>div{background:var(--paper);padding:22px 22px 26px;border-top:4px solid var(--teal)}
+.bring>div:nth-child(2){border-color:var(--orange)}.bring>div:nth-child(3){border-color:var(--berry)}
+.bring h3{font-size:34px;margin-bottom:8px}.bring p{font-size:22px;color:#3b352f;line-height:1.3}
+.cta{position:absolute;left:64px;right:64px;bottom:150px;font-size:27px;line-height:1.4}
+.cta b{font-weight:700}
+/* three columns slide (concept C 03) */
+.cols3{position:absolute;left:64px;right:64px;top:330px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.cols3>div{background:var(--paper);padding:24px 22px 28px;min-height:500px;border-top:5px solid var(--teal)}
+.cols3>div:nth-child(2){border-color:var(--orange)}.cols3>div:nth-child(3){border-color:var(--berry)}
+.cols3 h3{font-size:46px;margin-bottom:6px}
+.cols3 .lab{color:var(--muted);margin-bottom:14px;font-size:16px}
+.cols3 p{font-size:23.5px;line-height:1.32;color:#2d2822;margin-bottom:12px}
+/* field note (concept B) */
+.fn{background:#111}
+.fn .photo{position:absolute;inset:0;width:1080px;height:1350px;object-fit:cover}
+.fn .photo.lowres{image-rendering:auto;filter:saturate(1.05)}
+.fn .card{position:absolute;left:64px;right:64px;bottom:110px;background:#fff;padding:40px 44px 38px}
+.fn .tab{position:absolute;left:0;top:-30px;background:var(--orange);color:#fff;font:600 17px/1 'Oswald',sans-serif;letter-spacing:2.2px;text-transform:uppercase;padding:12px 18px 10px}
+.fn .name{font:600 16px/1.5 'Oswald',sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+.fn .name span{color:var(--muted)}
+.fn h3{font-size:40px;line-height:1.1;margin-bottom:14px}
+.fn p{font-size:26px;line-height:1.36;color:#2d2822}
+.fn .q{margin-top:18px;padding-top:16px;border-top:2px solid var(--rule);font-size:26px;line-height:1.35}
+.fn .q b{font-weight:700}
+.fn .logo{position:absolute;left:64px;top:44px;width:250px;filter:drop-shadow(0 2px 10px rgba(0,0,0,.4))}
+.fn .foot{position:absolute;left:64px;right:64px;bottom:56px;display:flex;justify-content:space-between;font:600 14px/1 'Oswald',sans-serif;letter-spacing:2px;text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+/* count figure */
+.count{position:absolute;left:64px;right:64px;top:316px}
+.count .step{display:grid;grid-template-columns:70px 1fr;gap:18px;padding:16px 0;border-top:2px solid var(--rule)}
+.count .step:last-child{border-bottom:2px solid var(--rule)}
+.count .n{font:400 50px/1 'Alternate Gothic','Oswald',sans-serif;color:var(--teal)}
+.count p{font-size:26px;line-height:1.3}
+.count p b{font-weight:700}
+.tally{position:absolute;left:64px;right:64px;bottom:150px;height:250px}
+.tally svg{width:100%;height:100%}
+/* lightbox */
+#lb{position:fixed;inset:0;background:rgba(15,28,27,.92);display:none;align-items:center;justify-content:center;z-index:50;cursor:zoom-out}
+#lb.on{display:flex}
+#lb .box{width:1080px;height:1350px;transform-origin:center;background:#fff;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+@media (max-width:1100px){header.hero .wrap{grid-template-columns:1fr}.grid2,.grid3,.adapt,.twocol,.concept-head .why{grid-template-columns:1fr}.bank{grid-template-columns:repeat(3,1fr)}.concept-head{grid-template-columns:1fr}.concept-head .big{font-size:80px}h1{font-size:52px}h2{font-size:38px}}
+@media (max-width:640px){.wrap{padding:0 16px}.bank{grid-template-columns:repeat(2,1fr)}.sv{width:100%;height:auto;aspect-ratio:1080/1350}.sv>.slide{transform:scale(calc((100vw - 32px)/1080))}}
+@media print{.sv{break-inside:avoid}}
+
+/* ---- polish pass 13 Oct: entrance, lightbox and field-note treatment ---- */
+.sv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1),box-shadow .3s ease}
+.sv.in{opacity:1;transform:none}
+.slides .sv:nth-child(2){transition-delay:.08s}.slides .sv:nth-child(3){transition-delay:.16s}.slides .sv:nth-child(4){transition-delay:.24s}
+.sv:hover{box-shadow:0 18px 44px rgba(0,0,0,.22)}
+#lb .box>.slide{animation:lbIn .42s cubic-bezier(.2,.7,.2,1) both}
+@keyframes lbIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes cardUp{from{opacity:0;transform:translateY(54px)}to{opacity:1;transform:none}}
+@keyframes tabDrop{from{opacity:0;transform:translateY(-18px)}to{opacity:1;transform:none}}
+@keyframes kb{from{transform:scale(1.06)}to{transform:scale(1)}}
+@keyframes personIn{from{opacity:0;transform:translateX(34px)}to{opacity:1;transform:none}}
+#lb .fn .photo{animation:kb 8s ease-out both}
+#lb .fn .card{animation:cardUp .8s .25s cubic-bezier(.2,.7,.2,1) both}
+#lb .fn .tab{animation:tabDrop .55s .9s cubic-bezier(.2,.7,.2,1) both}
+#lb .fn .logo,#lb .fn .foot,#lb .fn .credit{animation:fadeIn 1.1s .3s both}
+#lb .s-head h2,#lb .s-head .sub,#lb .cover .copy,#lb .cover .credit{animation:fadeUp .6s .15s both}
+#lb .cover .person{animation:personIn .8s .25s cubic-bezier(.2,.7,.2,1) both}
+#lb .reads .r,#lb .count .step,#lb .cols3>div,#lb .bring>div{animation:fadeUp .55s .2s both}
+#lb .reads .r:nth-child(2),#lb .count .step:nth-child(2),#lb .cols3>div:nth-child(2),#lb .bring>div:nth-child(2){animation-delay:.34s}
+#lb .reads .r:nth-child(3),#lb .count .step:nth-child(3),#lb .cols3>div:nth-child(3),#lb .bring>div:nth-child(3){animation-delay:.48s}
+#lb .reads .r:nth-child(4),#lb .count .step:nth-child(4){animation-delay:.62s}
+#lb .fig,#lb .key,#lb .tally,#lb .then,#lb .ask-big,#lb .cta{animation:fadeUp .6s .4s both}
+#lb .hint{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);color:#cfc6b8;font:600 11px/1 'Oswald',sans-serif;letter-spacing:2px;text-transform:uppercase;opacity:.8}
+@media (prefers-reduced-motion:reduce){.sv{opacity:1;transform:none;transition:none}#lb *{animation:none!important}}
+@media print{.sv{opacity:1;transform:none}}
+html.static .sv{opacity:1;transform:none;transition:none}
+/* field-note slide treatment: scrims for the logo and the card, real white lockup, soft shadow */
+.fn::before{content:'';position:absolute;inset:0 0 auto;height:360px;background:linear-gradient(180deg,rgba(15,28,27,.6),rgba(15,28,27,0));z-index:1;pointer-events:none}
+.fn::after{content:'';position:absolute;inset:auto 0 0;height:620px;background:linear-gradient(0deg,rgba(15,28,27,.66),rgba(15,28,27,0));z-index:1;pointer-events:none}
+.fn .logo{z-index:2;width:286px;filter:drop-shadow(0 2px 12px rgba(0,0,0,.35))}
+.fn .card{z-index:2;box-shadow:0 28px 64px rgba(0,0,0,.42)}
+.fn .tab{box-shadow:0 8px 22px rgba(0,0,0,.28)}
+.fn .foot{z-index:2}
+.fn .credit{position:absolute;right:64px;top:60px;z-index:2;color:#fff;font-size:17px;line-height:1.3;text-align:right;text-shadow:0 1px 8px rgba(0,0,0,.6);opacity:.92}
+.fn .credit b{display:block;font:600 13px/1.5 'Oswald',sans-serif;letter-spacing:1.8px;text-transform:uppercase;opacity:.85}
+.cols3>div{min-height:430px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <img class="logo" src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/logo-black.png" alt="Hybrid-Ag">
+      <div class="label o" style="margin-top:28px">Flowering and fruit set · horticulture · social concepts</div>
+      <h1>Three ways to post flowering and set that actually pull a lead.</h1>
+      <p>Built from the drive, the Cherry session work and what the channels have rewarded this year. Each one is a named person, a real photo, one grower question and one ask. Marketing's lean is B, the real-photography one, because it plays to what nobody else in our space has: agronomists in a block every week. A and C are the two grower questions that sit around Andrew's session. Your read on which lands with growers is what we're after.</p>
+    </div>
+    <div class="meta">
+      <b>Options for Jamie Granger, Sales Manager</b> · from Nathan · 13 October 2026<br>
+      Replaces the calendar's "The new leaves need sugar too" concept<br>
+      Feeds Andrew Smith's online Cherry session<br>
+      Nothing here is posted or approved. Click any slide to see it full size.
+    </div>
+  </div>
+</header>
+<div class="stripe"></div>
+
+<section id="brief">
+  <div class="wrap">
+    <div class="label">The brief, and why the current concept is weak</div>
+    <h2 style="margin:10px 0 18px">The current flowering post explains a mechanism to nobody in particular.</h2>
+    <div class="grid2">
+      <div>
+        <p class="lead">"The new leaves need sugar too" is anonymous, leads with carbohydrate physiology, carries an AI-drawn branch, names no person, no product lens and no next step. It also lands after most cherry blocks in the north east have finished flowering.</p>
+        <p>What the channels have rewarded since July: posts with a named person and a field photo reach two to three times what the technical carousel did, and the one agronomy post that was saved most was the one that promised answers. Stories with a grower-facing field note (Hamilton's macadamia set, the 28 September shuck-fall cluster) are among the best-read stories of the month.</p>
+        <p>So every concept below starts with a person and a question, puts the agronomy inside, keeps the prescription-blend lens, and ends on the one ask that feeds the session: bring your results.</p>
+      </div>
+      <div>
+        <table>
+          <tr><th>Instagram feed, Jul to Sep 2026</th><th>Reach</th><th>Likes</th><th>Saves</th></tr>
+          <tr><td>James White's certificate (person, 17 Sep)</td><td>560</td><td>31</td><td>0</td></tr>
+          <tr><td>"Deeper agronomy breakdowns" announcement (23 Jul)</td><td>281</td><td>20</td><td>5</td></tr>
+          <tr><td>Bud &amp; Flower Readiness carousel (30 Jul)</td><td>197</td><td>17</td><td>2</td></tr>
+          <tr><td>Andrew Smith horticulture week (12 Jun)</td><td>309</td><td>28</td><td>0</td></tr>
+        </table>
+        <p class="meta2">Source: socials_history.json, Meta Graph insights. Stories 17 Sep to 12 Oct (reach at last pull): Hamilton's macadamia set 87 and 58, the 28 Sep shuck-fall cluster 57, Woody's nectarine set 48.</p>
+      </div>
+    </div>
+
+    <div class="grid3" style="margin-top:34px">
+      <div class="card"><div class="label">Rules every concept follows</div><h4>Rowe V1.8 and the claim gates</h4><p>Hybrid-Ag with the hyphen. Flowering, never bloom. Capitalised Nutrient names. No chemicals, no straights, no "proud". Conditional nutrient-role language, no fixed windows, no uptake percentages, no guaranteed set, size or yield. Prescription blend first, one product only where the test calls for it. Real photos or hand-built drawings. One CTA per asset.</p></div>
+      <div class="card"><div class="label">Where it goes</div><h4>Instagram, Facebook, X, in that order</h4><p>Instagram gets the carousel or the single 4:5 image. Facebook gets the same images with the longer caption and the phone number, because that audience rings. X gets one image and one line under 280 characters with the link. LinkedIn copy is a light edit of Facebook if wanted.</p></div>
+      <div class="card"><div class="label">The ask, every time</div><h4>Bring your results</h4><p>Send a photo of your set and your last leaf or sap result, with the soil test if you have it. We walk through what the trees are telling you. Replies land through contact-us and the office number as helpdesk tickets, so they route to sales the usual way. The 04B variant swaps the ask for the session invite once Andrew's date is locked.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="compare">
+  <div class="wrap">
+    <div class="label">Side by side</div>
+    <h2 style="margin:10px 0 18px">Three concepts, one recommendation.</h2>
+    <table>
+      <tr><th style="width:17%"></th><th>A · "The trees flowered well. So why was the set light?"</th><th>B · Field notes on set</th><th>C · "Do you actually know your crop load?"</th></tr>
+      <tr><td><b>What it is</b></td><td>Grower question 02 in the October run. Andrew Smith, first person, on why a strong flowering can still set light, with a journal-style drawing of what has to happen inside the flower.</td><td>A weekly photo-first post from a named agronomist's block this week: one photo, one observation in their own words, one question back to the grower. Macadamia, nectarine, cherry, apple already captured.</td><td>Grower question 03. Andrew's own line from the session guide, then the ten-limb count method that turns "a good crop" into a number the grower can bring.</td></tr>
+      <tr><td><b>Why it lands</b></td><td>It is the question growers are asking right now, cherries have just set. It is on record as a Hybrid-Ag answer (2020 Bud &amp; Flower webinar Q&amp;A), so Andrew can own it. Named person plus a drawing worth saving.</td><td>It is the format the channels already reward: a face, a field, this week. Zero production, the content is already in the stories log. Multi-crop, so it reaches apples, stone fruit and nuts, not only cherries.</td><td>A how-to is the most saved and shared kind of post. It converts an impression into evidence, which is the whole Hybrid-Ag pitch. It is timing-true for cherries after shuck fall and apples at petal fall.</td></tr>
+      <tr><td><b>Risk</b></td><td>Needs Andrew's wording and a current cherry photo at set. The flower drawing must stay a drawing, not a diagnosis.</td><td>Reach per post is modest unless the question provokes replies. Titles and photo consent per agronomist.</td><td>Growers may read a set percentage as a target. Keep it as their number, not ours.</td></tr>
+      <tr><td><b>Effort to post</b></td><td>One day. Builder exists (Calcium post), drawing to build in the house illustration language.</td><td>Two hours per note, template once.</td><td>One day. Reuses the Calcium post frame.</td></tr>
+      <tr><td><b>Feeds the session</b></td><td>Yes, directly (Q1 and Q4 of the question bank).</td><td>Indirectly, keeps the feed warm between posts.</td><td>Yes, it is the opening question of Andrew's guide.</td></tr>
+      <tr><td><b>What sales receives</b></td><td>A reply with a photo of a tagged limb and a leaf result, from a grower whose set disappointed. Warm, specific, ready for a call.</td><td>Photos and results from any crop, week on week. Lower volume per post, steady, and it builds the list sales can call through November.</td><td>A count and results from a grower who has already done the work. The best-qualified lead of the three, and it books them into the session.</td></tr>
+    </table>
+    <div class="rec">
+      <div class="label o">Where marketing has landed</div>
+      <h3>B is the engine. A and C are the two question posts that sit around Andrew's session.</h3>
+      <p>B plays to the strength: our people are in blocks every week and the photos already exist. It runs weekly from now, every note ending on the same ask. A answers the question growers have this fortnight, cherries have just set, and gives Andrew a line he has said in public before. C produces the best-qualified lead of the three, because the grower has done the counting before they reply, so it goes out as the lead-in to the session. What we want from sales: which of the three questions you hear most from growers right now, and any grower you would want named in a field note.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONCEPT A ================= -->
+<section id="a">
+  <div class="wrap">
+    <div class="concept-head">
+      <div class="big">A</div>
+      <div>
+        <div class="label">Concept A · grower question 02 · cherries, with stone fruit and apple variants</div>
+        <h2>The trees flowered well. So why was the set light?</h2>
+        <p class="hook">Andrew Smith's answer to the question he gets every spring: a flower that opens is not a fruit yet. The pollen tube has to make it all the way down, and the flower has to feed it the whole way.</p>
+        <div class="why">
+          <div><b>Where it comes from.</b> The 2020 Hybrid-Ag Bud &amp; Flower webinar notes (pollination needs Calcium and Boron supplied by the flower tissue; the pollen tube is fed Calcium the whole way down) and its Q&amp;A, where a grower asked exactly this and the answer was "quite a high possibility it's nutritional, Calcium first, and Manganese, Zinc and Boron to get the Calcium where it needs to go". Andrew's 2025 cherry webinar covers pollen quality: nutrient availability, water, pollinators, weather at flowering.</div>
+          <div><b>What makes it stronger than the current concept.</b> A named grower-agronomist, a question in the grower's words, a real flowering photo from Andrew's own block, a hand-built drawing in the journal-figure language, the prescription lens with one conditional product, and the one ask. Timing: cherries have just set, apples are at petal fall, stone fruit is being thinned.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="label m">Instagram carousel · four slides · 1080 × 1350 · click a slide to enlarge</div>
+    <div class="slides">
+
+      <!-- A01 -->
+      <div class="sv"><div class="slide cover">
+        <img class="photo" src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/josh-flowering-orchard.jpg" alt="" style="object-position:56% 62%">
+        <div class="veil"></div>
+        <img class="logo" src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/logo-black.png" alt="Hybrid-Ag">
+        <div class="run">Cherries · Spring 2026<span>Grower question 02</span></div>
+        <div class="copy">
+          <div class="lab">Flowering &amp; fruit set</div>
+          <h2>The trees flowered well. So why was the set light?</h2>
+          <p>Andrew Smith grows cherries at Smith's Fruit and is one of our Nutritional Agronomists. Every spring someone asks him this. Here is how he answers it.</p>
+        </div>
+        <img class="person" src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/andrew-cutout.webp" alt="">
+        <div class="credit"><b>Photo</b>Cherry flowering, north east Victoria, September 2026. Josh Richardson.</div>
+        <div class="s-foot"><div class="stripe"></div><div class="brand"><span>Precision Nutrition</span><span>Optimising Inputs</span><span>Maximising Outcomes</span></div></div>
+      </div><div class="tag">01 · The question</div></div>
+
+      <!-- A02 -->
+      <div class="sv"><div class="slide">
+        <div class="s-head"><img class="logo" src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/logo-black.png" alt=""><div class="run">Cherries · Spring 2026<span>Grower question 02</span></div>
+          <h2>A flower that opens isn't a fruit yet.</h2>
+          <div class="sub">Set happens at the bottom of the flower, not at the petals.</div><div class="stripe"></div></div>
+        <div class="fig">
+          <svg viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg" font-family="Proxima Nova, Helvetica, Arial, sans-serif">
+            <!-- petals, cut -->
+            <path d="M330 300 C 250 250, 150 200, 110 120 C 200 150, 290 220, 350 290 Z" fill="#faf7f2" stroke="#1a1714" stroke-width="2.2"/>
+            <path d="M622 300 C 702 250, 802 200, 842 120 C 752 150, 662 220, 602 290 Z" fill="#faf7f2" stroke="#1a1714" stroke-width="2.2"/>
+            <path d="M400 290 C 380 200, 360 120, 400 60 C 440 120, 450 200, 445 285 Z" fill="#fbf9f5" stroke="#1a1714" stroke-width="2.2"/>
+            <path d="M552 290 C 572 200, 592 120, 552 60 C 512 120, 502 200, 507 285 Z" fill="#fbf9f5" stroke="#1a1714" stroke-width="2.2"/>
+            <!-- hypanthium cup -->
+            <path d="M330 300 C 330 420, 380 470, 476 470 C 572 470, 622 420, 622 300" fill="#efe9d8" stroke="#1a1714" stroke-width="2.4"/>
+            <path d="M330 300 L 622 300" stroke="#1a1714" stroke-width="1.6" stroke-dasharray="4 5"/>
+            <!-- sepals -->
+            <path d="M330 300 L 300 330 L 345 318 Z" fill="#cfe0b8" stroke="#1a1714" stroke-width="1.8"/>
+            <path d="M622 300 L 652 330 L 607 318 Z" fill="#cfe0b8" stroke="#1a1714" stroke-width="1.8"/>
+            <!-- ovary with ovule -->
+            <ellipse cx="476" cy="428" rx="30" ry="34" fill="#d9e6c2" stroke="#1a1714" stroke-width="2.2"/>
+            <ellipse cx="476" cy="432" rx="11" ry="13" fill="#f4e7a0" stroke="#1a1714" stroke-width="1.8"/>
+            <!-- style -->
+            <path d="M462 396 L 460 150 C 460 136, 492 136, 492 150 L 490 396" fill="#e3ead0" stroke="#1a1714" stroke-width="2.2"/>
+            <!-- stigma -->
+            <ellipse cx="476" cy="140" rx="24" ry="14" fill="#f2d9c6" stroke="#1a1714" stroke-width="2.2"/>
+            <!-- stamens -->
+            <g stroke="#1a1714" stroke-width="1.8" fill="none">
+              <path d="M360 300 C 370 240, 400 220, 430 212"/><path d="M380 300 C 395 250, 420 235, 445 228"/>
+              <path d="M592 300 C 582 240, 552 220, 522 212"/><path d="M572 300 C 557 250, 532 235, 507 228"/>
+              <path d="M345 302 C 352 262, 372 248, 398 240"/><path d="M607 302 C 600 262, 580 248, 554 240"/>
+            </g>
+            <g fill="#f3cf5a" stroke="#1a1714" stroke-width="1.6">
+              <ellipse cx="430" cy="208" rx="9" ry="6"/><ellipse cx="445" cy="225" rx="9" ry="6"/><ellipse cx="398" cy="238" rx="9" ry="6"/>
+              <ellipse cx="522" cy="208" rx="9" ry="6"/><ellipse cx="507" cy="225" rx="9" ry="6"/><ellipse cx="554" cy="238" rx="9" ry="6"/>
+            </g>
+            <!-- pollen grain -->
+            <circle cx="486" cy="128" r="7" fill="#f3cf5a" stroke="#1a1714" stroke-width="1.6"/>
+            <!-- pollen tube -->
+            <path d="M486 134 C 480 180, 474 260, 476 330 C 477 370, 476 395, 476 418" fill="none" stroke="#018d8a" stroke-width="4" stroke-dasharray="9 7" stroke-linecap="round"/>
+            <!-- calcium / boron supply from style tissue -->
+            <g fill="#dc6800">
+              <circle cx="451" cy="190" r="5"/><circle cx="501" cy="215" r="5"/><circle cx="450" cy="250" r="5"/><circle cx="502" cy="285" r="5"/><circle cx="449" cy="320" r="5"/><circle cx="503" cy="350" r="5"/><circle cx="456" cy="385" r="5"/>
+            </g>
+            <g stroke="#dc6800" stroke-width="2" fill="none">
+              <path d="M457 190 L 470 192"/><path d="M495 215 L 482 218"/><path d="M456 250 L 468 252"/><path d="M496 285 L 484 287"/><path d="M455 320 L 468 322"/><path d="M497 350 L 484 352"/>
+            </g>
+            <!-- labels -->
+            <g font-size="20" fill="#1a1714">
+              <path d="M500 128 L 640 96" stroke="#1a1714" stroke-width="1.2" fill="none"/>
+              <text x="648" y="92" font-weight="700">Stigma</text><text x="648" y="118">Pollen lands and germinates.</text>
+              <path d="M506 300 L 640 300" stroke="#1a1714" stroke-width="1.2" fill="none"/>
+              <text x="648" y="292" font-weight="700">Style</text><text x="648" y="318">The tube grows down inside it.</text><text x="648" y="344">The flower keeps feeding it</text><text x="648" y="370">Calcium and Boron all the way.</text>
+              <path d="M506 432 L 640 470" stroke="#1a1714" stroke-width="1.2" fill="none"/>
+              <text x="648" y="470" font-weight="700">Ovule</text><text x="648" y="496">The tube arrives. Fruit is set.</text><text x="648" y="522">If it doesn't arrive, no fruit,</text><text x="648" y="548">however good the flowering looked.</text>
+              <path d="M200 114 L 232 186" stroke="#1a1714" stroke-width="1.2" fill="none"/>
+              <text x="30" y="52" font-weight="700">Petals</text><text x="30" y="78">What we see from the ute.</text><text x="30" y="104">Not where set is decided.</text>
+              <path d="M398 244 L 300 342" stroke="#1a1714" stroke-width="1.2" fill="none"/>
+              <text x="40" y="376" font-weight="700">Anthers</text><text x="40" y="402">Pollen. Its quality was</text><text x="40" y="428">built in the bud last autumn.</text>
+            </g>
+            <text x="476" y="660" text-anchor="middle" font-size="19" fill="#867764">Cherry flower in section. A drawing of the process, not a measurement.</text>
+          </svg>
+        </div>
+        <div class="key"><span><i></i>Pollen tube</span><span><u></u>Calcium and Boron supplied by the flower tissue</span></div>
+        <div class="folio">02 / 04</div>
+        <div class="s-foot"><div class="stripe"></div><div class="brand"><span>Precision Nutrition</span><span>Optimising Inputs</span><span>Maximising Outcomes</span></div></div>
+      </div><div class="tag">02 · What has to happen inside the flower</div></div>
+
+      <!-- A03 -->
+      <div class="sv"><div class="slide">
+        <div class="s-head"><img class="logo" src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/logo-black.png" alt=""><div class="run">Cherries · Spring 2026<span>Grower question 02</span></div>
+          <h2>Before you blame the bees, check four things.</h2>
+          <div class="sub">In Andrew's words. A light set is usually more than one of these.</div><div class="stripe"></div></div>
+        <div class="reads">
+          <div class="r"><div class="n">1</div><div><h3>Weather through flowering</h3><p>Frost, a cold snap or days of rain slow the tube down. It has a short time to reach the ovule.</p></div></div>
+          <div class="r"><div class="n">2</div><div><h3>Pollinisers and bees</h3><p>Did the polliniser rows overlap your main variety, and were the bees flying on the days that counted?</p></div></div>
+          <div class="r"><div class="n">3</div><div><h3>Water and roots</h3><p>A dry or waterlogged root zone through flowering cuts what the tree can take up, Boron included. Supply in the soil is not the same as access.</p></div></div>
+          <div class="r"><div class="n">4</div><div><h3>What went in</h3><p>Boron, Calcium and Zinc in the leaf or sap results before flowering, read against the soil test. If they were short going in, the flowers were working with less.</p></div></div>
+        </div>
+        <div class="then">When the results show a trace was short, we build a prescription blend for that block ahead of next flowering, with Opti-Trace Boron where a foliar Boron fits.</div>
+        <div class="folio">03 / 04</div>
+        <div class="s-foot"><div class="stripe"></div><div class="brand"><span>Precision Nutrition</span><span>Optimising Inputs</span><span>Maximising Outcomes</span></div></div>
+      </div><div class="tag">03 · The four checks, then the blend</div></div>
+
+      <!-- A04 -->
+      <div class="sv"><div class="slide">
+        <div class="s-head"><img class="logo" src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/logo-black.png" alt=""><div class="run">Cherries · Spring 2026<span>Grower question 02</span></div>
+          <h2>Bring your set and your results.</h2>
+          <div class="sub">Measure first. Understand second. Intervene third.</div><div class="stripe"></div></div>
+        <div class="ask-big">
+          <p>If your set didn't match your flowering, that's the question to bring us. We'll walk through what your trees are telling you, and what to put in place before the next flowering.</p>
+        </div>
+        <div class="bring">
+          <div><h3>A photo</h3><p>One tagged limb, flowers then fruit.</p></div>
+          <div><h3>Your leaf or sap result</h3><p>The last one you have, any lab.</p></div>
+          <div><h3>Your soil test</h3><p>If there is one. It sets the baseline.</p></div>
+        </div>
+        <div class="cta"><b>hybridag.com.au/contactus</b> · (03) 5722 7555<br>Andrew Smith · Nutritional Agronomist · Hybrid-Ag</div>
+        <div class="folio">04 / 04</div>
+        <div class="s-foot"><div class="stripe"></div><div class="brand"><span>Precision Nutrition</span><span>Optimising Inputs</span><span>Maximising Outcomes</span></div></div>
+      </div><div class="tag">04 · The ask (04B swaps in the session invite)</div></div>
+    </div>
+    <p class="note">Cover photo is Josh Richardson's September flowering photo from the dashboard. Andrew's own Royal Tioga flowering photo (10 September story) can replace it once he sends the original. Slide 2 is a hand-drawn SVG in the journal-figure language from the illustration options; it says on its face that it is a drawing of the process.</p>
+
+    <div class="adapt">
+      <div class="card"><h4><span>Instagram</span>Carousel, 4 slides</h4>
+        <div class="cap"><b>The trees flowered well. So why was the set light?</b>
+
+Andrew Smith grows cherries and is one of our agronomists. Every spring someone asks him this.
+
+"A flower that opens isn't a cherry yet. Pollen lands on the stigma and sends a tube down to the ovule, and the flower has to keep feeding that tube Calcium and Boron the whole way. If the tube doesn't make it, there's no fruit, however good the flowering looked."
+
+"So before I blame the bees I check four things. The weather through flowering. Whether the pollinisers overlapped and the bees were flying. Whether the roots had water. And what the leaf or sap results said was in the tree before the flowers opened."
+
+When the results show a trace was short going in, we build a prescription blend for that block ahead of next flowering, with Opti-Trace Boron where a foliar Boron fits.
+
+Set didn't match your flowering? Bring us a photo of a tagged limb and your last leaf result. Link in bio, or call (03) 5722 7555.
+
+#cherries #stonefruit #horticulture #fruitset</div>
+        <p class="meta2">Swipe cue sits on slide 1. Alt text per slide describes the drawing.</p></div>
+      <div class="card"><h4><span>Facebook</span>Same four images, longer caption</h4>
+        <div class="cap"><b>The trees flowered well. So why was the set light?</b>
+
+Andrew Smith gets asked this every spring. He grows cherries at Smith's Fruit and is one of our Nutritional Agronomists, so we asked him to answer it properly.
+
+"A flower that opens isn't a cherry yet. Set happens at the bottom of the flower. Pollen lands on the stigma and grows a tube down through the style to the ovule, and the flower tissue has to keep feeding that tube Calcium and Boron the whole way down. Cold slows it. If it doesn't get there in time, that flower never becomes a fruit, and you can have a block that looked magnificent in September and sets light."
+
+"So I don't start with the bees. I check four things. What the weather did through flowering. Whether the polliniser rows overlapped the main variety and the bees were flying on the days that mattered. Whether the root zone was dry or waterlogged, because that cuts what the tree can take up, Boron included. And what the leaf or sap results said was in the tree before the flowers opened. If Boron, Calcium or Zinc were short going in, the flowers were working with less."
+
+When the results show a trace was short, we build a prescription blend for that block ahead of the next flowering. Where a foliar Boron fits, Opti-Trace Boron is what we use.
+
+If your set didn't match your flowering, that's the question to bring us. A photo of one tagged limb, your last leaf or sap result, and the soil test if you have one. We'll walk through what your trees are telling you.
+
+Contact us: https://www.hybridag.com.au/contactus or call (03) 5722 7555.</div></div>
+      <div class="card"><h4><span>X</span>One image (slide 02) + one line</h4>
+        <div class="cap">The trees flowered well. So why was the set light? A flower that opens isn't a fruit yet: the pollen tube has to reach the ovule, fed Calcium and Boron the whole way. Andrew Smith on the four things to check before blaming the bees. hybridag.com.au/contactus #cherries</div>
+        <p class="meta2">258 characters. Reply to it with slide 03 as a second image if it gets traction.</p>
+        <h4 style="margin-top:18px"><span>Variants</span>Stone fruit and apples</h4>
+        <p style="font-size:14.5px">Swap the cover photo and the first line. Stone fruit: Woody's Maybright nectarine set photo, "The nectarines flowered well". Apples: Nathan Strawbridge's Pink Lady flowering in the Adelaide Hills, with the polliniser-overlap check moved to the top of slide 3. The drawing and the four checks hold across crops.</p></div>
+    </div>
+
+    <div class="twocol">
+      <div><div class="label">Sources used</div>
+        <ul class="list">
+          <li>Hybrid-Ag Bud &amp; Flower Optimisation webinar 2020, slides 6 and 7 speaker notes: the stigma must supply Calcium and Boron for the pollen to germinate; a constant supply of Calcium to the pollen tube is critical to its growth; no tube, no set.</li>
+          <li>Same webinar Q&amp;A: strong flowering then a light set "could quite possibly be nutritional"; Calcium first, with Manganese, Zinc and Boron critical to getting Calcium where it needs to go.</li>
+          <li>Andrew Smith, Cherry Nutrition Webinar 2025: pollen production and quality depend on nutrient availability (Boron, Calcium, Nitrogen, Zinc), consistent water, pollinator activity and favourable conditions at flowering.</li>
+          <li>Apple Bible 2026 (Andrew's source draft, Boron masterclass): cold slows pollen tube growth; dry conditions reduce Boron uptake, "the issue may be Boron access, not supply".</li>
+          <li>Product truth, 10 Aug 2026 workbook: Opti-Trace Boron 4.7% w/v B, foliar 1 to 5 L/ha, "placed where the test says it is short, ahead of flowering and fruit set". Rates stay off the post.</li>
+        </ul></div>
+      <div><div class="label b">Claim gates kept</div>
+        <div class="gate">No set percentage, no uptake figure, no fixed window, no "cell division is already half done". Nutrient roles are conditional and in Andrew's voice. The drawing is labelled as a drawing. One product, conditional on the test. BudMax is not used here (the V1.8 ruling against framing it around flowering stands); Opti-Trace Boron carries the conditional line instead.</div>
+        <div class="label" style="margin-top:18px">Before posting</div>
+        <ul class="list"><li>Andrew rewords or approves his lines, and supplies the flowering photo at full size.</li><li>Andrew or Chelsea confirms the Opti-Trace Boron line.</li><li>Amos sees the finished set.</li><li>Alt slide 04B needs the session date.</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONCEPT B ================= -->
+<section id="b">
+  <div class="wrap">
+    <div class="concept-head">
+      <div class="big">B</div>
+      <div>
+        <div class="label">Concept B · field notes on set · all horticulture crops · weekly</div>
+        <h2>Field notes: what set looks like this week.</h2>
+        <p class="hook">One photo from a named agronomist's block this week, their own words, and one question back to the grower. The agronomy is in the observation; the lead is in the question.</p>
+        <div class="why">
+          <div><b>Where it comes from.</b> The team is already posting these as stories: Hamilton Rowe on Woody's macadamia nut set at Red Rock's (12 Oct), Andrew Woodford on Maybright nectarine set (17 Sep), Andrew Smith's Royal Tioga and Royal Lyn in flower (10 and 11 Sep) and "Tioga at Elerslee" after flowering (25 Sep), Nathan Strawbridge's Pink Lady flowering in the Adelaide Hills (1 Oct). They vanish after 24 hours. This turns them into feed posts with a question and an ask.</div>
+          <div><b>What makes it stronger than the current concept.</b> A face and a field, which is what reach has followed all year. Multi-crop, so it speaks to the apple, stone fruit and nut growers the cherry posts do not. Real, dated, named. No production: a template card over the photo they already took.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="label m">Instagram single image or two-slide · 1080 × 1350 · three notes ready to go, one template</div>
+    <div class="slides">
+
+      <div class="sv"><div class="slide fn">
+        <img class="photo" src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/crop-b1.jpg" alt="" style="object-position:50% 40%"><div class="credit"><b>Photo</b>Hamilton Rowe · Red Rock's, Bundaberg</div>
+        <img class="logo" src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/lockup-white.png" alt="Hybrid-Ag">
+        <div class="card"><div class="tab">Field note · 12 Oct 2026 · Bundaberg QLD</div>
+          <div class="name">Hamilton Rowe <span>· Hybrid-Ag · on Andrew Woodford's block</span></div>
+          <h3>Excellent nut set in macadamias at Red Rock's.</h3>
+          <p>"Good to see the trees in excellent condition post-flowering. Great work from Woody, with agronomy advice and leaf testing over the last couple of years."</p>
+          <div class="q"><b>What did your flowering turn into?</b> Send us a photo of your set and your last leaf result. We'll tell you what we see.</div>
+        </div>
+        <div class="foot"><span>Precision Nutrition</span><span>hybridag.com.au</span></div>
+      </div><div class="tag">B1 · Macadamia · Hamilton Rowe</div></div>
+
+      <div class="sv"><div class="slide fn">
+        <img class="photo" src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/field-nectarine-set-2019-11-13.jpg" alt="" style="object-position:50% 42%"><div class="credit"><b>Photo</b>Hybrid-Ag archive · Woody's original to follow</div>
+        <img class="logo" src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/lockup-white.png" alt="Hybrid-Ag">
+        <div class="card"><div class="tab">Field note · 17 Sep 2026 · Queensland</div>
+          <div class="name">Andrew Woodford <span>· Nutritional Agronomist · Hybrid-Ag</span></div>
+          <h3>Very good fruit set in Maybright nectarine.</h3>
+          <p>"Some yet to be thinned, others have had their final thinning."</p>
+          <div class="q"><b>Thinning to a number, or to a feel?</b> Send us a photo of a limb before and after, and your last leaf result. We'll tell you what we see.</div>
+        </div>
+        <div class="foot"><span>Precision Nutrition</span><span>hybridag.com.au</span></div>
+      </div><div class="tag">B2 · Nectarine · Andrew Woodford</div></div>
+
+      <div class="sv"><div class="slide fn">
+        <img class="photo" src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/crop-b3.jpg" alt="" style="object-position:50% 30%"><div class="credit"><b>Photo</b>Andrew Smith · Elerslee</div>
+        <img class="logo" src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/lockup-white.png" alt="Hybrid-Ag">
+        <div class="card"><div class="tab">Field note · 25 Sep 2026 · North East Victoria</div>
+          <div class="name">Andrew Smith <span>· Nutritional Agronomist · Smith's Fruit</span></div>
+          <h3>Tioga at Elerslee, a fortnight after flowering.</h3>
+          <p>[Andrew's line here: what he is seeing on the spurs, and what he is watching for through shuck fall.]</p>
+          <div class="q"><b>What's holding on your spurs?</b> Send us a photo of one tagged limb and your last leaf result. We'll tell you what we see.</div>
+        </div>
+        <div class="foot"><span>Precision Nutrition</span><span>hybridag.com.au</span></div>
+      </div><div class="tag">B3 · Cherry · Andrew Smith (line to come)</div></div>
+
+      <div class="sv"><div class="slide fn">
+        <img class="photo" src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/crop-b4.jpg" alt="" style="object-position:50% 20%"><div class="credit"><b>Photo</b>Nathan Strawbridge · Adelaide Hills</div>
+        <img class="logo" src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/lockup-white.png" alt="Hybrid-Ag">
+        <div class="card"><div class="tab">Field note · 1 Oct 2026 · Adelaide Hills SA</div>
+          <div class="name">Nathan Strawbridge <span>· Nutritional Agronomist · Hybrid-Ag</span></div>
+          <h3>Pink Lady in flower in the Adelaide Hills.</h3>
+          <p>[Nathan's line here: how the overlap with the pollinisers looks, and what he is watching at petal fall.]</p>
+          <div class="q"><b>How's the overlap with your pollinisers this year?</b> Send us a photo and your last leaf result. We'll tell you what we see.</div>
+        </div>
+        <div class="foot"><span>Precision Nutrition</span><span>hybridag.com.au</span></div>
+      </div><div class="tag">B4 · Apple · Nathan Strawbridge (line to come)</div></div>
+    </div>
+    <p class="note">B1, B3 and B4 use the team's own story captures, upscaled and cropped to hide the story text; each agronomist sends the original from their phone and it drops straight into the template. B2 shows an archive nectarine photo until Woody sends his Maybright original (his story is a two-panel composite that does not crop cleanly). B1 and B2 use the words already posted. B3 and B4 need one sentence from the person. Open any slide to see the card and tab come in.</p>
+
+    <div class="adapt">
+      <div class="card"><h4><span>Instagram</span>Single 4:5 image, or photo + card as two slides</h4>
+        <div class="cap"><b>Field note · Bundaberg, Queensland.</b>
+
+Hamilton Rowe was on Andrew Woodford's macadamia block at Red Rock's this week. Excellent nut set, trees in good condition after flowering. Woody has had the agronomy and the leaf testing on this block for the last couple of years, and it shows at set.
+
+What did your flowering turn into? Send us a photo of your set and your last leaf result, any crop, any lab. We'll tell you what we see.
+
+Link in bio.
+
+#macadamias #horticulture #fruitset #nutset</div>
+        <p class="meta2">Reshare the original story the same day. Reply to every comment with a question, not an answer.</p></div>
+      <div class="card"><h4><span>Facebook</span>Photo post, same words, add the number</h4>
+        <div class="cap"><b>Field note · Bundaberg, Queensland.</b>
+
+Hamilton Rowe was on Andrew Woodford's macadamia block at Red Rock's this week. Excellent nut set, and the trees are in good condition after flowering. Woody has had the agronomy advice and the leaf testing on this block for the last couple of years, and that is where you see it, at set.
+
+What did your flowering turn into this spring? Send us a photo of your set and your last leaf result. Any crop, any lab. We'll tell you what we see, and whether it's worth a closer look before the fruit starts filling.
+
+Contact us: https://www.hybridag.com.au/contactus or call (03) 5722 7555.</div></div>
+      <div class="card"><h4><span>X</span>Photo + one line</h4>
+        <div class="cap">Field note, Bundaberg: excellent nut set in macadamias at Red Rock's after a couple of seasons of leaf testing and agronomy from Woody. What did your flowering turn into? Send us a photo and your last leaf result. hybridag.com.au/contactus #macadamias</div>
+        <p class="meta2">230 characters.</p>
+        <h4 style="margin-top:18px"><span>Cadence</span>One a week, October to November</h4>
+        <p style="font-size:14.5px">Rotate crops and faces: macadamia (Hamilton/Woody), nectarine (Woody), cherry (Andrew Smith, Josh Richardson), apple (Nathan Strawbridge), then whatever the team posts next. Every note ends with the same ask so the replies land in the same place.</p></div>
+    </div>
+
+    <div class="twocol">
+      <div><div class="label">Sources used</div>
+        <ul class="list">
+          <li>Stories log (socials_log.json), 10 Sep to 12 Oct 2026: the story captures above with their overlay text and reach.</li>
+          <li>FGV 2026 campaign V2 rule: one audience, one job, one CTA, one owner per asset; stories carry the daily rhythm, feed is for meaningful moments. This concept promotes the best story to the feed once a week.</li>
+          <li>Commercial storyline 2026: results-first, grower as hero, "uncover, simplify, support".</li>
+        </ul></div>
+      <div><div class="label b">Claim gates kept</div>
+        <div class="gate">Only what the agronomist said and saw. No cause claimed for the set ("and it shows at set" is an observation on a block with a known history, not a product claim). No product named. No rates. Titles to confirm: Hamilton Rowe's and Nathan Strawbridge's public titles; Woody is Nutritional Agronomist. Photo consent from each grower whose block appears (Red Rock's, Maybright block, Elerslee).</div>
+        <div class="label" style="margin-top:18px">Before posting</div>
+        <ul class="list"><li>Original photos from Hamilton, Woody, Andrew and Nathan Strawbridge.</li><li>One sentence each from Andrew Smith and Nathan Strawbridge for B3 and B4.</li><li>Grower permission to name the block.</li><li>Amos sees the template once; the weekly notes then run on the template.</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONCEPT C ================= -->
+<section id="c">
+  <div class="wrap">
+    <div class="concept-head">
+      <div class="big">C</div>
+      <div>
+        <div class="label o">Concept C · grower question 03 · cherries, apples and stone fruit · feeds the session</div>
+        <h2>Do you actually know your crop load, or do you just know you've got a good crop?</h2>
+        <p class="hook">Andrew's own line from the session guide, then a ten-minute method that turns "a good crop" into a number. A number can be brought to the session. An impression can't.</p>
+        <div class="why">
+          <div><b>Where it comes from.</b> Andrew Smith's Cherry Grower Webinar Development Guide: "Do you actually know your crop load, or do you just know that you've got a good crop?", crop load changes the conversation around water, nutrition, fruit size, maturity, carbohydrate demand and pack-out; "measure first, understand second, intervene third". The Apple Play Book's crop-load dilution: the same Calcium pool shared across more fruit is less Calcium per fruit.</div>
+          <div><b>What makes it stronger than the current concept.</b> It is a how-to, the most saved and shared kind of post, and it asks the grower to do something that produces evidence, which is the whole Hybrid-Ag pitch. It opens the session on Andrew's exact question. Timing-true: cherries are past shuck fall, apples are at petal fall, stone fruit is being thinned.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="label m">Instagram carousel · four slides · 1080 × 1350</div>
+    <div class="slides">
+
+      <!-- C01 -->
+      <div class="sv"><div class="slide cover">
+        <img class="photo" src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/w25-shuckfall-27.jpg" alt="" style="object-position:50% 45%">
+        <div class="veil"></div>
+        <img class="logo" src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/logo-black.png" alt="Hybrid-Ag">
+        <div class="run">Horticulture · Spring 2026<span>Grower question 03</span></div>
+        <div class="copy">
+          <div class="lab">Fruit set &amp; crop load</div>
+          <h2>Do you actually know your crop load?</h2>
+          <p>Or do you just know you've got a good crop? Andrew Smith asks every cherry grower this in October. Here's how to answer it in ten minutes.</p>
+        </div>
+        <img class="person" src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/andrew-cutout.webp" alt="">
+        <div class="credit"><b>Photo</b>Cherry fruitlets at shuck fall. Andrew Smith's cherry webinar deck, 2025.</div>
+        <div class="s-foot"><div class="stripe"></div><div class="brand"><span>Precision Nutrition</span><span>Optimising Inputs</span><span>Maximising Outcomes</span></div></div>
+      </div><div class="tag">01 · The question</div></div>
+
+      <!-- C02 -->
+      <div class="sv"><div class="slide">
+        <div class="s-head"><img class="logo" src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/logo-black.png" alt=""><div class="run">Horticulture · Spring 2026<span>Grower question 03</span></div>
+          <h2>Count it. Ten limbs, ten minutes.</h2>
+          <div class="sub">A number beats an impression, and it travels to the next decision.</div><div class="stripe"></div></div>
+        <div class="count">
+          <div class="step"><div class="n">1</div><p><b>Tag ten fruiting limbs</b> across the block. Not the easy row, not the best tree. Flag tape and a marker.</p></div>
+          <div class="step"><div class="n">2</div><p><b>At full flowering, count the flowers</b> on each limb and write it on the tag. Missed it this year? Start at step 3 and carry the fruit count to harvest.</p></div>
+          <div class="step"><div class="n">3</div><p><b>After shuck fall</b> (cherries) or the drop (apples, stone fruit), <b>count the fruit that held.</b></p></div>
+          <div class="step"><div class="n">4</div><p><b>Fruit held ÷ flowers counted = your set.</b> Average the ten. That is your crop load, in your block, this season.</p></div>
+        </div>
+        <div class="tally">
+          <svg viewBox="0 0 952 250" xmlns="http://www.w3.org/2000/svg" font-family="Proxima Nova, Helvetica, Arial, sans-serif">
+            <text x="0" y="28" font-size="19" font-weight="700" fill="#867764" letter-spacing="2">LIMB 4 · FULL FLOWERING</text>
+            <g fill="#faf7f2" stroke="#1a1714" stroke-width="2">
+              <circle cx="22" cy="80" r="16"/><circle cx="64" cy="80" r="16"/><circle cx="106" cy="80" r="16"/><circle cx="148" cy="80" r="16"/><circle cx="190" cy="80" r="16"/><circle cx="232" cy="80" r="16"/><circle cx="274" cy="80" r="16"/><circle cx="316" cy="80" r="16"/><circle cx="358" cy="80" r="16"/><circle cx="400" cy="80" r="16"/>
+            </g>
+            <g fill="#f3cf5a"><circle cx="22" cy="80" r="5"/><circle cx="64" cy="80" r="5"/><circle cx="106" cy="80" r="5"/><circle cx="148" cy="80" r="5"/><circle cx="190" cy="80" r="5"/><circle cx="232" cy="80" r="5"/><circle cx="274" cy="80" r="5"/><circle cx="316" cy="80" r="5"/><circle cx="358" cy="80" r="5"/><circle cx="400" cy="80" r="5"/></g>
+            <text x="440" y="88" font-size="40" font-family="Alternate Gothic, Oswald, sans-serif" fill="#1a1714">10 flowers</text>
+            <text x="0" y="158" font-size="19" font-weight="700" fill="#867764" letter-spacing="2">LIMB 4 · AFTER SHUCK FALL</text>
+            <g fill="#bfd38f" stroke="#1a1714" stroke-width="2">
+              <circle cx="22" cy="210" r="16"/><circle cx="64" cy="210" r="16"/><circle cx="106" cy="210" r="16"/><circle cx="148" cy="210" r="16"/><circle cx="190" cy="210" r="16"/><circle cx="232" cy="210" r="16"/>
+            </g>
+            <g fill="none" stroke="#d9d2c7" stroke-width="2" stroke-dasharray="4 4"><circle cx="274" cy="210" r="16"/><circle cx="316" cy="210" r="16"/><circle cx="358" cy="210" r="16"/><circle cx="400" cy="210" r="16"/></g>
+            <text x="440" y="218" font-size="40" font-family="Alternate Gothic, Oswald, sans-serif" fill="#1a1714">6 held</text>
+            <text x="640" y="88" font-size="40" font-family="Alternate Gothic, Oswald, sans-serif" fill="#018d8a">6 ÷ 10</text>
+            <text x="640" y="218" font-size="40" font-family="Alternate Gothic, Oswald, sans-serif" fill="#dc6800">= your number</text>
+            <text x="640" y="250" font-size="17" fill="#867764">Example limb. Your block sets its own.</text>
+          </svg>
+        </div>
+        <div class="folio">02 / 04</div>
+        <div class="s-foot"><div class="stripe"></div><div class="brand"><span>Precision Nutrition</span><span>Optimising Inputs</span><span>Maximising Outcomes</span></div></div>
+      </div><div class="tag">02 · The method</div></div>
+
+      <!-- C03 -->
+      <div class="sv"><div class="slide">
+        <div class="s-head"><img class="logo" src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/logo-black.png" alt=""><div class="run">Horticulture · Spring 2026<span>Grower question 03</span></div>
+          <h2>The number changes the next decision.</h2>
+          <div class="sub">Andrew on what he looks at next, depending on where the count lands.</div><div class="stripe"></div></div>
+        <div class="cols3">
+          <div><h3>Light</h3><div class="lab">Well under what the flowering promised</div><p>The question goes back to flowering: weather, pollination, water, and what the leaf results said was in the tree. Ask it now while it's fresh, so the lead-in to next flowering changes.</p></div>
+          <div><h3>About right</h3><div class="lab">Load the trees can carry</div><p>Protect it. Water to the load, keep the canopy working, and keep Calcium arriving while the cells are being laid down. A paired sap test tells you whether it is.</p></div>
+          <div><h3>Heavy</h3><div class="lab">More fruit than the tree can finish</div><p>Every fruit shares the same Calcium and sugar supply. Size and firmness are what's at stake. Crop load, water and Calcium delivery are the levers left, read off the test, not the calendar.</p></div>
+        </div>
+        <div class="then">Whichever column you're in, the next step is the same: measure first, understand second, intervene third. Where the results call for it, we build a prescription blend for that block.</div>
+        <div class="folio">03 / 04</div>
+        <div class="s-foot"><div class="stripe"></div><div class="brand"><span>Precision Nutrition</span><span>Optimising Inputs</span><span>Maximising Outcomes</span></div></div>
+      </div><div class="tag">03 · Light, right, heavy</div></div>
+
+      <!-- C04 -->
+      <div class="sv"><div class="slide">
+        <div class="s-head"><img class="logo" src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/logo-black.png" alt=""><div class="run">Horticulture · Spring 2026<span>Grower question 03</span></div>
+          <h2>Bring your count.</h2>
+          <div class="sub">And whatever results you already have. Any lab.</div><div class="stripe"></div></div>
+        <div class="ask-big">
+          <p>Andrew Smith is running an online session for cherry growers on where the crop is now and what you can still influence before harvest. It starts with this question. Bring your number and we'll start there.</p>
+        </div>
+        <div class="bring">
+          <div><h3>Your count</h3><p>Ten limbs, flowers and fruit held.</p></div>
+          <div><h3>Your leaf or sap result</h3><p>The last one you have, any lab.</p></div>
+          <div><h3>Your soil test</h3><p>If there is one. It sets the baseline.</p></div>
+        </div>
+        <div class="cta"><b>Register: [link]</b> · [date, 7pm] · online, 45 minutes, recorded<br>Can't make it? <b>hybridag.com.au/contactus</b> · (03) 5722 7555</div>
+        <div class="folio">04 / 04</div>
+        <div class="s-foot"><div class="stripe"></div><div class="brand"><span>Precision Nutrition</span><span>Optimising Inputs</span><span>Maximising Outcomes</span></div></div>
+      </div><div class="tag">04 · The ask: bring your count to the session</div></div>
+    </div>
+    <p class="note">Cover photo is the shuck-fall photo from Andrew's 2025 cherry webinar deck; Andrew to confirm it is his. The 28 September story (hand-held cluster under net) is the alternative once its owner is known.</p>
+
+    <div class="adapt">
+      <div class="card"><h4><span>Instagram</span>Carousel, 4 slides</h4>
+        <div class="cap"><b>Do you actually know your crop load? Or do you just know you've got a good crop?</b>
+
+Andrew Smith asks every cherry grower this in October. Here's the ten-minute answer.
+
+Tag ten fruiting limbs across the block. Count the flowers at full flowering. Count the fruit that held after shuck fall. Fruit held divided by flowers is your set, and the average of ten is your crop load, in your block, this season.
+
+Missed the flower count? Start now. Count fruit per limb and carry it through to harvest. A number beats an impression.
+
+Light, about right or heavy, the number changes what Andrew looks at next: the flowering if it's light, water and Calcium delivery if it's heavy. Where the results call for it, we build a prescription blend for that block.
+
+Bring your count and your results to Andrew's online cherry session. Link in bio.
+
+#cherries #apples #stonefruit #horticulture #cropload</div></div>
+      <div class="card"><h4><span>Facebook</span>Same four images, longer caption</h4>
+        <div class="cap"><b>Do you actually know your crop load? Or do you just know you've got a good crop?</b>
+
+Andrew Smith grows cherries at Smith's Fruit and is one of our Nutritional Agronomists. It's the first thing he asks a grower in October, because crop load changes everything that follows: water, nutrition, fruit size, maturity and pack-out.
+
+Here's the ten-minute answer. Tag ten fruiting limbs across the block, not just the easy row. At full flowering, count the flowers on each and write it on the tag. After shuck fall in cherries, or after the drop in apples and stone fruit, count the fruit that held. Fruit held divided by flowers counted is your set. Average the ten and you have your crop load, in your block, this season.
+
+Missed the flower count this year? Start now. Count fruit per limb and carry it through to harvest. Next year you'll have both numbers.
+
+"Light, about right or heavy, the number changes what I look at next," Andrew says. "If it's light, the question goes back to flowering. If it's heavy, every fruit is sharing the same Calcium and sugar supply, and size and firmness are what's at stake. Either way I measure first, understand second, intervene third."
+
+Where the results call for it, we build a prescription blend for that block.
+
+Andrew is running an online session for cherry growers on where the crop is now and what you can still influence before harvest. Bring your count and whatever results you have, any lab. Register: [link]. Can't make it? https://www.hybridag.com.au/contactus or (03) 5722 7555.</div></div>
+      <div class="card"><h4><span>X</span>One image (slide 02) + one line</h4>
+        <div class="cap">Do you actually know your crop load, or do you just know you've got a good crop? Andrew Smith's ten-minute answer: tag ten limbs, count flowers, count fruit held, divide. Bring the number to his online cherry session: [link] #cherries #cropload</div>
+        <p class="meta2">232 characters. Pin it until the session.</p>
+        <h4 style="margin-top:18px"><span>Variants</span>Apples and stone fruit</h4>
+        <p style="font-size:14.5px">Same method, swap "shuck fall" for "after the drop" and the cover photo for Woody's nectarine or Nathan Strawbridge's apples. For apples the heavy column leads with thinning to a number; the session ask becomes "send us your count".</p></div>
+    </div>
+
+    <div class="twocol">
+      <div><div class="label">Sources used</div>
+        <ul class="list">
+          <li>Andrew Smith, Cherry Grower Webinar Development Guide (30 Sep 2026): the opening question, "Do you actually know your crop load", crop load changes water, nutrition, fruit size, maturity, carbohydrate demand and pack-out; "measure first, understand second, intervene third"; fruit counts and crop-load assessment listed as useful evidence.</li>
+          <li>Apple Play Book (Andrew's source draft), chapter 45, crop load vs Calcium: the same Calcium pool across more fruit is less per fruit.</li>
+          <li>Cherry webinar review decisions (30 Sep and 12 Oct): establish actual stage and crop load before discussing an intervention; no fixed windows; no assumed stage from variety.</li>
+          <li>Tag-and-count is standard orchard practice, not a Hybrid-Ag claim; the post presents it as the grower's own number.</li>
+        </ul></div>
+      <div><div class="label b">Claim gates kept</div>
+        <div class="gate">No target set percentage, no "x% is right". The example tally is labelled as an example. "Light / about right / heavy" are the grower's judgement against what the trees can carry, not a Hybrid-Ag threshold. No product named; the prescription blend is the only commercial line. The heavy column keeps Potassium out, because the V1.8 note on grouping Nutrients without a verified reason applies; Andrew can add it if he wants it.</div>
+        <div class="label" style="margin-top:18px">Before posting</div>
+        <ul class="list"><li>Session date and registration link, or run 04 with the contact-us ask until then.</li><li>Andrew confirms the three-column wording is how he'd say it.</li><li>Confirm the fruitlet photo's owner, or use Andrew's 2025 deck photo.</li><li>Amos sees the finished set.</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="bank">
+  <div class="wrap">
+    <div class="label">Photo bank found on the drive and in the stories log</div>
+    <h2 style="margin:10px 0 8px">Real photos only. These are the candidates.</h2>
+    <p class="lead" style="margin-bottom:22px">Everything below is a real photograph. <span class="ok">Clear</span> means owner and date are known. <span class="ask">Ask</span> means confirm the owner before it goes out.</p>
+    <div class="bank">
+      <figure><img src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/story-2026-09-10_17906595264490176.jpg" alt=""><figcaption><b>Royal Tioga in flower</b>Andrew Smith story, 10 Sep 2026. Original needed. <span class="ok">Clear</span></figcaption></figure>
+      <figure><img src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/josh-flowering-orchard.jpg" alt=""><figcaption><b>Cherry flowering, NE Victoria</b>Josh Richardson, Sep 2026. Already on the dashboard. <span class="ok">Clear</span></figcaption></figure>
+      <figure><img src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/story-2026-09-28_17951398641298178.jpg" alt=""><figcaption><b>Fruitlets at shuck fall</b>Story, 28 Sep 2026, under net. <span class="ask">Ask</span> whose block.</figcaption></figure>
+      <figure><img src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/story-2026-09-25_18109256498134960.jpg" alt=""><figcaption><b>Tioga at Elerslee after flowering</b>Andrew Smith story, 25 Sep 2026. <span class="ok">Clear</span></figcaption></figure>
+      <figure><img src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/story-2026-10-12_18078597677547486.jpg" alt=""><figcaption><b>Macadamia nut set, Red Rock's</b>Hamilton Rowe story, 12 Oct 2026, Bundaberg. <span class="ok">Clear</span></figcaption></figure>
+      <figure><img src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/story-2026-09-17_17908448868498823.jpg" alt=""><figcaption><b>Maybright nectarine set</b>Andrew Woodford story, 17 Sep 2026. <span class="ok">Clear</span></figcaption></figure>
+      <figure><img src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/story-2026-10-01_18126771266492942.jpg" alt=""><figcaption><b>Pink Lady flowering, Adelaide Hills</b>Nathan Strawbridge story, 1 Oct 2026. <span class="ok">Clear</span></figcaption></figure>
+      <figure><img src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/w25-shuckfall-27.jpg" alt=""><figcaption><b>Shuck fall, close</b>Andrew's 2025 webinar deck, image 27. <span class="ask">Ask</span> Andrew.</figcaption></figure>
+      <figure><img src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/w25-bud-fruitlet-finger.jpg" alt=""><figcaption><b>Bud opened on a finger</b>Andrew's 2025 webinar deck, image 23. <span class="ask">Ask</span> Andrew.</figcaption></figure>
+      <figure><img src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/w25-flowers-24.jpg" alt=""><figcaption><b>Bee on cherry flower</b>Andrew's 2025 webinar deck, image 24. <span class="ask">Ask</span> Andrew.</figcaption></figure>
+      <figure><img src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/w25-fullbloom-26.jpg" alt=""><figcaption><b>Full flowering, close</b>Andrew's 2025 webinar deck, image 26. <span class="ask">Ask</span> Andrew.</figcaption></figure>
+      <figure><img src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/deck-andrew-cherries.jpg" alt=""><figcaption><b>Andrew with cherries</b>Hidden Season deck, Mar 2026. Portrait for covers. <span class="ok">Clear</span></figcaption></figure>
+      <figure><img src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/field-cherry-fruitlets-2019-10-16.jpg" alt=""><figcaption><b>Cherry fruitlets</b>Drive, 16 Oct 2019, site unknown. <span class="ask">Ask</span></figcaption></figure>
+      <figure><img src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/field-nectarine-set-2019-11-13.jpg" alt=""><figcaption><b>Nectarine set</b>Drive, 13 Nov 2019, site unknown. <span class="ask">Ask</span></figcaption></figure>
+      <figure><img src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/bud-swell.jpg" alt=""><figcaption><b>Cherry bud at swell</b>Soil testing campaign folder, Jul 2026. <span class="ok">Clear</span></figcaption></figure>
+      <figure><img src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/deck-blossom-rows.jpg" alt=""><figcaption><b>Flowering rows</b>Hidden Season deck, image 13. <span class="ask">Ask</span> source.</figcaption></figure>
+      <figure><img src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/w25-budcluster-21.jpg" alt=""><figcaption><b>Bud cluster at burst</b>Andrew's 2025 webinar deck, image 21. <span class="ask">Ask</span> Andrew.</figcaption></figure>
+      <figure><img src="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/w25-greenbud-17.jpg" alt=""><figcaption><b>Green tip</b>Andrew's 2025 webinar deck, image 17. <span class="ask">Ask</span> Andrew.</figcaption></figure>
+    </div>
+    <p class="note" style="margin-top:14px">Not used: the website's cherry photos (stock), the Hidden Season deck's battery tree and racing-car art, the AI branch in the current flowering post, and andrew-smith-field.jpg (may be a different person).</p>
+  </div>
+</section>
+
+<section id="method">
+  <div class="wrap">
+    <div class="grid2">
+      <div>
+        <div class="label">What was read to build this</div>
+        <ul class="list">
+          <li>nathan_brain: memory and master instructions in full; subjects social-stage-posts (48 pages) and cherry-webinar (125 pages); product truth for BudMax, Flower-Cal, Power-Cal, Opti-Trace Boron, Agri-Vive RF (48 verified pages); discovery across agronomic, marketing, internal knowledge and strategy (305 candidate pages, 106 groups classified).</li>
+          <li>Drive: Cherry Nutrition Playbook text, Andrew's Development Guide and the 30 Sep webinar notes and slides, the Apple Handbook 2025, Andrew's Hidden Season deck and 2025 Cherry Nutrition Webinar deck photos, the Bud &amp; Flower post and the current flowering post, the marketing calendar, the field pictures folder, the stories and posts logs.</li>
+          <li>Hybrid-Ag archive: 2020 Bud &amp; Flower webinar notes and Q&amp;A, 2023 workshop summary sheets (Bud &amp; Flower, Fruit Set &amp; Cell Division), Emily Corbett's 2024 reproduction talk, Chelsea Hall's 2023 pollination posts, the Apple Bible and Apple Play Book source drafts.</li>
+          <li>Channel data: Instagram post and story insights, July to 13 October 2026.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="label b">Gaps and limits</div>
+        <ul class="list">
+          <li>The Cherry Nutrition Playbook's window bodies (Window 04 and the Calcium/Potassium rule) are image pages; only the science table and headings were read.</li>
+          <li>Exact reconstruction of the older archive sources (2020 webinars, 2023 sheets) fails on legacy metadata in the brain; their candidate pages were read and are cited as background. Nothing in the concepts depends on a figure from them.</li>
+          <li>Apple Bible pages are marked truncated at ingest.</li>
+          <li>Facebook and X post-level performance is not available from the API; the comparison uses Instagram only.</li>
+          <li>Not read: the Montague cherry transcript family and the four blocked required keys noted on 12 October.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>Hybrid-Ag · Marketing · Flowering and fruit set concepts · 13 October 2026</span><span>Draft for Nathan. Nothing posted, nothing approved.</span></div></footer>
+
+<div id="lb" aria-hidden="true"><div class="box"></div></div>
+<script>
+(function(){
+  var lb=document.getElementById('lb'),box=lb.querySelector('.box');
+  function fit(){var s=Math.min((window.innerWidth-40)/1080,(window.innerHeight-40)/1350);box.style.transform='scale('+s+')';}
+  document.querySelectorAll('.sv').forEach(function(sv){
+    sv.addEventListener('click',function(){
+      var c=sv.querySelector('.slide').cloneNode(true);box.innerHTML='';box.appendChild(c);fit();lb.classList.add('on');lb.setAttribute('aria-hidden','false');
+    });
+  });
+  var hint=document.createElement('div');hint.className='hint';hint.textContent='Click anywhere or press Esc to close';lb.appendChild(hint);
+  var all=document.querySelectorAll('.sv');function showAll(){all.forEach(function(sv){sv.classList.add('in');});}
+  if(/static/.test(location.search)||!('IntersectionObserver' in window)){document.documentElement.classList.add('static');showAll();}else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});all.forEach(function(sv){io.observe(sv);});setTimeout(showAll,2500);}
+  lb.addEventListener('click',function(){lb.classList.remove('on');lb.setAttribute('aria-hidden','true');});
+  window.addEventListener('resize',function(){if(lb.classList.contains('on'))fit();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){lb.classList.remove('on');}});
+})();
+</script>
+</body>
+</html>
