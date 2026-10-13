@@ -220,6 +220,19 @@ html.static .sv{opacity:1;transform:none;transition:none}
 .fn .credit{position:absolute;right:64px;top:60px;z-index:2;color:#fff;font-size:17px;line-height:1.3;text-align:right;text-shadow:0 1px 8px rgba(0,0,0,.6);opacity:.92}
 .fn .credit b{display:block;font:600 13px/1.5 'Oswald',sans-serif;letter-spacing:1.8px;text-transform:uppercase;opacity:.85}
 .cols3>div{min-height:430px}
+
+/* ---- header alignment pass 13 Oct: visible mark on the 64 px margin, level with the running label ---- */
+.s-head .logo{left:50px;top:30px;width:270px}
+.s-head .run{top:43px}
+.cover .logo{left:50px;top:30px;width:270px}
+.cover .run{top:43px}
+.fn .logo{left:51px;top:31px;width:286px}
+.fn .credit{top:44px}
+.fig{top:316px;height:700px}
+
+/* ---- header alignment, measured: ink of logo, headline and subline all start on the 64 px margin; running label caps level with the logo top ---- */
+.s-head h2{left:61px}.s-head .sub{left:60px}.s-head .run{top:38px}
+.cover .run{top:38px}.cover .copy{left:60px}
 </style>
 </head>
 <body>
@@ -281,7 +294,7 @@ html.static .sv{opacity:1;transform:none;transition:none}
       <tr><td><b>What it is</b></td><td>Grower question 02 in the October run. Andrew Smith, first person, on why a strong flowering can still set light, with a journal-style drawing of what has to happen inside the flower.</td><td>A weekly photo-first post from a named agronomist's block this week: one photo, one observation in their own words, one question back to the grower. Macadamia, nectarine, cherry, apple already captured.</td><td>Grower question 03. Andrew's own line from the session guide, then the ten-limb count method that turns "a good crop" into a number the grower can bring.</td></tr>
       <tr><td><b>Why it lands</b></td><td>It is the question growers are asking right now, cherries have just set. It is on record as a Hybrid-Ag answer (2020 Bud &amp; Flower webinar Q&amp;A), so Andrew can own it. Named person plus a drawing worth saving.</td><td>It is the format the channels already reward: a face, a field, this week. Zero production, the content is already in the stories log. Multi-crop, so it reaches apples, stone fruit and nuts, not only cherries.</td><td>A how-to is the most saved and shared kind of post. It converts an impression into evidence, which is the whole Hybrid-Ag pitch. It is timing-true for cherries after shuck fall and apples at petal fall.</td></tr>
       <tr><td><b>Risk</b></td><td>Needs Andrew's wording and a current cherry photo at set. The flower drawing must stay a drawing, not a diagnosis.</td><td>Reach per post is modest unless the question provokes replies. Titles and photo consent per agronomist.</td><td>Growers may read a set percentage as a target. Keep it as their number, not ours.</td></tr>
-      <tr><td><b>Effort to post</b></td><td>One day. Builder exists (Calcium post), drawing to build in the house illustration language.</td><td>Two hours per note, template once.</td><td>One day. Reuses the Calcium post frame.</td></tr>
+      <tr><td><b>Effort to post</b></td><td>One day. Builder exists (Calcium post); the flower section is already painted.</td><td>Two hours per note, template once.</td><td>One day. Reuses the Calcium post frame.</td></tr>
       <tr><td><b>Feeds the session</b></td><td>Yes, directly (Q1 and Q4 of the question bank).</td><td>Indirectly, keeps the feed warm between posts.</td><td>Yes, it is the opening question of Andrew's guide.</td></tr>
       <tr><td><b>What sales receives</b></td><td>A reply with a photo of a tagged limb and a leaf result, from a grower whose set disappointed. Warm, specific, ready for a call.</td><td>Photos and results from any crop, week on week. Lower volume per post, steady, and it builds the list sales can call through November.</td><td>A count and results from a grower who has already done the work. The best-qualified lead of the three, and it books them into the session.</td></tr>
     </table>
@@ -334,60 +347,22 @@ html.static .sv{opacity:1;transform:none;transition:none}
           <h2>A flower that opens isn't a fruit yet.</h2>
           <div class="sub">Set happens at the bottom of the flower, not at the petals.</div><div class="stripe"></div></div>
         <div class="fig">
-          <svg viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg" font-family="Proxima Nova, Helvetica, Arial, sans-serif">
-            <!-- petals, cut -->
-            <path d="M330 300 C 250 250, 150 200, 110 120 C 200 150, 290 220, 350 290 Z" fill="#faf7f2" stroke="#1a1714" stroke-width="2.2"/>
-            <path d="M622 300 C 702 250, 802 200, 842 120 C 752 150, 662 220, 602 290 Z" fill="#faf7f2" stroke="#1a1714" stroke-width="2.2"/>
-            <path d="M400 290 C 380 200, 360 120, 400 60 C 440 120, 450 200, 445 285 Z" fill="#fbf9f5" stroke="#1a1714" stroke-width="2.2"/>
-            <path d="M552 290 C 572 200, 592 120, 552 60 C 512 120, 502 200, 507 285 Z" fill="#fbf9f5" stroke="#1a1714" stroke-width="2.2"/>
-            <!-- hypanthium cup -->
-            <path d="M330 300 C 330 420, 380 470, 476 470 C 572 470, 622 420, 622 300" fill="#efe9d8" stroke="#1a1714" stroke-width="2.4"/>
-            <path d="M330 300 L 622 300" stroke="#1a1714" stroke-width="1.6" stroke-dasharray="4 5"/>
-            <!-- sepals -->
-            <path d="M330 300 L 300 330 L 345 318 Z" fill="#cfe0b8" stroke="#1a1714" stroke-width="1.8"/>
-            <path d="M622 300 L 652 330 L 607 318 Z" fill="#cfe0b8" stroke="#1a1714" stroke-width="1.8"/>
-            <!-- ovary with ovule -->
-            <ellipse cx="476" cy="428" rx="30" ry="34" fill="#d9e6c2" stroke="#1a1714" stroke-width="2.2"/>
-            <ellipse cx="476" cy="432" rx="11" ry="13" fill="#f4e7a0" stroke="#1a1714" stroke-width="1.8"/>
-            <!-- style -->
-            <path d="M462 396 L 460 150 C 460 136, 492 136, 492 150 L 490 396" fill="#e3ead0" stroke="#1a1714" stroke-width="2.2"/>
-            <!-- stigma -->
-            <ellipse cx="476" cy="140" rx="24" ry="14" fill="#f2d9c6" stroke="#1a1714" stroke-width="2.2"/>
-            <!-- stamens -->
-            <g stroke="#1a1714" stroke-width="1.8" fill="none">
-              <path d="M360 300 C 370 240, 400 220, 430 212"/><path d="M380 300 C 395 250, 420 235, 445 228"/>
-              <path d="M592 300 C 582 240, 552 220, 522 212"/><path d="M572 300 C 557 250, 532 235, 507 228"/>
-              <path d="M345 302 C 352 262, 372 248, 398 240"/><path d="M607 302 C 600 262, 580 248, 554 240"/>
-            </g>
-            <g fill="#f3cf5a" stroke="#1a1714" stroke-width="1.6">
-              <ellipse cx="430" cy="208" rx="9" ry="6"/><ellipse cx="445" cy="225" rx="9" ry="6"/><ellipse cx="398" cy="238" rx="9" ry="6"/>
-              <ellipse cx="522" cy="208" rx="9" ry="6"/><ellipse cx="507" cy="225" rx="9" ry="6"/><ellipse cx="554" cy="238" rx="9" ry="6"/>
-            </g>
-            <!-- pollen grain -->
-            <circle cx="486" cy="128" r="7" fill="#f3cf5a" stroke="#1a1714" stroke-width="1.6"/>
-            <!-- pollen tube -->
-            <path d="M486 134 C 480 180, 474 260, 476 330 C 477 370, 476 395, 476 418" fill="none" stroke="#018d8a" stroke-width="4" stroke-dasharray="9 7" stroke-linecap="round"/>
-            <!-- calcium / boron supply from style tissue -->
-            <g fill="#dc6800">
-              <circle cx="451" cy="190" r="5"/><circle cx="501" cy="215" r="5"/><circle cx="450" cy="250" r="5"/><circle cx="502" cy="285" r="5"/><circle cx="449" cy="320" r="5"/><circle cx="503" cy="350" r="5"/><circle cx="456" cy="385" r="5"/>
-            </g>
-            <g stroke="#dc6800" stroke-width="2" fill="none">
-              <path d="M457 190 L 470 192"/><path d="M495 215 L 482 218"/><path d="M456 250 L 468 252"/><path d="M496 285 L 484 287"/><path d="M455 320 L 468 322"/><path d="M497 350 L 484 352"/>
-            </g>
-            <!-- labels -->
-            <g font-size="20" fill="#1a1714">
-              <path d="M500 128 L 640 96" stroke="#1a1714" stroke-width="1.2" fill="none"/>
-              <text x="648" y="92" font-weight="700">Stigma</text><text x="648" y="118">Pollen lands and germinates.</text>
-              <path d="M506 300 L 640 300" stroke="#1a1714" stroke-width="1.2" fill="none"/>
-              <text x="648" y="292" font-weight="700">Style</text><text x="648" y="318">The tube grows down inside it.</text><text x="648" y="344">The flower keeps feeding it</text><text x="648" y="370">Calcium and Boron all the way.</text>
-              <path d="M506 432 L 640 470" stroke="#1a1714" stroke-width="1.2" fill="none"/>
-              <text x="648" y="470" font-weight="700">Ovule</text><text x="648" y="496">The tube arrives. Fruit is set.</text><text x="648" y="522">If it doesn't arrive, no fruit,</text><text x="648" y="548">however good the flowering looked.</text>
-              <path d="M200 114 L 232 186" stroke="#1a1714" stroke-width="1.2" fill="none"/>
-              <text x="30" y="52" font-weight="700">Petals</text><text x="30" y="78">What we see from the ute.</text><text x="30" y="104">Not where set is decided.</text>
-              <path d="M398 244 L 300 342" stroke="#1a1714" stroke-width="1.2" fill="none"/>
-              <text x="40" y="376" font-weight="700">Anthers</text><text x="40" y="402">Pollen. Its quality was</text><text x="40" y="428">built in the bud last autumn.</text>
-            </g>
-            <text x="476" y="660" text-anchor="middle" font-size="19" fill="#867764">Cherry flower in section. A drawing of the process, not a measurement.</text>
+          <svg viewBox="0 0 952 700" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <image href="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/flower-section-plate.jpg" x="0" y="0" width="600" height="700"/>
+            <path d="M306 120 C 303 132, 300.5 160, 300.3 300 L 300 428" fill="none" stroke="#018d8a" stroke-width="3.6" stroke-dasharray="9 7" stroke-linecap="round" opacity=".95"/>
+            <circle cx="300" cy="432" r="5" fill="#018d8a"/>
+            <circle cx="285" cy="176" r="4.6" fill="#dc6800"/><path d="M289 176 l10 0" stroke="#dc6800" stroke-width="2" stroke-linecap="round"/><circle cx="315" cy="176" r="4.6" fill="#dc6800"/><path d="M311 176 l-10 0" stroke="#dc6800" stroke-width="2" stroke-linecap="round"/><circle cx="285" cy="226" r="4.6" fill="#dc6800"/><path d="M289 226 l10 0" stroke="#dc6800" stroke-width="2" stroke-linecap="round"/><circle cx="315" cy="226" r="4.6" fill="#dc6800"/><path d="M311 226 l-10 0" stroke="#dc6800" stroke-width="2" stroke-linecap="round"/><circle cx="285" cy="276" r="4.6" fill="#dc6800"/><path d="M289 276 l10 0" stroke="#dc6800" stroke-width="2" stroke-linecap="round"/><circle cx="315" cy="276" r="4.6" fill="#dc6800"/><path d="M311 276 l-10 0" stroke="#dc6800" stroke-width="2" stroke-linecap="round"/><circle cx="285" cy="326" r="4.6" fill="#dc6800"/><path d="M289 326 l10 0" stroke="#dc6800" stroke-width="2" stroke-linecap="round"/><circle cx="315" cy="326" r="4.6" fill="#dc6800"/><path d="M311 326 l-10 0" stroke="#dc6800" stroke-width="2" stroke-linecap="round"/><circle cx="285" cy="376" r="4.6" fill="#dc6800"/><path d="M289 376 l10 0" stroke="#dc6800" stroke-width="2" stroke-linecap="round"/><circle cx="315" cy="376" r="4.6" fill="#dc6800"/><path d="M311 376 l-10 0" stroke="#dc6800" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="336" cy="118" r="13" fill="#1a1714" stroke="#fff" stroke-width="2"/><text x="336" y="123" text-anchor="middle" font-family="Oswald, Arial Narrow, sans-serif" font-size="15" fill="#fff">1</text><circle cx="332" cy="292" r="13" fill="#1a1714" stroke="#fff" stroke-width="2"/><text x="332" y="297" text-anchor="middle" font-family="Oswald, Arial Narrow, sans-serif" font-size="15" fill="#fff">2</text>
+            <path d="M247 212 L192 150" stroke="#1a1714" stroke-width="1.2" fill="none"/><circle cx="247" cy="212" r="2.6" fill="#1a1714"/><text x="14" y="108" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#1a1714">Anthers</text><text x="14" y="132" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="18.5" fill="#2d2822">Pollen, built in</text><text x="14" y="156" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="18.5" fill="#2d2822">the bud last autumn.</text>
+            <path d="M214 250 L172 254" stroke="#1a1714" stroke-width="1.2" fill="none"/><circle cx="214" cy="250" r="2.6" fill="#1a1714"/><text x="14" y="232" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#1a1714">Petals</text><text x="14" y="256" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="18.5" fill="#2d2822">What we see from</text><text x="14" y="280" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="18.5" fill="#2d2822">the ute. Not where</text><text x="14" y="304" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="18.5" fill="#2d2822">set is decided.</text>
+            <path d="M152 312 L88 368" stroke="#1a1714" stroke-width="1.2" fill="none"/><circle cx="152" cy="312" r="2.6" fill="#1a1714"/><text x="14" y="374" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#1a1714">Sepals</text>
+            <path d="M238 428 L190 434" stroke="#1a1714" stroke-width="1.2" fill="none"/><circle cx="238" cy="428" r="2.6" fill="#1a1714"/><text x="14" y="428" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#1a1714">Nectary</text><text x="14" y="452" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="18.5" fill="#2d2822">Feeds the bees that</text><text x="14" y="476" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="18.5" fill="#2d2822">carry the pollen in.</text>
+            <path d="M331 128 L384 98" stroke="#1a1714" stroke-width="1.2" fill="none"/><circle cx="331" cy="128" r="2.6" fill="#1a1714"/><text x="392" y="92" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#1a1714">Stigma</text><text x="392" y="116" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="18.5" fill="#2d2822">Pollen lands and germinates.</text>
+            <path d="M313 362 L432 354" stroke="#1a1714" stroke-width="1.2" fill="none"/><circle cx="313" cy="362" r="2.6" fill="#1a1714"/><text x="440" y="348" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#1a1714">Style</text><text x="440" y="372" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="18.5" fill="#2d2822">The tube grows down inside it.</text><text x="440" y="396" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="18.5" fill="#2d2822">The flower keeps feeding it</text><text x="440" y="420" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="18.5" fill="#2d2822">Calcium and Boron all the way.</text>
+            <path d="M309 441 L432 476" stroke="#1a1714" stroke-width="1.2" fill="none"/><circle cx="309" cy="441" r="2.6" fill="#1a1714"/><text x="440" y="470" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#1a1714">Ovule</text><text x="440" y="494" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="18.5" fill="#2d2822">The tube arrives. Fruit is set.</text><text x="440" y="518" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="18.5" fill="#2d2822">No arrival, no fruit, however</text><text x="440" y="542" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="18.5" fill="#2d2822">good the flowering looked.</text>
+            <clipPath id="lensA"><circle cx="852" cy="128" r="95"/></clipPath><image href="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/flower-lens-stigma.jpg" x="757" y="33" width="190" height="190" clip-path="url(#lensA)" preserveAspectRatio="xMidYMid slice"/><circle cx="852" cy="128" r="95" fill="none" stroke="#1a1714" stroke-width="2.2"/><circle cx="852" cy="128" r="90" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><circle cx="773" cy="49" r="13" fill="#1a1714" stroke="#fff" stroke-width="2"/><text x="773" y="54" text-anchor="middle" font-family="Oswald, Arial Narrow, sans-serif" font-size="15" fill="#fff">1</text><text x="757" y="253" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="19.5" font-weight="700" fill="#1a1714">On the stigma</text><text x="757" y="276" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="17.5" fill="#2d2822">Pollen takes up water</text><text x="757" y="299" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="17.5" fill="#2d2822">and sends a tube down</text><text x="757" y="322" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="17.5" fill="#2d2822">between the papillae.</text>
+            <clipPath id="lensB"><circle cx="852" cy="445" r="95"/></clipPath><image href="https://hybrid-ag.github.io/Live-Dashboard/assets/cherry-spring-2026/flowering-concepts/flower-lens-style.jpg" x="757" y="350" width="190" height="190" clip-path="url(#lensB)" preserveAspectRatio="xMidYMid slice"/><circle cx="852" cy="445" r="95" fill="none" stroke="#1a1714" stroke-width="2.2"/><circle cx="852" cy="445" r="90" fill="none" stroke="#fff" stroke-width="1.4" opacity=".9"/><circle cx="773" cy="366" r="13" fill="#1a1714" stroke="#fff" stroke-width="2"/><text x="773" y="371" text-anchor="middle" font-family="Oswald, Arial Narrow, sans-serif" font-size="15" fill="#fff">2</text><text x="757" y="570" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="19.5" font-weight="700" fill="#1a1714">Inside the style</text><text x="757" y="593" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="17.5" fill="#2d2822">The tube grows</text><text x="757" y="616" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="17.5" fill="#2d2822">between the cells, fed</text><text x="757" y="639" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="17.5" fill="#2d2822">Calcium and Boron.</text>
+            <text x="0" y="692" font-family="Proxima Nova, Helvetica, Arial, sans-serif" font-size="17" fill="#867764">Cherry flower in longitudinal section, painted from the geometry. A picture of the process, not a measurement.</text>
           </svg>
         </div>
         <div class="key"><span><i></i>Pollen tube</span><span><u></u>Calcium and Boron supplied by the flower tissue</span></div>
@@ -429,7 +404,7 @@ html.static .sv{opacity:1;transform:none;transition:none}
         <div class="s-foot"><div class="stripe"></div><div class="brand"><span>Precision Nutrition</span><span>Optimising Inputs</span><span>Maximising Outcomes</span></div></div>
       </div><div class="tag">04 · The ask (04B swaps in the session invite)</div></div>
     </div>
-    <p class="note">Cover photo is Josh Richardson's September flowering photo from the dashboard. Andrew's own Royal Tioga flowering photo (10 September story) can replace it once he sends the original. Slide 2 is a hand-drawn SVG in the journal-figure language from the illustration options; it says on its face that it is a drawing of the process.</p>
+    <p class="note">Cover photo is Josh Richardson's September flowering photo from the dashboard. Andrew's own Royal Tioga flowering photo (10 September story) can replace it once he sends the original. Slide 2 is painted from the geometry with the same renderer as the Calcium plate (cup, ovary, style and stigma in section, with two hand-lens close-ups), then labelled over the top; it says on its face that it is a picture of the process, not a measurement.</p>
 
     <div class="adapt">
       <div class="card"><h4><span>Instagram</span>Carousel, 4 slides</h4>
