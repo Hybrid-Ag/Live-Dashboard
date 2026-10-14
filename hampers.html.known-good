@@ -324,9 +324,9 @@ blockquote .who{display:block;margin-top:6px;font-size:12px;color:var(--muted)}
 
 <div class="kpis current-kpis">
   <div class="kpi k-teal"><div class="lab">Working allocations</div><div class="num">133</div><div class="det">52 Tier 1 + 81 Tier 2 gifts</div></div>
-  <div class="kpi k-berry"><div class="lab">Tier 1 item subtotal</div><div class="num">$400.70</div><div class="det">Per gift &middot; $400 budget target &middot; previously $311.87</div></div>
-  <div class="kpi k-teal"><div class="lab">Tier 2 item subtotal</div><div class="num">$189.92</div><div class="det">Per gift &middot; $200 budget target &middot; previously $208.78</div></div>
-  <div class="kpi k-orn"><div class="lab">Working item spend</div><div class="num">$36,219.92</div><div class="det">52 Tier 1 + 81 Tier 2 &middot; previously $33,128.42</div></div>
+  <div class="kpi k-berry"><div class="lab">Tier 1 item subtotal</div><div class="num">$311.87 &ndash; $400.70</div><div class="det">Previous &rarr; current, Option 1 &middot; $400 budget target</div></div>
+  <div class="kpi k-teal"><div class="lab">Tier 2 item subtotal</div><div class="num">$208.78 &ndash; $189.92</div><div class="det">Previous &rarr; current, Option 1 &middot; $200 budget target</div></div>
+  <div class="kpi k-orn"><div class="lab">Working item spend</div><div class="num">$33,128.42 &ndash; $36,219.92</div><div class="det">Previous &rarr; current &middot; 52 Tier 1 + 81 Tier 2</div></div>
 </div>
 
 <nav class="jump" aria-label="Campaign sections">
@@ -554,6 +554,29 @@ blockquote .who{display:block;margin-top:6px;font-size:12px;color:var(--muted)}
         </tbody></table>
         <p class="remain">$1.88 left within the $200 target</p>
         <p class="gift-total">81 allocated gifts &times; $198.12 = $16,047.72</p>
+      </article>
+    </div>
+  </details>
+  <details class="premium-alt" style="margin-top:20px">
+    <summary>Current Hamper Stock</summary>
+    <div class="alt-body">
+      <article class="sheet gift-tier" style="--a:var(--orange)">
+        <h4>Current Hamper Stock</h4><span class="tag std">On hand</span>
+        <div class="grid g3" style="margin:14px 0">
+          <figure class="tier-photo"><img src="assets/hampers-2026/current-stock/stock-1.jpg" alt="Two large wooden hamper boxes with clear lids and wood wool filler, HYBRID AG laser engraved"></figure>
+          <figure class="tier-photo"><img src="assets/hampers-2026/current-stock/stock-2.jpg" alt="Square wooden hamper box with hinged wood lid, HYBRID AG laser engraved, stacked with wicker baskets"></figure>
+          <figure class="tier-photo"><img src="assets/hampers-2026/current-stock/stock-3.jpg" alt="Stack of wicker baskets on a pallet"></figure>
+          <figure class="tier-photo"><img src="assets/hampers-2026/current-stock/stock-4.jpg" alt="Wicker baskets with a part-used roll of cellophane"></figure>
+          <figure class="tier-photo"><img src="assets/hampers-2026/current-stock/stock-5.jpg" alt="Single wicker basket close-up"></figure>
+          <figure class="tier-photo"><img src="assets/hampers-2026/current-stock/stock-6.jpg" alt="Half-used bag of wood wool filler"></figure>
+        </div>
+        <ul>
+          <li>2 &times; large wooden boxes with clear lids</li>
+          <li>1 &times; square wooden box with hinged wood lid</li>
+          <li>25 &times; wicker baskets</li>
+          <li>1 &times; part used roll of cellophane</li>
+          <li>Half a bag of wood wool</li>
+        </ul>
       </article>
     </div>
   </details>
