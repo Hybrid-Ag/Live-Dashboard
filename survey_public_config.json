@@ -1,0 +1,29 @@
+{
+  "endpoint": null,
+  "models": {
+    "jacket": {
+      "men": {
+        "label": "Men's Kathmandu Epiq Down Jacket — Black",
+        "url": "https://www.kathmandu.com.au/products/epiq-mns-down-jacket-v3-black",
+        "sizes": ["XS", "S", "M", "L", "XL", "2XL", "3XL"]
+      },
+      "women": {
+        "label": "Women's Kathmandu Epiq Down Jacket — Black",
+        "url": "https://www.kathmandu.com.au/products/epiq-wmns-down-jacket-v3-black",
+        "sizes": ["AU 6", "AU 8", "AU 10", "AU 12", "AU 14", "AU 16", "AU 18"]
+      }
+    },
+    "vest": {
+      "men": {
+        "label": "Men's Kathmandu Epiq Down Vest — Black",
+        "url": "https://www.kathmandu.com.au/products/epiq-mns-down-vest-v2-black",
+        "sizes": ["XS", "S", "M", "L", "XL", "2XL"]
+      },
+      "women": {
+        "label": "Women's Kathmandu Epiq Down Vest — Black",
+        "url": "https://www.kathmandu.com.au/products/epiq-wmns-down-vest-v2-black",
+        "sizes": ["AU 6", "AU 8", "AU 10", "AU 12", "AU 14", "AU 16", "AU 18"]
+      }
+    }
+  }
+}
