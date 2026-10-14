@@ -1,14 +1,14 @@
 {
  "host": "runnervmmprz5",
- "sha256": "34c3cb3ce63db07c3f9fd5ec6c8090a3c3b93fd69cf120e7c2ae5a74bb37d523",
- "build_id": "20261014070636106224",
- "at": "2026-10-14T15:07:03",
+ "sha256": "d13b6d4665cc19c5e10298768bad9773f009ca95b1a3d6032f2e29e2a5d86768",
+ "build_id": "20261014081200350522",
+ "at": "2026-10-14T16:12:24",
  "siblings": {
   "bud-flower-post.html": "35550c28fc8a6ba790779ecbd73c73cd63624cc6a39c2942352b60522c7d8923",
   "frost-post.html": "99c89473c945f44f08fc0e4b93722c8f1250468b7f426f21e239e2dcd0f7f5ff",
   "frost-post.css": "312e26039b8191e42e7305300658b1867bad91c4e5ae62f2a4b2d29e3ba96667",
   "brandbook.html": "25381f2c582fee0508bfb6a62b0bd13ae4c695e7798c4c1601964a9795ed6d19",
-  "hampers.html": "6c89b752a1f9984b813723acf4feea3d28ceb64d17b06801a3aedc3a1e9bf0df",
+  "hampers.html": "9804b310687eee41885d27b42c2566a376f29e8f0a116954a0ec517d1fea2f6f",
   "customer-survey-2026.html": "a23d59a5ba5299cba510a553b68b689fca3b1857c24b1bbd09b2173ed96e8046",
   "riverina-ag-network-post.html": "5f997fbe270e9f7af094e498fb42b00d87b0926a858fe01dc471ac1f57eea665",
   "apple-playbook-campaign.html": "4dbf760357c60c8694b8c857d9e1c0de0c5b73bf60e94fb1e30116658a9cf965",
