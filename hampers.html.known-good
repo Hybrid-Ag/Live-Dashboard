@@ -497,6 +497,11 @@ blockquote .who{display:block;margin-top:6px;font-size:12px;color:var(--muted)}
           <p class="gift-total">52 allocated gifts &times; $395.14 = $20,547.28</p>
         </article>
       </div>
+    </div>
+  </details>
+  <details class="premium-alt" style="margin-top:20px">
+    <summary>Tier 1 additional value items</summary>
+    <div class="alt-body">
       <h3 class="sub">Tier 1 &middot; previous draft and remaining value</h3>
       <div class="grid g2 proposed-tiers">
         <article class="sheet gift-tier" style="--a:var(--berry)">
