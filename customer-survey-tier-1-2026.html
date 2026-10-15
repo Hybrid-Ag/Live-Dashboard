@@ -216,8 +216,10 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
     helpOptional: section.querySelector('[data-help-optional]'),
   }));
   const invitation = new URLSearchParams(location.hash.slice(1));
-  const hasInvitation = invitation.has('invite');
-  const token = invitation.get('invite') || '';
+  const invitationValues = ['token', 'invite'].flatMap(key => invitation.getAll(key));
+  const hasInvitation = invitationValues.length > 0;
+  const token = invitationValues[0] || '';
+  const validInvitation = /^[a-f0-9]{64}$/.test(token) && invitationValues.every(value => value === token);
   let endpoint = null;
   let mode = 'preview';
   let busy = false;
@@ -379,7 +381,7 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
         button.disabled = false;
         return;
       }
-      if (!token) { blockInvitation(); return; }
+      if (!validInvitation) { blockInvitation(); return; }
       if (!endpoint) { blockInvitation(true); return; }
       if (typeof endpoint !== 'string' || new URL(endpoint).protocol !== 'https:') throw new Error('Invalid endpoint');
       setStatus('Checking your invitation', 'Please wait while we check your gift invitation.');

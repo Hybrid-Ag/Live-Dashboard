@@ -1,5 +1,5 @@
 {
-  "endpoint": null,
+  "endpoint": "https://script.google.com/macros/s/AKfycbyl9jhtjkFV-xHbSaEgRpArE0R_ht4UaHMdHFVbxx9F-71IFGhAsmxAqxbnchwf6HSByg/exec",
   "models": {
     "jacket": {
       "men": {
@@ -25,5 +25,6 @@
         "sizes": ["AU 6", "AU 8", "AU 10", "AU 12", "AU 14", "AU 16", "AU 18"]
       }
     }
-  }
+  },
+  "adminUrl": "https://script.google.com/macros/s/AKfycbwaY52DS94H3isb04qjWnM_wTQCnk-5N5_vAkQY8dvMebjQkJ8T32HpFtVamXpXpDFp/exec"
 }
