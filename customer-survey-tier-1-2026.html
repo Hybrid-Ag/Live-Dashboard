@@ -463,6 +463,12 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
       controls.disabled = false;
     }
   });
+  // A different invitation fragment must load its own gift context.
+  window.addEventListener('hashchange', () => {
+    controls.disabled = true;
+    button.disabled = true;
+    window.location.reload();
+  });
   updateConditionalFields();
   initialise();
 })();
