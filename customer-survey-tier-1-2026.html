@@ -63,7 +63,8 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
 @media(hover:none),(forced-colors:active){.connection-field{display:none}}
 @media print{.connection-field{display:none}.hero-in>*,.answers,.reveal-panel.is-visible{animation:none}.part{box-shadow:none}}
 @media(max-width:600px){.hero{padding:26px 20px}.wordmark{height:32px}main{padding:20px 16px 32px}.part{padding:16px}.contact-grid,.choices{grid-template-columns:1fr}.wide{grid-column:auto}.rating-row{grid-template-columns:1fr;gap:8px}.rating-row select{max-width:none}.answers{padding:18px}button{width:100%}}
-.garment{border:1px solid var(--line);padding:18px;margin:20px 0 0;min-width:0}.garment>legend{font-weight:600;padding:0 8px}.model-note{margin:14px 0 0}.model-note a{color:var(--teal)}.preview-link{display:inline-block;color:var(--teal);font-weight:600;margin-top:6px}#retry-context{margin-top:12px}#form-error{margin:12px 0}
+.garment{border:1px solid var(--line);padding:18px;margin:20px 0 0;min-width:0}.garment>legend{font-weight:600;padding:0 8px}.model-note{margin:14px 0 0}.model-note a{color:#126965}.preview-link{display:inline-block;color:#126965;font-weight:600;margin-top:6px}#retry-context{margin-top:12px}#form-error{margin:12px 0}
+.gift-progress{margin:0 0 20px}.gift-progress label{font-size:13px;font-weight:600}.gift-progress progress{display:block;width:100%;height:10px;margin:7px 0;accent-color:#126965}.gift-progress .hint{font-size:12px;margin:0}.secondary{background:var(--cream);color:var(--ink);box-shadow:none;font-size:14px;padding:11px 14px}.secondary:hover{background:#DDD7CD}#reload-saved{margin-top:12px}
 </style>
 </head>
 <body>
@@ -76,14 +77,15 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
 <main>
   <div class="draft" role="status" aria-live="polite"><strong id="mode-title">Draft preview · Tier 1</strong><span id="mode-copy">No answers are sent or stored. The button below only lets you preview your answers on this page.</span><button id="retry-context" type="button" hidden>Check my invitation again</button></div>
   <noscript><div class="draft">JavaScript is needed to use this form. The form is disabled and no answers can be sent.</div></noscript>
-  <form id="customer-survey" action="#answers" method="get" autocomplete="off" data-tier="1">
+  <form id="customer-survey" action="#answers" method="get" data-tier="1">
   <fieldset class="controls" id="draft-controls" disabled><legend class="sr-only">Gift preference, size and optional feedback</legend>
     <fieldset class="part"><legend>1. Your details and gift</legend>
       <p>Your name, trading or business name and email are required, along with the garment choices and sizes below. Please confirm the details we should use to arrange your gift.</p>
+      <div class="gift-progress"><label for="gift-progress" id="gift-progress-label">Required gift details</label><progress id="gift-progress" value="0" max="9" aria-describedby="gift-progress-text"></progress><p class="hint" id="gift-progress-text" role="status" aria-live="polite">Complete your details and garment choices. Feedback is optional.</p></div>
       <div class="contact-grid">
-        <div class="field"><label for="customer-name">Your name</label><input id="customer-name" name="customer-name" type="text" maxlength="160" required></div>
-        <div class="field"><label for="business-name">Trading Name or Business Name</label><input id="business-name" name="business-name" type="text" maxlength="200" required></div>
-        <div class="field wide"><label for="email">Email address</label><input id="email" name="email" type="email" maxlength="254" required></div>
+        <div class="field"><label for="customer-name">Your name</label><input id="customer-name" name="customer-name" type="text" autocomplete="name" maxlength="160" required></div>
+        <div class="field"><label for="business-name">Trading Name or Business Name</label><input id="business-name" name="business-name" type="text" autocomplete="organization" maxlength="200" required></div>
+        <div class="field wide"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required></div>
       </div>
       <p>Please choose two garments: one for you and one for a partner or another key person in your business. Each person can choose a jacket or a vest in their preferred cut and size. The feedback questions only need to be completed once and are optional.</p>
       
@@ -132,6 +134,7 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
       <p class="hint model-note" data-model-note hidden><a data-model target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"></a> · <a data-guide target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">View the size guide</a></p>
       </fieldset>
       <p class="review-note" id="size-note">Sizes shown follow the proposed Epiq range. We'll confirm the final style, size guide and availability before ordering. Women's sizes are Australian sizes.</p>
+      <button class="secondary" id="skip-feedback" type="button">Skip optional questions</button>
     </fieldset>
     <fieldset class="part service"><legend>2. Your experience <span class="optional">· optional</span></legend>
       <p id="rating-help">Thinking about your dealings with Hybrid-Ag this year, how would you rate each area? <b>1 = Very poor. 10 = Excellent.</b> You can skip any question. Choose N/A if an area isn't relevant or you can't rate it yet. If you haven't raised a problem, choose N/A for the last question.</p>
@@ -173,7 +176,7 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
       </fieldset>
       <label class="choice follow-up"><input type="checkbox" id="follow-up" name="follow-up" value="yes"><span>I'd like someone from Hybrid-Ag to follow up with me about my feedback. <span class="optional">(optional)</span></span></label>
     </fieldset>
-    <div class="actions"><button id="preview-button" type="button" disabled>Preview my answers</button><p class="hint" id="action-hint">This is a draft preview. Your answers will not be submitted.</p><p class="error" id="form-error" role="alert"></p></div>
+    <div class="actions"><button id="preview-button" type="button" disabled>Preview my answers</button><p class="hint" id="action-hint">This is a draft preview. Your answers will not be submitted.</p><p class="error" id="form-error" role="alert"></p><button class="secondary" id="reload-saved" type="button" hidden>Reload saved answers</button></div>
   </fieldset>
   </form>
   <section id="answers" class="answers" hidden aria-labelledby="answers-heading">
@@ -200,6 +203,9 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
   const actionHint = document.getElementById('action-hint');
   const formError = document.getElementById('form-error');
   const retryContext = document.getElementById('retry-context');
+  const reloadSaved = document.getElementById('reload-saved');
+  const giftProgress = document.getElementById('gift-progress');
+  const giftProgressText = document.getElementById('gift-progress-text');
   const topicOther = document.getElementById('topic-other');
   const groups = Array.from(form.querySelectorAll('.choice-group'));
   const garments = Array.from(form.querySelectorAll('[data-garment]')).map(section => ({
@@ -224,6 +230,9 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
   let mode = 'preview';
   let busy = false;
   let submissionId = null;
+  let revision = 0;
+  let loadedGift = false;
+  let conflict = false;
 
   function setStatus(title, copy) {
     statusTitle.textContent = title;
@@ -232,9 +241,9 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
   function clearPreview() {
     answersPanel.hidden = true;
     summary.textContent = '';
-    formError.textContent = '';
+    if (!conflict) formError.textContent = '';
     submissionId = null;
-    if (!busy && mode === 'live') {
+    if (!busy && mode === 'live' && !conflict) {
       button.disabled = false;
       button.textContent = 'Send my sizes and feedback';
     }
@@ -273,6 +282,20 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
       input.setCustomValidity(input.value.trim() ? '' : 'Please enter ' +
         (id === 'customer-name' ? 'your name.' : 'your trading or business name.'));
     });
+    updateProgress();
+  }
+  function updateProgress() {
+    const required = ['customer-name', 'business-name', 'email'].map(id => document.getElementById(id));
+    garments.forEach(garment => {
+      required.push(garment.type, garment.fit, garment.size);
+      if (garment.size.value === 'other') required.push(garment.other);
+    });
+    const complete = required.filter(input => input.value.trim() && input.validity.valid).length;
+    giftProgress.max = required.length;
+    giftProgress.value = complete;
+    const message = complete === required.length ? 'Your gift details are complete. Feedback is optional.'
+      : complete + ' of ' + required.length + ' required gift details complete. Feedback is optional.';
+    if (giftProgressText.textContent !== message) giftProgressText.textContent = message;
   }
   function validateGroup(group) {
     const boxes = Array.from(group.querySelectorAll('input[type="checkbox"]'));
@@ -305,7 +328,7 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
       followUp: document.getElementById('follow-up').checked,
     };
   }
-  function showPreview(data) {
+  function giftSummary(data) {
     const lines = ['YOUR GIFT',
       'Name: ' + data.respondent.name,
       'Trading or business name: ' + data.respondent.business,
@@ -313,9 +336,14 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
     data.garments.forEach((garment, index) => {
       lines.push('', 'Garment ' + (index + 1), 'For: ' + (garment.name || 'Not specified'),
         'Preference: ' + (garment.type === 'jacket' ? 'Jacket' : 'Vest'),
-        'Cut: ' + (garment.fit === 'men' ? "Men's" : "Women's"), 'Size: ' + garment.size);
+        'Cut: ' + (garment.fit === 'men' ? "Men's" : "Women's"),
+        'Size: ' + (garment.size === 'help' ? 'Sizing help requested' : garment.size === 'other' ? 'Other size' : garment.size));
       if (garment.other) lines.push('Sizing details: ' + garment.other);
     });
+    return lines;
+  }
+  function showPreview(data) {
+    const lines = giftSummary(data);
     lines.push('', 'YOUR EXPERIENCE');
     form.querySelectorAll('.rating').forEach(select => {
       const value = data.ratings[select.id.slice('rating-'.length)];
@@ -335,6 +363,40 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
     answersPanel.hidden = false;
     heading.focus();
   }
+  function restoreAnswers(data) {
+    const respondent = data.respondent;
+    ['name', 'business', 'email'].forEach((key, index) => {
+      document.getElementById(['customer-name', 'business-name', 'email'][index]).value = respondent[key];
+    });
+    if (!Array.isArray(data.garments) || data.garments.length !== garments.length) throw new Error('Wrong garment count');
+    garments.forEach((garment, index) => {
+      const saved = data.garments[index];
+      if (!models[saved.type]?.[saved.fit]) throw new Error('Unknown saved garment');
+      garment.type.value = saved.type;
+      garment.fit.value = saved.fit;
+      updateSizes(garment);
+      garment.size.value = saved.size;
+      if (garment.size.value !== saved.size) throw new Error('Unknown saved size');
+      garment.other.value = saved.other || '';
+      if (garment.name) garment.name.value = saved.name || '';
+    });
+    form.querySelectorAll('.rating').forEach(select => {
+      const value = data.ratings[select.id.slice('rating-'.length)];
+      select.value = value === null ? '' : String(value);
+    });
+    document.getElementById('purchase-change').value = data.purchaseChange || '';
+    document.getElementById('service-feedback').value = data.feedback || '';
+    groups.forEach(group => group.querySelectorAll('input[type="checkbox"]').forEach(input => {
+      input.checked = data[input.name].includes(input.value);
+    }));
+    topicOther.value = data.topicOther || '';
+    document.getElementById('follow-up').checked = data.followUp === true;
+    updateConditionalFields();
+  }
+  function savedTime(value) {
+    if (typeof value !== 'string' || !Number.isFinite(Date.parse(value))) throw new Error('Missing receipt time');
+    return new Date(value).toLocaleString('en-AU', {dateStyle: 'medium', timeStyle: 'short'});
+  }
   async function request(payload) {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 30000);
@@ -346,7 +408,11 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
       });
       if (!response.ok) throw new Error('No acknowledgement');
       const result = await response.json();
-      if (!result || result.ok !== true) throw new Error('No acknowledgement');
+      if (!result || result.ok !== true) {
+        const error = new Error('No acknowledgement');
+        error.code = result?.error?.code;
+        throw error;
+      }
       return result;
     } finally {
       clearTimeout(timeout);
@@ -365,10 +431,14 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
         : 'Please check your invitation link or contact Hybrid-Ag. No gift preferences or feedback have been sent.');
     retryContext.hidden = false;
   }
-  async function initialise() {
+  async function initialise({replaceAnswers = false} = {}) {
     controls.disabled = true;
     button.disabled = true;
     retryContext.hidden = true;
+    if (hasInvitation) {
+      document.getElementById('preview-label').hidden = true;
+      setStatus('Checking your invitation', 'Please wait while we check your gift invitation.');
+    }
     try {
       const response = await fetch('survey_public_config.json', {cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer'});
       if (!response.ok) throw new Error('Configuration unavailable');
@@ -387,19 +457,29 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
       setStatus('Checking your invitation', 'Please wait while we check your gift invitation.');
       const context = await request({action: 'context', token, tier});
       if (String(context.tier) !== String(tier)) throw new Error('Wrong gift form');
-      ['recipientName', 'email', 'account'].forEach((key, index) => {
-        const input = document.getElementById(['customer-name', 'email', 'business-name'][index]);
-        if (!input.value && typeof context[key] === 'string') input.value = context[key];
-      });
+      if (!Number.isSafeInteger(context.revision) || context.revision < 0) throw new Error('Missing saved revision');
+      if (!loadedGift || replaceAnswers) {
+        ['recipientName', 'email', 'account'].forEach((key, index) => {
+          const input = document.getElementById(['customer-name', 'email', 'business-name'][index]);
+          if (typeof context[key] === 'string') input.value = context[key];
+        });
+        if (context.answers) restoreAnswers(context.answers);
+        revision = context.revision;
+        loadedGift = true;
+        conflict = false;
+        reloadSaved.hidden = true;
+        clearPreview();
+      }
       mode = 'live';
       document.getElementById('preview-label').hidden = true;
-      document.getElementById('page-footer').textContent = 'Hybrid-Ag · 2026';
-      setStatus('Your gift invitation', 'Please confirm your details and garment preferences below. The feedback questions are optional and will not affect your gift.');
+      setStatus(context.answers ? 'Your saved reply' : 'Your gift invitation', context.answers
+        ? 'Your reply saved on ' + savedTime(context.savedAt) + ' is shown below. You can update it if needed. Feedback is optional.'
+        : 'Please confirm your details and garment preferences below. The feedback questions are optional and will not affect your gift.');
       actionHint.textContent = 'Your gift preferences and any optional feedback will be sent to Hybrid-Ag.';
       button.textContent = 'Send my sizes and feedback';
       controls.disabled = false;
       updateConditionalFields();
-      button.disabled = false;
+      button.disabled = conflict;
     } catch (error) {
       if (hasInvitation) blockInvitation(!endpoint);
       else {
@@ -430,9 +510,11 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
   form.addEventListener('submit', event => event.preventDefault());
   form.addEventListener('input', () => { clearPreview(); updateConditionalFields(); });
   form.addEventListener('change', () => { clearPreview(); updateConditionalFields(); });
-  retryContext.addEventListener('click', initialise);
+  retryContext.addEventListener('click', () => initialise({replaceAnswers: conflict}));
+  reloadSaved.addEventListener('click', () => initialise({replaceAnswers: true}));
+  document.getElementById('skip-feedback').addEventListener('click', () => button.focus());
   button.addEventListener('click', async () => {
-    if (busy || mode === 'blocked') return;
+    if (busy || conflict || mode === 'blocked') return;
     updateConditionalFields();
     groups.forEach(validateGroup);
     if (!form.reportValidity()) return;
@@ -446,18 +528,28 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
     button.textContent = 'Sending…';
     formError.textContent = '';
     try {
-      const result = await request({action: 'submit', token, tier, submissionId, answers: data});
-      if (typeof result.responseId !== 'string' || !result.responseId || typeof result.savedAt !== 'string' || !result.savedAt) throw new Error('Missing receipt');
+      const result = await request({action: 'submit', token, tier, submissionId, expectedRevision: revision, answers: data});
+      if (typeof result.responseId !== 'string' || !result.responseId || !Number.isSafeInteger(result.revision) || result.revision <= revision) throw new Error('Missing receipt');
+      const receivedAt = savedTime(result.savedAt);
+      revision = result.revision;
       heading.textContent = 'Thank you';
-      resultMessage.textContent = 'Your gift preferences and any feedback have been received by Hybrid-Ag. You can make changes below and send them again if needed.';
-      summary.textContent = '';
+      resultMessage.textContent = 'Your gift preferences and any feedback have been received by Hybrid-Ag. To make changes, edit the form above and send it again.';
+      summary.textContent = 'Saved on ' + receivedAt + '\n\n' + giftSummary(data).join('\n');
       answersPanel.hidden = false;
       button.textContent = 'Received';
       heading.focus();
     } catch (error) {
-      formError.textContent = 'We could not confirm that your answers were received. Please try again. Your answers are still on this page.';
-      button.textContent = 'Try sending again';
-      button.disabled = false;
+      if (error.code === 'REVISION_CONFLICT') {
+        conflict = true;
+        formError.textContent = 'A newer reply has already been saved for this invitation. Your edits are still on this page. Reloading replaces them with the latest saved answers, which you can review and update.';
+        reloadSaved.hidden = false;
+        retryContext.textContent = 'Reload saved answers';
+        button.textContent = 'Reload saved answers before sending';
+      } else {
+        formError.textContent = 'We could not confirm that your answers were received. Please try again. Your answers are still on this page.';
+        button.textContent = 'Try sending again';
+        button.disabled = false;
+      }
     } finally {
       busy = false;
       controls.disabled = false;
