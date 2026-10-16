@@ -146,8 +146,8 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
 <div class="rating-row"><label for="rating-delivery">Deliveries arriving within the agreed timeframe</label><select id="rating-delivery" name="rating-delivery" class="rating" aria-describedby="rating-help" data-label="Deliveries arriving within the agreed timeframe"><option value="">Choose a score</option><option value="1">1 — Very poor</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10 — Excellent</option><option value="na">N/A / Cannot rate</option></select></div>
 <div class="rating-row"><label for="rating-updates">Updates about your orders and deliveries</label><select id="rating-updates" name="rating-updates" class="rating" aria-describedby="rating-help" data-label="Updates about your orders and deliveries"><option value="">Choose a score</option><option value="1">1 — Very poor</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10 — Excellent</option><option value="na">N/A / Cannot rate</option></select></div>
 <div class="rating-row"><label for="rating-problems">How well we dealt with any problems you raised</label><select id="rating-problems" name="rating-problems" class="rating" aria-describedby="rating-help" data-label="How well we dealt with any problems you raised"><option value="">Choose a score</option><option value="1">1 — Very poor</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10 — Excellent</option><option value="na">N/A / Cannot rate</option></select></div></div>
-      <div class="field comment"><label for="purchase-change">If your purchases from Hybrid-Ag have changed this year, what is the main reason? <span class="optional">(optional)</span></label><textarea id="purchase-change" name="purchase-change" rows="3"></textarea></div>
-      <div class="field comment"><label for="service-feedback">What is the main thing we could do better, if anything? <span class="optional">(optional)</span></label><p class="hint" id="feedback-help">You can also tell us what is working well, or anything else we should know.</p><textarea id="service-feedback" name="service-feedback" rows="3" aria-describedby="feedback-help"></textarea></div>
+      <div class="field comment"><label for="purchase-change">If your purchases from Hybrid-Ag have changed this year, what is the main reason? <span class="optional">(optional)</span></label><textarea id="purchase-change" name="purchase-change" rows="3" maxlength="6000"></textarea></div>
+      <div class="field comment"><label for="service-feedback">What is the main thing we could do better, if anything? <span class="optional">(optional)</span></label><p class="hint" id="feedback-help">You can also tell us what is working well, or anything else we should know.</p><textarea id="service-feedback" name="service-feedback" rows="3" maxlength="6000" aria-describedby="feedback-help"></textarea></div>
     </fieldset>
     <fieldset class="part marketing"><legend>3. Useful information <span class="optional">· optional</span></legend>
       <p>Let us know what information you would find useful. Choosing a topic or format does not sign you up to anything.</p>
@@ -161,7 +161,7 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
 <label class="choice"><input type="checkbox" name="topics" value="ordering"><span>Ordering and delivery information</span></label>
 <label class="choice"><input type="checkbox" name="topics" value="other"><span>Other</span></label>
 <label class="choice"><input type="checkbox" name="topics" value="none"><span>Nothing extra</span></label></div><p class="error" id="topics-error" aria-live="polite"></p>
-        <div class="field other-field" id="topic-other-wrap" hidden><label for="topic-other">What other information would be useful? <span class="optional">(optional)</span></label><input id="topic-other" name="topic-other" type="text" disabled></div>
+        <div class="field other-field" id="topic-other-wrap" hidden><label for="topic-other">What other information would be useful? <span class="optional">(optional)</span></label><input id="topic-other" name="topic-other" type="text" maxlength="1000" disabled></div>
       </fieldset>
       <fieldset class="choice-group" id="formats-group" data-max="2" data-label="Preferred formats" aria-describedby="formats-help formats-error">
         <legend>How would you prefer to receive useful information?</legend>
@@ -539,7 +539,7 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
       button.textContent = 'Received';
       heading.focus();
     } catch (error) {
-      if (error.code === 'REVISION_CONFLICT') {
+      if (error.code === 'REVISION_CONFLICT' || error.code === 'STALE_SUBMISSION') {
         conflict = true;
         formError.textContent = 'A newer reply has already been saved for this invitation. Your edits are still on this page. Reloading replaces them with the latest saved answers, which you can review and update.';
         reloadSaved.hidden = false;
