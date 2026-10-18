@@ -233,17 +233,21 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
   let revision = 0;
   let loadedGift = false;
   let conflict = false;
+  let acceptingResponses = true;
+  let responseDeadline = '';
+  let savedReply = null;
 
   function setStatus(title, copy) {
     statusTitle.textContent = title;
     statusCopy.textContent = copy;
   }
   function clearPreview() {
+    if (mode === 'live' && !acceptingResponses) { controls.disabled = true; button.disabled = true; return; }
     answersPanel.hidden = true;
     summary.textContent = '';
     if (!conflict) formError.textContent = '';
     submissionId = null;
-    if (!busy && mode === 'live' && !conflict) {
+    if (!busy && mode === 'live' && !conflict && acceptingResponses) {
       button.disabled = false;
       button.textContent = 'Send my sizes and feedback';
     }
@@ -397,6 +401,26 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
     if (typeof value !== 'string' || !Number.isFinite(Date.parse(value))) throw new Error('Missing receipt time');
     return new Date(value).toLocaleString('en-AU', {dateStyle: 'medium', timeStyle: 'short'});
   }
+  function deadlineNotice() {
+    return responseDeadline ? ' Please send your reply by ' + savedTime(responseDeadline) + ' (your local time).' : '';
+  }
+  function closeResponses() {
+    acceptingResponses = false;
+    controls.disabled = true;
+    button.disabled = true;
+    button.textContent = 'Response period closed';
+    retryContext.hidden = false;
+    retryContext.textContent = 'Reload saved reply';
+    const deadline = responseDeadline ? ' The response period ended on ' + savedTime(responseDeadline) + ' (your local time).' : ' The response period has ended.';
+    setStatus('Response period closed', (savedReply ? 'Your saved reply is shown below.' : 'New replies can no longer be submitted.') + deadline + ' Please contact Hybrid-Ag if you need help.');
+    actionHint.textContent = savedReply ? 'Your saved gift preferences and feedback remain on record.' : 'Please contact Hybrid-Ag about your gift preferences.';
+    if (savedReply) {
+      heading.textContent = 'Your saved reply';
+      resultMessage.textContent = 'Your gift preferences and any feedback were received by Hybrid-Ag. The response period is now closed.';
+      summary.textContent = 'Saved on ' + savedTime(savedReply.savedAt) + '\n\n' + giftSummary(savedReply.answers).join('\n');
+      answersPanel.hidden = false;
+    }
+  }
   async function request(payload) {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 30000);
@@ -458,6 +482,10 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
       const context = await request({action: 'context', token, tier});
       if (String(context.tier) !== String(tier)) throw new Error('Wrong gift form');
       if (!Number.isSafeInteger(context.revision) || context.revision < 0) throw new Error('Missing saved revision');
+      if (typeof context.acceptingResponses !== 'boolean' || typeof context.responseDeadline !== 'string' || context.responseDeadline && !Number.isFinite(Date.parse(context.responseDeadline))) throw new Error('Missing response availability');
+      responseDeadline = context.responseDeadline;
+      acceptingResponses = context.acceptingResponses;
+      savedReply = context.answers ? {answers: context.answers, savedAt: context.savedAt} : null;
       if (!loadedGift || replaceAnswers) {
         ['recipientName', 'email', 'account'].forEach((key, index) => {
           const input = document.getElementById(['customer-name', 'email', 'business-name'][index]);
@@ -472,9 +500,10 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
       }
       mode = 'live';
       document.getElementById('preview-label').hidden = true;
+      if (!acceptingResponses) { closeResponses(); updateConditionalFields(); return; }
       setStatus(context.answers ? 'Your saved reply' : 'Your gift invitation', context.answers
-        ? 'Your reply saved on ' + savedTime(context.savedAt) + ' is shown below. You can update it if needed. Feedback is optional.'
-        : 'Please confirm your details and garment preferences below. The feedback questions are optional and will not affect your gift.');
+        ? 'Your reply saved on ' + savedTime(context.savedAt) + ' is shown below. You can update it if needed. Feedback is optional.' + deadlineNotice()
+        : 'Please confirm your details and garment preferences below. The feedback questions are optional and will not affect your gift.' + deadlineNotice());
       actionHint.textContent = 'Your gift preferences and any optional feedback will be sent to Hybrid-Ag.';
       button.textContent = 'Send my sizes and feedback';
       controls.disabled = false;
@@ -510,11 +539,12 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
   form.addEventListener('submit', event => event.preventDefault());
   form.addEventListener('input', () => { clearPreview(); updateConditionalFields(); });
   form.addEventListener('change', () => { clearPreview(); updateConditionalFields(); });
-  retryContext.addEventListener('click', () => initialise({replaceAnswers: conflict}));
+  form.addEventListener('reset', () => { if (mode === 'live' && !acceptingResponses) { controls.disabled = true; button.disabled = true; } });
+  retryContext.addEventListener('click', () => initialise({replaceAnswers: conflict || !acceptingResponses}));
   reloadSaved.addEventListener('click', () => initialise({replaceAnswers: true}));
   document.getElementById('skip-feedback').addEventListener('click', () => button.focus());
   button.addEventListener('click', async () => {
-    if (busy || conflict || mode === 'blocked') return;
+    if (busy || conflict || mode === 'blocked' || mode === 'live' && !acceptingResponses) return;
     updateConditionalFields();
     groups.forEach(validateGroup);
     if (!form.reportValidity()) return;
@@ -532,6 +562,7 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
       if (typeof result.responseId !== 'string' || !result.responseId || !Number.isSafeInteger(result.revision) || result.revision <= revision) throw new Error('Missing receipt');
       const receivedAt = savedTime(result.savedAt);
       revision = result.revision;
+      savedReply = {answers: data, savedAt: result.savedAt};
       heading.textContent = 'Thank you';
       resultMessage.textContent = 'Your gift preferences and any feedback have been received by Hybrid-Ag. To make changes, edit the form above and send it again.';
       summary.textContent = 'Saved on ' + receivedAt + '\n\n' + giftSummary(data).join('\n');
@@ -539,7 +570,11 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
       button.textContent = 'Received';
       heading.focus();
     } catch (error) {
-      if (error.code === 'REVISION_CONFLICT' || error.code === 'STALE_SUBMISSION') {
+      if (error.code === 'RESPONSE_CLOSED') {
+        closeResponses();
+        formError.textContent = 'The response period has closed. These changes were not saved. Please contact Hybrid-Ag if you need help.';
+        reloadSaved.hidden = true;
+      } else if (error.code === 'REVISION_CONFLICT' || error.code === 'STALE_SUBMISSION') {
         conflict = true;
         formError.textContent = 'A newer reply has already been saved for this invitation. Your edits are still on this page. Reloading replaces them with the latest saved answers, which you can review and update.';
         reloadSaved.hidden = false;
@@ -552,7 +587,7 @@ button{border-radius:4px;box-shadow:0 4px 12px rgba(19,17,16,.1);transition:back
       }
     } finally {
       busy = false;
-      controls.disabled = false;
+      controls.disabled = mode === 'live' && !acceptingResponses;
     }
   });
   // A different invitation fragment must load its own gift context.
