@@ -465,7 +465,7 @@ dialog{max-width:min(660px,calc(100vw - 32px));width:100%;max-height:calc(100dvh
   }
   async function request(payload) {
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 30000);
+    const timeout = setTimeout(() => controller.abort(), payload.action === 'entitySubmit' ? 60000 : 30000);
     try {
       const requestUrl = new URL(endpoint);
       requestUrl.searchParams.set('requestId', crypto.randomUUID());
