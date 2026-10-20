@@ -33,7 +33,7 @@ main{padding:32px 30px 28px}.draft{font-size:13px;line-height:1.65;padding:16px 
 .part{--accent:var(--teal);position:relative;background:#FFFEFC;border:1px solid var(--line);border-radius:3px;box-shadow:0 3px 9px #1A171403,0 16px 40px #1A171403;padding:30px 34px 32px;margin:0 0 28px;transition:border-color .3s var(--ease),box-shadow .3s var(--ease)}.part.service{--accent:var(--orange)}.part.marketing{--accent:var(--berry)}.part::before{content:"";position:absolute;left:-4px;top:40px;width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px var(--paper);transition:box-shadow .3s}.part::after{content:"";position:absolute;left:-1px;top:52px;bottom:28px;width:1px;background:linear-gradient(var(--accent),transparent);opacity:0;transform:scaleY(.8);transform-origin:top;transition:opacity .4s,transform .5s var(--ease);pointer-events:none}.part:focus-within::after{opacity:.65;transform:none}.part:focus-within{border-color:#BEBDB2;box-shadow:0 4px 12px #1A171406,0 18px 42px #1A171407}.part>legend{float:left;width:100%;padding:0;margin:0 0 17px;background:none;font:400 34px/1.15 'Alternate Gothic No2 D','Oswald',sans-serif;letter-spacing:.005em}.part>legend+*{clear:both}.optional,.part>legend .optional{font:400 12px/1.5 'Inter',sans-serif;color:var(--muted)}.part>legend .optional{white-space:nowrap;margin-left:3px}.part p,.hint{font-size:13px;line-height:1.75;color:var(--muted)}.part>p{max-width:80ch}.part p:last-child{margin-bottom:0}
 label{display:block}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 24px;margin:24px 0 28px}.wide{grid-column:1/-1}.field{min-width:0}.field label{display:flex;align-items:baseline;gap:6px;font-size:12px;font-weight:600;line-height:18px;min-height:18px;margin-bottom:8px;transition:color .2s}.field:focus-within>label{color:#126F6B}.hint{margin:8px 0 0}.optional{font-size:12px}
 input:not([type=checkbox]),select,textarea{width:100%;min-width:0;min-height:50px;font:400 15px/1.4 'Inter',sans-serif;color:var(--ink);background-color:#FFF;border:1px solid #C8C3BA;border-radius:3px;padding:13px 14px;transition:border-color .22s,background-color .22s,box-shadow .22s;box-shadow:0 1px 2px #1A171403}input:not([type=checkbox]),select{height:50px}select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%236B665E' stroke-width='1.3'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 15px center;background-size:11px 7px;padding-right:39px;cursor:pointer;text-overflow:ellipsis}select:disabled{background-color:#F1EFEA;border-color:#DDD8D0;color:#8A847A;opacity:1;-webkit-text-fill-color:#8A847A;cursor:not-allowed}input[readonly]{background:#F1EFEA;color:#575249;border-color:#DDD8D0}textarea{resize:vertical;min-height:110px;line-height:1.65}input:not([type=checkbox]):focus,select:focus,textarea:focus{border-color:var(--teal);background-color:#fff;box-shadow:0 0 0 3px #1B969014}input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--teal);outline-offset:4px}input[type=checkbox]{width:18px;height:18px;flex:0 0 18px;margin:3px 0 0;accent-color:var(--teal)}
-.gift-progress{margin:24px 0 28px;padding:0 0 22px;border-bottom:1px solid var(--line)}.gift-progress label{font:400 10px/1.5 'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}.gift-progress progress{appearance:none;-webkit-appearance:none;display:block;border:0;border-radius:3px;overflow:hidden;width:100%;height:3px;margin:12px 0;background:var(--cream);accent-color:var(--teal)}.gift-progress progress::-webkit-progress-bar{background:var(--cream)}.gift-progress progress::-webkit-progress-value{background:var(--teal);transition:width .35s var(--ease)}.gift-progress progress::-moz-progress-bar{background:var(--teal)}.gift-progress .hint{font-size:11px;margin:0}.allocation-summary{border:1px solid #DDE5DF;background:#EFF4F0;padding:12px 15px;color:#344E45!important;font-size:12px!important;line-height:1.7!important;border-radius:3px;margin:22px 0 6px}
+.form-progress{position:fixed;z-index:10;left:max(18px,calc((100vw - 1040px)/2 - 106px));top:50%;width:82px;transform:translateY(-50%);pointer-events:none;user-select:none;color:var(--muted)}.progress-caption{display:flex;flex-direction:column;gap:8px;font:400 9px/1.5 'Inter',sans-serif;letter-spacing:.06em}.progress-percent{font:400 27px/1 'Alternate Gothic No2 D','Oswald',sans-serif;color:var(--ink);letter-spacing:0;font-variant-numeric:tabular-nums}.progress-track{position:relative;width:2px;height:clamp(120px,23vh,220px);margin:19px 0;background:#DAD5CC;border-radius:2px}.progress-fill{position:absolute;left:0;right:0;top:0;height:0;background:var(--teal);border-radius:2px;transition:height .15s linear}.progress-fill::after{content:"";position:absolute;bottom:0;left:-2px;width:6px;height:6px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 3px var(--paper)}.progress-section{max-width:82px;min-height:52px;font-size:10px;line-height:1.6;margin:0;color:var(--muted)}.progress-section span{display:block;font-size:9px;color:#929187;margin-top:3px}@media(max-width:1199px){.form-progress{left:5px;width:3px}.progress-caption,.progress-section{display:none}.progress-track{width:3px;height:30vh;max-height:210px;min-height:110px;margin:0;background:#DAD5CC99}.progress-fill::after{left:-1px;width:5px;height:5px;box-shadow:0 0 0 2px var(--paper)}}.allocation-summary{border:1px solid #DDE5DF;background:#EFF4F0;padding:12px 15px;color:#344E45!important;font-size:12px!important;line-height:1.7!important;border-radius:3px;margin:22px 0 6px}
 #entity-gifts{display:grid;gap:0}.garment{margin:0;padding:20px 0;border:0;border-bottom:1px solid var(--line);border-radius:0;min-width:0}.garment-row{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr) minmax(0,1fr) minmax(0,.9fr);gap:14px;align-items:start}.garment .field label{height:18px;min-height:18px;white-space:nowrap;font-size:11px;line-height:18px;margin:0 0 8px}.garment input,.garment select{height:50px;min-height:50px;font-size:14px;line-height:20px;padding-top:14px;padding-bottom:14px}.row-number{margin-left:auto;font-size:10px;font-weight:400;letter-spacing:.04em;color:var(--muted)}.stock-note{display:block;padding-left:12px;border-left:1px solid #CCA984;font-size:11px;line-height:1.6;color:#85502E;margin:10px 0 0}.stock-note:empty{display:none}.model-note{margin:14px 0 0}
 .size-guide{margin:22px 0 0;border:1px solid var(--line);background:#F7F5F0;border-radius:3px;transition:border-color .25s}.size-guide>summary{display:flex;align-items:center;gap:12px;min-height:54px;padding:14px 16px;list-style:none;font-size:13px;font-weight:600;cursor:pointer}.size-guide>summary::-webkit-details-marker{display:none}.size-guide>summary::after{content:"+";margin-left:auto;font:300 23px/1 'Inter',sans-serif;color:var(--teal);transition:transform .3s var(--ease)}.size-guide[open]>summary::after{transform:rotate(45deg)}.size-guide>summary>span{font-size:11px;font-weight:400;color:var(--muted)}.size-guide[open]{border-color:#BABDB2}.guide-content{padding:2px 18px 20px}.size-guide[open]>.guide-content{animation:guide-open .35s var(--ease)}.guide-content>p{font-size:12px}.size-chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}.size-chart{min-width:0}.size-chart h3{font:400 26px/1.2 'Alternate Gothic No2 D','Oswald',sans-serif;margin:12px 0}.size-chart table{width:100%;border-collapse:collapse;font-size:12px;font-variant-numeric:tabular-nums}.size-chart th,.size-chart td{padding:9px 6px;text-align:left;white-space:nowrap;border-bottom:1px solid var(--line)}.size-chart thead th{background:#EAE7DF;font-weight:600}.size-chart tbody th{font-weight:600}.size-chart .hint{font-size:11px}.measurement-help{font-size:12px;margin-top:16px}.measurement-help summary{font-weight:600;cursor:pointer;min-height:32px;padding-block:5px}.measurement-help p{margin:10px 0 0;font-size:12px}.review-note{font-size:11px!important;border-left:1px solid var(--line);padding-left:12px;margin-top:14px;line-height:1.7}
 .ratings{margin-top:24px}.rating-row{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:28px;align-items:center;padding:17px 0;border-top:1px solid var(--line);transition:background-color .25s}.rating-row:last-child{border-bottom:1px solid var(--line)}.rating-row label{font-size:14px;line-height:1.6;padding-right:4px}.rating-row:focus-within{background:#F0F6F2}.rating-row:focus-within label{color:#126F6B}.rating-row select{font-size:13px}.comment{margin-top:26px}.choice-group{border:0;padding:0;margin:28px 0 0}.choice-group legend{font-size:14px;font-weight:600;padding:0;margin-bottom:6px}.choice-group>.hint{font-size:11px;margin:0 0 14px}.choices{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px}.choice{display:flex;align-items:flex-start;gap:11px;min-height:48px;padding:12px;border:1px solid transparent;border-radius:3px;font-size:13px;line-height:1.7;cursor:pointer;transition:background-color .25s,border-color .25s}.choice span{flex:1}.choice:has(input:checked){border-color:#BED9D0;background:#EDF5EF}.follow-up{margin-top:26px;background:#F2F5EF}.other-field{margin-top:14px}.error{color:#9A2E23!important;font-size:12px;margin:8px 0 0}.error:empty{display:none}
@@ -43,10 +43,10 @@ dialog{width:min(660px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh
 .reveal-panel.is-visible{animation:soft-drop .65s var(--ease) both}.reveal-panel:focus-within{animation:none}@keyframes soft-drop{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}@keyframes guide-open{from{opacity:.3;transform:translateY(-5px)}to{opacity:1;transform:none}}@keyframes dialog-enter{from{opacity:0;transform:translateY(10px) scale(.99)}to{opacity:1;transform:none}}
 @media(hover:hover) and (pointer:fine){input:not([type=checkbox]):hover,select:not(:disabled):hover,textarea:hover{border-color:#909F93}.part:hover::after{opacity:.4;transform:none}.choice:hover{background:#F3F5EF}.rating-row:hover{background:#F7F8F3}button:not(:disabled):hover::before{transform:none}button:not(:disabled):hover{border-color:var(--teal)}.secondary:hover{color:var(--ink)}}
 @media(max-width:760px){.size-chart-grid{grid-template-columns:1fr;gap:20px}.garment-row{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr) minmax(0,.95fr);gap:10px}.part{padding:28px}.footer-main{gap:24px}.footer-brand>.footer-title{font-size:30px}}
-@media(max-width:600px){.hero{padding:30px 22px 34px}.hero .wordmark{height:38px;margin-bottom:26px}.hero h1{font-size:52px;margin-bottom:18px}.hero p{font-size:14px;line-height:1.75}.hero .year{font-size:10px}main{padding:24px 16px 22px}input:not([type=checkbox]),select,textarea{font-size:16px}.draft{padding:14px 16px;margin-bottom:24px;font-size:12px}.part{padding:24px 18px 26px;margin-bottom:24px}.part::before{top:34px}.part::after{top:46px}.part>legend{font-size:29px;margin-bottom:15px}.part>legend .optional{font-size:11px}.part p{font-size:12px}.contact-grid{grid-template-columns:1fr;gap:20px;margin:23px 0}.wide{grid-column:auto}.field label{font-size:12px}.garment-row{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 12px}.garment{padding:18px 0}.garment .field label{font-size:10px;letter-spacing:0}.garment input,.garment select{font-size:16px;height:50px;min-height:50px;padding-left:11px}.garment select{padding-right:30px;background-position:right 11px center;background-size:10px 6px}.stock-note{font-size:10px}.gift-progress{margin:22px 0}.allocation-summary{padding:11px 12px;font-size:11px!important}.size-guide>summary{flex-wrap:wrap;gap:0 8px;padding:13px 14px}.size-guide>summary>span{font-size:10px}.guide-content{padding:0 12px 16px}.size-chart th,.size-chart td{font-size:11px;padding:9px 4px}.rating-row{grid-template-columns:minmax(0,1fr) 145px;gap:16px;padding:17px 0}.rating-row label{font-size:12px}.rating-row select{font-size:16px;padding-left:10px;padding-right:26px;background-position:right 10px center}.choices{grid-template-columns:1fr;gap:7px}.choice{font-size:12px;padding:10px;min-height:46px}.choice-group legend{font-size:13px}.actions{gap:14px}.actions #preview-button{width:100%;min-width:0}.answers{padding:24px 18px}.review-content{padding:24px 20px}.review-content h2{font-size:34px}.review-actions{gap:10px}.review-actions button{flex:1;min-width:0;font-size:12px;padding:13px 10px}.review-garment{grid-template-columns:1fr;gap:4px}.review-garment span:last-child{text-align:left}footer{margin-top:34px;padding-top:24px}.footer-main{flex-direction:column;align-items:flex-start;gap:24px;padding-bottom:24px}.footer-logo{width:140px;max-width:60%}.footer-brand{text-align:left}.footer-brand>.footer-title{font-size:31px;margin-bottom:9px}.footer-outcomes{justify-content:flex-start;gap:11px;font-size:10px}.footer-meta{font-size:9px;padding-top:14px}.footer-signal{width:75px}}
+@media(max-width:600px){.hero{padding:30px 22px 34px}.hero .wordmark{height:38px;margin-bottom:26px}.hero h1{font-size:52px;margin-bottom:18px}.hero p{font-size:14px;line-height:1.75}.hero .year{font-size:10px}main{padding:24px 16px 22px}input:not([type=checkbox]),select,textarea{font-size:16px}.draft{padding:14px 16px;margin-bottom:24px;font-size:12px}.part{padding:24px 18px 26px;margin-bottom:24px}.part::before{top:34px}.part::after{top:46px}.part>legend{font-size:29px;margin-bottom:15px}.part>legend .optional{font-size:11px}.part p{font-size:12px}.contact-grid{grid-template-columns:1fr;gap:20px;margin:23px 0}.wide{grid-column:auto}.field label{font-size:12px}.garment-row{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 12px}.garment{padding:18px 0}.garment .field label{font-size:10px;letter-spacing:0}.garment input,.garment select{font-size:16px;height:50px;min-height:50px;padding-left:11px}.garment select{padding-right:30px;background-position:right 11px center;background-size:10px 6px}.stock-note{font-size:10px}.allocation-summary{padding:11px 12px;font-size:11px!important}.size-guide>summary{flex-wrap:wrap;gap:0 8px;padding:13px 14px}.size-guide>summary>span{font-size:10px}.guide-content{padding:0 12px 16px}.size-chart th,.size-chart td{font-size:11px;padding:9px 4px}.rating-row{grid-template-columns:minmax(0,1fr) 145px;gap:16px;padding:17px 0}.rating-row label{font-size:12px}.rating-row select{font-size:16px;padding-left:10px;padding-right:26px;background-position:right 10px center}.choices{grid-template-columns:1fr;gap:7px}.choice{font-size:12px;padding:10px;min-height:46px}.choice-group legend{font-size:13px}.actions{gap:14px}.actions #preview-button{width:100%;min-width:0}.answers{padding:24px 18px}.review-content{padding:24px 20px}.review-content h2{font-size:34px}.review-actions{gap:10px}.review-actions button{flex:1;min-width:0;font-size:12px;padding:13px 10px}.review-garment{grid-template-columns:1fr;gap:4px}.review-garment span:last-child{text-align:left}footer{margin-top:34px;padding-top:24px}.footer-main{flex-direction:column;align-items:flex-start;gap:24px;padding-bottom:24px}.footer-logo{width:140px;max-width:60%}.footer-brand{text-align:left}.footer-brand>.footer-title{font-size:31px;margin-bottom:9px}.footer-outcomes{justify-content:flex-start;gap:11px;font-size:10px}.footer-meta{font-size:9px;padding-top:14px}.footer-signal{width:75px}}
 @media(max-width:359px){.hero h1{font-size:46px}.part{padding-inline:14px}.garment-row{gap:16px 10px}.rating-row{grid-template-columns:1fr;gap:10px}.rating-row select{width:100%;font-size:16px}.footer-outcomes{gap:8px;font-size:9px}}
 @media(prefers-reduced-motion:reduce),(forced-colors:active){html{scroll-behavior:auto}.hero-in>*,.answers,.reveal-panel.is-visible,.size-guide[open]>.guide-content,dialog[open]{animation:none!important}*,*::before,*::after{transition:none!important}.connection-field{display:none}button:active{transform:none}}
-@media(hover:none),(forced-colors:active){.connection-field{display:none}}@media print{.connection-field,.footer-signal{display:none}.hero-in>*,.answers,.reveal-panel.is-visible{animation:none}.part{box-shadow:none;break-inside:avoid}main{padding:20px}.hero{background:var(--ink)}}
+@media(hover:none),(forced-colors:active){.connection-field{display:none}}@media print{.connection-field,.footer-signal,.form-progress{display:none}.hero-in>*,.answers,.reveal-panel.is-visible{animation:none}.part{box-shadow:none;break-inside:avoid}main{padding:20px}.hero{background:var(--ink)}}
 
 </style>
 </head>
@@ -58,13 +58,18 @@ dialog{width:min(660px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh
   <p>Please complete the jacket or vest choices for everyone included in your business’s gifts. We’d really appreciate your feedback too, good or bad. We’re keen to take it on board and improve how we look after you. It’s optional and won’t affect your gifts.</p>
 </div></header>
 <main>
+<aside class="form-progress" id="form-progress" aria-label="Position in form" hidden>
+  <div class="progress-caption" aria-hidden="true">Form progress<span class="progress-percent" id="gift-progress-percent">0%</span></div>
+  <div class="progress-track" aria-hidden="true"><span class="progress-fill" id="form-progress-fill"></span></div>
+  <progress class="sr-only" id="gift-progress" value="0" max="100" aria-label="Form scroll progress" aria-describedby="gift-progress-text"></progress>
+  <p class="progress-section" id="gift-progress-text">Gift selections</p>
+</aside>
   <div class="draft" role="status" aria-live="polite"><strong id="mode-title">Draft preview</strong><span id="mode-copy">No answers are sent or stored. The button below only lets you preview your answers on this page.</span><button id="retry-context" type="button" hidden>Check my invitation again</button></div>
   <noscript><div class="draft">JavaScript is needed to use this form. The form is disabled and no answers can be sent.</div></noscript>
   <form id="customer-survey" action="#answers" method="get" data-tier="entity">
   <fieldset class="controls" id="draft-controls" disabled><legend class="sr-only">Gift preference, size and optional feedback</legend>
     <fieldset class="part"><legend>1. Primary contact and gift selections</legend>
       <p>Please check the primary contact details below, then complete one line for each garment. This form covers all the gifts for your business. Feedback only needs to be answered once and is optional.</p>
-      <div class="gift-progress"><label for="gift-progress" id="gift-progress-label">Required gift details</label><progress id="gift-progress" value="0" max="15" aria-describedby="gift-progress-text"></progress><p class="hint" id="gift-progress-text" role="status" aria-live="polite">Complete your details and garment choices. Feedback is optional.</p></div>
       <div class="contact-grid">
         <div class="field wide"><label for="business-name">Trading Name or Business Name</label><input id="business-name" name="business-name" type="text" autocomplete="organization" maxlength="200" required></div>
         <div class="field"><label for="customer-name">Primary contact name</label><input id="customer-name" name="customer-name" type="text" autocomplete="name" maxlength="160" required></div>
@@ -77,10 +82,10 @@ dialog{width:min(660px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh
       <div class="garment-row">
         <div class="field"><label for="garment-name-2">Name <span class="row-number" data-row-number></span></label><input id="garment-name-2" name="garment-name-2" data-field="name" type="text" maxlength="160" required placeholder="Who is this for?"></div>
         <div class="field"><label for="garment-cut-2">Men’s / Women’s</label><select id="garment-cut-2" name="garment-cut-2" data-field="fit" required><option value="">Choose fit</option><option value="men">Men’s</option><option value="women">Women’s</option></select></div>
-        <div class="field"><label for="garment-preference-2">Jacket / Vest</label><select id="garment-preference-2" name="garment-preference-2" data-field="type" required aria-describedby="jacket-availability-2"><option value="">Choose style</option><option value="jacket">Jacket</option><option value="vest">Vest</option></select></div>
+        <div class="field"><label for="garment-preference-2">Jacket / Vest</label><select id="garment-preference-2" name="garment-preference-2" data-field="type" required aria-describedby="vest-availability-2"><option value="">Choose style</option><option value="jacket">Jacket</option><option value="vest">Vest</option></select></div>
         <div class="field"><label for="jacket-size-2">Size</label><select id="jacket-size-2" name="jacket-size-2" data-field="size" required disabled aria-describedby="size-note"><option value="">Choose size</option></select></div>
       </div>
-      <small class="stock-note" id="jacket-availability-2" data-stock-note hidden>Jackets are in limited supply. We’ll confirm availability.</small>
+      <small class="stock-note" id="vest-availability-2" data-stock-note hidden>Vests are in limited supply. We’ll confirm availability.</small>
     </fieldset></template><details class="size-guide"><summary>Find your size <span>Body measurements · cm</span></summary><div class="guide-content"><p>These are body measurements in centimetres, not garment dimensions. Epiq jackets and vests have a regular fit: relaxed away from the body, with room for another garment underneath. Women’s sizes follow AU/NZ/UK sizing.</p><p class="fit-note">Customer fit feedback rates these styles as true to size. Individual fit can vary, so check the body measurements below before choosing.</p><div class="size-chart-grid"><section class="size-chart"><h3>Men’s</h3><table><caption class="sr-only">Kathmandu men’s tops body measurements, centimetres</caption><thead><tr><th scope="col">Size</th><th scope="col">Chest</th><th scope="col">Waist</th><th scope="col">Hip</th></tr></thead><tbody><tr><th>XS</th><td>83–89</td><td>70–76</td><td>82–88</td></tr><tr><th>S</th><td>89–95</td><td>76–82</td><td>88–94</td></tr><tr><th>M</th><td>95–101</td><td>82–88</td><td>94–100</td></tr><tr><th>L</th><td>101–107</td><td>88–94</td><td>100–106</td></tr><tr><th>XL</th><td>107–114</td><td>94–101</td><td>106–113</td></tr><tr><th>XXL</th><td>114–122</td><td>101–109</td><td>113–121</td></tr><tr><th>XXXL</th><td>122–130</td><td>109–117</td><td>121–129</td></tr></tbody></table></section><section class="size-chart"><h3>Women’s</h3><table><caption class="sr-only">Kathmandu women’s tops body measurements, centimetres</caption><thead><tr><th scope="col">Size</th><th scope="col">Bust</th><th scope="col">Waist</th><th scope="col">Hip</th></tr></thead><tbody><tr><th>AU 6</th><td>78</td><td>61</td><td>87</td></tr><tr><th>AU 8</th><td>83</td><td>66</td><td>92</td></tr><tr><th>AU 10</th><td>88</td><td>71</td><td>97</td></tr><tr><th>AU 12</th><td>93</td><td>76</td><td>102</td></tr><tr><th>AU 14</th><td>98</td><td>81</td><td>107</td></tr><tr><th>AU 16</th><td>104</td><td>87</td><td>113</td></tr><tr><th>AU 18</th><td>111</td><td>94</td><td>120</td></tr></tbody></table></section></div><p class="hint">The men’s vest is available in XS–XXL; XXXL is offered for the jacket only.</p><details class="measurement-help"><summary>How to measure</summary><p><b>Chest / bust:</b> Keep the tape level around the fullest part of your chest, just below your armpits. <b>Waist:</b> Measure around the narrowest part, above your hips. <b>Hips:</b> With feet together, measure around the widest part.</p></details></div></details>
       <p class="review-note" id="size-note">Choose a fit and style to see the available sizes. We’ll confirm availability before placing the order.</p>
     </fieldset>
@@ -164,8 +169,6 @@ dialog{width:min(660px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh
   const formError = document.getElementById('form-error');
   const retryContext = document.getElementById('retry-context');
   const reloadSaved = document.getElementById('reload-saved');
-  const giftProgress = document.getElementById('gift-progress');
-  const giftProgressText = document.getElementById('gift-progress-text');
   const topicOther = document.getElementById('topic-other');
   const groups = Array.from(form.querySelectorAll('.choice-group'));
   let garments = [];
@@ -266,7 +269,10 @@ dialog{width:min(660px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh
       garment.sizeModel = model;
     }
     garment.size.disabled = !model;
-    garment.stockNote.hidden = garment.type.value !== 'jacket';
+    const limited = garment.type.value === 'vest';
+    garment.stockNote.hidden = !limited;
+    if (limited) garment.type.setAttribute('aria-describedby', garment.stockNote.id);
+    else garment.type.removeAttribute('aria-describedby');
   }
   function conditionalField(input, wrap, active, required = false) {
     wrap.hidden = !active;
@@ -299,19 +305,6 @@ dialog{width:min(660px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh
       input.setCustomValidity(input.value.trim() ? '' : 'Please enter ' +
         (id === 'customer-name' ? 'your name.' : 'your trading or business name.'));
     });
-    updateProgress();
-  }
-  function updateProgress() {
-    const required = ['customer-name', 'business-name', 'email', 'primary-mobile'].map(id => document.getElementById(id));
-    garments.forEach(garment => {
-      required.push(garment.name, garment.type, garment.fit, garment.size);
-    });
-    const complete = required.filter(input => input.value.trim() && input.validity.valid).length;
-    giftProgress.max = required.length;
-    giftProgress.value = complete;
-    const message = complete === required.length ? 'Your gift details are complete. Feedback is optional.'
-      : complete + ' of ' + required.length + ' required gift details complete. Feedback is optional.';
-    if (giftProgressText.textContent !== message) giftProgressText.textContent = message;
   }
   function validateGroup(group) {
     const boxes = Array.from(group.querySelectorAll('input[type="checkbox"]'));
@@ -709,6 +702,72 @@ dialog{width:min(660px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh
   if (!hasInvitation) renderPreviewGifts();
   updateConditionalFields();
   initialise();
+})();
+</script>
+<script>
+// Scroll position only. Optional feedback stays optional.
+(() => {
+  'use strict';
+  const form = document.getElementById('customer-survey');
+  const rail = document.getElementById('form-progress');
+  const progress = document.getElementById('gift-progress');
+  const fill = document.getElementById('form-progress-fill');
+  const percent = document.getElementById('gift-progress-percent');
+  const caption = document.getElementById('gift-progress-text');
+  const sections = [...form.querySelectorAll('.part'), form.querySelector('.actions')];
+  const labels = ['Gift selections', 'Your experience', 'Useful information', 'Review & send'];
+  let frame = 0, lastStage = -1, lastPercent = -1, paused = false;
+  function update() {
+    frame = 0;
+    const height = window.innerHeight;
+    const boxes = sections.map(section => section.getBoundingClientRect());
+    const formBox = form.getBoundingClientRect();
+    const start = boxes[0].top + window.scrollY - height * .25;
+    const end = boxes[3].bottom + window.scrollY - height * .85;
+    const ratio = Math.max(0, Math.min(1, (window.scrollY - start) / Math.max(1, end - start)));
+    const value = Math.round(ratio * 100);
+    let stage = 0;
+    boxes.forEach((box, index) => { if (box.top <= height * .6) stage = index; });
+    if (value === 100) stage = 3;
+    rail.hidden = boxes[0].top >= height * .75 || formBox.bottom <= 0;
+    if (value !== lastPercent) {
+      progress.value = value;
+      percent.textContent = value + '%';
+      fill.style.height = (ratio * 100).toFixed(3) + '%';
+      lastPercent = value;
+    }
+    if (stage !== lastStage) {
+      caption.replaceChildren(document.createTextNode(labels[stage]));
+      if (stage === 1 || stage === 2) {
+        const optional = document.createElement('span');
+        optional.textContent = 'Optional feedback';
+        caption.append(optional);
+      }
+      lastStage = stage;
+    }
+    progress.setAttribute('aria-valuetext', value + '% through the form. ' + labels[stage] + ((stage === 1 || stage === 2) ? ', optional.' : '.'));
+  }
+  function schedule() {
+    if (!frame && !paused && !document.hidden) frame = requestAnimationFrame(update);
+  }
+  window.addEventListener('scroll', schedule, {passive:true});
+  window.addEventListener('resize', schedule, {passive:true});
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) { cancelAnimationFrame(frame); frame = 0; }
+    else schedule();
+  });
+  form.addEventListener('toggle', schedule, true);
+  let observer;
+  if ('ResizeObserver' in window) {
+    observer = new ResizeObserver(schedule);
+    observer.observe(form);
+  }
+  window.addEventListener('pageshow', () => { paused = false; schedule(); });
+  window.addEventListener('pagehide', () => {
+    paused = true; cancelAnimationFrame(frame); frame = 0;
+  });
+  if (document.fonts?.ready) document.fonts.ready.then(schedule);
+  schedule();
 })();
 </script>
 <script>
