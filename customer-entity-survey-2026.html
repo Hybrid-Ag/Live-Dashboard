@@ -467,7 +467,9 @@ dialog{max-width:min(660px,calc(100vw - 32px));width:100%;max-height:calc(100dvh
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 30000);
     try {
-      const response = await fetch(endpoint, {
+      const requestUrl = new URL(endpoint);
+      requestUrl.searchParams.set('requestId', crypto.randomUUID());
+      const response = await fetch(requestUrl.href, {
         method: 'POST', headers: {'Content-Type': 'text/plain;charset=UTF-8'},
         body: JSON.stringify(payload), credentials: 'omit', cache: 'no-store',
         referrerPolicy: 'no-referrer', signal: controller.signal,
