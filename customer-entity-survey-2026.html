@@ -190,14 +190,17 @@ dialog{width:min(660px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh
     const checked = gifts.map(gift => {
       if (!gift || typeof gift.giftId !== 'string' || !/^[A-Za-z0-9_-]{1,100}$/.test(gift.giftId) || ids.has(gift.giftId) || !['1', '2'].includes(String(gift.tier))) throw new Error('Invalid gift allocation');
       ids.add(gift.giftId);
-      return {giftId: gift.giftId, tier: String(gift.tier)};
+      const tier = String(gift.tier);
+      const garmentCount = gift.garmentCount === undefined ? (tier === '1' ? 2 : 1) : gift.garmentCount;
+      if (!Number.isInteger(garmentCount) || garmentCount < 1 || garmentCount > 2) throw new Error('Invalid garment count');
+      return {giftId: gift.giftId, tier, garmentCount};
     });
-    const total = checked.reduce((n, gift) => n + (gift.tier === '1' ? 2 : 1), 0);
+    const total = checked.reduce((n, gift) => n + gift.garmentCount, 0);
     if (total > 200) throw new Error('Invalid garment count');
     const nodes = document.createDocumentFragment();
     const nextGarments = [];
     checked.forEach(gift => {
-      const count = gift.tier === '1' ? 2 : 1;
+      const count = gift.garmentCount;
       for (let slot = 1; slot <= count; slot++) {
         const index = nextGarments.length + 1;
         const fragment = garmentTemplate.content.cloneNode(true);
