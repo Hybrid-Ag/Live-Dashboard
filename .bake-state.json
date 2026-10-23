@@ -1,25 +1,25 @@
 {
- "host": "runnervm8k3b6",
- "sha256": "196ce9af29a9dd76430eda3c0965c09e16fbf498fe01778229b08aa4aa4e682c",
- "build_id": "20261023030619887300",
- "at": "2026-10-23T11:06:51",
- "siblings": {
-  "bud-flower-post.html": "35550c28fc8a6ba790779ecbd73c73cd63624cc6a39c2942352b60522c7d8923",
-  "frost-post.html": "99c89473c945f44f08fc0e4b93722c8f1250468b7f426f21e239e2dcd0f7f5ff",
-  "frost-post.css": "312e26039b8191e42e7305300658b1867bad91c4e5ae62f2a4b2d29e3ba96667",
-  "brandbook.html": "25381f2c582fee0508bfb6a62b0bd13ae4c695e7798c4c1601964a9795ed6d19",
-  "hampers.html": "ee1ccbb31e81006f3c16f6af744a57db0ef02f2e56c033e5635776909998d4c8",
-  "customer-survey-2026.html": "6c51447dac59e4dca999fbebd308574598721d52b14faa4e5036a3c3a4157294",
-  "customer-survey-tier-1-2026.html": "6c51447dac59e4dca999fbebd308574598721d52b14faa4e5036a3c3a4157294",
-  "customer-survey-tier-2-2026.html": "6c51447dac59e4dca999fbebd308574598721d52b14faa4e5036a3c3a4157294",
-  "customer-entity-survey-2026.html": "2df9c1b31bce276697688aeaf004faece0662586dc6f4a56ed3914883a1bcf2e",
-  "survey-responses-2026.html": "19edf4e871fc6aabbf00506ade634a253e924f347c7854d0642568bad7ca000b",
-  "survey_public_config.json": "6b47b29348faee0e05b18721379e9c5b1c7904750fa377fa6b0bb22338905060",
-  "riverina-ag-network-post.html": "5f997fbe270e9f7af094e498fb42b00d87b0926a858fe01dc471ac1f57eea665",
-  "apple-playbook-campaign.html": "4dbf760357c60c8694b8c857d9e1c0de0c5b73bf60e94fb1e30116658a9cf965",
-  "cherry-webinar-review.html": "29a21a123745f31feecd99ef62721e7ac8fe2adf2d582d6fd1272ef0c485b4da",
-  "cherry-flowering-post.html": "44f11d24adcee39488d842cf1fc17cd03a5e14da83be196aca450e88cdf420dd",
-  "cherry-shuck-fall-post.html": "aceb698ed384401def5f5d9a1920d8e8825c14109ba4d8ded66c47895538100f",
-  "flowering-set-concepts.html": "138a086fb064a6c1e76e665e69998dfbd00b15dae592ce7ace8bfecea299037e"
- }
+  "host": "runnervm8k3b6",
+  "sha256": "196ce9af29a9dd76430eda3c0965c09e16fbf498fe01778229b08aa4aa4e682c",
+  "build_id": "20261023030619887300",
+  "at": "2026-10-23T11:06:51",
+  "siblings": {
+    "bud-flower-post.html": "35550c28fc8a6ba790779ecbd73c73cd63624cc6a39c2942352b60522c7d8923",
+    "frost-post.html": "99c89473c945f44f08fc0e4b93722c8f1250468b7f426f21e239e2dcd0f7f5ff",
+    "frost-post.css": "312e26039b8191e42e7305300658b1867bad91c4e5ae62f2a4b2d29e3ba96667",
+    "brandbook.html": "25381f2c582fee0508bfb6a62b0bd13ae4c695e7798c4c1601964a9795ed6d19",
+    "hampers.html": "ee1ccbb31e81006f3c16f6af744a57db0ef02f2e56c033e5635776909998d4c8",
+    "customer-survey-2026.html": "6c51447dac59e4dca999fbebd308574598721d52b14faa4e5036a3c3a4157294",
+    "customer-survey-tier-1-2026.html": "6c51447dac59e4dca999fbebd308574598721d52b14faa4e5036a3c3a4157294",
+    "customer-survey-tier-2-2026.html": "6c51447dac59e4dca999fbebd308574598721d52b14faa4e5036a3c3a4157294",
+    "customer-entity-survey-2026.html": "82946e9085a5b4b031f568cc9dbe78703b81759b374a4bd753544648d516edff",
+    "survey-responses-2026.html": "19edf4e871fc6aabbf00506ade634a253e924f347c7854d0642568bad7ca000b",
+    "survey_public_config.json": "6b47b29348faee0e05b18721379e9c5b1c7904750fa377fa6b0bb22338905060",
+    "riverina-ag-network-post.html": "5f997fbe270e9f7af094e498fb42b00d87b0926a858fe01dc471ac1f57eea665",
+    "apple-playbook-campaign.html": "4dbf760357c60c8694b8c857d9e1c0de0c5b73bf60e94fb1e30116658a9cf965",
+    "cherry-webinar-review.html": "29a21a123745f31feecd99ef62721e7ac8fe2adf2d582d6fd1272ef0c485b4da",
+    "cherry-flowering-post.html": "44f11d24adcee39488d842cf1fc17cd03a5e14da83be196aca450e88cdf420dd",
+    "cherry-shuck-fall-post.html": "aceb698ed384401def5f5d9a1920d8e8825c14109ba4d8ded66c47895538100f",
+    "flowering-set-concepts.html": "138a086fb064a6c1e76e665e69998dfbd00b15dae592ce7ace8bfecea299037e"
+  }
 }
