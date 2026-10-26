@@ -1,14 +1,14 @@
 {
  "host": "runnervmtai0g",
- "sha256": "1e66a7b303b2a27cc95141bc25e81d2b8b4c7e356eff398abb79ef8510a20b15",
- "build_id": "20261026021050924307",
- "at": "2026-10-26T10:11:17",
+ "sha256": "1cbb4c5faaabfd0a25e58c25ddcd44081e7f094d314bc6028bc6cdbaab645dbe",
+ "build_id": "20261026050608509684",
+ "at": "2026-10-26T13:06:38",
  "siblings": {
   "bud-flower-post.html": "35550c28fc8a6ba790779ecbd73c73cd63624cc6a39c2942352b60522c7d8923",
   "frost-post.html": "99c89473c945f44f08fc0e4b93722c8f1250468b7f426f21e239e2dcd0f7f5ff",
   "frost-post.css": "312e26039b8191e42e7305300658b1867bad91c4e5ae62f2a4b2d29e3ba96667",
   "brandbook.html": "25381f2c582fee0508bfb6a62b0bd13ae4c695e7798c4c1601964a9795ed6d19",
-  "hampers.html": "4e4de96684df0cc3dea225254816072fe07c0ca3cb99dac6f53cdd33e4da712a",
+  "hampers.html": "7957ae0183ed1ee4356a75b6f9071deec2de6a4640dee867224659ca8ecba49a",
   "customer-survey-2026.html": "6c51447dac59e4dca999fbebd308574598721d52b14faa4e5036a3c3a4157294",
   "customer-survey-tier-1-2026.html": "6c51447dac59e4dca999fbebd308574598721d52b14faa4e5036a3c3a4157294",
   "customer-survey-tier-2-2026.html": "6c51447dac59e4dca999fbebd308574598721d52b14faa4e5036a3c3a4157294",
