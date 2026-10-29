@@ -78,7 +78,7 @@ dialog{width:min(660px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh
         <div class="field wide"><label for="email">Primary contact email</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required></div>
       </div>
       <p>Please choose a jacket or vest for each person. You’re welcome to include a partner or another key person where a second garment is allocated. <strong>All jackets and vests come in black.</strong></p>
-      <p id="allocation-summary" class="allocation-summary" role="status"></p><div id="entity-gifts"></div><template id="entity-garment-template"><fieldset class="garment" data-garment="2">
+      <p id="allocation-summary" class="allocation-summary" role="status"></p><p id="recipient-prefill-note" class="hint" hidden>The names supplied by your agronomist are filled in below. Please check each line and change the name if that garment is for someone else.</p><div id="entity-gifts"></div><template id="entity-garment-template"><fieldset class="garment" data-garment="2">
       <legend class="sr-only">Garment 2</legend>
       <div class="garment-row">
         <div class="field"><label for="garment-name-2">Name <span class="row-number" data-row-number></span></label><input id="garment-name-2" name="garment-name-2" data-field="name" type="text" maxlength="160" required placeholder="Who is this for?"></div>
@@ -235,6 +235,28 @@ dialog{width:min(660px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh
     garments = nextGarments;
     allocations = checked;
     document.getElementById('allocation-summary').textContent = 'Your business has ' + checked.length + (checked.length === 1 ? ' gift' : ' gifts') + ' with ' + total + (total === 1 ? ' garment to choose.' : ' garments to choose.');
+  }
+  function applyRecipientPrefill(context) {
+    const note = document.getElementById('recipient-prefill-note');
+    note.hidden = true;
+    const names = context.garmentNames;
+    if (names === undefined || Array.isArray(names) && names.length === 0) return;
+    if (!Array.isArray(names) || names.length !== garments.length) throw new Error('Invalid recipient names');
+    const bySlot = new Map();
+    names.forEach(entry => {
+      if (!entry || typeof entry.giftId !== 'string' || !Number.isInteger(entry.slot) || entry.slot < 1 ||
+        typeof entry.name !== 'string' || !entry.name.trim() || entry.name.length > 160) throw new Error('Invalid recipient names');
+      const key = entry.giftId + ':' + entry.slot;
+      if (bySlot.has(key)) throw new Error('Duplicate recipient name slot');
+      bySlot.set(key, entry.name.trim());
+    });
+    const checked = garments.map(garment => {
+      const name = bySlot.get(garment.giftId + ':' + garment.slot);
+      if (name === undefined) throw new Error('Recipient allocation mismatch');
+      return name;
+    });
+    garments.forEach((garment, index) => { garment.name.value = checked[index]; });
+    note.hidden = false;
   }
   const invitation = new URLSearchParams(location.hash.slice(1));
   const invitationValues = ['token', 'invite'].flatMap(key => invitation.getAll(key));
@@ -547,6 +569,7 @@ dialog{width:min(660px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh
         renderGifts(context.allocations);
         allocationHash = context.allocationHash;
         if (context.garmentCount !== garments.length) throw new Error('Wrong garment allocation');
+        applyRecipientPrefill(context);
         ['recipientName', 'email', 'account', 'mobile'].forEach((key, index) => {
           const input = document.getElementById(['customer-name', 'email', 'business-name', 'primary-mobile'][index]);
           const value = key === 'mobile' ? (context.mobile || context.phone || '') : context[key];
