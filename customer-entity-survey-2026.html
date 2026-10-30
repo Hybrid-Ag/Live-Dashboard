@@ -12,13 +12,46 @@
 <link rel="preconnect" href="https://script.google.com" crossorigin>
 <link rel="preconnect" href="https://script.googleusercontent.com" crossorigin>
 <script>
-// Start the small public configuration request while the form is still loading.
-// This contains no invitation or contact details and is never stored on the device.
+// Start the private invitation request before the rest of the page is parsed.
+// Details stay in memory for this page only; never cache them on the device.
+document.documentElement.classList.add('gift-loading');
+window.hybridGiftRequest = async (endpoint, payload) => {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), payload.action === 'entitySubmit' ? 60000 : 30000);
+  try {
+    const requestUrl = new URL(endpoint);
+    requestUrl.searchParams.set('requestId', crypto.randomUUID());
+    const response = await fetch(requestUrl.href, {
+      method: 'POST', headers: {'Content-Type': 'text/plain;charset=UTF-8'},
+      body: JSON.stringify(payload), credentials: 'omit', cache: 'no-store',
+      referrerPolicy: 'no-referrer', signal: controller.signal,
+    });
+    if (!response.ok) throw new Error('No acknowledgement');
+    const result = await response.json();
+    if (!result || result.ok !== true) {
+      const error = new Error('No acknowledgement');
+      error.code = result?.error?.code;
+      throw error;
+    }
+    return result;
+  } finally { clearTimeout(timeout); }
+};
 window.hybridGiftConfig = fetch('survey_public_config.json', {cache:'no-store', credentials:'omit', referrerPolicy:'no-referrer'})
   .then(async response => {
     if (!response.ok) throw new Error('Configuration unavailable');
     return {config:await response.json()};
   }).catch(error => ({error}));
+window.hybridGiftContext = window.hybridGiftConfig.then(async loaded => {
+  const invitation = new URLSearchParams(location.hash.slice(1));
+  const values = ['token', 'invite'].flatMap(key => invitation.getAll(key));
+  const token = values[0] || '';
+  if (loaded.error || !/^[a-f0-9]{64}$/.test(token) || !values.every(value => value === token)) return null;
+  try {
+    const endpoint = loaded.config.endpoint;
+    if (typeof endpoint !== 'string' || new URL(endpoint).protocol !== 'https:') return null;
+    return {token, context: await window.hybridGiftRequest(endpoint, {action: 'entityContext', token})};
+  } catch (error) { return {token, error}; }
+});
 </script>
 <title>Thank you from Hybrid-Ag</title>
 <style>
@@ -49,6 +82,9 @@ dialog{width:min(660px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh
 @media(hover:none),(forced-colors:active){.connection-field{display:none}}@media print{.connection-field,.footer-signal,.form-progress{display:none}.hero-in>*,.answers,.reveal-panel.is-visible{animation:none}.part{box-shadow:none;break-inside:avoid}main{padding:20px}.hero{background:var(--ink)}}
 
 .part>legend .optional-badge{display:inline-block;vertical-align:middle;margin-left:8px;padding:3px 8px;border:1px solid var(--line);border-radius:3px}
+.invitation-loading{display:none;min-height:240px;align-items:center;justify-content:center;gap:22px;padding:38px 28px;border:1px solid var(--line);border-radius:3px;background:#FFFEFC;box-shadow:0 16px 40px #1A171403}.invitation-loading h2{font:400 34px/1.15 'Alternate Gothic No2 D','Oswald',sans-serif;margin:0 0 10px}.invitation-loading p{font-size:13px;line-height:1.7;color:var(--muted);max-width:40ch;margin:0}.loading-mark{flex:none;width:40px;height:40px;border:1px solid #D9E5DE;border-top-color:var(--teal);border-right-color:var(--teal);border-radius:50%;animation:loading-turn 1.2s linear infinite}.gift-loading .invitation-loading{display:flex}.gift-loading #customer-survey,.gift-loading .draft,.gift-loading #page-footer,.gift-loading #form-progress,.gift-unavailable #customer-survey{display:none!important}.gift-ready #customer-survey{animation:soft-drop .35s var(--ease)}@keyframes loading-turn{to{transform:rotate(360deg)}}
+@media(max-width:600px){.invitation-loading{min-height:230px;gap:18px;padding:30px 22px}.invitation-loading h2{font-size:30px}.loading-mark{width:32px;height:32px}.invitation-loading p{font-size:12px}}
+@media(prefers-reduced-motion:reduce),(forced-colors:active){.loading-mark,.gift-ready #customer-survey{animation:none}}
 </style>
 </head>
 <body>
@@ -59,6 +95,7 @@ dialog{width:min(660px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh
   <p>This year’s gifts include a Kathmandu Epiq jacket or vest alongside a few other items. Please fill out the garment details for your business’s gifts. We’d also really appreciate your feedback to improve how we look after you.</p>
 </div></header>
 <main>
+  <section class="invitation-loading" id="invitation-loading" role="status" aria-live="polite" aria-atomic="true"><span class="loading-mark" aria-hidden="true"></span><div><h2>Gathering your details</h2><p>Your contact details and garment choices will appear together in a moment.</p></div></section>
 <aside class="form-progress" id="form-progress" aria-label="Position in form" hidden>
   <div class="progress-caption" aria-hidden="true">Form progress<span class="progress-percent" id="gift-progress-percent">0%</span></div>
   <div class="progress-track" aria-hidden="true"><span class="progress-fill" id="form-progress-fill"></span></div>
@@ -173,6 +210,7 @@ dialog{width:min(660px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh
   const formError = document.getElementById('form-error');
   const retryContext = document.getElementById('retry-context');
   const reloadSaved = document.getElementById('reload-saved');
+  const page = document.documentElement;
   const topicOther = document.getElementById('topic-other');
   const groups = Array.from(form.querySelectorAll('.choice-group'));
   const concernChoice = document.getElementById('concerns-this-year');
@@ -483,30 +521,11 @@ dialog{width:min(660px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh
     }
   }
   async function request(payload) {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), payload.action === 'entitySubmit' ? 60000 : 30000);
-    try {
-      const requestUrl = new URL(endpoint);
-      requestUrl.searchParams.set('requestId', crypto.randomUUID());
-      const response = await fetch(requestUrl.href, {
-        method: 'POST', headers: {'Content-Type': 'text/plain;charset=UTF-8'},
-        body: JSON.stringify(payload), credentials: 'omit', cache: 'no-store',
-        referrerPolicy: 'no-referrer', signal: controller.signal,
-      });
-      if (!response.ok) throw new Error('No acknowledgement');
-      const result = await response.json();
-      if (!result || result.ok !== true) {
-        const error = new Error('No acknowledgement');
-        error.code = result?.error?.code;
-        throw error;
-      }
-      return result;
-    } finally {
-      clearTimeout(timeout);
-    }
+    return window.hybridGiftRequest(endpoint, payload);
   }
   function blockInvitation(unavailable = false) {
     mode = 'blocked';
+    page.classList.toggle('gift-unavailable', !loadedGift);
     controls.disabled = true;
     button.disabled = true;
     button.textContent = 'Currently unavailable';
@@ -520,6 +539,9 @@ dialog{width:min(660px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh
     retryContext.hidden = false;
   }
   async function initialise({replaceAnswers = false} = {}) {
+    page.classList.toggle('gift-loading', !loadedGift);
+    page.classList.remove('gift-unavailable');
+    form.setAttribute('aria-busy', 'true');
     controls.disabled = true;
     button.disabled = true;
     retryContext.hidden = true;
@@ -553,7 +575,11 @@ dialog{width:min(660px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh
       if (!endpoint) { blockInvitation(true); return; }
       if (typeof endpoint !== 'string' || new URL(endpoint).protocol !== 'https:') throw new Error('Invalid endpoint');
       setStatus('Checking your invitation', 'Please wait while we check your gift invitation.');
-      const context = await request({action: 'entityContext', token});
+      const earlyContext = window.hybridGiftContext;
+      window.hybridGiftContext = null;
+      const preloaded = earlyContext ? await earlyContext : null;
+      if (preloaded?.token === token && preloaded.error) throw preloaded.error;
+      const context = preloaded?.token === token ? preloaded.context : await request({action: 'entityContext', token});
       if (typeof context.entityId !== 'string' || !/^[A-Za-z0-9_-]{1,100}$/.test(context.entityId) || typeof context.allocationHash !== 'string' || !/^[a-f0-9]{64}$/.test(context.allocationHash)) throw new Error('Missing entity allocation');
       if (loadedGift && !replaceAnswers && allocationHash !== context.allocationHash) {
         conflict = true; controls.disabled = true; button.disabled = true;
@@ -604,6 +630,10 @@ dialog{width:min(660px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh
         controls.disabled = false;
         button.disabled = false;
       }
+    } finally {
+      page.classList.remove('gift-loading');
+      page.classList.toggle('gift-ready', mode === 'live' || mode === 'preview');
+      form.removeAttribute('aria-busy');
     }
   }
 
