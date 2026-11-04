@@ -1,8 +1,8 @@
 {
- "host": "runnervm7aw5e",
- "sha256": "1026835cd595d8aad245a6d8221b56c0cb553a0a15e8a442b7c91d992c9c0693",
- "build_id": "20261104050647523490",
- "at": "2026-11-04T13:07:28",
+ "host": "runnervm48cm3",
+ "sha256": "ec2fd08681cda27e76f91f3278c27498146657c4f2705d10a5360cabe69eb624",
+ "build_id": "20261104063528952013",
+ "at": "2026-11-04T14:36:05",
  "siblings": {
   "bud-flower-post.html": "35550c28fc8a6ba790779ecbd73c73cd63624cc6a39c2942352b60522c7d8923",
   "frost-post.html": "99c89473c945f44f08fc0e4b93722c8f1250468b7f426f21e239e2dcd0f7f5ff",
@@ -20,6 +20,11 @@
   "cherry-webinar-review.html": "29a21a123745f31feecd99ef62721e7ac8fe2adf2d582d6fd1272ef0c485b4da",
   "cherry-flowering-post.html": "44f11d24adcee39488d842cf1fc17cd03a5e14da83be196aca450e88cdf420dd",
   "cherry-shuck-fall-post.html": "aceb698ed384401def5f5d9a1920d8e8825c14109ba4d8ded66c47895538100f",
-  "flowering-set-concepts.html": "138a086fb064a6c1e76e665e69998dfbd00b15dae592ce7ace8bfecea299037e"
+  "flowering-set-concepts.html": "138a086fb064a6c1e76e665e69998dfbd00b15dae592ce7ace8bfecea299037e",
+  "november-testing-campaigns.html": "0335e3c405974e87734d45fdeef054dc204c375fec8e2e1f2f9249f400dbbe34",
+  "november-cherry-checklist.html": "cc632d143e82fb657c53b634a46219ba108ece19820dc018ed3e304fcaed362e",
+  "november-soil-checklist.html": "ca16972b17d202be2ed6ba8bb1f4d10d906d93bb85e6bd52cea2633ac36b7b6b",
+  "november-cherry-checklist.pdf": "6bc30f5ff82a578b6cd93f4acbb9252f4a3f7da561fd5d7b0a1071dce7879193",
+  "november-soil-checklist.pdf": "66c5657f344f7b2802ae665002b22a0aec0ab5ca8d193e286ca8fb61f55b28b9"
  }
 }
