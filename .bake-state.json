@@ -1,8 +1,8 @@
 {
  "host": "runnervm48cm3",
- "sha256": "b584128dea261b32e46a3b68b7c8298bd9fef72fae2ec6166c37a233d59dd977",
- "build_id": "20261104230638080850",
- "at": "2026-11-05T07:07:17",
+ "sha256": "4726e36fea4017d033d469745f6a44c653d0f99ebedfc4eb21cbe1ba98db8851",
+ "build_id": "20261105000633880116",
+ "at": "2026-11-05T08:07:15",
  "siblings": {
   "bud-flower-post.html": "35550c28fc8a6ba790779ecbd73c73cd63624cc6a39c2942352b60522c7d8923",
   "frost-post.html": "99c89473c945f44f08fc0e4b93722c8f1250468b7f426f21e239e2dcd0f7f5ff",
@@ -21,10 +21,10 @@
   "cherry-flowering-post.html": "44f11d24adcee39488d842cf1fc17cd03a5e14da83be196aca450e88cdf420dd",
   "cherry-shuck-fall-post.html": "aceb698ed384401def5f5d9a1920d8e8825c14109ba4d8ded66c47895538100f",
   "flowering-set-concepts.html": "138a086fb064a6c1e76e665e69998dfbd00b15dae592ce7ace8bfecea299037e",
-  "november-testing-campaigns.html": "d72d544d29a6497f9b6e22742c165f490c66bea53d08924b035a512f588aabbf",
+  "november-testing-campaigns.html": "489884aac88f988671b445dc5b81c86fa03e20fd4c6261a849d883f206f803e1",
   "november-cherry-checklist.html": "bae54121e9bc2f0dc851fa78fa0f42a2b953020375b2223c3487a3e22b9abaed",
-  "november-soil-checklist.html": "f65f905f2c89a52d20e74bebb251f823d774e4fab08f9c1af572f897d85f1e53",
+  "november-soil-checklist.html": "c44bdc73ba84ae6144186f1a8f13f0602df1f115ec0feb313e262aedf9178ea0",
   "november-cherry-checklist.pdf": "38bc7b90a7623aea1892a3621cb8be27eb0a14f95cdcee180b9a607044dfbd86",
-  "november-soil-checklist.pdf": "c8af490c1e37dc60f94698b14c284fa77c80967eb57d4e0944698aa13c7b6287"
+  "november-soil-checklist.pdf": "1fce1d581c67e4437841b6145380643f2902a922e12e0e746a1a26445eb2fddb"
  }
 }
