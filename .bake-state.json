@@ -1,8 +1,8 @@
 {
- "host": "runnervm7aw5e",
- "sha256": "5762de2169446385bdaf1fac3e6c7ae34b66e40328809d510d314a0feb48d7e8",
- "build_id": "20261113074244778780",
- "at": "2026-11-13T15:43:23",
+ "host": "runnervm8axu0",
+ "sha256": "ad5e681fcade325850eb86138d030a95d8e4397c0543f50d7af25635ec9b4292",
+ "build_id": "20261114130449093109",
+ "at": "2026-11-14T21:05:30",
  "siblings": {
   "bud-flower-post.html": "35550c28fc8a6ba790779ecbd73c73cd63624cc6a39c2942352b60522c7d8923",
   "frost-post.html": "99c89473c945f44f08fc0e4b93722c8f1250468b7f426f21e239e2dcd0f7f5ff",
@@ -22,11 +22,11 @@
   "cherry-shuck-fall-post.html": "aceb698ed384401def5f5d9a1920d8e8825c14109ba4d8ded66c47895538100f",
   "flowering-set-concepts.html": "138a086fb064a6c1e76e665e69998dfbd00b15dae592ce7ace8bfecea299037e",
   "november-testing-campaigns.html": "535c304002b00165b73ad71fae1cdb7211d7fa76e6b56d828b3acc93f84dd0ea",
-  "november-broadacre-campaign.html": "5c0c95775e6459f546c48125a5f9b8bd3797cb653ad6ae1aa6fa260c37f6db58",
-  "november-horticulture-campaign.html": "e5680cd8c0e36663a8b7e882eb8485dfef2aef7db5dbcde8bfc3d1020ef25303",
-  "november-cherry-checklist.html": "bae54121e9bc2f0dc851fa78fa0f42a2b953020375b2223c3487a3e22b9abaed",
-  "november-soil-checklist.html": "7a3cf48e54aa553e5f5e1b0d5ce874f78eb3e1021a15b5067fbeeb0817bd5607",
-  "november-cherry-checklist.pdf": "38bc7b90a7623aea1892a3621cb8be27eb0a14f95cdcee180b9a607044dfbd86",
-  "november-soil-checklist.pdf": "712d9bee7d31584737a8592188ac4a5c47834ddf33af6e85ef8ae5bfac268f8e"
+  "november-broadacre-campaign.html": "c0c03a168b47f395ff7cda8a94bcaa03e7b28d82c2bb3ef3a1fd23f56c898dce",
+  "november-horticulture-campaign.html": "a4dc28d6551642dbd9d2626baf681efba0cdeaa478e645a1159a0812b5b8557c",
+  "november-cherry-checklist.html": "d710b23f9bc9e75b8a29c0b7817708aea2e759c57fc2d2c5364345125886ae6d",
+  "november-soil-checklist.html": "e7da9be4e29f293350b9a4074d6c38a10b2636ed9537a72c9c594a595ca3a9fd",
+  "november-cherry-checklist.pdf": "4398c57f23d24fa7010cf482bc8566e813f901f1b4444dc3a1623b02ced1e348",
+  "november-soil-checklist.pdf": "0a1e741673ee3d9d7f72ac3164bc289736aafb8a698cd2a9386224089993476a"
  }
 }
