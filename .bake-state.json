@@ -1,8 +1,8 @@
 {
- "host": "runnervm8axu0",
- "sha256": "79a1eadd7545011073735696fa5187c6d113724d35a2674bf80b914bc1f44cf8",
- "build_id": "20261113071011499421",
- "at": "2026-11-13T15:10:50",
+ "host": "runnervm7aw5e",
+ "sha256": "5762de2169446385bdaf1fac3e6c7ae34b66e40328809d510d314a0feb48d7e8",
+ "build_id": "20261113074244778780",
+ "at": "2026-11-13T15:43:23",
  "siblings": {
   "bud-flower-post.html": "35550c28fc8a6ba790779ecbd73c73cd63624cc6a39c2942352b60522c7d8923",
   "frost-post.html": "99c89473c945f44f08fc0e4b93722c8f1250468b7f426f21e239e2dcd0f7f5ff",
@@ -22,8 +22,8 @@
   "cherry-shuck-fall-post.html": "aceb698ed384401def5f5d9a1920d8e8825c14109ba4d8ded66c47895538100f",
   "flowering-set-concepts.html": "138a086fb064a6c1e76e665e69998dfbd00b15dae592ce7ace8bfecea299037e",
   "november-testing-campaigns.html": "535c304002b00165b73ad71fae1cdb7211d7fa76e6b56d828b3acc93f84dd0ea",
-  "november-broadacre-campaign.html": "fb926c6790f9db023ff71c4d825cb3a4efc3de1219a289b9056b2d25121b18bf",
-  "november-horticulture-campaign.html": "531649768eb8789dca2dae9d4deaa93dfacfd88727cb694b383da4d9b474c08a",
+  "november-broadacre-campaign.html": "5c0c95775e6459f546c48125a5f9b8bd3797cb653ad6ae1aa6fa260c37f6db58",
+  "november-horticulture-campaign.html": "e5680cd8c0e36663a8b7e882eb8485dfef2aef7db5dbcde8bfc3d1020ef25303",
   "november-cherry-checklist.html": "bae54121e9bc2f0dc851fa78fa0f42a2b953020375b2223c3487a3e22b9abaed",
   "november-soil-checklist.html": "7a3cf48e54aa553e5f5e1b0d5ce874f78eb3e1021a15b5067fbeeb0817bd5607",
   "november-cherry-checklist.pdf": "38bc7b90a7623aea1892a3621cb8be27eb0a14f95cdcee180b9a607044dfbd86",
