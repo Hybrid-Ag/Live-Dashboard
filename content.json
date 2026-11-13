@@ -2899,7 +2899,99 @@
     ]
    }
   ],
-  "mtg-notes-1113": []
+  "mtg-notes-1113": [
+   {
+    "title": "Sales",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "November progress",
+      "text": "Jamie described sales as slightly behind the desired pace and recognised Jimmy and Bruce for proactively planning the coming season together. The figures above retain the frozen dashboard snapshot."
+     },
+     {
+      "lead": "Pearl Fusion",
+      "text": "Jamie and Amos are preparing a focused sales effort for about 230 tonnes of stock. Jamie will develop the approach and test calls next week, then propose a shared team calling session for the following week. Pricing, customer lists and timing remain to be confirmed; no price or commission arrangement was approved."
+     },
+     {
+      "lead": "Packaging options",
+      "text": "The stock is in 9.5 kg bags. Pallet quantities in the existing bags and repacking into bulk bags were both discussed. Jamie will circulate the confirmed options before the team starts the wider push."
+     }
+    ]
+   },
+   {
+    "title": "Quotes and testing",
+    "accent": "orange",
+    "items": [
+     {
+      "lead": "Orders and quotes",
+      "text": "The granule supply needed for Jimmy’s CRC order had arrived, allowing it to move forward. Nathan Strawbridge will update an outstanding quote to reflect ordering after 2026. A small yuzu-grower blend enquiry remained with the customer while pricing was considered."
+     },
+     {
+      "lead": "DSA activity",
+      "text": "Chelsea attributed the increase to repeat sampling, more blocks being tested and better scheduling. She acknowledged Josh’s extra sampling support across regions. Chelsea and Josh said staggered plans and coordinating who covers each test were working well."
+     },
+     {
+      "lead": "Field follow-up",
+      "text": "The cherry leaf-test discussion raised questions about Phosphorus ratios and uptake where soil results appear adequate. A focused session with pre-reading was suggested. No new rate, program or date was agreed."
+     }
+    ]
+   },
+   {
+    "title": "Operations and support",
+    "accent": "berry",
+    "items": [
+     {
+      "lead": "Deliveries",
+      "text": "Amos reported that recent deliveries had cleared some of the red items in the operations view; some displayed statuses were processing-related."
+     },
+     {
+      "lead": "Liqui-Gyp",
+      "text": "The Prima Partnership order was affected by product flowability. A change in raw-material particle distribution appears to have made recent batches thicker. Operations is testing suspension levels to restore flow while keeping solids suspended. A resolution date was not given."
+     },
+     {
+      "lead": "DSA labels",
+      "text": "Requests go to Paige, with Roselle as backup. Jamie will check whether Roselle needs further training. Chelsea raised the wider need for backup coverage when a task depends on one person."
+     }
+    ]
+   },
+   {
+    "title": "Marketing and end-of-year work",
+    "accent": "green",
+    "items": [
+     {
+      "lead": "November campaigns",
+      "text": "Nathan and Pia have field content and more developed posts in progress. For Broadacre, Nathan and Jimmy are considering up to three video approaches leading into the soil-testing resource and enquiry form. For Horticulture, cherry post-harvest is the first proposed play with Josh, using existing technical material. Nathan planned to split the existing paid lead-generation funds between the two campaigns and put more behind the strongest-performing Broadacre video. Content, seasonal fit and launch details still need work; no new budget or launch date was approved."
+     },
+     {
+      "lead": "Biology and Pearl Fusion",
+      "text": "Biology material and brochures remain with Nathan and Jamie to resolve before wider release. Marketing support for Pearl Fusion will follow once Jamie and Amos settle the sales plan."
+     },
+     {
+      "lead": "Client gifts",
+      "text": "As of the meeting, 86 of 100 businesses had responded and 14 remained outstanding. Nathan said most orders had progressed, with jackets and one or two smaller items still to finish. These are the meeting’s figures, not the live response total."
+     },
+     {
+      "lead": "Tree Crop magazine",
+      "text": "An article and advertisement cost the same for the same space. Nathan cited roughly $3,000; no booking was approved. Nathan and Pia will review the opportunity and possible content. Nathan will share print and digital circulation figures once email access returns."
+     }
+    ]
+   },
+   {
+    "title": "Technical meeting",
+    "accent": "teal",
+    "items": [
+     {
+      "lead": "Recording available; transcript pending",
+      "text": "The technical recording is embedded above. Its transcript was unavailable when these notes were prepared, so the discussion and decisions from that session have not yet been added."
+     },
+     {
+      "lead": "AI-A update from the sales meeting",
+      "text": "Tom and AJ were due to demonstrate AI-A in the technical session. Availability the following week was described as possible if the weekend work went well, not a confirmed rollout."
+     }
+    ]
+   }
+  ],
+  "mtg-notes-1120": []
  },
  "meetingStats": {
   "Friday 17 July 2026": {
